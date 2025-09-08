@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scheduled tasks - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Scheduled tasks">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li class="selected"><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/api/apps/">Apps</a>
+                            <ul>    <li>
+                            <a href="/api/apps/registering/">Registering</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/apps/activating/">Activation</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/apps/settings/">Adding Settings</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/apps/runtime-functions/">Runtime functions</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/apps/field-types/">Field types</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/apps/scheduled-tasks/" class="selected">Scheduled tasks</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/apps/upgrading/">Upgrading</a>
+                             
+                             
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/api/auth/">Authentication plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/buckets/">Bucket handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/custom-ui/">UI Customisations</a>
+                        </li>
+                        <li>
+                            <a href="/api/dashboard/">Dashboard Widgets</a>
+                        </li>
+                        <li>
+                            <a href="/api/editors/">Editor plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/events/">Event hooks</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/api/template-filters/">Template filters</a>
+                        </li>
+                        <li>
+                            <a href="/api/templates/">Template handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/field-types/">Field Types</a>
+                        </li>
+                        <li>
+                            <a href="/api/validators/">Form validators</a>
+                        </li>
+                        <li>
+                            <a href="/api/search/">Search handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/shortcodes/">Shortcode providers</a>
+                        </li>
+                        <li>
+                            <a href="/api/translations/">Translations</a>
+                        </li>
+                        <li>
+                            <a href="/api/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/api/import/">Importing Content</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/reference/">API Reference</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Scheduled tasks</h1>
+
+  <p>Perch includes a centralised system for scheduling tasks. Apps (and dashboard widgets) can make use of this by adding a <code>scheduled_tasks.php</code> file to their app folder.</p>
+<h2 id="scheduling-a-task">Scheduling a task</h2>
+<p>When the task scheduler runs, it looks through each app’s folder for a file called <code>scheduled_tasks.php</code>. An app can register one or more tasks with a call to <code>PerchScheduledTasks::register_task</code></p>
+<pre><code class="lang-php">PerchScheduledTasks::register_task(&#39;app_id&#39;, &#39;task_key&#39;, $minutes, &#39;function_to_run&#39;);
+</code></pre>
+<h3 id="register_task-arguments">register_task arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app_id</td>
+<td>The ID of your app.</td>
+</tr>
+<tr>
+<td>task_key</td>
+<td>An identifier for this task. (e.g. update_tweets)</td>
+</tr>
+<tr>
+<td>minutes</td>
+<td>Integer: the frequency, in minutes, of this task.</td>
+</tr>
+<tr>
+<td>function</td>
+<td>A callable function to run, so either a function name as a string, or an array of object, method.</td>
+</tr>
+</tbody>
+</table>
+<p>The function is called with one argument – the date and time this task last ran.</p>
+<h2 id="return-values">Return values</h2>
+<p>The function you nominate to be called must return an associative array with the results of the task.</p>
+<h3 id="return-array">Return array</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result</td>
+<td>OK, WARNING or FAILED</td>
+</tr>
+<tr>
+<td>message</td>
+<td>A human readable description of the result. This is displayed to the user in the Settings section, to help them fix problems. Max 256 chars.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<p>A basic example of a <code>scheduled_tasks.php</code> file might look like this.</p>
+<pre><code class="lang-php">&lt;?php
+    PerchScheduledTasks::register_task(&#39;my_app&#39;, &#39;download_rss&#39;, 60, &#39;my_app_download_rss&#39;);
+    function my_app_download_rss($last_run_date)
+    {
+        if (MyApp::download_rss()) {
+            return array(
+                &#39;result&#39;=&gt;&#39;OK&#39;,
+                &#39;message&#39;=&gt;&#39;RSS successfully fetched.&#39;
+            );
+        }else{
+            return array(
+                &#39;result&#39;=&gt;&#39;FAILED&#39;,
+                &#39;message&#39;=&gt;&#39;RSS could not be fetched.&#39;
+            );
+        }
+    }
+</code></pre>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

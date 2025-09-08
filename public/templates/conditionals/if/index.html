@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>if - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="if">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li class="selected"><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/templates/core-concepts/">Template Core Concepts</a>
+                        </li>
+                        <li>
+                            <a href="/templates/attributes/">Tag attributes</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/field-types/">Field Types</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/apps/">App Specific Tags</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/groups/">Field Groups</a>
+                        </li>
+                        <li>
+                            <a href="/templates/blocks/">Blocks Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/categories/">Category Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/comments/">Template Comments</a>
+                        </li>
+                        <li>
+                            <a href="/templates/conditionals/">Conditional Tags</a>
+                            <ul>    <li>
+                            <a href="/templates/conditionals/after/">after</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/conditionals/before/">before</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/conditionals/else/">else</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/conditionals/every/">every</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/conditionals/if/" class="selected">if</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/templates/form/">Form Tags</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/includes/">Template Includes</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/navigation/">Navigation Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/noresults/">No Results Tag</a>
+                        </li>
+                        <li>
+                            <a href="/templates/pagination/">Pagination Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/passing-variables-into-templates/">Passing variables into templates</a>
+                        </li>
+                        <li>
+                            <a href="/templates/repeaters/">Repeaters Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/search/">Search Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/show-all/">Show All Tag</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>if</h1>
+
+  <p>The <code>&lt;perch:if&gt;&lt;/perch:if&gt;</code> conditional tag can be used to only include a section of the template if a value has been set for one of the fields.</p>
+<p>The following code example uses perch:if to check that content has been entered for the heading and only outputs the markup if it has.</p>
+<pre><code class="lang-html">&lt;perch:if exists=&quot;heading&quot;&gt;
+    &lt;h2&gt;
+        &lt;perch:content id=&quot;heading&quot; type=&quot;text&quot; label=&quot;Heading&quot; required=&quot;false&quot;&gt;
+    &lt;/h2&gt;
+&lt;/perch:if&gt;
+</code></pre>
+<p>The following attributes can be used with perch:if:</p>
+<h3 id="perch-if-attributes">perch:if attributes</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>exists</td>
+<td>The <code>id</code> of a content item to check for the existence of any value (i.e. not empty).</td>
+</tr>
+<tr>
+<td>not-exists</td>
+<td>The same as <code>exists</code> but with the reverse outcome.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>The id of a content item to check against a specific value.</td>
+</tr>
+<tr>
+<td>value</td>
+<td>The string to compare against the content in the item with the given ID. If the value is wrapped in {braces} it is evaluated as a content ID rather than a literal string.</td>
+</tr>
+<tr>
+<td>match</td>
+<td>The type of comparison to use when comparing the content of field id to string given in the value attribute. Defaults to eq (equal to) see below for other values</td>
+</tr>
+<tr>
+<td>different</td>
+<td>The id of a content item to compare with the value of the previous item, when outputting multiple items. Can be used with format.</td>
+</tr>
+<tr>
+<td>format</td>
+<td>Used with different or ID comparisons, to format the value (e.g. to use a month from a date field) before comparison. Value as per format attribute on content tags.</td>
+</tr>
+<tr>
+<td>format-both</td>
+<td>true or false. Used with format, to format both the value AND the value of the ID field in order to make a like-for-like comparison.</td>
+</tr>
+<tr>
+<td>case</td>
+<td>Used with different or ID comparisons. Set to insensitive to make the comparison case insensitive.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="values-for-the-match-attribute">Values for the match attribute</h3>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eq</td>
+<td><code>is</code>, <code>exact</code></td>
+<td>equal to</td>
+</tr>
+<tr>
+<td>neq</td>
+<td><code>not</code>, <code>!eq</code></td>
+<td>not equal to</td>
+</tr>
+<tr>
+<td>gt</td>
+<td></td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>gte</td>
+<td></td>
+<td>greater than or equal to</td>
+</tr>
+<tr>
+<td>lt</td>
+<td></td>
+<td>less than</td>
+</tr>
+<tr>
+<td>lte</td>
+<td></td>
+<td>less than or equal to</td>
+</tr>
+<tr>
+<td>contains</td>
+<td></td>
+<td>the value exists within the content (a simple search)</td>
+</tr>
+<tr>
+<td>!contains</td>
+<td></td>
+<td>opposite of <code>contains</code>: the value does not exist within the content</td>
+</tr>
+<tr>
+<td>regex</td>
+<td><code>regexp</code></td>
+<td>using a PCRE regular expression</td>
+</tr>
+<tr>
+<td>between</td>
+<td></td>
+<td>match between two values</td>
+</tr>
+<tr>
+<td>!between</td>
+<td></td>
+<td>opposite of <code>between</code></td>
+</tr>
+<tr>
+<td>eqbetween</td>
+<td></td>
+<td>match between two values inclusively</td>
+</tr>
+<tr>
+<td>!eqbetween</td>
+<td></td>
+<td>opposite of <code>eqbetween</code></td>
+</tr>
+<tr>
+<td>in</td>
+<td><code>within</code></td>
+<td>match within a comma delimited content list (like a list of tags)</td>
+</tr>
+<tr>
+<td>!in</td>
+<td><code>!within</code></td>
+<td>opposite of <code>in</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="testing-for-multiple-values">Testing for multiple values</h2>
+<p>The <code>exists</code> and <code>not-exists</code> attributes can test multiple values, separated by <code>AND</code>, <code>OR</code> and <code>XOR</code> keywords. For example, check to see if the field with an id of name OR the field with an id of title has been completed:</p>
+<pre><code class="lang-html">&lt;perch:if exists=&quot;name OR title&quot;&gt;&lt;/perch:if&gt;
+</code></pre>
+<p>Check to see that the field with an id of price AND the field with an id of on_sale have been completed:</p>
+<pre><code class="lang-html">&lt;perch:if exists=&quot;price AND on_sale&quot;&gt;&lt;/perch:if&gt;
+</code></pre>
+<p>These can also be combined:</p>
+<pre><code class="lang-html">&lt;perch:if exists=&quot;price AND on_sale OR is_download&quot;&gt;&lt;/perch:if&gt;
+</code></pre>
+<p>The logic string is processed left-to-right, so the above would be processed as:</p>
+<pre><code class="lang-php">(price AND on_sale) OR is_download
+</code></pre>
+<p>You can control the sequence using brackets:</p>
+<pre><code class="lang-html">&lt;perch:if exists=&quot;price AND (on_sale OR is_download)&quot;&gt;&lt;/perch:if&gt;
+</code></pre>
+<p>The result of any value can also be flipped with the <code>!</code> not operator. The following would test for <code>price</code> <em>and not</em> <code>on_sale</code>:</p>
+<pre><code class="lang-html">&lt;perch:if exists=&quot;price AND !on_sale&quot;&gt;&lt;/perch:if&gt;
+</code></pre>
+<h2 id="examples">Examples</h2>
+<p>As well as hiding the markup around a field when a field is not used, conditional tags can have other uses. For example, you can use a checkbox to turn parts of a template on and off:</p>
+<pre><code class="lang-html">&lt;perch:content type=&quot;checkbox&quot; id=&quot;sale&quot; value=&quot;1&quot; label=&quot;Sale in progress&quot; suppress&gt;
+&lt;perch:if exists=&quot;sale&quot;&gt;
+        &lt;div class=&quot;promo&quot;&gt;Sale now on!&lt;/div&gt;
+&lt;/perch:if&gt;
+</code></pre>
+<p>Or check content for specific values:</p>
+<pre><code class="lang-html">&lt;perch:if id=&quot;text&quot; value=&quot;Hello&quot;&gt;
+    The value of field &#39;text&#39; is &#39;Hello&#39;
+&lt;/perch:if&gt;
+
+&lt;perch:if id=&quot;age&quot; value=&quot;18&quot; match=&quot;gt&quot;&gt;
+    The value of field &#39;age&#39; is greater than 18.
+&lt;/perch:if&gt;
+</code></pre>
+<p>The <code>value</code> attribute can also be dynamic – comparing one content value against another. To do this, wrap the value in {braces}.</p>
+<pre><code class="lang-html">&lt;perch:if id=&quot;price&quot; match=&quot;lt&quot; value=&quot;{list_price}&quot;&gt;
+    &lt;strong&gt;Fantastic reduction!&lt;/strong&gt;
+&lt;/perch:if&gt;
+</code></pre>
+<p>The <code>different</code> attribute is used when outputting multiple items. It compares the current value of the specified field with the same field in the previous item. If they’re not the same, the condition is true. If the are the same, the else is used.</p>
+<p>The following would output the category, only if it’s different from the previous category.</p>
+<pre><code class="lang-html">&lt;perch:if different=&quot;category&quot;&gt;
+    &lt;h2&gt;&lt;perch:content id=&quot;category&quot; type=&quot;text&quot;&gt;&lt;/h2&gt;
+&lt;/perch:if&gt;
+</code></pre>
+<p>The <a href="/docs/attributes/format/">format</a> attribute can be used to prepare a value before comparing it. This is particularly useful for dates.</p>
+<p>The following would output the name of the month, only if the month is different from the previous entry. (<code>F</code> is the formatting code to display the full month name.)</p>
+<pre><code class="lang-html">&lt;perch:if different=&quot;date&quot; format=&quot;F&quot;&gt;
+    &lt;h2&gt;&lt;perch:content id=&quot;date&quot; type=&quot;date&quot; format=&quot;F&quot;&gt;&lt;/h2&gt;
+&lt;/perch:if&gt;
+</code></pre>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

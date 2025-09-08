@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard Widgets - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Dashboard Widgets">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li class="selected"><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/api/apps/">Apps</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/auth/">Authentication plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/buckets/">Bucket handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/custom-ui/">UI Customisations</a>
+                        </li>
+                        <li>
+                            <a href="/api/dashboard/" class="selected">Dashboard Widgets</a>
+                        </li>
+                        <li>
+                            <a href="/api/editors/">Editor plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/events/">Event hooks</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/api/template-filters/">Template filters</a>
+                        </li>
+                        <li>
+                            <a href="/api/templates/">Template handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/field-types/">Field Types</a>
+                        </li>
+                        <li>
+                            <a href="/api/validators/">Form validators</a>
+                        </li>
+                        <li>
+                            <a href="/api/search/">Search handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/shortcodes/">Shortcode providers</a>
+                        </li>
+                        <li>
+                            <a href="/api/translations/">Translations</a>
+                        </li>
+                        <li>
+                            <a href="/api/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/api/import/">Importing Content</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/reference/">API Reference</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Dashboard Widgets</h1>
+
+  <p>Perch users have the option to switch on the Dashboard. This is an optional home screen when logging into Perch rather than seeing a list of pages.</p>
+<p>Apps can create a dashboard widget to display useful information or quick access into the app. It is also possible to create a Dashboard widget app that has no other screens.</p>
+<p>To enable a Dashboard Widget in your app you need to place a minimum of 2 files directly inside your app folder.</p>
+<h2 id="how-do-i-create-a-dashboard-widget-">How do I create a Dashboard Widget?</h2>
+<p>Widgets can be created as part of an app, as with our official Perch Apps. However you can also create a standalone widget, that can contain anything from some simple HTML to more complex PHP. This solution shows you how to enable a very simple Widget of your own. All this Widget will do is output some HTML, and I’m going to use it to display my upcoming conferences by dropping in my Lanyrd JavaScript badge.</p>
+<p>You should be running Perch version 2.8 or newer to follow this tutorial.</p>
+<h2 id="create-the-files">Create the files</h2>
+<p>Dashboard Widgets are really a Perch app. So you will need to create a folder in <code>perch/addons/apps</code> to store your widget. I would suggest following the naming conventions used for apps, which is <code>prefix_appname</code>. Our official apps are all <code>perch_appname</code>. This one is just for me so I’ll name it <code>rachel_lanyrd</code>.</p>
+<p>Inside your folder you need two files. If you <a href="https://static.grabaperch.com/docs/api/download-create-a-dashboard-widget.zip">download the files for this tutorial</a> you will see that I have created two starting point files for you. These are the minimum requirements for creating a Dashboard Widget and should be placed inside your folder.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dashboard.php</td>
+<td>The display code for your dashboard widget</td>
+</tr>
+<tr>
+<td>admin.php</td>
+<td>Registers and activates the dashboard widget</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dashboard-php">dashboard.php</h3>
+<p>This file contains the minimum mark-up required to enable an app. You should maintain this HTML as it ensures your Widget will work with the others on the Dashboard.</p>
+<p>Update the string “Title of your Widget” to whatever title you would like to display at the top of your panel on the Dashboard.</p>
+<pre><code class="lang-html">    &lt;div class=&quot;widget&quot;&gt;
+      &lt;h2&gt;
+      &lt;?php echo $Lang-&gt;get(&#39;Title of your widget&#39;); ?&gt;
+      &lt;/h2&gt;
+      &lt;div class=&quot;bd&quot;&gt;
+          &lt;p&gt;Your content goes here.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+<h3 id="admin-php">admin.php</h3>
+<p>This file registers an app, it tells the Perch admin that a new app is present. You need this even if your app is just a Dashboard Widget. The first function registers the app with Perch and the second sets which version of Perch you need to be running to use this app.</p>
+<pre><code class="lang-php">    &lt;?php
+    if ($CurrentUser-&gt;logged_in()) {
+      $this-&gt;register_app(&#39;prefix_appname&#39;, &#39;App name&#39;, 1, &#39;App description&#39;, &#39;1&#39;, false);
+      $this-&gt;require_version(&#39;prefix_appname&#39;, &#39;2.0.8&#39;);
+    }
+    ?&gt;
+</code></pre>
+<p>You should update the parameters in the sample file to be correct for your Widget.</p>
+<ul>
+<li>Your app ID (same as the folder your app is in)</li>
+<li>A name/label for your app</li>
+<li>The priority in which is should appear on the Perch tab bar</li>
+<li>A brief description</li>
+<li>A version number</li>
+<li>Should the app show up in the admin menu – set to false for Widget only apps</li>
+</ul>
+<p>I have updated mine to look like the following:</p>
+<pre><code class="lang-php">    &lt;?php
+    if ($CurrentUser-&gt;logged_in()) {
+      $this-&gt;register_app(&#39;rachel_lanyrd&#39;, &#39;Lanyrd Conferences&#39;, 1, &#39;Panel to display my conferences&#39;, &#39;1&#39;, false);
+      $this-&gt;require_version(&#39;rachel_lanyrd&#39;, &#39;2.0.8&#39;);
+    }
+    ?&gt;
+</code></pre>
+<p>Simply adding these two files to your folder and refreshing the Dashboard in Perch should make the new Widget show up – it just doesn’t have any content yet.</p>
+<p>I can now add some content. In this case all I am going to do is add the two lines of code that will display my Lanyrd badge. So my completed dashboard.php ends up looking like this:</p>
+<pre><code class="lang-html">    &lt;div class=&quot;widget&quot;&gt;
+      &lt;h2&gt;
+      &lt;?php echo $Lang-&gt;get(&#39;My conferences&#39;); ?&gt;
+      &lt;/h2&gt;
+      &lt;div class=&quot;bd&quot;&gt;
+    &lt;div class=&quot;lanyrd-target-splat&quot;&gt;&lt;a href=&quot;http://lanyrd.com/profile/rachelandrew/&quot;
+        class=&quot;lanyrd-splat lanyrd-type-speaking lanyrd-context-future&quot; rel=&quot;me&quot;&gt;
+        See my conferences on Lanyrd&lt;/a&gt;&lt;/div&gt;
+          &lt;script src=&quot;http://cdn.lanyrd.net/badges/person-v1.min.js&quot;&gt;&lt;/script&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+<p>This is all you need to do to add a HTML-only Widget to your Dashboard. You could use these to display a message to your users, or include an iframe with content from elsewhere.</p>
+<p>By using a little bit of PHP you can easily include other data from a feed or api – see the <a href="https://grabaperch.com/add-ons/dashboard">official Widgets</a> for some examples.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

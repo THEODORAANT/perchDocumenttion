@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Database - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Database">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li class="selected"><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/api/apps/">Apps</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/auth/">Authentication plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/buckets/">Bucket handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/custom-ui/">UI Customisations</a>
+                        </li>
+                        <li>
+                            <a href="/api/dashboard/">Dashboard Widgets</a>
+                        </li>
+                        <li>
+                            <a href="/api/editors/">Editor plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/events/">Event hooks</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/api/template-filters/">Template filters</a>
+                        </li>
+                        <li>
+                            <a href="/api/templates/">Template handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/field-types/">Field Types</a>
+                        </li>
+                        <li>
+                            <a href="/api/validators/">Form validators</a>
+                        </li>
+                        <li>
+                            <a href="/api/search/">Search handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/shortcodes/">Shortcode providers</a>
+                        </li>
+                        <li>
+                            <a href="/api/translations/">Translations</a>
+                        </li>
+                        <li>
+                            <a href="/api/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/api/import/">Importing Content</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/reference/">API Reference</a>
+                            <ul>    <li>
+                            <a href="/api/reference/perchapi/">Perch API</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/html/">HTML</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/lang/">Lang</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/template/">Template</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/xmltag/">PerchXMLTag</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/adminlisting/">PerchAdminListing</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/db/" class="selected">Database</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/fieldtype/">FieldType</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/perchapi-base/">PerchAPI_Base</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/perchapi-factory/">PerchAPI_Factory</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/perchapi-submittedform/">PerchAPI_SubmittedForm</a>
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/settings/">Settings</a>
+                        </li>
+                    </ul>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Database</h1>
+
+  <p>The core database class <code>PerchDB</code> provides a basic set of tools for getting data in and out of the database. It uses a single database connection, so you should use <code>PerchDB</code> when possible.</p>
+<p>An instance of <code>PerchDB</code> is available in the <code>db</code> property of both <code>PerchAPI_Factory</code> and <code>PerchAPI_Base</code>, so the preferred way of accessing is simply to use <code>$this-&gt;db</code> in a subclass of one of those two classes.</p>
+<p>If you need to access <code>PerchDB</code> otherwise, you can get an instance:</p>
+<pre><code class="lang-php">$DB = PerchDB::fetch();
+</code></pre>
+<h2 id="methods">Methods</h2>
+<p>The class exposes a number of methods.</p>
+<h3 id="perchdb-execute-string-sql-">PerchDB::execute(string $sql)</h3>
+<p>Takes a raw SQL string and executes it against the database.</p>
+<pre><code class="lang-php">$this-&gt;db-&gt;execute(&#39;DROP my_table&#39;);
+</code></pre>
+<h3 id="perchdb-get_rows-string-sql-">PerchDB::get_rows(string $sql)</h3>
+<p>Takes a SELECT statement and returns an array of associative arrays for each matching row.</p>
+<pre><code class="lang-php">$this-&gt;db-&gt;get_rows(&#39;SELECT * FROM my_table&#39;);
+</code></pre>
+<h3 id="perchdb-get_row-string-sql-">PerchDB::get_row(string $sql)</h3>
+<p>Takes a SELECT statement designed to return a single row and returns an associative array of the matching row.</p>
+<pre><code class="lang-php">$this-&gt;db-&gt;get_row(&#39;SELECT * FROM my_table WHERE articleID=1 LIMIT 1&#39;);
+</code></pre>
+<h3 id="perchdb-get_value-string-sql-">PerchDB::get_value(string $sql)</h3>
+<p>Takes a SELECT statement designed to return a single value and returns it.</p>
+<pre><code class="lang-php">$this-&gt;db-&gt;get_value(&#39;SELECT articleTitle FROM my_table WHERE articleID=1 LIMIT 1&#39;);
+</code></pre>
+<h3 id="perchdb-get_count-string-sql-">PerchDB::get_count(string $sql)</h3>
+<p>Takes a SELECT COUNT statement and returns the count as an integer.</p>
+<pre><code class="lang-php">$this-&gt;db-&gt;get_count(&#39;SELECT COUNT(*) FROM my_table&#39;);
+</code></pre>
+<h3 id="perchdb-insert-string-table-array-data-">PerchDB::insert(string $table, array \data)</h3>
+<p>Takes an associative array with keys matching table column names and inserts into the given table. If the table uses an autonumbered primary key, returns the new ID.</p>
+<pre><code class="lang-php">$data = array();
+$data[&#39;articleTitle&#39;] = &#39;My article&#39;;
+$data[&#39;articleDate&#39;] = date(&#39;Y-m-d&#39;);
+$newID = $this-&gt;db-&gt;insert(&#39;my_table&#39;, $data);
+</code></pre>
+<h3 id="perchdb-update-string-table-array-data-string-column-string-id-">PerchDB::update(string $table, array $data, string $column, string $id)</h3>
+<p>Takes an associative array with keys matching table column names and updates the given table, where <code>$column</code> equals <code>$id</code>.</p>
+<pre><code class="lang-php">$data = array();
+$data[&#39;articleTitle&#39;] = &#39;My article&#39;;
+$data[&#39;articleDate&#39;] = date(&#39;Y-m-d&#39;);
+$newID = $this-&gt;db-&gt;update(&#39;my_table&#39;, $data, &#39;articleID&#39;, &#39;3&#39;);
+</code></pre>
+<h3 id="perchdb-delete-string-table-string-column-string-id-int-limit-">PerchDB::delete(string $table, string $column, string $id [, int $limit])</h3>
+<p>Deletes from the given table, where <code>$column</code> equals <code>$id</code>. The number of rows to delete can be limited with <code>$limit</code>.</p>
+<pre><code class="lang-php">$this-&gt;db-&gt;delete(&#39;my_table&#39;, &#39;articleID&#39;, &#39;3&#39;);
+</code></pre>
+<h3 id="perchdb-pdb-mixed-value-">PerchDB::pdb(mixed $value)</h3>
+<p>Takes a value and prepares it for use in an SQL statement by escaping any quotes and then wrapping it in quotes. Integers are left unwrapped.</p>
+<pre><code class="lang-php">$sql = &#39;SELECT * FROM my_table WHERE articleID=&#39;.$this-&gt;db-&gt;pdb(3);
+// becomes:
+SELECT * FROM my_table WHERE articleID=3
+</code></pre>
+<p>And,</p>
+<pre><code class="lang-php">$sql = &#39;SELECT * FROM my_table WHERE articleTitle=&#39;.$this-&gt;db-&gt;pdb(&#39;My article&#39;);
+// becomes:
+SELECT * FROM my_table WHERE articleTitle=&#39;My article&#39;
+</code></pre>
+<h3 id="perchdb-get_table_meta-string-table-">PerchDB::get_table_meta(string $table)</h3>
+<p>Returns an associative array of meta information about the given table’s structure.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cart - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Cart">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li class="selected"><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/templates/core-concepts/">Template Core Concepts</a>
+                        </li>
+                        <li>
+                            <a href="/templates/attributes/">Tag attributes</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/field-types/">Field Types</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/apps/">App Specific Tags</a>
+                            <ul>    <li>
+                            <a href="/templates/apps/blog/">Perch Blog</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/apps/comments/">Comments App</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/apps/events/">Events App</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/apps/gallery/">Gallery App</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/apps/mailchimp/">Mailchimp App</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/apps/members/">Members App</a>
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/apps/podcasts/">Podcasts App</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/apps/shop-foxycart/">Shop FoxyCart App</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/apps/shop-paypal/">Shop PayPal App</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/apps/shop/">Perch Shop</a>
+                            <ul>    <li>
+                            <a href="/templates/apps/shop/brands/">Brands</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/apps/shop/cart/" class="selected">Cart</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/apps/shop/orders/">Orders</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/apps/shop/product-options/">Product Options</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/apps/shop/products/">Products</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/apps/twitter/">Twitter App</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/templates/groups/">Field Groups</a>
+                        </li>
+                        <li>
+                            <a href="/templates/blocks/">Blocks Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/categories/">Category Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/comments/">Template Comments</a>
+                        </li>
+                        <li>
+                            <a href="/templates/conditionals/">Conditional Tags</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/form/">Form Tags</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/includes/">Template Includes</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/navigation/">Navigation Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/noresults/">No Results Tag</a>
+                        </li>
+                        <li>
+                            <a href="/templates/pagination/">Pagination Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/passing-variables-into-templates/">Passing variables into templates</a>
+                        </li>
+                        <li>
+                            <a href="/templates/repeaters/">Repeaters Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/search/">Search Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/show-all/">Show All Tag</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Cart</h1>
+
+  <p>This page details the template tags available to you when creating a Cart template.</p>
+<h2 id="default-templates">Default templates</h2>
+<p>As with all Perch Add-ons, Shop comes with some default templates. Before editing any templates, please see the <a href="/templates/apps/shop/#editing-templates">notes on editing templates</a> to make sure your changes are safe when you next update the app.</p>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>Template</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cart display (master template)</td>
+<td>cart/cart.html</td>
+</tr>
+<tr>
+<td>Order confirmation</td>
+<td>cart/cart_static.html</td>
+</tr>
+</tbody>
+</table>
+<h2 id="creating-your-own-templates">Creating your own templates</h2>
+<p>You can either edit the default <code>cart.html</code> or create your own. See <a href="/functions/shop/cart/">page functions</a> for how to include a different template.</p>
+<p>The cart is namespaced with <code>perch:shop</code> so any  template tags used should use this namespace. An exception is when dealing with the individual items in the cart. These are namespaced <code>perch:cartitem</code>.</p>
+<h3 id="cart-template-tags">Cart template tags</h3>
+<p>The following variables are exposed as tags. As an example if you want to display the total including tax, formatted with the symbol of the currency the customer is paying in you would use the tag:</p>
+<pre><code class="lang-html">&lt;perch:shop id=&quot;grand_total_formatted&quot;&gt;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product_count</td>
+<td>Number of unique products in the cart</td>
+</tr>
+<tr>
+<td>item_count</td>
+<td>Number of individual items in the cart</td>
+</tr>
+<tr>
+<td>shipping_id</td>
+<td>Shipping ID for the shipping method in use for the cart</td>
+</tr>
+<tr>
+<td>shipping_method</td>
+<td>The name of the shipping method being used</td>
+</tr>
+<tr>
+<td>shipping_weight</td>
+<td>The combined weight of items being shipped</td>
+</tr>
+<tr>
+<td>shipping_tax</td>
+<td>Tax paid on selected shipping method, defaults to 0</td>
+</tr>
+<tr>
+<td>shipping_tax_formatted</td>
+<td>Formatted value for shipping tax</td>
+</tr>
+<tr>
+<td>shipping_tax_rate</td>
+<td>Rate used for shipping tax</td>
+</tr>
+<tr>
+<td>shipping_with_tax</td>
+<td>Shipping charge with tax added</td>
+</tr>
+<tr>
+<td>shipping_with_tax_formatted</td>
+<td>Shipping charge with tax added, formatted</td>
+</tr>
+<tr>
+<td>shipping_without_tax</td>
+<td>Cost of shipping without tax</td>
+</tr>
+<tr>
+<td>shipping_without_tax_formatted</td>
+<td>Cost of shipping without tax, formatted</td>
+</tr>
+<tr>
+<td>total_items</td>
+<td>Total value of the items in the cart</td>
+</tr>
+<tr>
+<td>total_items_formatted</td>
+<td>Total value of the items in the cart, formatted</td>
+</tr>
+<tr>
+<td>total_items_tax</td>
+<td>The total tax amount on items in the cart</td>
+</tr>
+<tr>
+<td>total_items_tax_formatted</td>
+<td>The total tax amount on items in the cart, formatted</td>
+</tr>
+<tr>
+<td>total_shipping</td>
+<td>The total shipping amount</td>
+</tr>
+<tr>
+<td>total_shipping_formatted</td>
+<td>The total shipping amount, formatted</td>
+</tr>
+<tr>
+<td>total_shipping_tax</td>
+<td>The total tax amount on shipping</td>
+</tr>
+<tr>
+<td>total_shipping_tax_formatted</td>
+<td>The total tax amount on shipping, formatted</td>
+</tr>
+<tr>
+<td>total_items_with_shipping</td>
+<td>The total value of items and shipping combined</td>
+</tr>
+<tr>
+<td>total_items_with_shipping_formatted</td>
+<td>The total value of items and shipping combined, formatted</td>
+</tr>
+<tr>
+<td>total_tax</td>
+<td>The total amount of item and shipping tax combined</td>
+</tr>
+<tr>
+<td>total_tax_formatted</td>
+<td>The total amount of item and shipping tax combined, formatted</td>
+</tr>
+<tr>
+<td>total_discounts</td>
+<td>Total of discounts applied</td>
+</tr>
+<tr>
+<td>total_discounts_formatted</td>
+<td>Total of discounts applied, formatted</td>
+</tr>
+<tr>
+<td>total_items_discount</td>
+<td>The total value of discounts applied to items in the cart</td>
+</tr>
+<tr>
+<td>total_items_discount_formatted</td>
+<td>The total value of discounts applied to items in the cart, formatted</td>
+</tr>
+<tr>
+<td>total_items_tax_discount</td>
+<td>The total value of discounts applied to tax</td>
+</tr>
+<tr>
+<td>total_items_tax_discount_formatted</td>
+<td>The total value of discounts applied to tax, formatted</td>
+</tr>
+<tr>
+<td>total_items_discounted</td>
+<td>Total value of the items in the cart with discounts applied</td>
+</tr>
+<tr>
+<td>total_items_discounted_formatted</td>
+<td>Total value of the items in the cart with discounts applied, formatted</td>
+</tr>
+<tr>
+<td>total_items_discounted_with_tax</td>
+<td>Total value of the items in the cart with discounts and tax applied</td>
+</tr>
+<tr>
+<td>total_items_discounted_with_tax_formatted</td>
+<td>Total value of the items in the cart with discounts and tax applied, formatted</td>
+</tr>
+<tr>
+<td>total_shipping_discount</td>
+<td>Total value of discounts applied to shipping</td>
+</tr>
+<tr>
+<td>total_shipping_discount_formatted</td>
+<td>Total value of discounts applied to shipping, formatted</td>
+</tr>
+<tr>
+<td>total_shipping_tax_discount</td>
+<td>Total value of shipping with discounts applied</td>
+</tr>
+<tr>
+<td>total_shipping_tax_discount_formatted</td>
+<td>Total value of shipping with discounts applied, formatted</td>
+</tr>
+<tr>
+<td>total_tax_discount</td>
+<td>Total amount of discount applied to tax</td>
+</tr>
+<tr>
+<td>total_tax_discount_formatted</td>
+<td>Total amount of discount applied to tax, formatted</td>
+</tr>
+<tr>
+<td>total_discounts_with_tax</td>
+<td>Combined total of item, shipping and tax discounts</td>
+</tr>
+<tr>
+<td>total_discounts_with_tax_formatted</td>
+<td>Combined total of item, shipping and tax discounts, formatted</td>
+</tr>
+<tr>
+<td>grand_total</td>
+<td>Grand total - what your customer will pay</td>
+</tr>
+<tr>
+<td>grand_total_formatted</td>
+<td>Grand total, formatted</td>
+</tr>
+<tr>
+<td>shipping_weight</td>
+<td>Shipping weight</td>
+</tr>
+<tr>
+<td>currency_id</td>
+<td>Currency ID for the currency used for this cart</td>
+</tr>
+<tr>
+<td>currency_code</td>
+<td>Currency code</td>
+</tr>
+<tr>
+<td>currency_name</td>
+<td>Currency name</td>
+</tr>
+<tr>
+<td>currency_symbol</td>
+<td>Currency symbol</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cart-item-tags">Cart Item tags</h3>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>identifier</td>
+<td>The unique ID of this entry in the cart</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Alias for <code>identifier</code></td>
+</tr>
+<tr>
+<td>qty</td>
+<td>The quantity of this item in the cart</td>
+</tr>
+<tr>
+<td>productID</td>
+<td>The unique ID of the product</td>
+</tr>
+<tr>
+<td>is_variant</td>
+<td>True or false, if the item is a variant</td>
+</tr>
+<tr>
+<td>variant_desc</td>
+<td>The variant description of the item, if it is a variant</td>
+</tr>
+<tr>
+<td>sku</td>
+<td>The product SKU</td>
+</tr>
+<tr>
+<td>title</td>
+<td>Title of the product</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>Product slug based on the title</td>
+</tr>
+<tr>
+<td>brand</td>
+<td>The product brand (use with <code>type=&quot;shop_brand&quot;</code></td>
+</tr>
+<tr>
+<td>category</td>
+<td>The product categories (use with <code>perch:categories</code> tags)</td>
+</tr>
+<tr>
+<td>catalog_only</td>
+<td>True or false, if the product is available for online sale</td>
+</tr>
+<tr>
+<td>requires_shipping</td>
+<td>True or false, requires physical shipping</td>
+</tr>
+<tr>
+<td>weight</td>
+<td>The weight of the item</td>
+</tr>
+<tr>
+<td>width</td>
+<td>The width of the item</td>
+</tr>
+<tr>
+<td>height</td>
+<td>The height of the item</td>
+</tr>
+<tr>
+<td>depth</td>
+<td>The depth of the item</td>
+</tr>
+<tr>
+<td>price</td>
+<td>Item price (use with <code>type=&quot;shop_currency_value&quot;</code>)</td>
+</tr>
+<tr>
+<td>sale_price</td>
+<td>Sale price (use with <code>type=&quot;shop_currency_value&quot;</code>)</td>
+</tr>
+<tr>
+<td>trade_price</td>
+<td>Trade price (use with <code>type=&quot;shop_currency_value&quot;</code>)</td>
+</tr>
+<tr>
+<td>on_sale</td>
+<td>True or false, if the item is currently discounted</td>
+</tr>
+<tr>
+<td>tax_group</td>
+<td>The product’s tax group (use with <code>type=&quot;shop_tax_group&quot;</code>)</td>
+</tr>
+<tr>
+<td>stock_level</td>
+<td>The number of items in stock</td>
+</tr>
+<tr>
+<td>stock_status</td>
+<td>The current stock status (use with <code>type=&quot;shop_stock_status&quot;</code>)</td>
+</tr>
+<tr>
+<td>max_in_cart</td>
+<td>The maximum allowable quantity of this item per cart</td>
+</tr>
+<tr>
+<td>discount</td>
+<td>The amount of discount applied to the item</td>
+</tr>
+<tr>
+<td>price_with_tax</td>
+<td>The price with tax included</td>
+</tr>
+<tr>
+<td>price_with_tax_formatted</td>
+<td>The price with tax included, formatted</td>
+</tr>
+<tr>
+<td>price_without_tax</td>
+<td>The price without tax</td>
+</tr>
+<tr>
+<td>price_without_tax_formatted</td>
+<td>The price without tax, formatted</td>
+</tr>
+<tr>
+<td>tax_discount</td>
+<td>The about of discount applied to the tax</td>
+</tr>
+<tr>
+<td>tax_rate</td>
+<td>The rate at which tax has been calculated</td>
+</tr>
+<tr>
+<td>total_tax</td>
+<td>The amount of tax</td>
+</tr>
+<tr>
+<td>total_tax_formatted</td>
+<td>The amount of tax, formatted</td>
+</tr>
+<tr>
+<td>total_with_tax</td>
+<td>The line total including tax</td>
+</tr>
+<tr>
+<td>total_with_tax_formatted</td>
+<td>The line total including tax, formatted</td>
+</tr>
+<tr>
+<td>total_without_tax</td>
+<td>The line total excluding tax</td>
+</tr>
+<tr>
+<td>total_without_tax_formatted</td>
+<td>The line total excluding tax, formatted</td>
+</tr>
+</tbody>
+</table>
+<h3 id="remove-from-cart-buttons">Remove from cart buttons</h3>
+<p>You can add a “remove from cart” button to provide a simpler way for a customer to remove the item than setting the quantity to zero.</p>
+<p>Within your <code>&lt;perch:cartitems&gt;</code> section:</p>
+<pre><code class="lang-html">&lt;button type=&quot;submit&quot; name=&quot;del:&lt;perch:cartitem id=&quot;identifier&quot;&gt;&quot; value=&quot;1&quot;&gt;
+  Remove from cart
+&lt;/button&gt;
+</code></pre>
+<p>Clicking the button will submit the form, sending along with it the <code>del:123</code> field. This causes item <code>123</code> to be removed from the cart. If doing this, it’s important to take account of the default action that occurs when a browser submits a form using the <keyboard>Enter</keyboard> key. What normally happens, is that the browser will submit the form as if the first submit button in the form had been clicked. If your “remove from cart” button appears as the first submit button, pressing Enter will remove the first item from the cart. Your customer might find this to be surprising.</p>
+<p>To account for this behaviour, it’s a good idea to make sure that the first button is a standard update button. Usefully, it doesn’t even need to be visible - you can hide it. Something like:</p>
+<pre><code class="lang-html">&lt;perch:input type=&quot;submit&quot; value=&quot;Update&quot; hidden=&quot;true&quot; aria-hidden=&quot;true&quot;&gt;
+</code></pre>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

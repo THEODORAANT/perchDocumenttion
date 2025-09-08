@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Importing Content - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Importing Content">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li class="selected"><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/api/apps/">Apps</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/auth/">Authentication plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/buckets/">Bucket handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/custom-ui/">UI Customisations</a>
+                        </li>
+                        <li>
+                            <a href="/api/dashboard/">Dashboard Widgets</a>
+                        </li>
+                        <li>
+                            <a href="/api/editors/">Editor plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/events/">Event hooks</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/api/template-filters/">Template filters</a>
+                        </li>
+                        <li>
+                            <a href="/api/templates/">Template handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/field-types/">Field Types</a>
+                        </li>
+                        <li>
+                            <a href="/api/validators/">Form validators</a>
+                        </li>
+                        <li>
+                            <a href="/api/search/">Search handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/shortcodes/">Shortcode providers</a>
+                        </li>
+                        <li>
+                            <a href="/api/translations/">Translations</a>
+                        </li>
+                        <li>
+                            <a href="/api/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/api/import/" class="selected">Importing Content</a>
+                            <ul>    <li>
+                            <a href="/api/import/collections/">Importing Collections</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/import/assets/">Importing Assets</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/import/categories/">Importing Categories</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/import/shop/">Importing into Perch Shop</a>
+                             
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/api/reference/">API Reference</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Importing Content</h1>
+
+  <p>Perch Runway provides a number of APIs for importing content directly into the system and into supporting add-ons. This can be useful when migrating content from a different system or reading content from a file.</p>
+<p>When migrating content between two systems, it’s often easier to get data <em>out</em> of the old system than to import that data into the new. That’s not surprising, as content management systems are designed for outputting content. Reading content back in from a myriad of different formats can be quite a task.</p>
+<p>This is the task we found ourselves facing when design the Runway import functionality. What file format should we teach Runway to interpret, and how should we able users to map that incoming data to where it needs to go inside Runway? Our first thought was if we supported one common data format, a developer needing to import content could first write the code to get their data into that format, and then import their file.</p>
+<p>The more we thought about it, the less sense that made. Why write code to move your data to a file, and then have Runway read that file back and have you go through some other process of mapping the data to the right places? Why not just write code to push the data directly into Runway via an API? That way, if you can get access to your content in a PHP context you can push it directly into Runway, and if you can’t, you just need to write the code to get that content into a format that <em>can</em> be read back in a PHP context. Best case scenario is simpler, and worst case scenario is no worse.</p>
+<p>For that reason we have these importer APIs rather than a single file importer.</p>
+<p>You can import the following types of content:</p>
+<h2 id="page-content">Page content</h2>
+<ul>
+<li><a href="/api/import/collections/">Collections</a></li>
+<li><a href="/api/import/assets/">Assets</a></li>
+<li><a href="/api/import/categories/">Categories</a></li>
+</ul>
+<h2 id="perch-shop">Perch Shop</h2>
+<ul>
+<li><a href="/api/import/shop/products/">Products</a></li>
+<li>Brands</li>
+<li>Countries</li>
+<li>Currencies</li>
+</ul>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Responsive Images in Perch - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Responsive Images in Perch">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link selected"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/perch/getting-started/">Getting Started With Perch</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/configuration/">Configuration</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/building/">Building Sites with Perch</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/categories/">Categories</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/content/">Working with Content</a>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/">Functions</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/">Templates</a>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/add-class-to-odd-items/">Adding a class to every other item</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/adding-help-text/">Adding Help Text</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/allow-editors-to-select-which-regions-to-show/">Toggling display with a checkbox</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/bootstrap-templates/">Using Bootstrap with Perch</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/can-i-use-html5/">Can I use HTML5?</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/compressive-images/">Compressive images in Perch</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/correcting-external-links-with-replace/">Correcting Links with the replace attribute</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/hide-templates-from-list/">Hide templates from the Control Panel selection</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/how-do-i-create-a-simple-image-gallery/">Create a simple image gallery</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/how-do-i-reuse-content-in-a-select-list/">Re-using content with a dataselect</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/how-do-i-upload-images-and-files/">Uploading images and files</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/how-do-i-use-responsive-images-in-perch/" class="selected">Responsive Images in Perch</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/how-to-create-an-excerpt/">Create an excerpt</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/how-to-create-video-playlist-descriptions/">Video playlists</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/only-show-a-section-if-content/">Displaying a section of a template only if content has been entered</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/rich-snippets-seo/">Using Rich Snippets</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/show-placeholder/">Displaying a placeholder image</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/sizing-textareas/">Changing the size of textareas</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/template-dividers/">Add dividers to show sections in a template</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/template-includes-rescope/">Using content templates inside apps</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/template-includes/">Including one template inside another</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/understanding-conditionals/">Understanding Conditional Tags</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/unique-ids/">Unique IDs in a multiple item Region</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/upload-one-image-generate-many-sizes/">Upload one image, generate many sizes</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/using-perch-before-and-after/">Perch Before and After</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/using-perch-showall/">See what is available in a template</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/perch/control-panel/">The Perch Control Panel</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/help/">Troubleshooting Tips</a>
+                        </li>
+                        <li>
+                            <a href="/perch/pages-and-nav/">Pages and Navigation</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/resources/">Managing Resources</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/upgrading/">Upgrading to Perch 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Responsive Images in Perch</h1>
+
+  <p><strong>How do I use responsive images in Perch?</strong></p>
+<p>You would like to ensure that as browsers begin to support the new picture element that your site takes advantage of it.</p>
+<p>The <em>picture</em> element, a method for using true responsive images on the web, is now making it’s way into browsers. Perch makes it easy to use this new element in your designs so that as browsers start to add support your site will allow visitors to benefit.</p>
+<h2 id="first-steps-to-responsive-images">First steps to responsive images</h2>
+<p>At the simplest level, if you have a responsive design then you are likely to not want heights and widths on images. Use the config setting <a href="http://docs.grabaperch.com/docs/installing-perch/configuration/markup/">PERCH_RWD</a> set to true and where image tags are created they will not include height or width and the image will be able to respond to browser width.</p>
+<h2 id="the-picture-element">The picture Element</h2>
+<p>The picture element covers a range of use cases. It gives you the ability to change image sizes based on responsive design rules, optimise images for high-dpi screens, serve images with different mime types and even to display different versions of an image descending on context. For example rather than just displaying a squished down big image on a mobile phone you might opt to show a cropped version.</p>
+<p>Perch works really well in combination with the picture element to help you communicate to content editors what is required for your design.</p>
+<p>In this solution I have taken some of the examples used in <a href="http://dev.opera.com/articles/responsive-images/">this post on Dev.Opera</a>. I’m showing the markup, and then a Perch template that would give you this output.</p>
+<p>In practice you would most likely be including the picture element within a larger template with other field types, to make up an article, post or product listing.</p>
+<h2 id="art-direction-use-case">Art direction use case</h2>
+<p>In this case you want the content editor to upload two images. One will be used for large screens (wider than 1024 pixels) and the other a prepared crop for small screens. We use help text to guide the editor.</p>
+<h3 id="output-html">Output HTML</h3>
+<pre><code class="lang-html">    &lt;picture&gt;
+        &lt;source media=&quot;(min-width: 1024px) srcset=&quot;opera-fullshot.jpg&quot;&gt;
+        &lt;img src=&quot;opera-closeup.jpg&quot; alt=&quot;The Oslo Opera House&quot;&gt;
+    &lt;/picture&gt;
+</code></pre>
+<h3 id="perch-template">Perch template</h3>
+<pre><code class="lang-html">    &lt;picture&gt;
+        &lt;source media=&quot;(min-width: 1024px)&quot; srcset=&quot;&lt;perch:content type=&quot;image&quot; id=&quot;image&quot; label=&quot;Image&quot; help=&quot;Full size image for large screens&quot;&gt;&quot;&gt;
+        &lt;img src=&quot;&lt;perch:content type=&quot;image&quot; id=&quot;imagecloseup&quot; label=&quot;Closeup image&quot; help=&quot;Closeup image for small screens, will be resized down to 1024 pixels&quot; width=&quot;1024&quot;&gt;&quot; alt=&quot;&lt;perch:content type=&quot;text&quot; id=&quot;alt&quot; label=&quot;Description&quot; required help=&quot;Description of subject of these images.&quot; title&gt;&quot;&gt;
+    &lt;/picture&gt;
+</code></pre>
+<h2 id="different-image-types-use-case">Different image types use case</h2>
+<p>In this case you want the content editor to upload a webp image for browsers that support it and a JPG or other format for the others.</p>
+<p><em><strong>Note</strong>: support for webp is coming to PHP. At the moment in Perch our suggestion is to use a file upload type in order that your file does not get mangled.</em></p>
+<h3 id="output-html">Output HTML</h3>
+<pre><code class="lang-html">    &lt;picture&gt;
+        &lt;source srcset=&quot;opera.webp&quot; type=&quot;image/webp&quot;&gt;
+        &lt;img src=&quot;opera.jpg&quot; alt=&quot;The Oslo Opera House&quot;&gt;
+    &lt;/picture&gt;
+</code></pre>
+<h3 id="perch-template">Perch Template</h3>
+<pre><code class="lang-html">    &lt;picture&gt;
+      &lt;source srcset=&quot;&lt;perch:content type=&quot;file&quot; id=&quot;webp&quot; label=&quot;Webp Image&quot; help=&quot;Webp image type for supporting browsers.&quot;&gt;&quot; type=&quot;image/webp&quot;&gt;
+      &lt;img src=&quot;&lt;perch:content type=&quot;image&quot; id=&quot;image&quot; label=&quot;Image&quot; help=&quot;Image for broswers without webp support&quot;&gt;&quot; alt=&quot;&lt;perch:content type=&quot;text&quot; id=&quot;alt&quot; label=&quot;Description&quot; required help=&quot;Description of subject of these images.&quot; title&gt;&quot;&gt;
+    &lt;/picture&gt;
+</code></pre>
+<h2 id="high-dpi-images-use-case">High-DPI images use case</h2>
+<p>In this case we want our content editors to only upload one image. Perch will then create three images - a standard one plus two higher DPI images.</p>
+<p>We use the density attribute of the perch:image tag and reuse the id of the image, in order that Perch will know to present just one upload field but create the different images specified.</p>
+<p>The density attribute on a image acts as a multiplier on the dimensions you give. If an image is scaled to a width of 1024 with density=”2”, Perch will actually scale it to 2048, but when asked will output a width value of 1024. It does more than save you some mental arithmetic, though, as it performs the same multiplication on the height, which you can’t know at the time of writing the template.</p>
+<h3 id="output-html">Output HTML</h3>
+<pre><code class="lang-html">    &lt;img src=&quot;opera-1x.jpg&quot; alt=&quot;The Oslo Opera House&quot;
+    srcset=&quot;opera-2x.jpg 2x, opera-3x.jpg 3x&quot;&gt;
+</code></pre>
+<h3 id="perch-template">Perch template</h3>
+<pre><code class="lang-html">    &lt;img src=&quot;&lt;perch:content id=&quot;image&quot; type=&quot;image&quot; width=&quot;1024&quot; label=&quot;Image&quot;&gt;&quot; alt=&quot;&lt;perch:content type=&quot;text&quot; id=&quot;alt&quot; label=&quot;Description&quot; required help=&quot;Description of this image&quot; title&gt;&quot; srcset=&quot;&lt;perch:content id=&quot;image&quot; type=&quot;image&quot; width=&quot;1024&quot; label=&quot;Image&quot; density=&quot;2&quot;&gt; 2x, &lt;perch:content id=&quot;image&quot; type=&quot;image&quot; width=&quot;1024&quot; label=&quot;Image&quot; density=&quot;3&quot;&gt; 3x&quot;&gt;
+</code></pre>
+<h2 id="high-dpi-images-art-direction-use-case">High-DPI images &amp; art direction use case</h2>
+<p>In this case we want to combine art direction - uploading a specific crop for smaller screens with the high-DPI technique. Our content editor will need to upload two images - Perch will create 6.</p>
+<h3 id="output-html">Output HTML</h3>
+<pre><code class="lang-html">    &lt;picture&gt;
+        &lt;source media=&quot;(min-width: 1024px)&quot;
+          srcset=&quot;opera-fullshot-1x.jpg 1x,
+              opera-fullshot-2x.jpg 2x,
+                opera-fullshot-3x.jpg 3x&quot;&gt;
+    &lt;img src=&quot;opera-closeup-1x.jpg&quot; alt=&quot;The Oslo Opera House&quot;
+        srcset=&quot;opera-closeup-2x.jpg 2x,
+                opera-closeup-3x.jpg 3x&quot;&gt;
+    &lt;/picture&gt;
+</code></pre>
+<h3 id="perch-template">Perch template</h3>
+<pre><code class="lang-html">    &lt;picture&gt;
+        &lt;source media=&quot;(min-width: 1024px)&quot;
+          srcset=&quot;&lt;perch:content id=&quot;image&quot; type=&quot;image&quot; label=&quot;Image&quot; help=&quot;Full size image for large screens&quot;&gt; 1x,
+              &lt;perch:content id=&quot;image&quot; type=&quot;image&quot; label=&quot;Image&quot; density=&quot;2&quot;&gt; 2x,
+                &lt;perch:content id=&quot;image&quot; type=&quot;image&quot; label=&quot;Image&quot; density=&quot;3&quot;&gt; 3x&quot;&gt;
+    &lt;img src=&quot;&lt;perch:content type=&quot;image&quot; id=&quot;imagecloseup&quot; label=&quot;Closeup image&quot; help=&quot;Closeup image for small screens, will be resized down to 1024 pixels&quot; width=&quot;1024&quot;&gt;&quot; alt=&quot;&lt;perch:content type=&quot;text&quot; id=&quot;alt&quot; label=&quot;Description&quot; required help=&quot;Description of subject of these images.&quot; title&gt;&quot;
+        srcset=&quot;&lt;perch:content type=&quot;image&quot; id=&quot;imagecloseup&quot; label=&quot;Closeup image&quot; width=&quot;1024&quot; density=&quot;2&quot;&gt; 2x,
+                &lt;perch:content type=&quot;image&quot; id=&quot;imagecloseup&quot; label=&quot;Closeup image&quot; width=&quot;1024&quot; density=&quot;3&quot;&gt; 3x&quot;&gt;
+    &lt;/picture&gt;
+</code></pre>
+<h2 id="changing-image-sizes-use-case">Changing image sizes use case</h2>
+<p>In this use case we want to use different image sizes for different browser window widths. Supporting browsers will select the best image to use. We want our content editor to just need to upload one image, in the case of the below template Perch will then create the main image (used as a fallback in non-supporting browsers) and 4 additional images at widths 200 pixels, 400 pixels, 800 pixels and 1200 pixels.</p>
+<h3 id="output-html">Output HTML</h3>
+<pre><code class="lang-html">    &lt;img src=&quot;opera-fallback.jpg&quot; alt=&quot;The Oslo Opera House&quot;
+    sizes=&quot;(min-width: 640px) 60vw, 100vw&quot;
+    srcset=&quot;opera-200.jpg 200w,
+            opera-400.jpg 400w,
+            opera-800.jpg 800w,
+            opera-1200.jpg 1200w&quot;&gt;
+</code></pre>
+<h3 id="perch-template">Perch template</h3>
+<pre><code class="lang-html">    &lt;img src=&quot;&lt;perch:content type=&quot;image&quot; id=&quot;image&quot; label=&quot;Image&quot; help=&quot;Upload or select an image&quot;&gt;&quot; alt=&quot;&lt;perch:content type=&quot;text&quot; id=&quot;alt&quot; label=&quot;Description&quot; required help=&quot;Description of this image&quot; title&gt;&quot;
+    sizes=&quot;(min-width: 640px) 60vw, 100vw&quot;
+    srcset=&quot;&lt;perch:content type=&quot;image&quot; id=&quot;image&quot; label=&quot;Image&quot; width=&quot;200&quot;&gt; 200w,
+            &lt;perch:content type=&quot;image&quot; id=&quot;image&quot; label=&quot;Image&quot; width=&quot;400&quot;&gt; 400w,
+            &lt;perch:content type=&quot;image&quot; id=&quot;image&quot; label=&quot;Image&quot; width=&quot;800&quot;&gt; 800w,
+            &lt;perch:content type=&quot;image&quot; id=&quot;image&quot; label=&quot;Image&quot; width=&quot;1200&quot;&gt; 1200w&quot;&gt;
+</code></pre>
+<h2 id="changing-image-sizes-high-dpi-images-and-art-direction-use-case">Changing image sizes, high-DPI images and art direction use case</h2>
+<p>As you have probably realised by now you can combine these techniques as best works for your site and requirements. This final template will require the content editor to upload two images - a full-size image and a crop, just as in the very first example. However Perch will create a whole range of images - the fallback image plus 6 versions of the main image and 6 of the crop. The browser will then select the best one to use keeping in mind image width and screen DPI.</p>
+<p>The fantastic thing about this is that your content editor just has to upload or select from Assets two images. Perch and the magic of the picture element will take care of the rest.</p>
+<h3 id="output-html">Output HTML</h3>
+<pre><code class="lang-html">    &lt;picture&gt;
+        &lt;source
+        media=&quot;(min-width: 1280px)&quot;
+        sizes=&quot;50vw&quot;
+        srcset=&quot;opera-fullshot-200.jpg 200w,
+                opera-fullshot-400.jpg 400w,
+                opera-fullshot-800.jpg 800w,
+                opera-fullshot-1200.jpg 1200w,
+                opera-fullshot-1600.jpg 1600w,
+                opera-fullshot-2000.jpg 2000w&quot;&gt;
+        &lt;img
+        src=&quot;opera-fallback.jpg&quot; alt=&quot;The Oslo Opera House&quot;
+        sizes=&quot;(min-width: 640px) 60vw, 100vw&quot;
+        srcset=&quot;opera-closeup-200.jpg 200w,
+                opera-closeup-400.jpg 400w,
+                opera-closeup-800.jpg 800w,
+                opera-closeup-1200.jpg 1200w,
+                opera-closeup-1600.jpg 1600w,
+                opera-closeup-2000.jpg 2000w&quot;&gt;
+    &lt;/picture&gt;
+</code></pre>
+<h3 id="perch-template">Perch template</h3>
+<pre><code class="lang-html">    &lt;picture&gt;
+    &lt;source
+        media=&quot;(min-width: 1280px)&quot;
+        sizes=&quot;50vw&quot;
+        srcset=&quot;&lt;perch:content type=&quot;image&quot; id=&quot;image&quot; label=&quot;Image&quot; width=&quot;200&quot;&gt; 200w,
+                &lt;perch:content type=&quot;image&quot; id=&quot;image&quot; label=&quot;Image&quot; width=&quot;400&quot;&gt; 400w,
+                &lt;perch:content type=&quot;image&quot; id=&quot;image&quot; label=&quot;Image&quot; width=&quot;800&quot;&gt; 800w,
+                &lt;perch:content type=&quot;image&quot; id=&quot;image&quot; label=&quot;Image&quot; width=&quot;1200&quot;&gt; 1200w,
+                &lt;perch:content type=&quot;image&quot; id=&quot;image&quot; label=&quot;Image&quot; width=&quot;1600&quot;&gt; 1600w,
+                &lt;perch:content type=&quot;image&quot; id=&quot;image&quot; label=&quot;Image&quot; width=&quot;2000&quot;&gt; 2000w&quot;&gt;
+        &lt;img
+        src=&quot;&lt;perch:content type=&quot;image&quot; id=&quot;image&quot; label=&quot;Image&quot; help=&quot;Full size image for large screens&quot;&gt;&quot; alt=&quot;&lt;perch:content type=&quot;text&quot; id=&quot;alt&quot; label=&quot;Description&quot; required help=&quot;Description of subject of these images.&quot; title&gt;&quot;
+        sizes=&quot;(min-width: 640px) 60vw, 100vw&quot;
+        srcset=&quot;&lt;perch:content type=&quot;image&quot; id=&quot;imagecloseup&quot; label=&quot;Closeup image&quot; help=&quot;Closeup image for small screens.&quot; width=&quot;200&quot;&gt; 200w,
+                &lt;perch:content type=&quot;image&quot; id=&quot;imagecloseup&quot; label=&quot;Closeup image&quot; width=&quot;400&quot;&gt; 400w,
+                &lt;perch:content type=&quot;image&quot; id=&quot;imagecloseup&quot; label=&quot;Closeup image&quot; width=&quot;800&quot;&gt; 800w,
+                &lt;perch:content type=&quot;image&quot; id=&quot;imagecloseup&quot; label=&quot;Closeup image&quot; width=&quot;1200&quot;&gt; 1200w,
+                &lt;perch:content type=&quot;image&quot; id=&quot;imagecloseup&quot; label=&quot;Closeup image&quot; width=&quot;1600&quot;&gt; 1600w,
+                &lt;perch:content type=&quot;image&quot; id=&quot;imagecloseup&quot; label=&quot;Closeup image&quot; width=&quot;2000&quot;&gt; 2000w&quot;&gt;
+    &lt;/picture&gt;
+</code></pre>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

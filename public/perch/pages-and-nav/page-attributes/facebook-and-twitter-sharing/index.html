@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Use Page Attributes for Open Graph Tags - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:title" content="Use Page Attributes for Open Graph Tags">
+  <meta property="og:description" content="Perch documentation">
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+         <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+
+
+<nav class="site-nav">
+    <ul>
+        <li class="home-link selected"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+  <main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/perch/getting-started/">Getting Started With Perch</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/configuration/">Configuration</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/building/">Building Sites with Perch</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/categories/">Categories</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/content/">Working with Content</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/control-panel/">The Perch Control Panel</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/help/">Troubleshooting Tips</a>
+                        </li>
+                        <li>
+                            <a href="/perch/pages-and-nav/">Pages and Navigation</a>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/layouts/">Layouts</a>
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/navigation/">Navigation</a>
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/page-attributes/">Page Attributes</a>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/page-attributes/facebook-and-twitter-sharing/" class="selected">Use Page Attributes for Open Graph Tags</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/page-attributes/how-do-i-add-a-body-class/">Add a class to the body tag</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/pages/">Creating Pages</a>
+                             
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/perch/resources/">Managing Resources</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/upgrading/">Upgrading to Perch 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+  <h1>Use Page Attributes for Open Graph Tags</h1>
+
+  <p><strong>Using Page Attributes to add Facebook Open Graph Tags and Twitter Cards</strong></p>
+<h2 id="the-page-attributes-functionality-in-perch-makes-it-simple-for-you-to-control-how-your-content-looks-when-it-is-shared-on-twitter-and-facebook-this-solution-shows-you-how-">The Page Attributes functionality in Perch makes it simple for you to control how your content looks when it is shared on Twitter and Facebook. This solution shows you how.</h2>
+<p>Both Twitter and Facebook support open graph tags. These tags go into the head of your document along with other meta information. They allow you to specify a title, description, image and other information that is shown alongside your post on these sites.</p>
+<p>If you have ever shared a blog post and then found the Facebook was displaying a strange image picked from your site alongside it, this solution shows you how to fix that problem!</p>
+<p>This solution relies on functionality that was released in Perch and Perch Runway 2.7.4 so check that you are running at least that version before continuing.</p>
+<p>Perch ships with a basic Page Attributes template that you can find in <code>perch/templates/pages/attributes</code>. The default.html template includes seo.html - a template for adding page meta data. To add Facebook and Twitter tags I am going to create two new templates:</p>
+<ul>
+<li>facebook.html</li>
+<li>twitter.html</li>
+</ul>
+<p>I then link these into the default.html template.</p>
+<pre><code class="lang-html">    &lt;perch:template path=&quot;pages/attributes/seo.html&quot;&gt;
+    &lt;perch:template path=&quot;pages/attributes/facebook.html&quot;&gt;
+    &lt;perch:template path=&quot;pages/attributes/twitter.html&quot;&gt;
+</code></pre>
+<h3 id="facebook-html">facebook.html</h3>
+<p>The contents of this template is as follows:</p>
+<pre><code class="lang-html">    &lt;meta property=&quot;og:site_name&quot; content=&quot;&lt;perch:pages id=&quot;sitename&quot; type=&quot;hidden&quot;&gt;&quot;&gt;
+    &lt;meta property=&quot;og:url&quot; content=&quot;&lt;perch:pages id=&quot;url&quot; type=&quot;hidden&quot;&gt;&quot;&gt;
+    &lt;meta property=&quot;og:title&quot; content=&quot;&lt;perch:pages id=&quot;og_title&quot; label=&quot;Social title&quot; type=&quot;text&quot; escape help=&quot;Title for this document with no branding or site name&quot; divider-before=&quot;Facebook Open Graph Tags&quot;&gt;&quot;&gt;
+    &lt;meta property=&quot;og:description&quot; content=&quot;&lt;perch:pages id=&quot;og_description&quot; label=&quot;Social description&quot; type=&quot;textarea&quot; size=&quot;s&quot; escape&gt;&quot;&gt;
+    &lt;perch:if exists=&quot;og_image&quot;&gt;
+    &lt;meta property=&quot;og:image&quot; content=&quot;&lt;perch:pages id=&quot;domain&quot; type=&quot;hidden&quot;&gt;&lt;perch:pages id=&quot;og_image&quot; label=&quot;Image when shared&quot; help=&quot;Should be at least 1200x630&quot; type=&quot;image&quot; width=&quot;1200&quot;&gt;&quot;&gt;
+    &lt;perch:else&gt;
+    &lt;meta property=&quot;og:image&quot; content=&quot;&lt;perch:pages id=&quot;domain&quot; type=&quot;hidden&quot;&gt;&lt;perch:pages id=&quot;sharing_image&quot; type=&quot;hidden&quot;&gt;&quot;&gt;
+    &lt;/perch:if&gt;
+    &lt;perch:if exists=&quot;og_type&quot;&gt;
+    &lt;meta property=&quot;og:type&quot; content=&quot;&lt;perch:pages id=&quot;og_type&quot; label=&quot;Facebook type&quot; type=&quot;select&quot; options=&quot;article,book,profile,website,video,music&quot; allowempty&gt;&quot;&gt;
+    &lt;/perch:if&gt;
+    &lt;perch:if exists=&quot;og_author&quot;&gt;
+    &lt;meta property=&quot;article:author&quot; content=&quot;&lt;perch:pages id=&quot;og_author&quot; type=&quot;hidden&quot;&gt;&quot;&gt;
+    &lt;/perch:if&gt;
+</code></pre>
+<ul>
+<li><strong>og:site_name</strong> - this is the name of the site.</li>
+<li><strong>og:url</strong> - the page URL</li>
+<li><strong>og:title</strong> - a title as used on Facebook</li>
+<li><strong>og:description</strong> - a description</li>
+<li><strong>og:image</strong> - an image</li>
+<li><strong>og:type</strong> - a defined type, if not set will default to website</li>
+<li><strong>og:author</strong> - The author of the piece, needs to be a Facebook Page or Profile.</li>
+</ul>
+<p>The Open Graph tags are <a href="https://developers.facebook.com/docs/sharing/best-practices#tags">detailed on Facebook</a>. You can add any other tags that are relevant to your content, in the same way as my examples.</p>
+<p>Some of the fields in my template are regular Perch Content tags that will add fields to the Page Details Tab in the Perch Control Panel.</p>
+<p>Others have been set to <code>type=&quot;hidden&quot;</code> because I am going to pass the information to these tags from the page rather than ask an editor to fill them in.</p>
+<h3 id="twitter-html">twitter.html</h3>
+<p>My twitter.html template contains the following tags.</p>
+<pre><code class="lang-html">    &lt;meta name=&quot;twitter:card&quot; content=&quot;summary&quot;&gt;
+    &lt;meta name=&quot;twitter:site&quot; content=&quot;&lt;perch:pages id=&quot;twittername&quot; type=&quot;hidden&quot;&gt;&quot;&gt;
+    &lt;meta name=&quot;twitter:title&quot; content=&quot;&lt;perch:pages id=&quot;og_title&quot; label=&quot;Social title&quot; type=&quot;text&quot; escape help=&quot;Title for this document with no branding or site name&quot;&gt;&quot;&gt;
+    &lt;meta name=&quot;twitter:description&quot; content=&quot;&lt;perch:pages id=&quot;og_description&quot; label=&quot;Social description&quot; type=&quot;textarea&quot; size=&quot;s&quot; escape&gt;&quot;&gt;
+    &lt;perch:if exists=&quot;og_image&quot;&gt;
+    &lt;meta property=&quot;twitter:image&quot; content=&quot;&lt;perch:pages id=&quot;domain&quot; type=&quot;hidden&quot;&gt;&lt;perch:pages id=&quot;og_image&quot; label=&quot;Image when shared&quot; help=&quot;Should be at least 1200x630&quot; type=&quot;image&quot; width=&quot;1200&quot;&gt;&quot;&gt;
+    &lt;/perch:if&gt;
+    &lt;meta name=&quot;twitter:url&quot; content=&quot;&lt;perch:pages id=&quot;url&quot; type=&quot;hidden&quot;&gt;&quot;&gt;
+</code></pre>
+<ul>
+<li><strong>twitter:card</strong> - set to summary, there are other types of card if you are publishing certain content</li>
+<li><strong>twitter:site</strong> - set to the Twitter handle for the site author</li>
+<li><strong>twitter:title</strong> - I use the same ID as in the Facebook template so that the editor can enter this once and the content is used for Twitter and Facebook. Change the ID if you want to add special content for each.</li>
+<li><strong>twitter:image</strong> - reusing the ID for the Facebook image</li>
+<li><strong>twitter:url</strong> - the URL of the content</li>
+</ul>
+<p>You can see the information about these tags on the <a href="https://dev.twitter.com/cards/types/summary">Twitter developer site</a>. As with the Facebook template some of these tags will create a field to complete and others we will pass in values from the page.</p>
+<h3 id="adding-the-tags-to-our-pages">Adding the tags to our pages</h3>
+<p>In a Perch Layout (or just on each page if you are not using layouts) you can set variables that are then available to the template engine using PerchSystem::set_var. Before including my attribute templates I set these variables. I am getting the domain and full URL of the page, setting the name of the website and including a default image which can be overridden if the content editor uploads a specific one for any page.</p>
+<p>Finally I call in my default.html template, which includes my Facebook and Twitter templates. The below code should go in-between the <code>&lt;head&gt;&lt;/head&gt;</code> tags in your page or layout.</p>
+<pre><code class="lang-php">    &lt;?php
+    $domain        = &#39;http://&#39;.$_SERVER[&quot;HTTP_HOST&quot;];
+    $url           = $domain.$_SERVER[&quot;REQUEST_URI&quot;];
+    $sitename      = &quot;The name of my website&quot;;
+    $twittername   = &quot;@mytwittername&quot;;
+    $sharing_image = &#39;/images/default_fb_image.jpg&#39;;
+
+    PerchSystem::set_var(&#39;domain&#39;,$domain);
+    PerchSystem::set_var(&#39;url&#39;,$url);
+    PerchSystem::set_var(&#39;sharing_image&#39;,$sharing_image);
+    PerchSystem::set_var(&#39;twittername&#39;,$twittername);
+
+    perch_page_attributes(array(        
+      &#39;template&#39; =&gt; &#39;default.html&#39;    
+    ));
+    ?&gt;
+</code></pre>
+<p>You should now be able to edit the contents of the template tags in the Page Details section of any page and see the values appear in the head section of your page.</p>
+<p>If you are using the Twitter tags you should <a href="https://cards-dev.twitter.com/validator">validate your card on Twitter</a>. This page will also tell you if you need to authorise the use of cards on your domain and allow you to do that.</p>
+<p><a href="https://developers.facebook.com/tools/debug/">Facebook also have a handy tool</a> that lets you see what will be returned for any URL.</p>
+<h3 id="pushing-blog-or-other-app-content-into-page-attributes">Pushing blog or other app content into Page Attributes</h3>
+<p>The above all works well for regular page content, and you can now make sure that each page has the meta information added. However for app content such as blog, or any List/Detail type display of content you may have a single “page” that actually holds the content for 100s of articles.</p>
+<p>In Perch 2.7.4 the <code>perch_page_attributes_extend</code> function accepts an array of data that will essentially overwrite anything that has been set for the attributes named. Use the function before your layout, or wherever you include your attributes template.</p>
+<p>In the following example, I have a post.php that is the page on which blog posts display (this would be the blog post Master Page in Perch Runway).</p>
+<p>I get my post using <code>perch_blog_post_custom</code> with the <code>return-html</code> value set to true. This will give me the full templated blog post but also all the individual fields inside $post[0].</p>
+<p>I have added a field to my blog template with an ID of fbimage specifically so that content editors can include an image for social sharing.</p>
+<pre><code class="lang-php">    &lt;?php
+    # get the post
+    $post = perch_blog_custom(array(
+          &#39;filter&#39;        =&gt; &#39;postSlug&#39;,
+          &#39;match&#39;         =&gt; &#39;eq&#39;,
+          &#39;value&#39;         =&gt; perch_get(&#39;s&#39;),
+          &#39;skip-template&#39; =&gt; &#39;true&#39;,
+          &#39;return-html&#39;   =&gt; &#39;true&#39;,
+      ));
+
+    # set up the variables
+    $title       = $post[&#39;0&#39;][&#39;postTitle&#39;];
+    $description = strip_tags($post[&#39;0&#39;][&#39;excerpt&#39;]);
+    if (isset($post[0][&#39;fbimage&#39;])) {
+        $fbimage = $post[0][&#39;fbimage&#39;];
+    } else {
+        $fbimage = &#39;&#39;;
+    }
+
+    # use the variables in the array value
+    perch_page_attributes_extend(array(
+        &#39;description&#39;    =&gt; $description,
+        &#39;og_description&#39; =&gt; $description,
+        &#39;og_title&#39;       =&gt; $title,
+        &#39;og_type&#39;        =&gt; &#39;article&#39;,
+        &#39;sharing_image&#39;  =&gt; $fbimage,
+        &#39;og_author&#39;      =&gt; &#39;https://www.facebook.com/myfbname&#39;,
+    ));
+    ?&gt;
+</code></pre>
+<p>To actually display the blog post, I can save another PHP function call by just echoing out the variable <code>$post[&#39;html&#39;]</code>.</p>
+<pre><code class="lang-php">    &lt;?php echo $post[&#39;html&#39;]; ?&gt;
+</code></pre>
+<p>This process would work for any of the apps, for example pushing in details about a podcast or event. It would also work in a List Detail using perch_content_custom or with Collections in Runway.</p>
+
+
+  <ul>
+      <li>
+          Use Page Attributes for Open Graph Tags
+          <ul>
+          </ul>
+      </li>
+  </ul>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

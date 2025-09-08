@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>perch_blog_post_comments() - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="perch_blog_post_comments()">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li class="selected"><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/functions/announcements/">Announcements</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/blog/">Blog</a>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-author-for-post/">perch_blog_author_for_post()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-author/">perch_blog_author</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-authors/">perch_blog_authors()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-categories/">perch_blog_categories()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-category/">perch_blog_category()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-custom/">perch_blog_custom()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-date-archive-months/">perch_blog_date_archive_months()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-date-archive-years/">perch_blog_date_archive_years()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-post-categories/">perch_blog_post_categories()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-post-comment-form/">perch_blog_post_comment_form()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-post-comments/" class="selected">perch_blog_post_comments()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-post-field/">perch_blog_post_field()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-post-meta/">perch_blog_post_meta()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-post-tags/">perch_blog_post_tags()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-post/">perch_blog_post()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-recent-posts/">perch_blog_recent_posts()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-section/">perch_blog_section()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-sections/">perch_blog_sections()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-tag/">perch_blog_tag()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blog-tags/">perch_blog_tags()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/blog/perch-blogs/">perch_blogs()</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/functions/categories/">Categories Functions</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/collections/">Collection functions</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/comments/">Comments</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/content/">Content functions</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/events/">Events</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/form/">Form</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/gallery/">Gallery</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/layouts/">Layout Functions</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/listings/">Listings</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/mailchimp/">Mailchimp</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/members/">Members</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/navigation/">Navigation &amp; Page Functions</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/page-attributes/">Page Attributes</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/podcasts/">Podcasts</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/search/">Search Functions</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/shop-foxycart/">Foxycart (deprecated)</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/shop-paypal/">PayPal Shop (deprecated)</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/shop/">Shop</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/twitter/">Twitter</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/utilities/">Utility Functions</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>perch_blog_post_comments()</h1>
+
+  <p>Displays comments for a given post.</p>
+<h2 id="requires">Requires</h2>
+<ul>
+<li>The Blog App installed</li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID or Slug</td>
+<td>the ID or slug of your post</td>
+</tr>
+<tr>
+<td>Array</td>
+<td>Options array, see table below</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>Set to <code>true</code> to have the value returned instead of echoed.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="options-array">Options array</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>template</td>
+<td>The template to use.</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>The ID of the field to sort by (detault: commentDateTime)</td>
+</tr>
+<tr>
+<td>sort-order</td>
+<td>ASC/DESC</td>
+</tr>
+<tr>
+<td>paginate</td>
+<td>True or false. Whether to use pagination.</td>
+</tr>
+<tr>
+<td>count</td>
+<td>Integer. (When used with <code>paginate</code>) The number of items to show per page if pagination is being used.</td>
+</tr>
+<tr>
+<td>pagination-var</td>
+<td>The URL query string parameter name to use for the page number. Defaults to page.</td>
+</tr>
+<tr>
+<td>page-links</td>
+<td>True or false. Create numbered page links as well as previous and next links.</td>
+</tr>
+<tr>
+<td>page-link-template</td>
+<td>The template to use (if not the default) to generate the page links.</td>
+</tr>
+<tr>
+<td>page-link-style</td>
+<td>shortened or all. By default a shortened set of page links are generated. If you want a link for every page, set to all.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usage-examples">Usage examples</h2>
+<p>The first argument must be either the ID of a post, or a unique post slug. Usually this will have been passed on the URL from a blog listing page.</p>
+<pre><code class="lang-php">&lt;?php perch_blog_post_comments(perch_get(&#39;s&#39;)); ?&gt;
+</code></pre>
+<p>An options array can be used to pass in an alternate template.</p>
+<pre><code class="lang-php">&lt;?php
+perch_blog_post_comments(perch_get(&#39;s&#39;), array(
+     &#39;template&#39; =&gt; &#39;comment.html&#39;,
+));
+?&gt;
+</code></pre>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

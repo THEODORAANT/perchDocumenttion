@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>to_array() - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="to_array()">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li class="selected"><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/api/apps/">Apps</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/auth/">Authentication plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/buckets/">Bucket handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/custom-ui/">UI Customisations</a>
+                        </li>
+                        <li>
+                            <a href="/api/dashboard/">Dashboard Widgets</a>
+                        </li>
+                        <li>
+                            <a href="/api/editors/">Editor plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/events/">Event hooks</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/api/template-filters/">Template filters</a>
+                        </li>
+                        <li>
+                            <a href="/api/templates/">Template handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/field-types/">Field Types</a>
+                        </li>
+                        <li>
+                            <a href="/api/validators/">Form validators</a>
+                        </li>
+                        <li>
+                            <a href="/api/search/">Search handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/shortcodes/">Shortcode providers</a>
+                        </li>
+                        <li>
+                            <a href="/api/translations/">Translations</a>
+                        </li>
+                        <li>
+                            <a href="/api/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/api/import/">Importing Content</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/reference/">API Reference</a>
+                            <ul>    <li>
+                            <a href="/api/reference/perchapi/">Perch API</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/html/">HTML</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/lang/">Lang</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/template/">Template</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/xmltag/">PerchXMLTag</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/adminlisting/">PerchAdminListing</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/db/">Database</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/fieldtype/">FieldType</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/perchapi-base/">PerchAPI_Base</a>
+                            <ul>    <li>
+                            <a href="/api/reference/perchapi-base/id/">id()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/perchapi-base/update/">update()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/perchapi-base/delete/">delete()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/perchapi-base/index-function/">index()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/perchapi-base/to-array/" class="selected">to_array()</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/perchapi-factory/">PerchAPI_Factory</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/perchapi-submittedform/">PerchAPI_SubmittedForm</a>
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/reference/settings/">Settings</a>
+                        </li>
+                    </ul>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>to_array()</h1>
+
+  <p>The <code>to_array()</code> method gets the item’s data in an associative array. The method also JSON decodes the value of the dynamic fields column (if one exists) and includes the values in the returned array.</p>
+<p>If the <code>PerchAPI_Base</code> object’s property <code>prefix_vars</code> is set to <code>true</code>, the method also includes a duplicate for each dynamic field with a key prefixed with <code>perch_</code>. This is useful for control panel edit forms that are handled with <code>PerchAPI_Form</code>.</p>
+<h2 id="return">Return</h2>
+<p>Array</p>
+<h2 id="usage">Usage</h2>
+<pre><code class="lang-php">$API = new PerchAPI(1.0, &#39;company_app&#39;);
+$Articles = new CompanyApp_Articles($API);
+
+$Template   = $API-&gt;get(&#39;Template&#39;);
+$Template-&gt;set(&#39;path/to/template.html&#39;, &#39;namespace&#39;);
+
+
+$Article = $Articles-&gt;find(37);
+
+if( is_object($Article) ) {
+    // $Article is a PerchAPI_Base object
+    $details = $Article-&gt;to_array();
+}
+</code></pre>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

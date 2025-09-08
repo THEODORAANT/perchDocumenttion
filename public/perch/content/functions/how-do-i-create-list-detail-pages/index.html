@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create a list detail page - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Create a list detail page">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link selected"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/perch/getting-started/">Getting Started With Perch</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/configuration/">Configuration</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/building/">Building Sites with Perch</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/categories/">Categories</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/content/">Working with Content</a>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/">Functions</a>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/content-from-multiple-pages-and-regions/">Combining Content from Several Regions</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/create-a-prepopulated-region/">Pre-populating Template Regions</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/get-content-before-templating/">Accessing content before it is templated</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-add-an-rss-feed/">Adding an RSS Feed</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-create-a-faq/">Creating a FAQ</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-create-a-google-sitemap/">Create a Google Sitemap</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-create-list-detail-pages/" class="selected">Create a list detail page</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-link-prev-next/">Previous and Next Links in content</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/passing-options-to-custom-functions/">How to pass options to custom functions</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/show-one-random-item/">Display an item at random</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/sorting-data/">Sorting data</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/two-page-list-and-detail/">Two page list and detail</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/user-filtered-lists/">A user-filtered list</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/">Templates</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/perch/control-panel/">The Perch Control Panel</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/help/">Troubleshooting Tips</a>
+                        </li>
+                        <li>
+                            <a href="/perch/pages-and-nav/">Pages and Navigation</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/resources/">Managing Resources</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/upgrading/">Upgrading to Perch 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Create a list detail page</h1>
+
+  <p><strong>How do I create list and detail pages in Perch?</strong></p>
+<p>A common pattern in many websites is the idea of list-and-detail pages. One view shows a list of items, and clicking through shows more detail about the chosen item. This can be accomplished with Perch using a multiple-item content region.</p>
+<p>This guide will show you how to set up list and detail pages for a simple list of products. The same technique would apply for many other types of content, such as news articles, real estate listings, events and so on.</p>
+<p>If you get lost, you can download the example files from the end of the article and get back on track.</p>
+<h2 id="setting-up-the-templates">Setting up the templates</h2>
+<p>We need two templates – one for the detail view (showing all the information) and one shortened view for the listing page.</p>
+<h3 id="detail-template">Detail template</h3>
+<p>The detail template is the master template – the one that’s used for editing. It needs to include fields for all the information you want to appear in the edit form. It is used for the detail page when the user clicks through from a listing.</p>
+<p>In our case, it needs to represent one single product. Save this as product_detail.html</p>
+<pre><code class="lang-html">    &lt;h1&gt;&lt;perch:content id=&quot;title&quot; type=&quot;text&quot; label=&quot;Product title&quot; required title&gt;&lt;/h1&gt;
+    &lt;perch:content id=&quot;image&quot; type=&quot;image&quot; label=&quot;Image&quot; width=&quot;640&quot; output=&quot;tag&quot;&gt;
+    &lt;perch:content id=&quot;desc&quot; type=&quot;textarea&quot; label=&quot;Description&quot; textile editor=&quot;markitup&quot;&gt;
+    &lt;p&gt;Price: &amp;pound;&lt;perch:content id=&quot;price&quot; type=&quot;text&quot; label=&quot;Price&quot; format=&quot;#:2&quot;&gt;&lt;/p&gt;
+    &lt;perch:content id=&quot;slug&quot; for=&quot;title&quot; type=&quot;slug&quot; suppress&gt;
+    &lt;perch:content id=&quot;image&quot; type=&quot;image&quot; label=&quot;Image&quot; width=&quot;100&quot; height=&quot;100&quot; crop suppress&gt;
+</code></pre>
+<p>At the end of the template we’ve added an additional size for the image – the suppress attribute will stop it being output on the detail template, but keeps it available for us to use on the listing template. As this is the master template, all the image sizes we want to use need to be defined here, else they won’t be created.</p>
+<p>We’ve also added a ‘slug’ field. This makes a URL-friendly version of the title for use when linking to the detail page. It is also suppressed, as we don’t want to show it here, just make sure it’s created.</p>
+<h3 id="list-template">List template</h3>
+<p>The list template is just a simplified version of the detail template. The only addition is before and after sections, to add the right markup for a list. Save this as product_listing.html</p>
+<pre><code class="lang-html">    &lt;perch:before&gt;
+    &lt;ul&gt;
+    &lt;/perch:before&gt;
+    &lt;li&gt;
+     &lt;a href=&quot;?s=&lt;perch:content id=&quot;slug&quot; type=&quot;slug&quot;&gt;&quot;&gt;
+          &lt;perch:content id=&quot;image&quot; type=&quot;image&quot; width=&quot;100&quot; height=&quot;100&quot; crop output=&quot;tag&quot;&gt;
+          &lt;perch:content id=&quot;title&quot; type=&quot;text&quot;&gt;
+     &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;perch:after&gt;
+    &lt;/ul&gt;
+    &lt;/perch:after&gt;
+</code></pre>
+<p>As well as adding markup to make this a list of items (the <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> tags) we’ve added a link. The link uses the slug field as a query string parameter. That means that if our listing page URL looks like:</p>
+<p><code>/products.php</code></p>
+<p>a detail page might look like:</p>
+<p><code>/products.php?s=wooden-handled-claw-hammer</code></p>
+<p>You can, of course, use mod_rewrite rules to write cleaner URLs, but we’ll keep this simple for now.</p>
+<h2 id="setting-up-the-page">Setting up the page</h2>
+<p>Now that we have our templates, it’s time to create the page. We’re going to use one page that acts in a different way depending if it’s in list or detail mode.</p>
+<p><em>Tip: You can use two different pages if you prefer, by splitting the parts out. Perhaps follow along with this one-page example first, until you understand how it’s working.</em></p>
+<p>Create a new page, products.php, with whatever boilerplate code you’d like to use for the page. Here’s mine:</p>
+<pre><code class="lang-html">    &lt;?php include(&#39;perch/runtime.php&#39;); ?&gt;
+    &lt;!doctype html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+      &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Products&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+
+      &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
+<h2 id="creating-the-region">Creating the region</h2>
+<p>Normally, new regions are created by putting a <code>perch_content()</code> region in the page. In this instance, we’ll be displaying the content using <code>perch_content_custom()</code> for both the list and the detail view. Therefore, we’ll use <code>perch_content_create()</code> to set up the region instead.</p>
+<pre><code class="lang-php">    &lt;?php
+    perch_content_create(&#39;Products&#39;, array(
+     &#39;template&#39;   =&gt; &#39;product_detail.html&#39;,
+     &#39;multiple&#39;    =&gt; true,
+     &#39;edit-mode&#39; =&gt; &#39;listdetail&#39;,
+    ));
+    ?&gt;
+</code></pre>
+<p>Here we’re specifying the detail template as the master template for the region. We’re setting multiple to true, so that the region allows for multiple items, and setting the edit mode to list/detail (rather than editing all the items at once).</p>
+<p>When the page loads, this region will be created at set up, if it doesn’t already exist.</p>
+<p>Refresh the page, check that it shows up in admin, and add a few products to test with – you’ll need them in a moment so that you know it’s all working.</p>
+<h2 id="choosing-a-mode-list-or-detail-">Choosing a mode – list or detail?</h2>
+<p>We next need to add some logic to the page to decide whether to show list mode or detail mode. We’ll do that by looking to see if there’s a product slug on the page URL. We do that with <code>perch_get()</code>, which is a helper function that looks for items on the query string.</p>
+<pre><code class="lang-php">    &lt;?php
+    if (perch_get(&#39;s&#39;)) {
+
+     // Detail mode
+
+    } else {
+
+     // List mode
+
+    }
+
+  ?&gt;
+</code></pre>
+<p>The logic says “if s=something is set on the query string, show detail mode, otherwise, show list mode”.</p>
+<h2 id="adding-the-list-code">Adding the list code</h2>
+<p>We’re going to use <code>perch_content_custom()</code> to show the list code. All we need it to do is show the region using the list template.</p>
+<pre><code class="lang-php">    perch_content_custom(&#39;Products&#39;, array(
+     &#39;template&#39; =&gt; &#39;product_listing.html&#39;,
+    ));
+</code></pre>
+<p>This goes in the ‘else’ section:</p>
+<pre><code class="lang-php">    &lt;?php
+    if (perch_get(&#39;s&#39;)) {
+
+     // Detail mode
+
+    } else {
+
+     // List mode
+     perch_content_custom(&#39;Products&#39;, array(
+          &#39;template&#39; =&gt; &#39;product_listing.html&#39;,
+     ));
+    }
+
+    ?&gt;
+</code></pre>
+<p>If you load your page in the browser, you should see your test products listed. Click through to one of them, and should get nothing… yet. Note how the URL now has a s= query string parameter that contains your product slug. It’s this that we’ll use to filter the detail view to show just one product.</p>
+<h2 id="adding-the-detail-code">Adding the detail code</h2>
+<p>To display the detail view of a single product, we need to get clever. We know the ‘slug’ from the value of s= on the query string. We need to feed that into a filter with <code>perch_content_custom()</code></p>
+<pre><code class="lang-php">    perch_content_custom(&#39;Products&#39;, array(
+     &#39;template&#39; =&gt; &#39;product_detail.html&#39;,
+     &#39;filter&#39; =&gt; &#39;slug&#39;,
+     &#39;match&#39; =&gt; &#39;eq&#39;,
+     &#39;value&#39; =&gt; perch_get(&#39;s&#39;),
+     &#39;count&#39; =&gt; 1,
+    ));
+</code></pre>
+<p>As this is the detail view, we’ve chosen the product_detail.html template to use. The filter, match and value options are saying “find any items where the slug is equal to whatever s= is on the query string”. And then just to be sure, we set the count to 1, as we only every want to output a single item here.</p>
+<p>This goes in the top half of the if block:</p>
+<pre><code class="lang-php">    &lt;?php
+    if (perch_get(&#39;s&#39;)) {
+
+     // Detail mode
+     perch_content_custom(&#39;Products&#39;, array(
+          &#39;template&#39; =&gt; &#39;product_detail.html&#39;,
+          &#39;filter&#39; =&gt; &#39;slug&#39;,
+          &#39;match&#39; =&gt; &#39;eq&#39;,
+          &#39;value&#39; =&gt; perch_get(&#39;s&#39;),
+          &#39;count&#39; =&gt; 1,
+     ));
+    } else {
+
+     // List mode
+     perch_content_custom(&#39;Products&#39;, array(
+          &#39;template&#39; =&gt; &#39;product_listing.html&#39;,
+     ));
+    }
+
+    ?&gt;
+</code></pre>
+<p>Reload your previously empty ‘detail’ page in the browser, and you should see your content appear. That’s it, we’re done!</p>
+<p><a href="https://static.grabaperch.com/docs/download-list-detail.zip">Download the files for this solution</a></p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

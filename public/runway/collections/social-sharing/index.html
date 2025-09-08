@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Social Sharing with Collections, Layout and Blog - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Social Sharing with Collections, Layout and Blog">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li class="selected"><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/runway/caching/">Caching</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/cloud-storage/">Cloud Storage</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/collections/">Collections</a>
+                            <ul>    <li>
+                            <a href="/runway/collections/callback-functions-with-each/">Callback Functions with each</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/collections/relationships/">Relationships</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/collections/social-sharing/" class="selected">Social Sharing with Collections, Layout and Blog</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/runway/configuration/">Configuration</a>
+                        </li>
+                        <li>
+                            <a href="/runway/core-tasks/">Core Tasks</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/getting-started/">Getting Started with Runway</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/headless/">Headless requests</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/relationships/">Relationships</a>
+                        </li>
+                        <li>
+                            <a href="/runway/routing/">Routing</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/site-access/">Controlling site access</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading/">Upgrading to Runway 4</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading3/">Upgrading to Runway 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Social Sharing with Collections, Layout and Blog</h1>
+
+  <p>Blog version 5 has built-in social sharing templates, in this post I show how to add that functionality to content that is part of a Runway Collection.</p>
+<p>In the <a href="/functions/blog/perch-blog-post-meta/">documentation</a> for <code>perch_blog_meta</code> we show you how to switch your layout to show your page title on regular pages and the Blog meta and social sharing information on blog posts. If you have followed that information you should have the following code in your global layout for the head of your site. I’ve also included the perch_page_attributes function which, using the default template included with a Perch Runway install, just outputs the page meta information.</p>
+<pre><code class="lang-html">&lt;head&gt;
+&lt;?php
+  if (perch_layout_has(&#39;blog-post&#39;)) {
+    perch_blog_post_meta(perch_get(&#39;s&#39;));
+  }else{
+    echo &#39;&lt;title&gt;&#39; . perch_pages_title(true) . &#39;&lt;/title&gt;&#39;;
+  }
+?&gt;
+&lt;?php perch_page_attributes(); ?&gt;
+&lt;/head&gt;
+</code></pre>
+<p>You may also however be using a Collection to display content in a list detail format. In my case I have a Collection of recipes with a recipe listing page clicking through to a recipe detail page.</p>
+<h2 id="create-a-social-attributes-template">Create a social attributes template</h2>
+<p>The first step is to create a social sharing attributes template. This needs to live in the perch/templates/pages/attributes/ folder. I called mine social.html and have essentially copied the one from the Blog templates folder. Note that the Perch template tags need to be perch:pages and not perch:blog.</p>
+<pre><code class="lang-html">&lt;meta property=&quot;og:site_name&quot; content=&quot;&lt;perch:pages id=&quot;site_name&quot;&gt;&quot;&gt;
+&lt;meta property=&quot;og:url&quot; name=&quot;twitter:url&quot; content=&quot;&lt;perch:pages id=&quot;domain&quot;&gt;&lt;perch:pages id=&quot;url&quot;&gt;&quot;&gt;
+&lt;meta property=&quot;og:title&quot; name=&quot;twitter:title&quot; content=&quot;&lt;perch:pages id=&quot;title&quot;&gt;&quot;&gt;
+&lt;meta property=&quot;og:description&quot; name=&quot;twitter:description&quot; content=&quot;&lt;perch:pages id=&quot;description&quot;&gt;&quot;&gt;
+&lt;perch:if exists=&quot;og_image&quot;&gt;
+&lt;meta property=&quot;og:image&quot; name=&quot;twitter:image&quot; content=&quot;&lt;perch:pages id=&quot;domain&quot;&gt;&lt;perch:pages id=&quot;og_image&quot; label=&quot;Image when shared&quot; help=&quot;Should be at least 1200x630&quot; type=&quot;image&quot; width=&quot;1200&quot;&gt;&quot;&gt;
+&lt;/perch:if&gt;
+&lt;perch:if exists=&quot;og_type&quot;&gt;
+  &lt;meta property=&quot;og:type&quot; content=&quot;&lt;perch:pages id=&quot;og_type&quot; label=&quot;Facebook type&quot; type=&quot;select&quot; options=&quot;article,book,profile,website,video,music&quot; allowempty&gt;&quot;&gt;
+&lt;/perch:if&gt;
+&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;&gt;
+</code></pre>
+<h2 id="edit-the-layout">Edit the layout</h2>
+<p>Now I have my template I need to include this when I display my recipe detail page. To do this I edit the header.</p>
+<pre><code class="lang-php">&lt;?php
+if (perch_layout_has(&#39;blog-post&#39;)) {
+  perch_blog_post_meta(perch_get(&#39;s&#39;));
+} elseif (perch_layout_has(&#39;recipe-post&#39;)) {
+  echo &#39;&lt;title&gt;&#39;.perch_layout_var(&#39;title&#39;, true).&#39;&lt;/title&gt;&#39;;
+
+  perch_page_attributes_extend([
+    &#39;description&#39;   =&gt; perch_layout_var(&#39;description&#39;,true),
+    &#39;title&#39;         =&gt; perch_layout_var(&#39;title&#39;, true),
+    &#39;domain&#39;        =&gt; SITE_DOMAIN,
+    &#39;site_name&#39;     =&gt; SITE_NAME,
+    &#39;og_image&#39;      =&gt; perch_layout_var(&#39;og_image&#39;, true),
+    &#39;url&#39;           =&gt; $_SERVER[&#39;REQUEST_URI&#39;],
+    &#39;og_type&#39;       =&gt; perch_layout_var(&#39;og_type&#39;, true),
+   ]
+ );
+ //add a new attribute template for social sharing
+ perch_page_attributes([
+   &#39;template&#39; =&gt; &#39;social.html&#39;,
+ ]);
+}else{
+  echo &#39;&lt;title&gt;&#39; . perch_pages_title(true) . &#39;&lt;/title&gt;&#39;;
+}
+?&gt;
+&lt;?php perch_page_attributes(); ?&gt;
+</code></pre>
+<p>I am now checking for a variable called recipe-post in the same way I checked to see if I had a blog post. Then I use the <code>perch_page_attributes_extend</code> function to push values into Page Attributes. We’ll see where those values come from in a minute, but if you also look below that function you can see I am adding a new template to <code>perch_page_attributes</code>, that’s the template we just created.</p>
+<h2 id="getting-the-values-to-the-layout">Getting the values to the layout</h2>
+<p>The last part of the puzzle is to get the values from my recipe and pass them to the layout. Two of the values are essentially constants – the site name and domain. So I add these in the Perch Config file as constants.</p>
+<h2 id="edit-perch-config-config-php">Edit perch/config/config.php</h2>
+<pre><code class="lang-php">define(&#39;SITE_NAME&#39;,&#39;My lovely recipe site&#39;);
+define(&#39;SITE_DOMAIN&#39;,&#39;http://my-lovely-recipes.example.com&#39;);
+</code></pre>
+<h2 id="edit-the-recipe-template">Edit the recipe template</h2>
+<p>I also need to make sure I have the content to share and so I add to my recipe master template an additional field for a social sharing description and image.</p>
+<pre><code class="lang-html">&lt;perch:content id=&quot;description&quot; label=&quot;Short description&quot; type=&quot;textarea&quot; size=&quot;s&quot; suppress&gt;
+&lt;perch:content id=&quot;og_image&quot; type=&quot;image&quot; width=&quot;1200&quot; label=&quot;Image when shared&quot; help=&quot;Should be at least 1200x630&quot; suppress&gt;
+</code></pre>
+<h2 id="edit-the-recipe-detail-page">Edit the recipe detail page</h2>
+<p>I now need to edit my detail page. As a Collection detail page I was filtering on the recipe slug and displaying the content of the recipe using my master template.</p>
+<pre><code class="lang-php">&lt;?php
+// Include the header. You can find this in templates/layouts/global
+perch_layout(&#39;global/header&#39;, [
+  &#39;body-class&#39; =&gt; &#39;recipe&#39;
+]);
+perch_layout(&#39;global/nav&#39;);
+perch_collection(&#39;Recipes&#39;, [
+  &#39;template&#39;   =&gt;&#39;collections/recipe.html&#39;,
+  &#39;filter&#39;    =&gt; &#39;slug&#39;,
+  &#39;match&#39;     =&gt; &#39;eq&#39;,
+  &#39;value&#39;     =&gt; perch_get(&#39;s&#39;)
+]);
+// Include the footer. You can find this in templates/layouts/global
+perch_layout(&#39;global/footer&#39;);
+</code></pre>
+<p>I need to change this slightly to get all of the Collection data back as an array, so I can pass the information to my layout. To do this I move the perch_collection function above my perch_layout function and set <code>skip-template</code> to true. This returns the data as an array.</p>
+<p>I also add return-html true as this will give me the rendered HTML to display on the page as before – it means I don’t need to do two calls to get my data.</p>
+<p>I then get the bits I need out of the array and pass them into my layout. Don’t forget that if you switch on Perch Debug mode you’ll be able to see what is being returned in the array – it makes this much easier!</p>
+<p>The final step is to echo the recipe html so the recipe displays on the page as before.</p>
+<pre><code class="lang-php">&lt;?php
+$recipe = perch_collection(&#39;Recipes&#39;, [
+  &#39;skip-template&#39; =&gt; true,
+  &#39;return-html&#39;   =&gt; true,
+  &#39;template&#39;      =&gt;&#39;collections/recipe.html&#39;,
+  &#39;filter&#39;        =&gt; &#39;slug&#39;,
+  &#39;match&#39;      =&gt; &#39;eq&#39;,
+  &#39;value&#39;      =&gt; perch_get(&#39;s&#39;)
+  ]);
+
+  if(!isset($recipe[0])) {
+    // do whatever you do if no results
+    PerchSystem::redirect(&#39;/recipes&#39;);
+  }
+
+  $title = $recipe[0][&#39;title&#39;];
+  $description = $recipe[0][&#39;description&#39;];
+  $og_image = $recipe[0][&#39;og_image&#39;];
+
+  // Include the header. You can find this in templates/layouts/global
+  perch_layout(&#39;global/header&#39;, [
+    &#39;body-class&#39; =&gt; &#39;recipe&#39;,
+    &#39;recipe-post&#39; =&gt; true,
+    &#39;title&#39; =&gt; $title,
+    &#39;description&#39; =&gt; $description,
+    &#39;og_image&#39; =&gt; $og_image
+  ]);
+  perch_layout(&#39;global/nav&#39;);
+
+  //show the recipe
+  echo $recipe[&#39;html&#39;];
+
+  // Include the footer. You can find this in templates/layouts/global
+  perch_layout(&#39;global/footer&#39;);
+</code></pre>
+<p>You should now see Blog social sharing when on a Blog page, and custom social sharing on the Collection page. This could also be adapted for a list/detail setup using regular Perch Content or for any other scenario where you want to push data into a layout from content in Perch.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

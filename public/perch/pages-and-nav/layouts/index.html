@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Layouts - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Layouts">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link selected"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/perch/getting-started/">Getting Started With Perch</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/configuration/">Configuration</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/building/">Building Sites with Perch</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/categories/">Categories</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/content/">Working with Content</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/control-panel/">The Perch Control Panel</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/help/">Troubleshooting Tips</a>
+                        </li>
+                        <li>
+                            <a href="/perch/pages-and-nav/">Pages and Navigation</a>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/layouts/" class="selected">Layouts</a>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/layouts/displaying-from-templates/">Displaying a Layout from a Template</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/layouts/displaying/">Displaying a Perch Layout</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/layouts/layout-variables/">Unique titles with Layout Variables</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/layouts/variables/">Passing Variables into Layouts</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/navigation/">Navigation</a>
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/page-attributes/">Page Attributes</a>
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/pages/">Creating Pages</a>
+                             
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/perch/resources/">Managing Resources</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/upgrading/">Upgrading to Perch 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Layouts</h1>
+
+  <p>Perch is very flexible in how you build your pages. You don’t need to create themes, you can just drop regions into the page to add editable content.</p>
+<p>On many sites, it’s useful to have common page elements like headers, footers and sidebars that don’t change between pages. To make those easy to manage, Perch has layouts.</p>
+<pre><code class="lang-php">&lt;?php include(&#39;perch/runtime.php&#39;); ?&gt;
+&lt;?php perch_layout(&#39;global.header&#39;); ?&gt;
+&lt;h1&gt;Welcome to my website!&lt;/h1&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;?php perch_layout(&#39;global.footer&#39;); ?&gt;
+</code></pre>
+<p>If you’re familiar with PHP includes, layouts do pretty much the same thing but in a more structured way, and with some handy extra features.</p>
+<p>Layout files live in <code>perch/templates/layouts</code>. They are PHP files, and should end with a <code>.php</code> file extension. Think of them like a reusable slice of a page – they can include anything you’d normally have in a page; HTML, PHP and Perch regions and function calls.</p>
+<p>Layouts can also be included <a href="/docs/templates/layouts/">from within templates</a>.</p>
+<h2 id="naming">Naming</h2>
+<p>Place your layout files in <code>perch/templates/layouts</code>. There are two different ways you can choose to name your files. For simple sites without lots of different layouts, we’d recommend <code>layout.fragment.php</code>, for example, for a header in your ‘global’ layout:</p>
+<pre><code class="lang-php">global.header.php
+</code></pre>
+<p>The footer would be <code>global.footer.php</code> and a sidebar might be
+<code>global.sidebar.php</code>.</p>
+<p>If you had a different structure for your homepage, for example, you could name those <code>home.header.php</code> and <code>home.footer.php</code>.</p>
+<h3 id="grouping-layouts-in-subfolders">Grouping layouts in subfolders</h3>
+<p>For larger sites with lots of different layouts, you can also use subfolders.</p>
+<pre><code class="lang-php">global/header.php
+global/footer.php
+</code></pre>
+<p>These would then be loaded into your page using a slash, like a file path:</p>
+<pre><code class="lang-php">&lt;?php perch_layout(&#39;global/header&#39;); ?&gt;
+</code></pre>
+<p>Grouping layouts into subfolders helps keep them organized.</p>
+<h2 id="why-use-layouts-instead-of-php-includes">Why use Layouts instead of PHP Includes</h2>
+<p>As Perch manages layouts we can add some extra functionality not available if you use PHP includes to include parts of your pages.</p>
+<ul>
+<li>You can pass Layout Variables into Layouts and use them.</li>
+<li>You can include a Layout from a Perch Template</li>
+</ul>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

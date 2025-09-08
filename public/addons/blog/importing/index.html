@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Importing Posts - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Importing Posts">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li class="selected"><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/addons/announcements/">Announcements App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/backup/">Backup App</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/blog/">Blog App</a>
+                            <ul>    <li>
+                            <a href="/addons/blog/changelog/">Changelog</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/blog/examples/">Examples</a>
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/blog/importing/" class="selected">Importing Posts</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/blog/installation/">Installation</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/blog/post-types/">Post types</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/blog/runway/">Runway</a>
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/blog/spam/">Spam</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/blog/updating/">Updating</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/blog/webmentions/">Webmentions</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/addons/comments/">Comments App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/email_octopus/">EmailOctopus App</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/events/">Events App</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/addons/field-types/">Field Types</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/forms/">Forms App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/gallery/">Gallery App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/kraken/">Kraken App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/listings/">Listings App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/mailchimp/">Mailchimp App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/members/">Members App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/plugins/">Plugins</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/podcasts/">Podcasts App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/poll/">Poll App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/qr/">QRGenerator App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/shop-foxycart/">Foxycart Shop App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/shop-paypal/">PayPal Shop App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/shop/">Shop App</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/twillio/">Twilio App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/twitter/">Twitter App</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Importing Posts</h1>
+
+  <p>The Blog app includes an importer to move your blog posts from another blog engine. Currently this includes an importer for WordPress and Posterous. If there is demand we can create other import scripts, let us know in the forum if this would be helpful for you.</p>
+<ul>
+<li><a href="#wordpress">Instructions for WordPress</a></li>
+<li><a href="#posterous">Instructions for Posterous</a></li>
+<li><a href="#templates">Template guidelines and tips</a></li>
+</ul>
+<h2 id="importing-wordpress-posts-wordpress-">Importing WordPress posts {#wordpress}</h2>
+<p>To import your posts you will need to follow the following steps.</p>
+<ol>
+<li>Export your posts from WordPress</li>
+<li>Install the blog app into Perch</li>
+<li>Import your posts into Perch</li>
+<li>Create Perch templates for your posts</li>
+<li>Update your .htaccess file if you wish to preserve your WordPress
+URLs</li>
+</ol>
+<p>We would strongly suggest you do this on a local or staging copy of your site. If you need help to understand how to set that up see <a href="/solutions/development-guides/xampp-install/">this solution</a>.</p>
+<h3 id="export-your-posts">Export your posts</h3>
+<p>Log into WordPress and select <code>Tools &gt; Export</code>. Choose the radio button to export posts. Then click Download Export File to download an xml file of your posts.</p>
+<h3 id="install-the-blog-app">Install the blog app</h3>
+<p>On the Perch website, download the blog app and install it as described in the installation instructions. You will then have an empty blog install.</p>
+<p>Go to the Settings Page in Perch and find the Blog section. Update the Slug Format setting to match how your posts are formatted in WordPress.</p>
+<h3 id="import-your-posts">Import your posts</h3>
+<p>Take the xml file that you downloaded from WordPress and put it into the folder <code>/perch/addons/apps/perch_blog/import_data</code></p>
+<p>Then log into Perch admin and go to the Blog app. In the sidebar is a link to import posts. Click this. You should then see a form.</p>
+<p>Under import file select your posts xml file.</p>
+<p>File Type is WordPress.</p>
+<p>You can choose to keep your posts as HTML or Textile. This choice depends a little on how your posts were authored in WordPress. If they were created as HTML (using TinyMCE, for example) you’ll need to continue to use HTML in Perch in order to maintain the formatting.</p>
+<p>Posts that were authored largely as plain text (common with older WordPress blogs, which used automatic line break conversion) then you may have some success converting to Textile.</p>
+<p>Click the Import button, the import may take a little while if you have many posts.</p>
+<p>You should now find your posts and comments imported. Check by comparing the number of posts in Perch and WordPress.</p>
+<h2 id="importing-posterous-posts-posterous-">Importing Posterous posts {#posterous}</h2>
+<p>When Posterous announced it was closing in 2013, an export of content was made available. Unzip your data export, and you should have a folder called something along the lines of <code>space-12345678-sitename-abc123def456ghi789</code>. This is the folder you need to work with below.</p>
+<h3 id="install-the-blog-app">Install the blog app</h3>
+<p>On the Perch website, download the blog app and install it as described in the installation instructions. You will then have an empty blog install.</p>
+<p>Go to the Settings Page in Perch and find the Blog section. Update the Slug Format setting to match how your posts are formatted in Posterous.</p>
+<p>Copy the <code>/perch/addons/apps/perch_blog/templates/post.html</code> file to <code>/perch/templates/blog/post.html</code> and update the main <code>postDescHTML</code> tag to remove <code>textile</code> and add <code>html</code></p>
+<p>(You may find it easiest to use an editor like Redactor, as your posts will all be in HTML.)</p>
+<pre><code class="lang-html">&lt;perch:blog id=&quot;postDescHTML&quot; type=&quot;textarea&quot; editor=&quot;redactor&quot; html size=&quot;xxl&quot;&gt;
+</code></pre>
+<h3 id="import-your-posts">Import your posts</h3>
+<p>Take the <code>space-...</code> export folder and put it into the folder</p>
+<p><code>/perch/addons/apps/perch_blog/import_data</code></p>
+<p>Then log into Perch admin and go to the Blog app. In the sidebar is a link to import posts. Click this. You should then see a form.</p>
+<p>Under import file select your <code>space-</code> folder from the list.</p>
+<p>File Type is Posterous, and the format is HTML.</p>
+<p>Click the Import button, the import may take a little while if you have many posts.</p>
+<p>You should now find your posts and comments imported. Check by comparing the number of posts in Perch and Posterous. Note that the Posterous export doesn’t always include all the files you uploaded. Double check for things like PDF files, as we’ve found that those are often not included.</p>
+<h2 id="create-perch-templates-for-your-blog-templates-">Create Perch templates for your Blog {#templates}</h2>
+<p>You can now create your blog pages in Perch. In the blog download are some example pages and I would suggest using these as a basis for your new blog, copying in your design. We have a video that explains how to incorporate blog into your own design.</p>
+<h3 id="things-to-note-when-creating-templates">Things to note when creating templates</h3>
+<p>If you have converted your posts to Textile or Markdown these will still contain some html, so your Perch template tag will need to have an <code>encode=&quot;false&quot;</code> alongside the attribute <code>textile</code> or <code>markdown</code>. This prevents Perch from encoding the HTML entities. Our default blog template already has this in place.</p>
+<p>If you have an automatically created excerpt in your WordPress post listing you can do this in Perch. Before editing the default blog templates remember to copy them to perch/templates/blog then look at <code>post_in_list.html</code></p>
+<p>This template assumes that you have added an excerpt when creating your blog post. You can change this to just use the first x words from your blog post by using the following tag.</p>
+<pre><code class="lang-html">&lt;perch:blog id=&quot;postDescHTML&quot; encode=&quot;false&quot; words=&quot;50&quot; append=&quot; [...]&quot;&gt;
+</code></pre>
+<p>If you would like to be able to create excerpts (which tend to read more nicely than automatically generated ones) you can use a <code>perch:if</code> statement to show your added excerpt if it exists, and if not show your shortened version of the post. This means you won’t have to go through all of your old posts adding excerpts.</p>
+<pre><code class="lang-html">&lt;perch:if exists=&quot;excerpt&quot;&gt;
+  &lt;perch:blog id=&quot;excerpt&quot; type=&quot;textarea&quot; textile&gt;
+&lt;perch:else&gt;
+  &lt;perch:blog id=&quot;postDescHTML&quot; encode=&quot;false&quot; words=&quot;50&quot; append=&quot; [...]&quot;&gt;
+&lt;/perch:if&gt;
+</code></pre>
+<h3 id="update-the-htaccess-file">Update the .htaccess file</h3>
+<p>By default Perch will link to posts with a querystring. This is because not all servers our Perchers use have mod_rewrite capability, mod_rewrite is what is used to create “friendly” or “SEO friendly” URLs.</p>
+<p>If you have mod_rewrite then you can use it to rewrite your Perch URLs. For example to change your blog URLs from:</p>
+<pre><code>http://mysite.com/blog/post.php?s=2012/09/21/my-post-title
+</code></pre><p>to</p>
+<pre><code>http://mysite.com/blog/2012/09/21/my-post-title/
+</code></pre><p>You would add the following line to your .htaccess file.</p>
+<pre><code>RewriteRule ^blog/([a-zA-Z0-9-/]+)$ /blog/post.php?s=$1 [L]
+</code></pre><p>Then in Perch Settings, change your Blog Post Page Path to:</p>
+<pre><code>/blog/{postSlug}/
+</code></pre><p>This will ensure that the links from your listing page are updated. Read more detail about <a href="/addons/blog/installation/clean-urls/">URL Rewriting for the Blog App</a>.</p>
+<p>Importing a lot of data can use lots of server memory and take a while to process. In some hosting environments, this can cause the PHP memory limit, or the maximum script time to be reached.</p>
+<p>This can particularly be an issue with Posterous imports, and Perch reprocesses all the images. Processing images takes time and memory.</p>
+<p>Often, you can adjust the PHP memory limit and timeout. If you can’t do it on your live server, it may be better to run the import on your development server and then upload.</p>
+<p>In your <code>perch/config/config.php</code> file, you can adjust the limits using</p>
+<pre><code>ini_set(&#39;memory_limit&#39;, &#39;256M&#39;);
+set_time_limit(90);
+</code></pre>
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

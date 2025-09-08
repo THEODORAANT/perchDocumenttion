@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adding Blog Posts to the hompage - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Adding Blog Posts to the hompage">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li class="selected"><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+      <ul class="sidenav">
+          <li>
+              <a href="/video/getting-started/">Getting Started</a>
+          </li>
+          <li>
+              <a href="/video/blog/">Perch Blog</a>
+          </li>
+          <li>
+              <a href="/video/runway/">Perch Runway</a>
+          </li>
+      </ul>
+    </nav>
+
+<article class="content">
+
+  <h1>Adding Blog Posts to the hompage</h1>
+
+  <div class="video-wrapper">
+    <div class="flex-video widescreen">
+      <iframe src="https://www.youtube-nocookie.com/embed/ZPfbjNezA5Y?showinfo=0&amp;rel=0" frameborder="0" allow="encrypted-media" gesture="media" allowfullscreen class="embed-responsive-item" width="847" height="476"></iframe>
+    </div>
+  </div>
+
+  <div class="video-detail">
+    <div class="inner-panel">
+        <h2 id="video-transcript">Video Transcript</h2>
+<p>The final piece of our homepage content management is the display of blog posts on the homepage. Now that we have set up a blog, adding this listing is easy.</p>
+<p>To do it we use perch_blog_custom and this function works in a very similar way to the perch_content_custom already used on the homepage to display testimonials. In general our official apps have a custom function and this is what you can use to do more precise filtering and display of data than offered by the standard functions.</p>
+<p>For our homepage posts we want to display a maximum of three most recent posts using a different template to the standard listing template.</p>
+<p>First create a copy of <code>post_in_list.html</code> as <code>homepage_post_in_list.html</code> and update it to display the markup and blog tags that you want to show here.</p>
+<p>Now go to your homepage file, delete the placeholder blog posts and add the function <code>perch_blog_custom</code> passing in an array just as we did with the testimonials. In this case we sort by postDateTime descending (so most recent first) pass in the template and set a count of 3 to return no more than three posts.</p>
+<pre><code class="lang-php">&lt;?php
+perch_blog_custom(array(
+  &#39;sort&#39;=&gt;&#39;postDateTime&#39;,
+  &#39;sort-order&#39;=&gt;&#39;DESC&#39;,
+  &#39;template&#39;=&gt;&#39;blog/homepage_post_in_list.html&#39;,
+  &#39;count&#39;=&gt;3
+)); ?&gt;
+</code></pre>
+<p>Save your page and refresh and the posts will appear. You can pass other arguments into the array – for example only showing one category of the blog here.</p>
+
+
+
+        <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+        </ul>
+
+    </div>
+    
+  </div>
+
+
+
+
+  
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

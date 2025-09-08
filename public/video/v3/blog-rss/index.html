@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create a Blog RSS feed - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Create a Blog RSS feed">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li class="selected"><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+      <ul class="sidenav">
+          <li>
+              <a href="/video/getting-started/">Getting Started</a>
+          </li>
+          <li>
+              <a href="/video/blog/" class="selected">Perch Blog</a>
+
+                <ul class="video-nav">
+                  <li>
+                      <a href="/video/v3/installing-blog">Installing the Blog</a>
+                      <span class="badge">3:41</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-listing-page">Create a Blog Listing page</a>
+                      <span class="badge">5:34</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-detail-page">Create a Blog Detail page</a>
+                      <span class="badge">10:47</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-archive-page">Create a Blog Archive page</a>
+                      <span class="badge">12:08</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/editing-blog-templates">Editing Blog Templates</a>
+                      <span class="badge">9:18</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blocks">Blocks</a>
+                      <span class="badge">5:37</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-homepage">Showing blog posts on the homepage</a>
+                      <span class="badge">3:38</span>
+                  </li>
+                  <li class="selected">
+                      <a href="/video/v3/blog-rss">Create a Blog RSS feed</a>
+                      <span class="badge">8:27</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/htaccess-rewrites">Rewriting URLs with htaccess</a>
+                      <span class="badge">6:05</span>
+                  </li>
+                </ul>
+
+          </li>
+          <li>
+              <a href="/video/runway/">Perch Runway</a>
+          </li>
+      </ul>
+    </nav>
+
+<article class="content">
+
+  <h1>Create a Blog RSS feed</h1>
+
+  <div class="video-wrapper">
+    <div class="flex-video widescreen">
+      <iframe src="https://www.youtube-nocookie.com/embed/nnmwWdkIQCE?showinfo=0&amp;rel=0" frameborder="0" allow="encrypted-media" gesture="media" allowfullscreen class="embed-responsive-item" width="847" height="476"></iframe>
+    </div>
+  </div>
+
+  <div class="video-detail">
+    <div class="inner-panel">
+        <p>The blog templates include a template which outputs the post in a format as needed for an RSS feed. To use it, you will need to create a page just like any other. This will be a blank page though without any of your site design involved. Create that in the blog folder and call it <code>rss.php</code>.</p>
+<p>The entire code for <code>rss.php</code> is below. To see a walkthrough of this code watch the video (which has captions). The code uses a template from the <code>perch/blog/templates</code> folder, named <code>rss_post.html</code>. The default may well be all you need but you can make changes to it as with any other template.</p>
+<pre><code class="lang-php">&lt;?php include(&#39;../perch/runtime.php&#39;); ?&gt;
+&lt;?php 
+    $domain = &#39;http://&#39;. $_SERVER[&#39;HTTP_HOST&#39;];
+    PerchSystem::set_var(&#39;domain&#39;,$domain);
+
+    header(&#39;Content-Type: application/rss+xml&#39;);
+
+    echo &#39;&lt;?xml version=&quot;1.0&quot;?&gt;&#39;;
+?&gt;
+
+&lt;rss version=&quot;2.0&quot; xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot;&gt;
+    &lt;channel&gt;
+        &lt;title&gt;Blog | Swift Migrations&lt;/title&gt;
+        &lt;link&gt;&lt;?php echo PerchUtil::html($domain) ?&gt;/blog/&lt;/link&gt;
+        &lt;description&gt;News from Swift Migrations&lt;/description&gt;
+        &lt;atom:link href=&quot;&lt;?php echo PerchUtil::html($domain) ?&gt;/blog/rss.php&quot; rel=&quot;self&quot; type=&quot;application/rss+xml&quot;&gt;
+
+        &lt;?php 
+        perch_blog_custom([
+            &#39;template&#39;=&gt;&#39;blog/rss_post.html&#39;,
+            &#39;count&#39;=&gt;10,
+            &#39;sort&#39;=&gt;&#39;postDateTime&#39;,
+            &#39;sort-order&#39;=&gt;&#39;DESC&#39;
+        ]);
+        ?&gt;
+    &lt;/channel&gt;
+&lt;/rss&gt;
+</code></pre>
+
+
+
+        <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+            <li class="pagination-previous">
+              <a class="pagination-pointed-button" href="/video/v3/blog-homepage" aria-label="Previous video">
+                Previous<span class="show-for-sr"> video</span>
+              </a>
+            </li>
+            <li class="pagination-next">
+              <a class="pagination-pointed-button" href="/video/v3/htaccess-rewrites" aria-label="Next video">
+                Next<span class="show-for-sr"> video</span>
+              </a>
+            </li>
+        </ul>
+
+    </div>
+    
+  </div>
+
+
+
+
+  
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

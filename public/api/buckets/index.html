@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bucket handlers - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Bucket handlers">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li class="selected"><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/api/apps/">Apps</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/auth/">Authentication plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/buckets/" class="selected">Bucket handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/custom-ui/">UI Customisations</a>
+                        </li>
+                        <li>
+                            <a href="/api/dashboard/">Dashboard Widgets</a>
+                        </li>
+                        <li>
+                            <a href="/api/editors/">Editor plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/events/">Event hooks</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/api/template-filters/">Template filters</a>
+                        </li>
+                        <li>
+                            <a href="/api/templates/">Template handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/field-types/">Field Types</a>
+                        </li>
+                        <li>
+                            <a href="/api/validators/">Form validators</a>
+                        </li>
+                        <li>
+                            <a href="/api/search/">Search handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/shortcodes/">Shortcode providers</a>
+                        </li>
+                        <li>
+                            <a href="/api/translations/">Translations</a>
+                        </li>
+                        <li>
+                            <a href="/api/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/api/import/">Importing Content</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/reference/">API Reference</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Bucket handlers</h1>
+
+  <p>Uploaded assets are stored in resource buckets, which are managed through the user’s bucket list. Perch has support for buckets on the local file system, whereas Perch Runway adds support for buckets on Dropbox, Amazon S3, CloudFiles and so on. You can add support for alternative backends using a bucket handler.</p>
+<h2 id="when-to-use">When to use</h2>
+<p>You would use a bucket handler when you wanted Runway to be able to store resources (assets, backups and so on) on a different type of storage backend. Runway can write to the local or network file system, and includes handlers for Dropbox, Cloudfiles and Amazon S3. If you wanted to add a new service, you’d need a bucket handler.</p>
+<h2 id="how-to-use">How to use</h2>
+<p>Interally, Runway uses <a href="http://php.net/manual/en/book.stream.php">PHP streams</a> to read and write to a wide variety of file systems. If the service you need to integrate with already has PHP stream wrappers available, then the process of making it available in Runway should be very simple. If stream wrappers aren’t available, you may have to write one yourself, which isn’t hard and is quite interesting.</p>
+<p>There are a couple of steps to using a different bucket handler. The first is to add a bucket to your <code>config/buckets.php</code> file with your handler specifed as the <code>type</code>. The second is to define the handler with the <code>config/runway.php</code> file.</p>
+<p>For this example, let’s take an imaginary cloud storage service called CloudSquirrel. In the <code>config/runway.php</code> file, we’d add a definition for our template handler:</p>
+<pre><code class="lang-php">&#39;cloudsquirrel&#39; =&gt; [
+    &#39;access_token&#39; =&gt; &#39;abc123squirrel&#39;,
+    &#39;handler&#39;      =&gt; &#39;CloudSquirrel_ResourceBucket&#39;,
+    &#39;handler_path&#39; =&gt; PERCH_PATH.&#39;/addons/apps/my_cloudsquirrel/CloudSquirrel_ResourceBucket.class.php&#39;,
+]
+</code></pre>
+<p>This sets an access token, the name of the handler class, and the path to the handler on the file system. You can set any setting or credientials that are needed here and that vary from site to site.</p>
+<h2 id="the-resource-bucket-class">The Resource Bucket class</h2>
+<p>You then need to add your class with the name and location specified in the configuration. The class needs to extend <code>PerchResourceBucket</code>.</p>
+<p>The job of the resource bucket class is to represent a single instance of a resource bucket. When it is instantiated, it is passed the configuration details from the <code>buckets.php</code> file for the bucket it is supposed to represent.</p>
+<p>If the service you’re integrating with alreadt has a PHP SDK that includes stream wrappers, your class just needs to act as the glue to make sure the stream wrapper is configured and registered. This is best done in the contructor.</p>
+<pre><code class="lang-php">class CloudSquirrel_ResourceBucket extends PerchResourceBucket
+{
+    public function __construct($details)
+    {
+        parent::__construct($details);
+
+        // Get the config from the runway.php file
+        $config = PerchConfig::get(&#39;cloudsquirrel&#39;);
+
+        // Initialise the SDK you&#39;re using - this is pseudo code:
+        $client = new CloudSquirrelSDK($config[&#39;access_token&#39;]);
+        $client-&gt;register_stream_wrappers();
+
+
+        // Update the file path for the bucket to use the right stream protocol
+        $this-&gt;file_path = &#39;cloudsquirrel://&#39;.$details[&#39;file_path&#39;];
+    }
+
+    public function ready_to_write()
+    {
+        return true;
+    }
+}
+</code></pre>
+<p>The <code>ready_to_write()</code> method can be implemented, but for remote file systems may involve too much overheader. We’ve found it’s better to pretend to always be ready, and then let the error handling at the next stage deal with any issues.</p>
+<p>The <code>PerchResourceBucket</code> class has lots of other methods for reading and writing files which you could overwrite in your class if necessary. However, the beauty of the stream wrapper system means that you shouldn’t need to do so. It should all just work!</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

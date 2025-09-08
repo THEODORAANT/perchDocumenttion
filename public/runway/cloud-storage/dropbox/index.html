@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dropbox - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Dropbox">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li class="selected"><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/runway/caching/">Caching</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/cloud-storage/">Cloud Storage</a>
+                            <ul>    <li>
+                            <a href="/runway/cloud-storage/amazon/">Amazon S3</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/cloud-storage/dropbox/" class="selected">Dropbox</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/cloud-storage/openstack/">OpenStack Object Storage</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/runway/collections/">Collections</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/configuration/">Configuration</a>
+                        </li>
+                        <li>
+                            <a href="/runway/core-tasks/">Core Tasks</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/getting-started/">Getting Started with Runway</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/headless/">Headless requests</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/relationships/">Relationships</a>
+                        </li>
+                        <li>
+                            <a href="/runway/routing/">Routing</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/site-access/">Controlling site access</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading/">Upgrading to Runway 4</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading3/">Upgrading to Runway 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Dropbox</h1>
+
+  <p>Use the following procedure to configure a resource bucket for use with a Dropbox account. This is primarily useful for storing backups, as Dropbox isn’t designed for serving files. Perch Runway stores backups in resource buckets, so configuring a Dropbox bucket is ideal for this purpose.</p>
+<h2 id="setting-up-dropbox">Setting up Dropbox</h2>
+<p>Getting started with Dropbox takes a few steps, but should only need to be done once. We need to set up your Perch Runway site as an app that will use your Dropbox account. The process goes like this:</p>
+<ol>
+<li>Create an App on the Dropbox website</li>
+<li>Get an secret access token as a result</li>
+<li>Add the token to your Runway config file</li>
+</ol>
+<h3 id="creating-a-dropbox-app">Creating a Dropbox app</h3>
+<p>Follow these steps using the Dropbox account you want to store the files in.</p>
+<ol>
+<li>Log into Dropbox and go to the <a href="https://www.dropbox.com/developers/apps">App Console</a>.</li>
+<li>Click the blue <strong>Create app</strong> button</li>
+<li>Select the <strong>Dropbox API app</strong> option<ul>
+<li>You need to store <strong>Files and datastores</strong></li>
+<li><strong>Yes</strong>, your app <strong>can be limited to its own folder</strong></li>
+</ul>
+</li>
+<li>Give you app a name - we suggest using the name of your website. This will create a folder in your Dropbox account as <code>/Apps/YourAppName</code>. This is where your backups will go.</li>
+<li>Click <strong>Create app</strong> to submit the form</li>
+</ol>
+<p>This creates the app, and you should now be looking at the <em>Settings</em> tab showing its details.</p>
+<p>The next step is to get an access token. Find the <strong>OAuth 2</strong> section of the page.</p>
+<ol>
+<li>Under <strong>Generate Access Token</strong> click <strong>Generate</strong></li>
+<li>You’ll be given long string of random letters and numbers - this is your access token.</li>
+<li>Copy the token to your clipboard.</li>
+</ol>
+<p>Next, open up your <code>perch/config/runway.php</code> file and look for the Dropbox section. It looks like this:</p>
+<pre><code class="lang-php">&#39;dropbox&#39; =&gt; [
+    &#39;access_token&#39; =&gt; &#39;&#39;,
+    &#39;handler&#39;      =&gt; &#39;PerchDropbox_ResourceBucket&#39;,
+    &#39;handler_path&#39; =&gt; PERCH_CORE.&#39;/runway/apps/perch_dropbox/PerchDropbox_ResourceBucket.class.php&#39;,
+],
+</code></pre>
+<p>Add your new access token where indicated, and save the file. You should be set to go.</p>
+<h2 id="add-a-resource-bucket">Add a resource bucket</h2>
+<p>Open up your <code>perch/config/buckets.php</code> file. By default it is empty. Create a new bucket - we’ll call this one <code>backup</code></p>
+<pre><code class="lang-php">&lt;?php
+    return [
+        &#39;backup&#39; =&gt; [
+                 &#39;type&#39;      =&gt; &#39;dropbox&#39;,
+                 &#39;web_path&#39;  =&gt; &#39;&#39;,
+                 &#39;file_path&#39; =&gt; &#39;backups&#39;,
+         ],
+    ];
+</code></pre>
+<p>The <code>file_path</code> should be the name of any subfolder you wish to store the files in. The <code>web_path</code> can be left empty. The <code>type</code> is always <code>dropbox</code>.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Master Pages - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Master Pages">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link selected"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/perch/getting-started/">Getting Started With Perch</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/configuration/">Configuration</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/building/">Building Sites with Perch</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/categories/">Categories</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/content/">Working with Content</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/control-panel/">The Perch Control Panel</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/help/">Troubleshooting Tips</a>
+                        </li>
+                        <li>
+                            <a href="/perch/pages-and-nav/">Pages and Navigation</a>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/layouts/">Layouts</a>
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/navigation/">Navigation</a>
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/page-attributes/">Page Attributes</a>
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/pages/">Creating Pages</a>
+                            <ul>    <li>
+                            <a href="/perch/pages-and-nav/pages/master-pages/" class="selected">Master Pages</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/perch/resources/">Managing Resources</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/upgrading/">Upgrading to Perch 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Master Pages</h1>
+
+  <p>Master Pages are a special kind of Perch Template that defines an entire page and is used when an editor creates a new page in Perch. You can set up any number of Master Pages and then choose where these are used in your site.</p>
+<h2 id="creating-a-master-page">Creating a Master Page</h2>
+<p>An example Master Page is included in your Perch install at
+<code>perch/templates/pages/default.php</code>.</p>
+<p>A Master Page is just like any other page in your site. So a good starting point is to save a copy of a page that is like the pages you want content editors to create into <code>perch/templates/pages/</code>.</p>
+<p>The only important difference to a regular page is that you need to ensure your Perch runtime include references the document root. So the include should look like this:</p>
+<pre><code class="lang-php">&lt;?php include($_SERVER[&#39;DOCUMENT_ROOT&#39;].&#39;/perch/runtime.php&#39;); ?&gt;
+</code></pre>
+<h2 id="setting-up-a-master-page-in-the-perch-admin">Setting up a Master Page in the Perch Admin</h2>
+<p>Log into your Perch Admin and select the Master Pages link. The list here is of all Master Pages in your <code>perch/templates/pages/</code> folder.</p>
+<p>Click on your new Master Page and you can set it up ready for use.</p>
+<p><strong>Title</strong> is just a name for the page in the system, use something descriptive – especially if you will have lots of different Master Pages.</p>
+<p>The <strong>Copy Region Options</strong> setting lets you choose a page to copy region information from. I would normally use the page that I copied to create my Master Page. This ensures that when an editor creates a new page, all of the templates and any other options on those Regions are already defined. They just start to edit content.</p>
+<p>The setting <strong>New Pages Should</strong> Reference this Master Page, means that when new pages are created they will use the Master Page as a reference and any future changes you make to the Master Page design will be reflected in pages created from it – <strong>this is the most usual choice</strong>. If for some reason however you want to copy the Master Page HTML over to your new page and <em>not</em> have changes to the Master Page reflected in it, select <strong>Copy this master page</strong> as the value.</p>
+<p>Finally, if you have any <a href="/docs/navigation/navigation-groups/">Navigation Groups</a> set up, you will see checkboxes to select a group if you want created pages to go into that group.</p>
+<p>Submit this form and your new Master Page is ready to be used.</p>
+<p>You can view a video of the whole process in our <a href="/video/tutorials/swift/creating-pages/">Creating Pages video tutorial</a>.</p>
+<h2 id="configuring-regions-automatically">Configuring regions automatically</h2>
+<p>It can be useful to pre-define your regions with templates, sorting options and so on, so that this doesn’t need to be done each time a new page is created. You can do this by using <a href="/docs/developers/creating-regions/">perch_content_create()</a> within your master page.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Collections - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Collections">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li class="selected"><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/runway/caching/">Caching</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/cloud-storage/">Cloud Storage</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/collections/" class="selected">Collections</a>
+                            <ul>    <li>
+                            <a href="/runway/collections/callback-functions-with-each/">Callback Functions with each</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/collections/relationships/">Relationships</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/collections/social-sharing/">Social Sharing with Collections, Layout and Blog</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/runway/configuration/">Configuration</a>
+                        </li>
+                        <li>
+                            <a href="/runway/core-tasks/">Core Tasks</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/getting-started/">Getting Started with Runway</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/headless/">Headless requests</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/relationships/">Relationships</a>
+                        </li>
+                        <li>
+                            <a href="/runway/routing/">Routing</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/site-access/">Controlling site access</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading/">Upgrading to Runway 4</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading3/">Upgrading to Runway 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Collections</h1>
+
+  <p>Collections are big repositories that hold one type of content. You might have a collection of Articles and a collection of Authors. You can then create relationships between collections, for example to relate an Author to an Article.</p>
+<p>In use, collections can be displayed in just the same way as basic content regions, but there are a few key differences.</p>
+<h2 id="differences-between-collections-and-regions">Differences between Collections and Regions</h2>
+<ol>
+<li>Regions are tied to a page or (for shared regions) to <em>every</em> page. Collections are not tied to any page.</li>
+<li>Version revisioning on collections is per <em>item</em>, whereas regions are versioned per <em>region</em></li>
+<li>A link to manage a collection can be added to any number of your control panel pages, and to the sidebar where needed</li>
+</ol>
+<h2 id="managing-a-collection-from-a-page">Managing a collection from a page</h2>
+<p>Adding a link to edit a collection from a page particular page in the control panel enables you to provide a logical editing experience for your client. You might have a collection of news articles, and also a News page that displays them. Make life easy for your client by linking the collection from the News page, which is where they’d probably expect to find it.</p>
+<ol>
+<li>Create a collection from the Collections section under Pages</li>
+<li>Find your page and go to the Page Options</li>
+<li>You should see your collection listed in the Collections section. Check the box to add it to this page, and save.</li>
+</ol>
+<p>When you go to edit the page, the collection should now be listed with the page’s regions. Clicking on it jumps you through to the collection edit page.</p>
+<h2 id="adding-a-collection-to-the-sidebar">Adding a collection to the sidebar</h2>
+<ol>
+<li>Go to <em>Settings</em> and to the <em>Menu Manager</em></li>
+<li>Select an existing menu or create a new one</li>
+<li>Create a new menu item</li>
+<li>Enter a title and choose your collection from the “Link to Collection” list, and save.</li>
+</ol>
+<p>Your collection will now appear in the choosen point in the sidebar menu.</p>
+<h2 id="importing-from-a-region-to-a-collection">Importing from a Region to a Collection</h2>
+<p>When moving from a Perch site to Runway, or if restructuring a site because it’s grown in ways you didn’t expect, it can be useful to import one or more regions into a collection.</p>
+<p>To do this, the structure of the region(s) and the collection must be compatible - their templates need to include the same IDs and types.</p>
+<ol>
+<li>Create your new collection</li>
+<li>In the collection, go to the Import tab</li>
+<li>Select the page the region is on, click next</li>
+<li>Select the region, click next</li>
+<li>You’ll be asked to confirm your choices, click Import</li>
+</ol>
+<h2 id="importing-other-data-into-a-collection">Importing other data into a collection</h2>
+<p>If you need to import external data into a collection, that’s possible too. To give the most flexibility, this is done by writing a script to import the data using an import API. You can <a href="/api/import/">read about importing into a collection</a> in the API docs.</p>
+<h2 id="displaying-content-from-collection">Displaying content from collection</h2>
+<p>Content is displayed using the <code>perch_collection()</code> page function, which works in the same way as <a href="/functions/content/perch-content-custom/">perch_content_custom()</a>.</p>
+<pre><code class="lang-php">perch_collection(&#39;Articles&#39;, [
+    &#39;count&#39; =&gt; 3,
+    &#39;sort&#39;  =&gt; &#39;_date&#39;, 
+    &#39;sort-order&#39; =&gt; &#39;DESC&#39;,
+]);
+</code></pre>
+<h3 id="perch_collection-options">perch_collection options</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>template</td>
+<td>The name of a template to use to display the content.</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>The ID of the field to sort on.</td>
+</tr>
+<tr>
+<td>sort-order</td>
+<td>Either <code>ASC</code> (ascending), <code>DESC</code> (descending) or <code>RAND</code> (random).</td>
+</tr>
+<tr>
+<td>sort-type</td>
+<td>Either <code>alpha</code> or <code>numeric</code>. Default is <code>alpha</code>.</td>
+</tr>
+<tr>
+<td>count</td>
+<td>The number of items to display.</td>
+</tr>
+<tr>
+<td>start</td>
+<td>The item number to start displaying from.</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>The ID of a field to filter the results by.</td>
+</tr>
+<tr>
+<td>match</td>
+<td>Used with filter, see the below table for values</td>
+</tr>
+<tr>
+<td>value</td>
+<td>Used with filter and match. The value to match. For <code>between</code> and <code>in</code>, takes a comma delimited string. For <code>regex</code> takes PCRE regular expression.</td>
+</tr>
+<tr>
+<td>category</td>
+<td>Filter by one or more categories. See <a href="/docs/categories/filtering/">Category filtering</a></td>
+</tr>
+<tr>
+<td>category-match</td>
+<td>Either <code>any</code> or <code>all</code>. See <a href="/docs/categories/filtering/">Category filtering</a></td>
+</tr>
+<tr>
+<td>skip-template</td>
+<td>True or false. Bypass template processing and return the content in an associative array.</td>
+</tr>
+<tr>
+<td>return-html</td>
+<td>True or false. For use with <code>skip-template</code>. Adds the HTML onto the end of the returned array with key <code>html</code>.</td>
+</tr>
+<tr>
+<td>split-items</td>
+<td>True or false. Return an array of individually templated items.</td>
+</tr>
+<tr>
+<td>raw</td>
+<td>True or false. Returns unprocessed content, for use alongside skip-template.</td>
+</tr>
+<tr>
+<td>paginate</td>
+<td>True or false. Whether to use pagination.</td>
+</tr>
+<tr>
+<td>count</td>
+<td>Integer. (When used with <code>paginate</code>) The number of items to show per page if pagination is being used.</td>
+</tr>
+<tr>
+<td>pagination-var</td>
+<td>The URL query string parameter name to use for the page number. Defaults to page.</td>
+</tr>
+<tr>
+<td>page-links</td>
+<td>True or false. Create numbered page links as well as previous and next links.</td>
+</tr>
+<tr>
+<td>page-link-template</td>
+<td>The template to use (if not the default) to generate the page links.</td>
+</tr>
+<tr>
+<td>page-link-style</td>
+<td>shortened or all. By default a shortened set of page links are generated. If you want a link for every page, set to all.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="possible-values-for-match">Possible values for match</h3>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eq</td>
+<td><code>is</code>, <code>exact</code></td>
+<td>equal to</td>
+</tr>
+<tr>
+<td>neq</td>
+<td><code>not</code>, <code>!eq</code></td>
+<td>not equal to</td>
+</tr>
+<tr>
+<td>gt</td>
+<td></td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>gte</td>
+<td></td>
+<td>greater than or equal to</td>
+</tr>
+<tr>
+<td>lt</td>
+<td></td>
+<td>less than</td>
+</tr>
+<tr>
+<td>lte</td>
+<td></td>
+<td>less than or equal to</td>
+</tr>
+<tr>
+<td>contains</td>
+<td></td>
+<td>the value exists within the content (a simple search)</td>
+</tr>
+<tr>
+<td>!contains</td>
+<td></td>
+<td>opposite of <code>contains</code>: the value does not exist within the content</td>
+</tr>
+<tr>
+<td>regex</td>
+<td><code>regexp</code></td>
+<td>using a PCRE regular expression</td>
+</tr>
+<tr>
+<td>between</td>
+<td></td>
+<td>match between two values</td>
+</tr>
+<tr>
+<td>!between</td>
+<td></td>
+<td>opposite of <code>between</code></td>
+</tr>
+<tr>
+<td>eqbetween</td>
+<td></td>
+<td>match between two values inclusively</td>
+</tr>
+<tr>
+<td>!eqbetween</td>
+<td></td>
+<td>opposite of <code>eqbetween</code></td>
+</tr>
+<tr>
+<td>in</td>
+<td><code>within</code></td>
+<td>match within a comma delimited content list (like a list of tags)</td>
+</tr>
+<tr>
+<td>!in</td>
+<td><code>!within</code></td>
+<td>opposite of <code>in</code></td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

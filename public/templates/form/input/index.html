@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>perch:input - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="perch:input">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li class="selected"><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/templates/core-concepts/">Template Core Concepts</a>
+                        </li>
+                        <li>
+                            <a href="/templates/attributes/">Tag attributes</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/field-types/">Field Types</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/apps/">App Specific Tags</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/groups/">Field Groups</a>
+                        </li>
+                        <li>
+                            <a href="/templates/blocks/">Blocks Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/categories/">Category Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/comments/">Template Comments</a>
+                        </li>
+                        <li>
+                            <a href="/templates/conditionals/">Conditional Tags</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/form/">Form Tags</a>
+                            <ul>    <li>
+                            <a href="/templates/form/form/">perch:form</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/error/">perch:error</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/" class="selected">perch:input</a>
+                            <ul>    <li>
+                            <a href="/templates/form/input/checkbox/">Perch Form Template Tag perch:input type checkbox</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/cms/">Perch Form Template Tag perch:input type cms</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/color/">Perch Form Template Tag perch:input type color</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/date/">Perch Form Template Tag perch:input type date</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/datetime/">Perch Form Template Tag perch:input type datetime</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/email/">Perch Form Template Tag perch:input type email</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/file/">Perch Form Template Tag perch:input type file</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/hidden/">Perch Form Template Tag perch:input type hidden</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/image/">Perch Form Template Tag perch:input type image</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/month/">Perch Form Template Tag perch:input type month</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/number/">Perch Form Template Tag perch:input type number</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/radio/">Perch Form Template Tag perch:input type radio</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/range/">Perch Form Template Tag perch:input type range</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/select/">Perch Form Template Tag perch:input type select</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/submit/">Perch Form Template Tag perch:input type submit</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/text/">Perch Form Template Tag perch:input type text</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/textarea/">Perch Form Template Tag perch:input type textarea</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/url/">Perch Form Template Tag perch:input type url</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/input/week/">Perch Form Template Tag perch:input type week</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/label/">perch:label</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/templates/form/success/">perch:success</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/templates/includes/">Template Includes</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/navigation/">Navigation Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/noresults/">No Results Tag</a>
+                        </li>
+                        <li>
+                            <a href="/templates/pagination/">Pagination Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/passing-variables-into-templates/">Passing variables into templates</a>
+                        </li>
+                        <li>
+                            <a href="/templates/repeaters/">Repeaters Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/search/">Search Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/show-all/">Show All Tag</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>perch:input</h1>
+
+  <p><code>perch:input</code> is a self-closing tag which creates an input element in your form.</p>
+<p>Perch enables you to use the HTML5 form input elements. Any user completing the form with a browser which supports these will get the additional validation and form input widgets in HTML5. These degrade to standard input elements in non-supporting browsers.</p>
+<p>The following example will create an HTML textarea.</p>
+<pre><code class="lang-html">&lt;perch:input type=&quot;textarea&quot; id=&quot;message&quot; required label=&quot;Message&quot;&gt;
+</code></pre>
+<h2 id="attributes-for-perch-input">Attributes for perch:input</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Required. The id of the element. This will be prefixed unless the prefix attribute is set to none on the form tag</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Optional: if not specified the value of id will create the form name attribute</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Required. See the below table for list of available types</td>
+</tr>
+<tr>
+<td>label</td>
+<td>This is used in the admin and email output of the field - not shown on the page</td>
+</tr>
+<tr>
+<td>required</td>
+<td>sets the field as being required when the form is completed</td>
+</tr>
+<tr>
+<td>other html5 attributes</td>
+<td>if you wish to set any other html5 attributes for example placeholder, these will be copied as is through to the rendered field</td>
+</tr>
+<tr>
+<td>class</td>
+<td>if you set a class on a input tag this will be copied through into the mark-up</td>
+</tr>
+<tr>
+<td>antispam</td>
+<td>One of name, email, url, body or honeypot. For sending values to an anti spam service such as Akismet.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="values-for-the-type-attribute">Values for the type attribute</h2>
+<p>The values that you select for the type attribute will change the way that fields are validated and, if you are using HTML5, may cause Perch to output a specific field type. For example there are HTML5 UI elements for number and range which will then display. If you simply want to use text input fields and validate them just as a string of text then simply use type=“text”.</p>
+<p>The table below shows all possible values. Each one is detailed fully on the page for that type.</p>
+<h3 id="possible-values-for-the-type-attribute">Possible values for the type attribute</h3>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type=”text”</td>
+<td>Creates an input element of type text in your form</td>
+</tr>
+<tr>
+<td>type=”email”</td>
+<td>Creates an input element of type email in your form</td>
+</tr>
+<tr>
+<td>type=”url”</td>
+<td>Creates an input element of type url in your form. This wil validate to require a protocol.</td>
+</tr>
+<tr>
+<td>type=”range” and type=”number”</td>
+<td>If using html5 these will display the HTML5 widgets for range and number. There are additional attributes to set for the validation: min - Minimum value allowed, max - maximum value allowed, step - increments</td>
+</tr>
+<tr>
+<td>type=”date”</td>
+<td>this accepts a date in format YYYY-MM-DD</td>
+</tr>
+<tr>
+<td>type=”datetime”</td>
+<td>this accepts date and time YYYY-MM-DD HH:MM (optionally :SS too)</td>
+</tr>
+<tr>
+<td>type=”month”</td>
+<td>This accepts a year and month YYYY-MM</td>
+</tr>
+<tr>
+<td>type=”week”</td>
+<td>This accepts a year and week number YYYY-WNN e.g. 2011-W23 (W is literal)</td>
+</tr>
+<tr>
+<td>type=”color”</td>
+<td>This will accept a hex color e.g. #FFFFFF</td>
+</tr>
+<tr>
+<td>type=”textarea”</td>
+<td>Creates a textarea</td>
+</tr>
+<tr>
+<td>type=”select”</td>
+<td>A select list. If using type=”select” you also need an options attribute with a value which is a string of options.</td>
+</tr>
+<tr>
+<td>type=”radio”</td>
+<td>Creates a set of radiobuttons. If using type=”select” you also need an options attribute with a value which is a string of options.</td>
+</tr>
+<tr>
+<td>type=”checkbox”</td>
+<td>creates a checkbox field. The value set will become the checked value of the checkbox</td>
+</tr>
+<tr>
+<td>type=”image”</td>
+<td>this will create a file upload field which accepts image formats. The allowed formats are detailed in: perch/config/filetypes.ini</td>
+</tr>
+<tr>
+<td>type=”file”</td>
+<td>this will create a file upload field which accepts document formats using the accept attribute. The allowed formats are detailed in: perch/config/filetypes.ini</td>
+</tr>
+<tr>
+<td>type=”hidden”</td>
+<td>creates a hidden field</td>
+</tr>
+<tr>
+<td>type=”submit”</td>
+<td>creates a submit button, the value of this field becomes the text displayed on the button</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

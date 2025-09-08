@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Getting Started - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Getting Started">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li class="selected"><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/runway/caching/">Caching</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/cloud-storage/">Cloud Storage</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/collections/">Collections</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/configuration/">Configuration</a>
+                        </li>
+                        <li>
+                            <a href="/runway/core-tasks/">Core Tasks</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/getting-started/">Getting Started with Runway</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/headless/">Headless requests</a>
+                            <ul>    <li>
+                            <a href="/runway/headless/getting-started/" class="selected">Getting Started</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/headless/examples/">Examples</a>
+                             
+                             
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/runway/relationships/">Relationships</a>
+                        </li>
+                        <li>
+                            <a href="/runway/routing/">Routing</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/site-access/">Controlling site access</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading/">Upgrading to Runway 4</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading3/">Upgrading to Runway 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Getting Started</h1>
+
+  <p>By default, Runway serves your headless views from <code>/api</code>. This routes to the <code>perch/templates/api</code> folder, where you create a PHP file for any headless view you wish to make available.</p>
+<h2 id="example">Example</h2>
+<p>Create a new PHP file as <code>perch/templates/api/news.php</code>. This will be a headless view that we’ll configure to access a collection called News. (The file name is not significant, just convenient.)</p>
+<p>Once complete, we’ll be able to access our new headless view at the URL:</p>
+<pre><code>/api/news
+</code></pre><p>In this file, open some <code>&lt;?php</code> tags and create a new instance of the Headless API.</p>
+<pre><code class="lang-php">&lt;?php
+    $Headless   = $API-&gt;get(&#39;HeadlessAPI&#39;);
+</code></pre>
+<h3 id="the-response">The Response</h3>
+<p>Creating a headless view is all about building up the <em>response</em>. We find all the content we want to include, add it to the response, and then at the very end we call <code>respond()</code> and the result is sent to the client.</p>
+<p>So to get started, create a new response:</p>
+<pre><code class="lang-php">$Response   = $Headless-&gt;new_response();
+</code></pre>
+<h3 id="sourcing-the-content">Sourcing the content</h3>
+<p>For this example, we’re going to query some items from the News collection. To do that, we need to get an instance of <code>ContentCollections</code> and find our collection by name.</p>
+<pre><code class="lang-php">$Collections = $API-&gt;get(&#39;ContentCollections&#39;);
+$Collection  = $Collections-&gt;find(&#39;News&#39;);
+</code></pre>
+<p>We now have an instance of the News collection quick we can query for content. More on that in a moment.</p>
+<h3 id="sets">Sets</h3>
+<p>Each response is made up of one or more content sets. In a simple view like this one, there might just be one set containing our news items. On a more complex view, there could be multiple. For example, a blog post view might have a set containing the post, one containing the comments, and another containing related posts.</p>
+<p>It’s the ability to put multiple sets into a response that give the opportunity to build views that contain all the content you need for fetching with a single HTTP request. Of course, you don’t <em>have</em> to put multiple sets into a response, but the fact that you <em>can</em> offers lots of flexibility.</p>
+<p>When you create a set, you give it a name to identify it in the response. We’ll call this one <code>news</code>:</p>
+<pre><code class="lang-php">$Set = $Headless-&gt;new_set(&#39;news&#39;);
+</code></pre>
+<p>We then need to call the <code>add_items()</code> method on the set to pass in our content. We could do something like this:</p>
+<pre><code class="lang-php">$Set-&gt;add_items([
+    [
+        &#39;id&#39; =&gt; 1,
+        &#39;title&#39; =&gt; &#39;Hello&#39;,
+    ],
+    [
+        &#39;id&#39; =&gt; 2,
+        &#39;title&#39; =&gt; &#39;World&#39;,
+    ],
+]);
+</code></pre>
+<p>More realisically, that content needs to come form the CMS somewhere. It’s here that we’re going to query the News collection to get our items. To do that, we use the <code>query()</code> method, and pass it the same options we’d use for <code>perch_collection()</code>.</p>
+<pre><code class="lang-php">$Set-&gt;add_items($Collection-&gt;query([
+            &#39;sort&#39; =&gt; &#39;date&#39;,
+            &#39;sort-order&#39; =&gt; &#39;DESC&#39;,
+        ]));
+</code></pre>
+<p>Now that the set has items, we can add it to the response.</p>
+<pre><code class="lang-php">$Response-&gt;add_set($Set);
+</code></pre>
+<h3 id="sending-the-response">Sending the response</h3>
+<p>We’re all done, so send the response to the client:</p>
+<pre><code class="lang-php">$Response-&gt;respond();
+</code></pre>
+<h2 id="full-example">Full example</h2>
+<p>Here’s the <code>perch/templates/api/news.php</code> view in full:</p>
+<pre><code class="lang-php">&lt;?php
+    $Headless   = $API-&gt;get(&#39;HeadlessAPI&#39;);
+    $Response   = $Headless-&gt;new_response();
+
+    $Collections = $API-&gt;get(&#39;ContentCollections&#39;);
+    $Collection  = $Collections-&gt;find(&#39;News&#39;);
+
+    $Set = $Headless-&gt;new_set(&#39;news&#39;);
+
+    $Set-&gt;add_items($Collection-&gt;query([
+            &#39;sort&#39; =&gt; &#39;date&#39;,
+            &#39;sort-order&#39; =&gt; &#39;DESC&#39;,
+        ]));
+
+    $Response-&gt;add_set($Set);
+
+    $Response-&gt;respond();
+</code></pre>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

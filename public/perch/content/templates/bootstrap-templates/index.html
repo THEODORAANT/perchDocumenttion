@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Using Bootstrap with Perch - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Using Bootstrap with Perch">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link selected"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/perch/getting-started/">Getting Started With Perch</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/configuration/">Configuration</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/building/">Building Sites with Perch</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/categories/">Categories</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/content/">Working with Content</a>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/">Functions</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/">Templates</a>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/add-class-to-odd-items/">Adding a class to every other item</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/adding-help-text/">Adding Help Text</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/allow-editors-to-select-which-regions-to-show/">Toggling display with a checkbox</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/bootstrap-templates/" class="selected">Using Bootstrap with Perch</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/can-i-use-html5/">Can I use HTML5?</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/compressive-images/">Compressive images in Perch</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/correcting-external-links-with-replace/">Correcting Links with the replace attribute</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/hide-templates-from-list/">Hide templates from the Control Panel selection</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/how-do-i-create-a-simple-image-gallery/">Create a simple image gallery</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/how-do-i-reuse-content-in-a-select-list/">Re-using content with a dataselect</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/how-do-i-upload-images-and-files/">Uploading images and files</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/how-do-i-use-responsive-images-in-perch/">Responsive Images in Perch</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/how-to-create-an-excerpt/">Create an excerpt</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/how-to-create-video-playlist-descriptions/">Video playlists</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/only-show-a-section-if-content/">Displaying a section of a template only if content has been entered</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/rich-snippets-seo/">Using Rich Snippets</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/show-placeholder/">Displaying a placeholder image</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/sizing-textareas/">Changing the size of textareas</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/template-dividers/">Add dividers to show sections in a template</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/template-includes-rescope/">Using content templates inside apps</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/template-includes/">Including one template inside another</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/understanding-conditionals/">Understanding Conditional Tags</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/unique-ids/">Unique IDs in a multiple item Region</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/upload-one-image-generate-many-sizes/">Upload one image, generate many sizes</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/using-perch-before-and-after/">Perch Before and After</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/using-perch-showall/">See what is available in a template</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/perch/control-panel/">The Perch Control Panel</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/help/">Troubleshooting Tips</a>
+                        </li>
+                        <li>
+                            <a href="/perch/pages-and-nav/">Pages and Navigation</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/resources/">Managing Resources</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/upgrading/">Upgrading to Perch 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Using Bootstrap with Perch</h1>
+
+  <p><strong>Can I use Bootstrap with Perch?</strong></p>
+<p>Bootstrap is a popular CSS framework that can help you to rapidly develop responsive sites. In this solution I take a look at how to build Perch templates for the various components.</p>
+<p>Perch is ideally suited for working with a framework like Bootstrap. Bootstrap requires that you add classes to your markup in order to make use of the various component styles. A CMS like Perch that allows you to create templates with the exact HTML that you need makes this easy.</p>
+<p>You use Bootstrap by including the Bootstrap CSS and JavaScript. For this solution I have used the <a href="http://getbootstrap.com/getting-started/#template">Bootstrap Basic Template</a>, loading the files from the CDN. With Bootstrap included in my pages I can add Perch Regions to test out my templates.</p>
+<p class="text-center"><a href="https://github.com/PerchCMS/perch-bootstrap-templates" class="btn btn-success"><i class="glyphicon glyphicon-arrow-down"></i> Download the templates</a></p>
+
+<h2 id="the-jumbotron">The jumbotron</h2>
+<p><img src="https://static.grabaperch.com/solutions/bootstrap-templates-jumbotron.png" alt="Jumbotron via Perch">{.img-thumbnail}</p>
+<p>The <a href="http://getbootstrap.com/components/#jumbotron">jumbotron</a> is a large header area that can be used as a call to action. My template adds the header and body along with a link styled as a button.</p>
+<pre><code class="lang-html">    &lt;div class=&quot;jumbotron&quot;&gt;
+      &lt;h1&gt;&lt;perch:content id=&quot;heading&quot; type=&quot;text&quot; label=&quot;Heading&quot; required title&gt;&lt;/h1&gt;
+      &lt;perch:content id=&quot;content&quot; type=&quot;textarea&quot; label=&quot;Content&quot; required markdown editor=&quot;markitup&quot;&gt;
+      &lt;p&gt;&lt;a class=&quot;btn btn-primary btn-lg&quot; role=&quot;button&quot; href=&quot;&lt;perch:content id=&quot;link&quot; type=&quot;text&quot; label=&quot;Link&quot; required&gt;&quot;&gt;&lt;perch:content id=&quot;linktext&quot; type=&quot;text&quot; label=&quot;Link text&quot; required help=&quot;Text for the button, keep it short but try to avoid using click here!&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+</code></pre>
+<h2 id="the-page-header">The Page Header</h2>
+<p>The <a href="http://getbootstrap.com/components/#page-header">Page Header</a> component gives you a header and subtext style. I have made the subtext optional using Perch Conditionals.</p>
+<pre><code class="lang-html">    &lt;div class=&quot;page-header&quot;&gt;
+      &lt;h1&gt;&lt;perch:content id=&quot;heading&quot; type=&quot;text&quot; label=&quot;Heading&quot; required title&gt;
+      &lt;perch:if exists=&quot;subtext&quot;&gt;
+        &lt;small&gt;&lt;perch:content id=&quot;subtext&quot; type=&quot;text&quot; label=&quot;Subtext&quot;&gt;&lt;/small&gt;
+      &lt;/perch:if&gt;
+      &lt;/h1&gt;
+    &lt;/div&gt;
+</code></pre>
+<h2 id="thumbnails">Thumbnails</h2>
+<p><img src="https://static.grabaperch.com/solutions/bootstrap-templates-thumbnails.png" alt="Thumbnails created by Perch">{.img-thumbnail}</p>
+<p><a href="http://getbootstrap.com/components/#thumbnails-default">Default Thumbnails</a> just give you a grid of images. I contain the grid within <code>perch:before</code> and <code>perch:after</code> tags and then set this region to <strong>Allow Multiples</strong> when selecting the template in the Perch Control Panel.</p>
+<pre><code class="lang-html">    &lt;perch:before&gt;
+                &lt;div class=&quot;row&quot;&gt;
+    &lt;/perch:before&gt;
+    &lt;div class=&quot;col-xs-6 col-md-3&quot;&gt;
+      &lt;a href=&quot;&lt;perch:content id=&quot;link&quot; type=&quot;text&quot; label=&quot;Link&quot; required&gt;&quot; class=&quot;thumbnail&quot;&gt;
+        &lt;img src=&quot;&lt;perch:content id=&quot;image&quot; type=&quot;image&quot; label=&quot;Image&quot; width=&quot;171&quot; height=&quot;180&quot; crop&gt;&quot; alt=&quot;&lt;perch:content id=&quot;alt&quot; type=&quot;text&quot; label=&quot;Alt text&quot; title&gt;&quot;&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;perch:after&gt;
+      &lt;/div&gt;
+    &lt;/perch:after&gt;
+</code></pre>
+<p><a href="http://getbootstrap.com/components/#thumbnails-custom-content">Custom Content Thumbnails</a> can contain other content, and I’ve created a template that matches the example on the Bootstrap site.</p>
+<pre><code class="lang-html">    &lt;perch:before&gt;
+      &lt;div class=&quot;row&quot;&gt;
+    &lt;/perch:before&gt;
+    &lt;div class=&quot;col-xs-6 col-md-4&quot;&gt;
+        &lt;div class=&quot;thumbnail&quot;&gt;
+            &lt;img src=&quot;&lt;perch:content id=&quot;image&quot; type=&quot;image&quot; label=&quot;Image&quot; width=&quot;242&quot; height=&quot;200&quot; crop&gt;&quot; alt=&quot;&lt;perch:content id=&quot;alt&quot; type=&quot;text&quot; label=&quot;Alt text&quot;&gt;&quot;&gt;
+          &lt;div class=&quot;caption&quot;&gt;
+              &lt;h3&gt;&lt;perch:content id=&quot;heading&quot; type=&quot;text&quot; label=&quot;Heading&quot; required title&gt;&lt;/h3&gt;
+              &lt;perch:content id=&quot;content&quot; type=&quot;textarea&quot; label=&quot;Content&quot; required size=&quot;s&quot; markdown editor=&quot;markitup&quot;&gt;
+                &lt;p&gt;&lt;a href=&quot;&lt;perch:content id=&quot;link&quot; type=&quot;text&quot; label=&quot;Link&quot; required&gt;&quot; class=&quot;btn btn-primary&quot; role=&quot;button&quot;&gt;
+                  &lt;perch:content id=&quot;linktext&quot; type=&quot;text&quot; label=&quot;Link text&quot; required help=&quot;Text for the button, keep it short but try to avoid using click here!&quot;&gt;
+                &lt;/a&gt;&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;  
+    &lt;/div&gt;
+    &lt;perch:after&gt;
+      &lt;/div&gt;
+    &lt;/perch:after&gt;
+</code></pre>
+<h2 id="media-object">Media Object</h2>
+<p><img src="https://static.grabaperch.com/solutions/bootstrap-templates-media.png" alt="Media Object created by Perch">{.img-thumbnail}</p>
+<p>The <a href="http://getbootstrap.com/components/#media">Media Object</a> is for building components that feature a left or right aligned image along with some other content.</p>
+<pre><code class="lang-html">    &lt;div class=&quot;media&quot;&gt;
+      &lt;a class=&quot;pull-left&quot; href=&quot;&lt;perch:content id=&quot;link&quot; type=&quot;text&quot; label=&quot;Link&quot; required&gt;&quot;&gt;
+        &lt;img src=&quot;&lt;perch:content id=&quot;image&quot; type=&quot;image&quot; label=&quot;Image&quot; width=&quot;64&quot; height=&quot;64&quot; crop&gt;&quot; alt=&quot;&lt;perch:content id=&quot;alt&quot; type=&quot;text&quot; label=&quot;Alt text&quot;&gt;&quot; class=&quot;media-object&quot;&gt;
+      &lt;/a&gt;
+      &lt;div class=&quot;media-body&quot;&gt;
+        &lt;h4 class=&quot;media-heading&quot;&gt;&lt;perch:content id=&quot;heading&quot; type=&quot;text&quot; label=&quot;Heading&quot; required title&gt;&lt;/h4&gt;
+        &lt;perch:content id=&quot;content&quot; type=&quot;textarea&quot; label=&quot;Content&quot; required size=&quot;s&quot; markdown editor=&quot;markitup&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
+<h2 id="panels">Panels</h2>
+<p><img src="https://static.grabaperch.com/solutions/bootstrap-templates-panels.png" alt="Panels created by Perch">{.img-thumbnail}</p>
+<p>The <a href="http://getbootstrap.com/components/#panels">Panel</a> Component means you can put content in a box. The Panel can optionally have a header and footer and there are also ways to give Panels contextual styles. My first template is just a simple panel with a header and an optional footer.</p>
+<p>The <code>perch:if</code> conditional ensures that we do not get empty footer markup if the content editor doesn’t enter footer content.</p>
+<pre><code class="lang-html">    &lt;div class=&quot;panel panel-default&quot;&gt;
+      &lt;div class=&quot;panel-heading&quot;&gt;
+        &lt;h3 class=&quot;panel-title&quot;&gt;&lt;perch:content id=&quot;heading&quot; type=&quot;text&quot; label=&quot;Heading&quot; required title&gt;&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;panel-body&quot;&gt;
+        &lt;perch:content id=&quot;content&quot; type=&quot;textarea&quot; label=&quot;Content&quot; required size=&quot;m&quot; markdown editor=&quot;markitup&quot;&gt;
+      &lt;/div&gt;
+      &lt;perch:if exists=&quot;footertext&quot;&gt;
+        &lt;div class=&quot;panel-footer&quot;&gt;
+          &lt;perch:content id=&quot;footertext&quot; type=&quot;text&quot; label=&quot;Footer text&quot; help=&quot;An optional footer for the panel&quot;&gt;
+        &lt;/div&gt;
+      &lt;/perch:if&gt;
+    &lt;/div&gt;
+</code></pre>
+<h3 id="contextual-panel-headings">Contextual Panel Headings</h3>
+<p>Bootstrap gives a list of classes that can be applied to a panel instead of <code>panel-default</code>. These will <a href="http://getbootstrap.com/components/#panels-alternatives">give the panel some context</a>.</p>
+<p>In order that content editors can choose which type of Panel to create we can give them a drop down list in the Perch Control Pane when editing this content, using the Perch template tag with a type of <a href="http://docs.grabaperch.com/docs/templates/attributes/type/select/">select</a>.</p>
+<p><img src="https://static.grabaperch.com/solutions/bootstrap-templates-admin.png" alt="Perch Admin">{.img-thumbnail}</p>
+<p>Select takes a list of options, and you can separate a friendly name for the option - that will be displayed in admin - from the value that is output.  We then output the chosen class to the content.</p>
+<pre><code class="lang-html">    &lt;div class=&quot;panel &lt;perch:content id=&quot;contextual&quot; type=&quot;select&quot; label=&quot;Panel context&quot; options=&quot;Default|panel-default,Primary|panel-primary,Success|panel-success,Info|panel-info,Warning|panel-warning,Danger|panel-danger&quot;&gt;&quot;&gt;
+      &lt;div class=&quot;panel-heading&quot;&gt;
+        &lt;h3 class=&quot;panel-title&quot;&gt;&lt;perch:content id=&quot;heading&quot; type=&quot;text&quot; label=&quot;Heading&quot; required title&gt;&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;panel-body&quot;&gt;
+        &lt;perch:content id=&quot;content&quot; type=&quot;textarea&quot; label=&quot;Content&quot; required size=&quot;m&quot; markdown editor=&quot;markitup&quot;&gt;
+      &lt;/div&gt;
+      &lt;perch:if exists=&quot;footertext&quot;&gt;
+        &lt;div class=&quot;panel-footer&quot;&gt;
+          &lt;perch:content id=&quot;footertext&quot; type=&quot;text&quot; label=&quot;Footer text&quot; help=&quot;An optional footer for the panel&quot;&gt;
+        &lt;/div&gt;
+      &lt;/perch:if&gt;
+    &lt;/div&gt;
+</code></pre>
+<h3 id="panel-with-list-group">Panel with List Group</h3>
+<p>You can output <a href="http://getbootstrap.com/components/#panels-list-group">full width list-groups</a> or tables within a Panel. This template has a panel with a heading and body, then a Bootstrap <a href="http://getbootstrap.com/components/#list-group">List Group</a> added by way of a <a href="/templates/repeaters/">Perch Repeater</a> template tag.</p>
+<pre><code class="lang-html">    &lt;div class=&quot;panel panel-default&quot;&gt;
+      &lt;div class=&quot;panel-heading&quot;&gt;
+        &lt;h3 class=&quot;panel-title&quot;&gt;&lt;perch:content id=&quot;heading&quot; type=&quot;text&quot; label=&quot;Heading&quot; required title&gt;&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;panel-body&quot;&gt;
+        &lt;perch:content id=&quot;content&quot; type=&quot;textarea&quot; label=&quot;Content&quot; required size=&quot;m&quot; markdown editor=&quot;markitup&quot;&gt;
+      &lt;/div&gt;
+      &lt;perch:repeater id=&quot;link_list&quot; label=&quot;Resources list&quot;&gt;
+      &lt;perch:before&gt;
+        &lt;div class=&quot;list-group&quot;&gt;
+      &lt;/perch:before&gt;
+        &lt;a class=&quot;list-group-item&quot; href=&quot;&lt;perch:content id=&quot;link&quot; type=&quot;text&quot; label=&quot;Link&quot; required&gt;&quot;&gt;
+          &lt;h4 class=&quot;list-group-item-heading&quot;&gt;&lt;perch:content id=&quot;linkheading&quot; type=&quot;text&quot; label=&quot;Link heading&quot; required&gt;&lt;/h4&gt;
+          &lt;p class=&quot;list-group-item-text&quot;&gt;&lt;perch:content id=&quot;linkdesc&quot; type=&quot;text&quot; label=&quot;Link short description&quot; required&gt;&lt;/p&gt;
+        &lt;/a&gt;
+      &lt;perch:after&gt;
+        &lt;/div&gt;
+      &lt;/perch:after&gt;
+      &lt;/perch:repeater&gt;
+      &lt;perch:if exists=&quot;footertext&quot;&gt;&lt;div class=&quot;panel-footer&quot;&gt;&lt;perch:content id=&quot;footertext&quot; type=&quot;text&quot; label=&quot;Footer text&quot; help=&quot;An optional footer for the panel&quot;&gt;&lt;/div&gt;&lt;/perch:if&gt;
+    &lt;/div&gt;
+</code></pre>
+<p>As you can see it is easy to turn Bootstrap components into Perch Templates. You can use these examples as starting points for your own Bootstrap and Perch websites.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

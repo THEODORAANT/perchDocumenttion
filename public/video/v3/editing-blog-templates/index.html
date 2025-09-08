@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Editing Blog Templates - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Editing Blog Templates">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li class="selected"><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+      <ul class="sidenav">
+          <li>
+              <a href="/video/getting-started/">Getting Started</a>
+          </li>
+          <li>
+              <a href="/video/blog/" class="selected">Perch Blog</a>
+
+                <ul class="video-nav">
+                  <li>
+                      <a href="/video/v3/installing-blog">Installing the Blog</a>
+                      <span class="badge">3:41</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-listing-page">Create a Blog Listing page</a>
+                      <span class="badge">5:34</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-detail-page">Create a Blog Detail page</a>
+                      <span class="badge">10:47</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-archive-page">Create a Blog Archive page</a>
+                      <span class="badge">12:08</span>
+                  </li>
+                  <li class="selected">
+                      <a href="/video/v3/editing-blog-templates">Editing Blog Templates</a>
+                      <span class="badge">9:18</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blocks">Blocks</a>
+                      <span class="badge">5:37</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-homepage">Showing blog posts on the homepage</a>
+                      <span class="badge">3:38</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-rss">Create a Blog RSS feed</a>
+                      <span class="badge">8:27</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/htaccess-rewrites">Rewriting URLs with htaccess</a>
+                      <span class="badge">6:05</span>
+                  </li>
+                </ul>
+
+          </li>
+          <li>
+              <a href="/video/runway/">Perch Runway</a>
+          </li>
+      </ul>
+    </nav>
+
+<article class="content">
+
+  <h1>Editing Blog Templates</h1>
+
+  <div class="video-wrapper">
+    <div class="flex-video widescreen">
+      <iframe src="https://www.youtube-nocookie.com/embed/HIrKlAeYIFg?showinfo=0&amp;rel=0" frameborder="0" allow="encrypted-media" gesture="media" allowfullscreen class="embed-responsive-item" width="847" height="476"></iframe>
+    </div>
+  </div>
+
+  <div class="video-detail">
+    <div class="inner-panel">
+        <p>To add the finishing touches to our blog, we will edit the default templates that come with Perch, to add in the markup that we want to use to show our posts. </p>
+<p>As with anything in Perch, the output HTML is completely down to you. Apps will ship with some default templates to get you started, just as Perch itself has default templates. You can use these as-is, edit them or supply your own. We will use the default templates but edit them for our requirements.</p>
+<h2 id="before-changing-the-default-template">Before changing the default template</h2>
+<p>The templates for blog are inside the installed blog app at <code>perch/addons/apps/perch_blog/templates/blog</code>. Don’t edit these directly, instead copy the entire <code>blog</code> folder with the templates inside to <code>perch/templates</code>.</p>
+<p>Now you have a copy of our default templates. What will happen is that Perch with look in your folder first to find a template, using the default names or a template name passed in. If it finds a template here it will use it. If it doesn’t it will use the default templates in the app. Therefore, by copying out your templates you have a safe way to make changes that won’t be overwritten when you update the blog app.</p>
+<p>Something else that’s worth understanding is that every one of the official apps has the concept of a <strong>Master Template</strong>. This is a template that contains any fields you want to output, either on this template or on another template. The Master Template will typically represent the detail page of any list of items. For blog the master template is <code>post.html</code>. Open <code>perch/templates/blog/post.html</code> and you can see all of the fields that appear in the Control Panel when editing a post.</p>
+<p>We can now edit the template with the markup and fields for our blog. The completed template markup is shown below, and the video walks through this in detail.</p>
+<h2 id="fields-for-use-with-other-templates">Fields for use with other templates</h2>
+<p>You can use the <code>suppress</code> attribute to add fields to the Master Template that are not displayed on the main blog post page but are used on other representations of the content. You can see this with the excerpt field in the default template. It doesn’t output on the main blog post page but is used in the listings. </p>
+<p>In our case we want to use the excerpt as an intro to the post so we change it to a field that will output by removing <code>excerpt=&quot;true&quot;</code>. It now displays on the blog page.</p>
+<p>The categories are also suppressed as we are using the Perch functions to display these.</p>
+<pre><code class="lang-html">&lt;div class=&quot;post&quot;&gt;
+  &lt;div class=&quot;hentry&quot;&gt;
+      &lt;h1&gt;
+      &lt;a href=&quot;&lt;perch:blog id=&quot;postURL&quot; type=&quot;hidden&quot;&gt;&quot; rel=&quot;bookmark&quot; class=&quot;p-name&quot;&gt;
+        &lt;perch:blog id=&quot;postTitle&quot; type=&quot;text&quot; label=&quot;Title&quot; required size=&quot;xl autowidth&quot; order=&quot;1&quot;&gt;
+      &lt;/a&gt;
+    &lt;/h1&gt;
+    &lt;time class=&quot;dt-published&quot; datetime=&quot;&lt;perch:blog id=&quot;postDateTime&quot; type=&quot;date&quot; label=&quot;Date&quot; time format=&quot;Y-m-d H:i:s&quot; divider-before=&quot;Publishing&quot;&gt;&quot;&gt;
+      &lt;perch:blog id=&quot;postDateTime&quot; type=&quot;date&quot; time format=&quot;%d %B %Y&quot;&gt; 
+    &lt;/time&gt;
+        &lt;perch:if exists=&quot;authorGivenName&quot;&gt;
+      &lt;p class=&quot;byline&quot;&gt;by &lt;perch:blog id=&quot;authorGivenName&quot; type=&quot;hidden&quot;&gt; &lt;perch:blog id=&quot;authorFamilyName&quot; type=&quot;hidden&quot;&gt;&lt;/p&gt;
+    &lt;/perch:if&gt;  
+    &lt;div class=&quot;intro entry-summary&quot;&gt;
+      &lt;perch:blog id=&quot;excerpt&quot; type=&quot;textarea&quot; label=&quot;Excerpt&quot; markdown order=&quot;3&quot; size=&quot;s&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;description entry-content&quot;&gt;
+      &lt;perch:blog id=&quot;postDescHTML&quot; type=&quot;textarea&quot; label=&quot;Post&quot; order=&quot;2&quot; editor=&quot;simplemde&quot; markdown size=&quot;xxl autowidth&quot; required&gt;
+    &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;perch:categories id=&quot;categories&quot; set=&quot;blog&quot; label=&quot;Categories&quot; display-as=&quot;checkboxes&quot; suppress&gt;
+  &lt;a href=&quot;archive.php?cat=&lt;perch:category id=&quot;catSlug&quot; type=&quot;slug&quot;&gt;&quot; class=&quot;p-category&quot;&gt;
+    &lt;perch:category id=&quot;catTitle&quot; type=&quot;text&quot;&gt;
+  &lt;/a&gt;
+&lt;/perch:categories&gt;
+</code></pre>
+<p>The key thing to remember with all of these app templates is that there will be a Master Template, and it is here that you need to add any fields you want to use in any template for that content. This includes multiple image sizes. If you want to have a thumbnail for your listing page of a larger image in your blog, add the cropped version here and then use it in your listing template.</p>
+
+
+
+        <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+            <li class="pagination-previous">
+              <a class="pagination-pointed-button" href="/video/v3/blog-archive-page" aria-label="Previous video">
+                Previous<span class="show-for-sr"> video</span>
+              </a>
+            </li>
+            <li class="pagination-next">
+              <a class="pagination-pointed-button" href="/video/v3/blocks" aria-label="Next video">
+                Next<span class="show-for-sr"> video</span>
+              </a>
+            </li>
+        </ul>
+
+    </div>
+    
+  </div>
+
+
+
+
+  
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

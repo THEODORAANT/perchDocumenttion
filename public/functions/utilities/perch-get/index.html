@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>perch_get() - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="perch_get()">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li class="selected"><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/functions/announcements/">Announcements</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/blog/">Blog</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/categories/">Categories Functions</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/collections/">Collection functions</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/comments/">Comments</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/content/">Content functions</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/events/">Events</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/form/">Form</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/gallery/">Gallery</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/layouts/">Layout Functions</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/listings/">Listings</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/mailchimp/">Mailchimp</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/members/">Members</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/navigation/">Navigation &amp; Page Functions</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/page-attributes/">Page Attributes</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/podcasts/">Podcasts</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/search/">Search Functions</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/shop-foxycart/">Foxycart (deprecated)</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/shop-paypal/">PayPal Shop (deprecated)</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/shop/">Shop</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/twitter/">Twitter</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/utilities/">Utility Functions</a>
+                            <ul>    <li>
+                            <a href="/functions/utilities/perch-get/" class="selected">perch_get()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/utilities/perch-post/">perch_post()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/utilities/perch-template/">Rendering Templates</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/utilities/perchsystem/">PerchSystem</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/utilities/perchutil/">PerchUtil</a>
+                        </li>
+                    </ul>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>perch_get()</h1>
+
+  <p>The <code>perch_get()</code> function does the same job as <code>$_GET</code> in PHP, but has some convenient safeguards and options built in.</p>
+<p>When building dynamic pages, it’s quite common to use the URL to pass options from one page to the next. For example, when building list and detail pages, the list page will link to the detail page with the item to be viewed as an argument on the URL.</p>
+<p>/article.php?s=2015-11-01-latest-news
+These are called GET arguments, as they are passed on the query string as part of the HTTP GET request.</p>
+<p>PHP has a standard way to read these values into the page. If you’ve done any PHP development at all, you’ll be familiar with using something like <code>$_GET[&#39;s&#39;]</code> to read a value from the GET request.</p>
+<p>You can do that in Perch, too. However, <code>$_GET</code> can be hard to use, because if you try to read in a value that hasn’t been set, PHP will throw an error. This means you need to test for it being set, and decide whether to read it or not. To make life easier, Perch has perch_get().</p>
+<h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>The value to look for on the query string</td>
+</tr>
+<tr>
+<td>String</td>
+<td>A default to use if the query string is empty</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usage-examples">Usage examples</h2>
+<p>If we have a query string that looks like:</p>
+<pre><code class="lang-html">/posts.php?count=10
+</code></pre>
+<p>Then to get the value of <code>count</code> we can use <code>perch_get()</code>.</p>
+<pre><code class="lang-php">perch_get(&#39;count&#39;);
+</code></pre>
+<p>If we want to set the count to 10 if there is no <code>count</code> value passed in we can use:</p>
+<pre><code class="lang-php">perch_get(&#39;count&#39;, 10);
+</code></pre>
+<p>This helps us ensure we always get a valid and usable result, we can then use the value in <code>perch_content_custom</code> for example:</p>
+<pre><code class="lang-php">&lt;?php
+perch_content_custom(&#39;Posts&#39;, [
+  &#39;count&#39; =&gt; perch_get(&#39;count&#39;, 10);
+]);
+?&gt;
+</code></pre>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

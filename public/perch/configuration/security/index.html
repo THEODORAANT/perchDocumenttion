@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Security Configuration - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Security Configuration">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link selected"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/perch/getting-started/">Getting Started With Perch</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/configuration/">Configuration</a>
+                            <ul>    <li>
+                            <a href="/perch/configuration/database/">Database Configuration</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/configuration/dates/">Time and Date Configuration</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/configuration/debug/">Enabling Debug</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/configuration/email/">Email Configuration</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/configuration/file/">File Configuration</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/configuration/images/">Image Configuration</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/configuration/markup/">Markup Configuration</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/configuration/path/">Path Configuration</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/configuration/perch/">Perch Configuration</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/configuration/security/" class="selected">Security Configuration</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/configuration/ssl/">SSL Configuration</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/perch/building/">Building Sites with Perch</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/categories/">Categories</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/content/">Working with Content</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/control-panel/">The Perch Control Panel</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/help/">Troubleshooting Tips</a>
+                        </li>
+                        <li>
+                            <a href="/perch/pages-and-nav/">Pages and Navigation</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/resources/">Managing Resources</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/upgrading/">Upgrading to Perch 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Security Configuration</h1>
+
+  <p>If running Perch or Perch Runway in particularly sensitive environments, you can switch the system into Paranoid Security Mode in the <code>perch/config/config.php</code> file.</p>
+<pre><code class="lang-php">define(&#39;PERCH_PARANOID&#39;, true);
+</code></pre>
+<p>This mode enables a set of smaller security hardening features in one easy step. If you want to change the defaults or disable certain subfeatures, you can do that with the individual configuration options detailed below.</p>
+<h2 id="users-and-passwords">Users and passwords</h2>
+<p>Paranoid security mode affects user accounts in the following ways:</p>
+<ul>
+<li>Requires a password to be entered before editing any user accounts</li>
+<li>Requires an existing password to be entered before updating your own password</li>
+<li>Enforces password length and complexity rules</li>
+<li>Prevents password re-use within a configured time frame</li>
+<li>Enforces case-sensitive usernames</li>
+<li>Implements timed account lock-out for multiple login failures</li>
+<li>Sends new user accounts a tokenised link to create a new password, rather than send their password in the clear</li>
+<li>Enforces secure cookies for user sessions</li>
+</ul>
+<p>These subfeatures can be individual controlled with the following settings:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PERCH_MAX_FAILED_LOGINS</code></td>
+<td>The number of failed logins before account lockout</td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td><code>PERCH_AUTH_LOCKOUT_DURATION</code></td>
+<td>The amount of time to lock the user account for after failed logins</td>
+<td><code>1 HOUR</code></td>
+</tr>
+<tr>
+<td><code>PERCH_STRONG_PASSWORDS</code></td>
+<td>Enable the ‘strong’ password rule set</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>PERCH_PASSWORD_MIN_LENGTH</code></td>
+<td>The minimum length for a password</td>
+<td><code>6</code></td>
+</tr>
+<tr>
+<td><code>PERCH_FORCE_SECURE_COOKIES</code></td>
+<td>Enforce the use of secure cookies (requires SSL/TLS)</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<p>When <code>PERCH_MAX_FAILED_LOGINS</code> is set, the account is locked for <code>PERCH_AUTH_LOCKOUT_DURATION</code> when that limit is hit. At that point, the user is sent an email telling them their account has been locked. Nothing changes on the login form when this happens (we want an attacker to waste their effort, not learn that the account has been locked and improve their strategy).</p>
+<p>The user can unlock their own account with a password reset - they’re sent a token to do so in the email. This means there’s never a requirement for a higher-level user to unlock a locked account. It’s also impossible for an attacker to completely disable the system by locking everyone out at once. It’s safe to unlock using a password reset, as if the attacker has access to the email account there’s no need to be brute forcing the login in the first place, they could just reset the password over email.</p>
+<h2 id="files-and-uploads">Files and uploads</h2>
+<p>Paranoid security mode affects file handling in the following ways:</p>
+<ul>
+<li>Implements the <code>accepts</code> attribute on <code>file</code> and <code>image</code> field types to restrict file uploads to whitelisted mime types</li>
+<li>Filters uploaded files for unsafe file names</li>
+</ul>
+<p>These subfeatures can be individual controlled with the following settings:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PERCH_VERIFY_UPLOADS</code></td>
+<td>Force uploaded files to be verified for type</td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+<p>File uploads are checked for the following, based on <a href="https://www.owasp.org/index.php/Unrestricted_File_Upload">OWASP recommendations</a></p>
+<ul>
+<li>File name: must be letters, numbers, dashes, underscores and spaces only, with a single dot and extension.</li>
+<li>File size: must be &gt;0 bytes</li>
+<li>Mime type: must match a whitelist of mime types (see below)</li>
+<li>File extension: must map to a mime type which matches the whitelist</li>
+</ul>
+<p>The whitelist of mime types is held within in the <code>perch/config/filetypes.ini</code> file. This has been updated for Perch 2.8.26, so if you’re updating an older version you’ll need to copy it over.</p>
+<p>With <code>PERCH_VERIFY_UPLOADS</code> enabled, no file uploads are accepted unless they match all of the above rules. This depends on having the <a href="http://php.net/manual/en/book.fileinfo.php">PHP FileInfo</a> extension configured and working to be able to detect file mime types.</p>
+<p>Image field types (<code>type=&quot;image&quot;</code>) default to only accepting the mime types from the <code>webimage</code> group specified in the <code>filetypes.ini</code> file. These are images that you’d normally embed on web pages (<code>jpg</code>, <code>png</code>, <code>gif</code>, <code>svg</code>, <code>webp</code>).</p>
+<p>File field types (<code>type=&quot;file&quot;</code>) defaults to these groups: <code>pdf</code>, <code>text</code>, <code>richtext</code>, <code>xml</code>, <code>zip</code>, <code>audio</code>, <code>video</code>, <code>office</code>.</p>
+<p>You can override these defaults on a field level by specifying the accept attribute with a comma-delimited list of group names from the <code>filetypes.ini</code> file.</p>
+<pre><code>&lt;perch:content id=&quot;file&quot; type=&quot;file&quot; accept=&quot;pdf,zip&quot;&gt;
+</code></pre><p>You can also limit the acceptable file size in bytes:</p>
+<pre><code>&lt;perch:content id=&quot;file&quot; type=&quot;file&quot; accept=&quot;pdf,zip&quot; max-file-size=&quot;2000000&quot;&gt;
+</code></pre>
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

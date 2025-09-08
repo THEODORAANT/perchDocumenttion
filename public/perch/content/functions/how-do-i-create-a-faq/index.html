@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Creating a FAQ - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Creating a FAQ">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link selected"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/perch/getting-started/">Getting Started With Perch</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/configuration/">Configuration</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/building/">Building Sites with Perch</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/categories/">Categories</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/content/">Working with Content</a>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/">Functions</a>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/content-from-multiple-pages-and-regions/">Combining Content from Several Regions</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/create-a-prepopulated-region/">Pre-populating Template Regions</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/get-content-before-templating/">Accessing content before it is templated</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-add-an-rss-feed/">Adding an RSS Feed</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-create-a-faq/" class="selected">Creating a FAQ</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-create-a-google-sitemap/">Create a Google Sitemap</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-create-list-detail-pages/">Create a list detail page</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-link-prev-next/">Previous and Next Links in content</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/passing-options-to-custom-functions/">How to pass options to custom functions</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/show-one-random-item/">Display an item at random</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/sorting-data/">Sorting data</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/two-page-list-and-detail/">Two page list and detail</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/user-filtered-lists/">A user-filtered list</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/">Templates</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/perch/control-panel/">The Perch Control Panel</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/help/">Troubleshooting Tips</a>
+                        </li>
+                        <li>
+                            <a href="/perch/pages-and-nav/">Pages and Navigation</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/resources/">Managing Resources</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/upgrading/">Upgrading to Perch 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Creating a FAQ</h1>
+
+  <p><strong>How do I create a FAQ?</strong></p>
+<p>An FAQ page often has a list of links at the top, skipping down to the answers below. This solution demonstrates how to create this in Perch.</p>
+<p>In this tutorial we will create an example FAQ page using a custom template. We will also use perch_content_custom to create a list of links at the top of the page jumping down to the individual FAQ answers.</p>
+<p>The first thing we need to do is to create our FAQ template. The quickest way to do that is to look in the perch/templates/content directory and grab one of the example templates as a starting point. I’m going to use article.html.</p>
+<p>Open article.html in a text editor save it as faq.html and delete everything other than the heading and body tags.</p>
+<p>I am also going to change the Heading tag to be named Question and Body to Answer just to make it clear to editors what needs to be entered here and, as this will be a list of FAQ questions and answers, I’ve wrapped the items in an li element.</p>
+<p>The final code for this template is shown below. Save the template.</p>
+<pre><code class="lang-html">    &lt;li&gt;
+      &lt;h2&gt;&lt;perch:content id=&quot;question&quot; type=&quot;text&quot; label=&quot;Question&quot; required&gt;&lt;/h2&gt;
+      &lt;perch:content id=&quot;answer&quot; type=&quot;textarea&quot; label=&quot;Answer&quot; textile editor=&quot;markitup&quot; required&gt;
+    &lt;/li&gt;
+</code></pre>
+<p>Now go back to your FAQ page. We just need to add Perch to this page.</p>
+<p>Add the include for the Perch runtime at the top of the document and then add a Perch Region to create a content area for the FAQ. I have surrounded this call with an unordered list to wrap the list items in the FAQ template that I created in the last step.</p>
+<pre><code class="lang-html">    &lt;ul class=&quot;faq&quot;&gt;
+      &lt;?php perch_content(&#39;FAQ&#39;); ?&gt;
+    &lt;/ul&gt;
+</code></pre>
+<p>You are ready to start adding FAQ items. Refresh your FAQ page so that Perch picks up the new region, then log into the administration area. You should see that your FAQ page is now showing as having new content.</p>
+<p>Click on the page name, then on the FAQ Reqion within that page.</p>
+<p>Select FAQ from the dropdown list for template. As you will want the user to be able to add multiple FAQ items, check the allow multiple checkbox and submit the form.</p>
+<p>The page will reload and you will be able to add your first FAQ item. After adding the item click the “Save, and add another” button to add another item.</p>
+<p>If you have a lot of items you may want to switch this region into List/Detail View. Just visit the Region Options and uncheck ‘Edit all on one page’ to enable this.</p>
+<p>After adding your items refresh the FAQ page on your site to view the content.</p>
+<h2 id="adding-a-list-of-links-to-individual-faq-items">Adding a list of links to individual FAQ items</h2>
+<p>The above process might be all you need for your FAQ page, however on a long page you might like to have a list of the questions at the top of the page and use an anchor to jump to individual answers. You achieve this in Perch by using the <code>perch_content_custom()</code> function.</p>
+<p>The <code>perch_content_custom()</code> page function is really useful if you want to reuse content from one page on another (for example showing two items from your news page on the homepage) it can also be used to create an anchor list for our FAQ page.</p>
+<p>Above your FAQ list add the following code:</p>
+<pre><code class="lang-html">    &lt;ul class=&quot;questions&quot;&gt;
+    &lt;?php
+      perch_content_custom(&#39;FAQ&#39;, array(
+        &#39;template&#39;=&gt;&#39;faq_question.html&#39;,
+        &#39;page&#39;=&gt;&#39;/faq.php&#39;
+      ));
+    ?&gt;
+    &lt;/ul&gt;
+</code></pre>
+<p>We are opening an unordered list for the links.</p>
+<p>Then we call perch_content_custom passing in the ID of the area on the page our content should come from, which is ‘FAQ’, and an array of options.</p>
+<p>In this case our options are quite simple:</p>
+<ul>
+<li>template is set to <code>faq_question.html</code>, we will create this template next</li>
+<li>page is set to <code>/faq.php</code> this is my FAQ page in my site</li>
+</ul>
+<p>Now create a new template in the <code>perch/templates/content</code> directory with a single list item of the question. Wrap the question in a link.</p>
+<p>To create our anchors in the link we can use the <code>perch_item_index</code> tag, which will give you the unique index of that content item. This is ideal for creating our anchor links by adding the unique id onto the end of the word faq, creating an ID of <code>faq1</code>, <code>faq2</code> and so on.</p>
+<pre><code class="lang-html">    &lt;li&gt;
+      &lt;a href=&quot;#faq&lt;perch:content id=&quot;perch_item_index&quot; type=&quot;hidden&quot;&gt;&quot;&gt;
+        &lt;perch:content id=&quot;question&quot; type=&quot;text&quot; label=&quot;Question&quot; required&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+</code></pre>
+<p>Now open the initial <code>faq.html</code> template that you created and add an ID to the <code>h2</code> element, the ID value will be the word <code>faq</code> plus the item index. The attribute type needs to have a value of hidden to stop this showing up as an editable field in the admin.</p>
+<pre><code class="lang-html">    &lt;li&gt;
+      &lt;h2 id=&quot;faq&lt;perch:content id=&quot;perch_item_index&quot; type=&quot;hidden&quot;&gt;&quot;&gt;
+        &lt;perch:content id=&quot;question&quot; type=&quot;text&quot; label=&quot;Question&quot; required&gt;
+      &lt;/h2&gt;
+
+      &lt;perch:content id=&quot;answer&quot; type=&quot;textarea&quot; label=&quot;Answer&quot; textile editor=&quot;markitup&quot; required&gt;
+    &lt;/li&gt;
+</code></pre>
+<p>To get your content to pick up the template changes you will need to visit the page in the admin and edit and save the FAQ region. After doing this refresh your page and you should see that you have a list of FAQ questions at the top of the page, clicking on any question will jump down to the FAQ answer.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

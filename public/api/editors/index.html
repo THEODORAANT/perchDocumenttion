@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Editor plugins - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Editor plugins">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li class="selected"><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/api/apps/">Apps</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/auth/">Authentication plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/buckets/">Bucket handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/custom-ui/">UI Customisations</a>
+                        </li>
+                        <li>
+                            <a href="/api/dashboard/">Dashboard Widgets</a>
+                        </li>
+                        <li>
+                            <a href="/api/editors/" class="selected">Editor plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/events/">Event hooks</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/api/template-filters/">Template filters</a>
+                        </li>
+                        <li>
+                            <a href="/api/templates/">Template handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/field-types/">Field Types</a>
+                        </li>
+                        <li>
+                            <a href="/api/validators/">Form validators</a>
+                        </li>
+                        <li>
+                            <a href="/api/search/">Search handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/shortcodes/">Shortcode providers</a>
+                        </li>
+                        <li>
+                            <a href="/api/translations/">Translations</a>
+                        </li>
+                        <li>
+                            <a href="/api/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/api/import/">Importing Content</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/reference/">API Reference</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Editor plugins</h1>
+
+  <p>Perch content editing forms can be extended using <a href="../feildtypes">field types</a>, offering a lot of flexibility over how content is structured at collected from the user. The existing <code>textarea</code> field type can be enhanced to use any number of WYSIWYG editors should you require.</p>
+<p>Just about any WYSIWYG editor that progressively enhances (or can be made to progressively enhance) a basic HTML textarea can be used with Perch. To make things simple, a few popular editors are pre-packaged for easy installation.</p>
+<h2 id="installing-an-existing-editor-plugin">Installing an existing editor plugin</h2>
+<p>The currently available editors can be found in the <a href="https://addons.perchcms.com/">add-ons</a> section of the Perch website.</p>
+<p>To install, unzip the folder and place the plugin into the <code>perch/addons/plugins/editors</code> folder. If you were installing the CKEditor plugin, for example, this would go into your site at:</p>
+<pre><code class="lang-unix">perch/addons/plugins/editors/ckeditor
+</code></pre>
+<p>You then use the plugin in the same way that the default markitup editor is used, by adding it to a template tag that has ty[e=”textarea”`. </p>
+<p>For example, if I had installed and wanted to use TinyMCE I would use the following in my template.</p>
+<pre><code class="lang-markup">&lt;perch:content id=&quot;text&quot; type=&quot;textarea&quot; label=&quot;Text&quot; editor=&quot;tinymce&quot; html&gt;
+</code></pre>
+<p>As most editors create HTML you need to set <code>html</code> on your region in addition to adding the editor attribute.</p>
+<p><strong>Note</strong>: If you are converting a default Perch template that uses the MarkItUp editor to use any of the other editor plugins – Redactor, TinyMCE or CKEditor you need to remove <code>markdown=“true”</code> from the tag and replace it with <code>html=“true”</code>.</p>
+<p>If you are not sure how to edit Perch Templates then first watch the video on <a href="/video/creating-templates/">Creating Templates</a></p>
+<h2 id="building-a-custom-editor">Building a custom editor</h2>
+<p>If the editor you wish to use isn’t pre-packaged on our site, it should still be quite easy to install. Place your editor’s files in a folder within <code>perch/addons/plugins/editors</code>, for example,</p>
+<pre><code class="lang-unix">perch/addons/plugins/editors/myeditor
+</code></pre>
+<p>When you specify <code>editor=&quot;myeditor&quot;</code> on a template tag, Perch will do two things</p>
+<ol>
+<li>Add a class of <code>myeditor</code> to the <code>textarea</code> field in the edit form</li>
+<li>Find the special file
+<code>perch/addons/plugins/editors/myeditor/_config.json</code> and include any JS and CSS files specified in the page.</li>
+</ol>
+<p>The <code>_config.json</code> file should use the following format:</p>
+<pre><code class="lang-javascript">{
+  &quot;js&quot;: [
+    &quot;PERCH_LOGINPATH/core/editors/myeditor/jquery.myeditor.js&quot;,
+    &quot;PERCH_LOGINPATH/core/editors/myeditor/config.js&quot;
+  ],
+  &quot;css&quot;: [
+    &quot;PERCH_LOGINPATH/core/editors/myeditor/css/myeditor.min.css&quot;
+  ]
+}
+</code></pre>
+<p>Within <code>_config.json</code> you can use the special string <code>PERCH_LOGINPATH</code> as a placeholder to the path to the user’s Perch installation. This will be replaced with the real path as the file is output. This helps to make your plugin portable between installations.</p>
+<p>One of the JavaScript files you include will be the code to bootstrap your editor. You should initialise your editor when the window loads, and also listen for the custom event <code>Perch_Init_Editors</code> on the <code>window</code> object. When this event is fired, you should initialise any new, uninitialised editors. It is called when a new block or repeater item is added.</p>
+<p>A typical bootstrapping JS file might look like this:</p>
+<pre><code class="lang-javascript">var set_up_my_editor = function(){
+  $(&#39;textarea.myeditor:not([data-init])&#39;).attr(&#39;data-init&#39;, true).myeditor();
+}
+
+$(window).on(&#39;Perch_Init_Editors&#39;, function(){
+  set_up_my_editor();
+});
+
+set_up_my_editor();
+</code></pre>
+<p>The function is looking for any <code>textarea</code> with a class of <code>myeditor</code> that does not have the custom <code>data-init</code> attribute set. It then sets that attribute and initialises the editor for that textarea. The custom attribute is used as a flag to prevent the same textarea being initialised more than once.</p>
+<p>Perch uses the jQuery library on its pages, so if your editor has a jQuery adaptor or implementation, that’s the best version to use.</p>
+<h2 id="editor-configuration-sets">Editor configuration sets</h2>
+<p>You can pass configuration options from the template to the editor using the <code>editor-config</code> attribute on your template tag. The value of this attribute is substituted for the string <code>PERCH_EDITOR_CONFIG</code> in your <code>_config.inc</code> file.</p>
+<pre><code class="lang-markup">&lt;perch:content id=&quot;desc&quot; type=&quot;textarea&quot; editor=&quot;myeditor&quot; editor-config=&quot;headings links&quot;&gt;
+</code></pre>
+<p>It’s then up to your plugin code to parse the string and use it however you see fit to configure your plugin.</p>
+<p><em>Note:</em> currently, as the configuration file is only include once per form, there is a limitation of the <code>editor-config</code> applying once. It’s not possible to mix multiple editors with different configurations within the same form. You should probably think carefully about using multiple WYSIWYG  editors per form anyway, as they can be quite heavy.</p>
+<h2 id="custom-configurations-for-default-editors">Custom configurations for default editors</h2>
+<p>Perch ships with three in-built editors: MarkItUp, SimpleMDE and Redactor. These are configured in a way that hooks them in with functionality provided by Perch such as Assets. You can, however, specify your own configuration. This is useful for adding additional toolbar plugins and so on.</p>
+<p>To get started, enable custom configurations in your config file:</p>
+<pre><code class="lang-php">define(&#39;PERCH_CUSTOM_EDITOR_CONFIGS&#39;, true);
+</code></pre>
+<p>When the editor is loaded, Perch looks for the file <code>addons/plugins/editors/config.js</code> and loads it.</p>
+<p>This is an example for adding the <code>source</code> and <code>fontcolor</code> plugins for Redactor:</p>
+<pre><code class="lang-javascript">Perch.UserConfig.redactor = function(){
+
+  var get = function(profile, config, field) {
+
+    if (config.plugins.indexOf(&#39;source&#39;) === -1) config.plugins.push(&#39;source&#39;);
+    if (config.plugins.indexOf(&#39;fontcolor&#39;) === -1) config.plugins.push(&#39;fontcolor&#39;);
+
+    return config;
+  };
+
+  var load = function(cb) {
+    if (typeof jQuery.Redactor.prototype.source == &#39;undefined&#39;) {
+      jQuery.getScript(Perch.path+&#39;/addons/plugins/editors/redactor-plugins/fontcolor.js&#39;, function(){
+        jQuery.getScript(Perch.path+&#39;/addons/plugins/editors/redactor-plugins/source.js&#39;, cb);    
+      }); 
+
+    } else {
+      cb();
+    }
+  };
+
+  return  {
+    &#39;get&#39;: get,
+    &#39;load&#39;: load
+  }
+
+}();
+</code></pre>
+<p>Your code needs to define the <code>Perch.UserConfig.editorname</code> property as an object with two methods: <code>get()</code> and <code>load()</code>.</p>
+<h3 id="the-get-method">The <code>get()</code> method</h3>
+<p>The purpose of this method is to return the configuration object that is used to instanciate the editor. Three arguments are passed in: </p>
+<ul>
+<li><code>profile</code> is the value of the <code>editor-config</code> attribute on the field</li>
+<li><code>config</code> is the default configuration to reference or modify</li>
+<li><code>field</code> is the input field</li>
+</ul>
+<p>The method should return a config object in whatever format the editor needs. It can do this by modifying the one given, or by creating its own. In either case, be sure to return your new config.</p>
+<h3 id="the-load-method">The <code>load()</code> method</h3>
+<p>The purpose of this method is to load in any files you need to support your configuration. In the case of a Redactor plugin, this method is loading in the plugin source file.</p>
+<p>It takes one argument, a callback function, which you <em>must</em> execute once your loading has completed.</p>
+<p>If you don’t have any files to load, just execute the callback and you’re done.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

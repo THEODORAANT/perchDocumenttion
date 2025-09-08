@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Amazon S3 - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Amazon S3">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li class="selected"><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/runway/caching/">Caching</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/cloud-storage/">Cloud Storage</a>
+                            <ul>    <li>
+                            <a href="/runway/cloud-storage/amazon/" class="selected">Amazon S3</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/cloud-storage/dropbox/">Dropbox</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/cloud-storage/openstack/">OpenStack Object Storage</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/runway/collections/">Collections</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/configuration/">Configuration</a>
+                        </li>
+                        <li>
+                            <a href="/runway/core-tasks/">Core Tasks</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/getting-started/">Getting Started with Runway</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/headless/">Headless requests</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/relationships/">Relationships</a>
+                        </li>
+                        <li>
+                            <a href="/runway/routing/">Routing</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/site-access/">Controlling site access</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading/">Upgrading to Runway 4</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading3/">Upgrading to Runway 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Amazon S3</h1>
+
+  <p>Use the following procedure to configure a resource bucket for use with Amazon S3.</p>
+<h2 id="configure">Configure</h2>
+<p>Open up your <code>perch/config/runway.php</code> file and look for the Amazon S3 section. It looks like this:</p>
+<pre><code class="lang-php">&#39;amazon_s3&#39; =&gt; [
+    &#39;access_key_id&#39;     =&gt; &#39;&#39;,
+    &#39;secret_access_key&#39; =&gt; &#39;&#39;,
+    &#39;handler&#39;           =&gt; &#39;PerchS3_ResourceBucket&#39;,
+    &#39;handler_path&#39;      =&gt; PERCH_PATH.&#39;/addons/apps/perch_s3/PerchS3_ResourceBucket.class.php&#39;,
+],
+</code></pre>
+<p>Add your S3 Access Key ID and Secret Access Key to the file and save your changes.</p>
+<h2 id="add-a-resource-bucket">Add a resource bucket</h2>
+<p>Next, open up your <code>perch/config/buckets.php</code> file. By default it is empty. Create a new bucket - we’ll call this one <code>images</code></p>
+<pre><code class="lang-php">&lt;?php
+    return [
+        &#39;images&#39; =&gt; [
+                 &#39;type&#39;      =&gt; &#39;amazon_s3&#39;,
+                 &#39;region&#39;    =&gt; &#39;eu-central-1&#39;,
+                 &#39;web_path&#39;  =&gt; &#39;&#39;,
+                 &#39;file_path&#39; =&gt; &#39;&#39;,
+         ],
+    ]
+</code></pre>
+<p>The <code>file_path</code> should be the name of the bucket you wish to use. The <code>web_path</code> is the HTTP path to the bucket. The <code>type</code> is always <code>amazon_s3</code>. The <code>region</code> is the <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">AWS data center</a> that the bucket resides in.</p>
+<p><strong>Example defining two buckets</strong></p>
+<pre><code class="lang-php">&lt;?php
+    return [
+        &#39;images&#39; =&gt; [
+                 &#39;type&#39;      =&gt; &#39;amazon_s3&#39;,
+                 &#39;region&#39;    =&gt; &#39;eu-central-1&#39;,
+                 &#39;web_path&#39;  =&gt; &#39;https://s3.amazonaws.com/myproject.images&#39;,
+                 &#39;file_path&#39; =&gt; &#39;myproject.images&#39;,
+         ],
+         &#39;press_releases&#39; =&gt; [
+                  &#39;type&#39;      =&gt; &#39;amazon_s3&#39;,
+                  &#39;region&#39;    =&gt; &#39;eu-central-1&#39;,
+                  &#39;web_path&#39;  =&gt; &#39;https://s3.amazonaws.com/myproject.press&#39;,
+                  &#39;file_path&#39; =&gt; &#39;myproject.press&#39;,
+          ],
+    ]
+</code></pre>
+<h2 id="using-the-cloudfront-cdn">Using the CloudFront CDN</h2>
+<p>If serving page assets (images, fonts, JavaScript etc) from S3, we’d recommend using the CloudFront CDN, as S3 is rather slow. Create a CloudFront distribution in your AWS management console, and then update the <code>web_path</code> in your bucket list to use the new CloudFront domain name:</p>
+<pre><code class="lang-php">&#39;images&#39; =&gt; [
+      &#39;type&#39;      =&gt; &#39;amazon_s3&#39;,
+      &#39;region&#39;    =&gt; &#39;eu-central-1&#39;,
+      &#39;web_path&#39;  =&gt; &#39;http://abcdefghijk.cloudfront.net&#39;,
+      &#39;file_path&#39; =&gt; &#39;myproject.images&#39;,
+],
+</code></pre>
+<p>You’ll need to add a bucket policy on your S3 bucket to make sure that files added to the bucket are public by default.</p>
+<pre><code class="lang-javascript">{
+  &quot;Version&quot;:&quot;2008-10-17&quot;,
+  &quot;Statement&quot;:[{
+    &quot;Sid&quot;:&quot;AllowPublicRead&quot;,
+        &quot;Effect&quot;:&quot;Allow&quot;,
+      &quot;Principal&quot;: {
+            &quot;AWS&quot;: &quot;*&quot;
+         },
+      &quot;Action&quot;:[&quot;s3:GetObject&quot;],
+      &quot;Resource&quot;:[&quot;arn:aws:s3:::bucket/*&quot;
+      ]
+    }
+  ]
+}
+</code></pre>
+<p>Replace the <code>bucket</code> in <code>arn:aws:s3:::bucket/*</code> with the name of your S3 bucket.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

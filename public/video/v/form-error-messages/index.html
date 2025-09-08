@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Form Error Messages - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Form Error Messages">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li class="selected"><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+      <ul class="sidenav">
+          <li>
+              <a href="/video/getting-started/">Getting Started</a>
+          </li>
+          <li>
+              <a href="/video/blog/">Perch Blog</a>
+          </li>
+          <li>
+              <a href="/video/runway/">Perch Runway</a>
+          </li>
+      </ul>
+    </nav>
+
+<article class="content">
+
+  <h1>Form Error Messages</h1>
+
+  <div class="video-wrapper">
+    <div class="flex-video widescreen">
+      <iframe src="https://www.youtube-nocookie.com/embed/P97xucL0Anc?showinfo=0&amp;rel=0" frameborder="0" allow="encrypted-media" gesture="media" allowfullscreen class="embed-responsive-item" width="847" height="476"></iframe>
+    </div>
+  </div>
+
+  <div class="video-detail">
+    <div class="inner-panel">
+        <h2 id="video-transcript">Video Transcript</h2>
+<p>In the last video in the series we created a form with a success message. However if you try to submit the form without completing all of the required fields it just reloads, which isn’t very friendly. We can use Perch forms to create clear error states for our form.</p>
+<p>I have an HTML document showing my desired error states, if a field isn’t correctly completed I will show a message and also add a class to the container for that label and field pair to highlight it.</p>
+<p>Go back to the template contact form.html. I am first going to add my messages if a field isn’t completed. I add an error at the top of the form which will display if any error state happens. I am using a template tag here so the content editor can create their own message.</p>
+<p>Below each field I add a perch:error tag wrapping my message. The attributes for perch:error are ‘for’ with a value of the id of the required field and type – in this case required.</p>
+<p>Save the template and then go into the admin and hit save on the content of the contact form region to update the template cache. Now go to your form and try and submit it without completing it – the errors will show.</p>
+<p>I can also add a second tag for the email field to detect when it has been completed but not with a valid email address. In this case I set the value of type to ‘format’.</p>
+<p>So that deals with the error messaging, what about the extra class? Well, you can use these perch:error tags anywhere and multiple times if you want to, so I simply use them to wrap the class for each field.</p>
+<p>Submit the form in admin to update the cache then try and submit the form empty or with some missing field and you will see the class is now being added highlighting the problem area.</p>
+
+
+
+        <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+        </ul>
+
+    </div>
+    
+  </div>
+
+
+
+
+  
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

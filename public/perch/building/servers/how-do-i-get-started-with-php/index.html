@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Getting Started with PHP - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Getting Started with PHP">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link selected"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/perch/getting-started/">Getting Started With Perch</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/configuration/">Configuration</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/building/">Building Sites with Perch</a>
+                            <ul>    <li>
+                            <a href="/perch/building/hosts/">Webhosts</a>
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/how-do-i-create-a-multilingual-site/">Create a multilingual site</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/integrations/">Integrations</a>
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/servers/">Servers</a>
+                            <ul>    <li>
+                            <a href="/perch/building/servers/email-testing-with-mailtrap/">Local testing of email with Mailtrap</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/servers/how-do-i-get-started-with-php/" class="selected">Getting Started with PHP</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/servers/how-do-i-move-a-perch-site/">How do I move a Perch site?</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/servers/installing-a-local-server-with-xampp/">Installing XAMPP for local development</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/servers/multiple-server-config/">Multiple Server Config Files</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/troubleshooting/">Troubleshooting</a>
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/updating/">Updating Perch</a>
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/working-with-front-controllers/">Working with Front Controllers</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/perch/categories/">Categories</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/content/">Working with Content</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/control-panel/">The Perch Control Panel</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/help/">Troubleshooting Tips</a>
+                        </li>
+                        <li>
+                            <a href="/perch/pages-and-nav/">Pages and Navigation</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/resources/">Managing Resources</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/upgrading/">Upgrading to Perch 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Getting Started with PHP</h1>
+
+  <p><strong>How do I get started with PHP?</strong></p>
+<p>Perch doesn’t require that you know PHP, but with just a little bit of knowledge you will find you can do far more advanced things. This solution gets you started.</p>
+<p>You don’t need to know any PHP to use Perch, for basic content all of your customizations happen in your templates which are just HTML snippets.</p>
+<p>However, if you want to work with <code>perch_content_custom()</code> or do more complex things with apps knowing a little PHP will make your job much easier. If you have learned HTML and CSS then you will not find basic PHP hard at all.</p>
+<h2 id="important-concepts">Important concepts</h2>
+<p>Unlike HTML and CSS PHP is parsed by the server before it gets to your web browser. This is why – if PHP is running on your server – when you View Source you will not see any of the PHP tags that you entered. There is also no concept of browser compatibility when it comes to serverside scripting like PHP. The browser gets HTML as it would if you had hand-coded the site, it doesn’t know or care that the HTML has been generated using PHP.</p>
+<p>In the case of Perch we use PHP to compile together your templates, and the content added to the database by an editor to produce the final page.</p>
+<p>In general a server will be configured to parse PHP on any page that has a <code>.php</code> extension. Most hosts will allow you to also parse pages with a <code>.html</code> extension but you may have to configure this using a <code>.htaccess</code> file as we explain in the documentation. If a page is not being parsed as PHP you will see the PHP tags when you View Source.</p>
+<h2 id="how-does-the-server-know-something-is-php-">How does the server know something is PHP?</h2>
+<p>When using Perch you add PHP to your page to include Perch and also when creating a Perch Editable Region. In each case you use PHP tags to demonstrate to the server that this is PHP, parse it.</p>
+<p><code>&lt;?php include(&#39;perch/runtime.php&#39;); ?&gt;</code></p>
+<p>The above line includes the Perch runtime. The PHP tags are the <code>&lt;?php ?&gt;</code> everything inside is an instruction for PHP. In this case we are telling PHP to include a file at that location.</p>
+<p>Therefore if any documentation tells you to add some PHP to your page, you know it needs to be inside <code>&lt;?php ?&gt;</code> otherwise the server doesn’t know to parse it and it will be output as text on your page.</p>
+<h2 id="variables-in-php">Variables in PHP</h2>
+<p>A variable is a value that might change. In PHP variables begin with a dollar sign <code>$</code> – a simple use of variables might be to get the value from the query string in order to pass it into a function. For example:</p>
+<pre><code class="lang-php">    &lt;?php
+    //get the value of id from the query string
+    $id = $_GET[&#39;id&#39;];
+    //pass it into the perch_blog_post function
+    perch_blog_post($id);
+    ?&gt;
+</code></pre>
+<p>In Perch we have a helper function to make getting that data from the query string even easier, <code>perch_get()</code> performs the above task but also checks to see if the value is present. Read more about <code>perch_get()</code> in the function reference.</p>
+<h2 id="arrays-in-php">Arrays in PHP</h2>
+<p>Most of our Perch functions take a special kind of variable called an array. An array is simply a list of things stored in a manner that PHP can look through and use.</p>
+<p>A simple array looks like this:</p>
+<pre><code class="lang-php">    &lt;?php
+    $my_shopping = array(&#39;eggs&#39;,&#39;apples&#39;,&#39;a nice cup of tea&#39;);
+    ?&gt;
+</code></pre>
+<p>If a variable is an array you can have a look at it by using the PHP <code>print_r</code> function. This is very useful if you need to know what an array contains. If I print_r the above array like so:</p>
+<pre><code class="lang-php">    &lt;?php
+    print_r($my_shopping);
+    ?&gt;
+</code></pre>
+<p>In the browser I will see:</p>
+<pre><code class="lang-php">    Array ( [0] =&gt; eggs [1] =&gt; apples [2] =&gt; a nice cup of tea )
+</code></pre>
+<p>In Perch we most often use a named array, in the simple array above to use any value you have to know the index of that value – this means you have to create your array in a fixed order to be able to use certain values.</p>
+<p>With a named array we essentially have a set of variables contained in a variable, which is very useful and so is how we tend to do things with Perch.</p>
+<p>The below array is the options array that you might pass into <code>perch_content_custom()</code>.</p>
+<pre><code class="lang-php">    &lt;?php
+    $opts = array(
+        &#39;page&#39;=&gt;&#39;/news/index.php&#39;,
+        &#39;template&#39;=&gt;&#39;article.html&#39;,
+        &#39;sort&#39;=&gt;&#39;date&#39;,
+        &#39;sort-order&#39;=&gt;&#39;DESC&#39;,
+        &#39;count&#39;=&gt;1
+    );
+    ?&gt;
+</code></pre>
+<p>The variable that contains the array is called <code>$opts</code> we then create an array, but instead of having a comma separated list of things, we have <code>name =&gt; value</code> pairs.</p>
+<p>Each pair has the name first, then the <code>=&gt;</code>, then the value. Each line except the last has a comma. It’s just a comma separated list except containing names and values.</p>
+<p>All this array says is that:</p>
+<ul>
+<li>the variable ‘page’ has the value ‘/news/index.php’</li>
+<li>the variable ‘template’ has the value ‘article.html’</li>
+<li>we want to ‘sort’ by ‘date’</li>
+<li>we want our ‘sort-order’ to be ‘DESC’ (descending)</li>
+<li>we want the ‘count’ to be ‘1’ – retrieve one item only.</li>
+</ul>
+<p>You don’t need to call the array <code>$opts</code> – it can be anything you like, it is just a reference, as the next thing you would do is pass this array into the <code>perch_content_custom()</code> function.</p>
+<pre><code class="lang-php">    &lt;?php
+    $opts = array(
+        &#39;page&#39;=&gt;&#39;/news/index.php&#39;,
+        &#39;template&#39;=&gt;&#39;article.html&#39;,
+        &#39;sort&#39;=&gt;&#39;date&#39;,
+        &#39;sort-order&#39;=&gt;&#39;DESC&#39;,
+        &#39;count&#39;=&gt;1
+    );
+    perch_content_custom(&#39;News&#39;, $opts);
+    ?&gt;
+</code></pre>
+<p>In fact you could do this without creating the array as a variable first at all, you can just create the array inside the <code>perch_content_custom()</code> function, which may look more of a familiar syntax if you are used to using jQuery for example. We tend to use this syntax in the documentation.</p>
+<pre><code class="lang-php">    &lt;?php
+    perch_content_custom(&#39;News&#39;,  array(
+        &#39;page&#39;=&gt;&#39;/news/index.php&#39;,
+        &#39;template&#39;=&gt;&#39;article.html&#39;,
+        &#39;sort&#39;=&gt;&#39;date&#39;,
+        &#39;sort-order&#39;=&gt;&#39;DESC&#39;,
+        &#39;count&#39;=&gt;1
+    ));
+    ?&gt;
+</code></pre>
+<p>In PHP 5.4 and above you can actually simplify this further and write:</p>
+<pre><code class="lang-php">    &lt;?php
+    perch_content_custom(&#39;News&#39;,  [
+        &#39;page&#39;=&gt;&#39;/news/index.php&#39;,
+        &#39;template&#39;=&gt;&#39;article.html&#39;,
+        &#39;sort&#39;=&gt;&#39;date&#39;,
+        &#39;sort-order&#39;=&gt;&#39;DESC&#39;,
+        &#39;count&#39;=&gt;1
+    ]);
+    ?&gt;
+</code></pre>
+<h2 id="php-errors">PHP Errors</h2>
+<p>Sometimes something will go wrong and PHP will throw an error.</p>
+<p>When you are working locally, on your own machine, you can get PHP to display errors directly on the screen so you can see them in the browser. How PHP reports errors is configured in a file called php.ini, if you are using XAMPP you can get to this via your control panel by clicking the Config button on the Apache line of buttons and selecting php.ini.</p>
+<p>Search for: <code>display_errors</code> and make sure that is set to On:</p>
+<pre><code class="lang-php">    display_errors = On
+</code></pre>
+<p>Also check that the value of error_reporting is as below, to make sure you get to see all potential errors:</p>
+<pre><code class="lang-php">    error_reporting = E_ALL | E_STRICT
+</code></pre>
+<p>On a live server you want errors to not be shown to the screen as they could reveal information that could be a security risk.</p>
+<p>When errors are not being shown this will usually mean that a PHP error will cause a “white screen” with nothing showing or a partial load of the document where if you View Source you can see the document stops loading at the point at which PHP threw the error. In this case errors should be logged to a file. You may find this is already available to you in your hosting control panel or in your site via FTP, if not have a look at an article written by Perch developer Rachel Andrew for Smashing Magazine, it details <a href="http://coding.smashingmagazine.com/2011/11/30/a-guide-to-php-error-messages-for-designers/">how to get PHP errors logging on your server</a>.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

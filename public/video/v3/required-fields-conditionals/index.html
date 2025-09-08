@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Required Fields and Conditionals - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Required Fields and Conditionals">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li class="selected"><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+      <ul class="sidenav">
+          <li>
+              <a href="/video/getting-started/" class="selected">Getting Started</a>
+
+                <ul class="video-nav">
+                  <li>
+                      <a href="/video/v3/getting-started">Getting Started</a>
+                      <span class="badge">1:28</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/installing-perch">Installing Perch</a>
+                      <span class="badge">2:56</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/editing-content">Editing Content</a>
+                      <span class="badge">4:02</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/creating-a-template">Creating a Template</a>
+                      <span class="badge">8:41</span>
+                  </li>
+                  <li class="selected">
+                      <a href="/video/v3/required-fields-conditionals">Required Fields and Conditionals</a>
+                      <span class="badge">2:41</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/creating-pages">Creating Pages</a>
+                      <span class="badge">8:34</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/contact-details">A contact details template</a>
+                      <span class="badge">7:01</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/shared-regions">Shared Regions</a>
+                      <span class="badge">2:03</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/google-map">A Google Map</a>
+                      <span class="badge">3:58</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/contact-form">A Contact Form</a>
+                      <span class="badge">9:20</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/form-error-messaging">Contact Form Error Messaging</a>
+                      <span class="badge">6:17</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/repeating-regions">Repeating Regions</a>
+                      <span class="badge">5:32</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/perch-repeaters">Perch Repeaters</a>
+                      <span class="badge">5:04</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/perch-content-custom">The perch_content_custom function</a>
+                      <span class="badge">6:47</span>
+                  </li>
+                </ul>
+
+          </li>
+          <li>
+              <a href="/video/blog/">Perch Blog</a>
+          </li>
+          <li>
+              <a href="/video/runway/">Perch Runway</a>
+          </li>
+      </ul>
+    </nav>
+
+<article class="content">
+
+  <h1>Required Fields and Conditionals</h1>
+
+  <div class="video-wrapper">
+    <div class="flex-video widescreen">
+      <iframe src="https://www.youtube-nocookie.com/embed/JrqH1ZC_w_Y?showinfo=0&amp;rel=0" frameborder="0" allow="encrypted-media" gesture="media" allowfullscreen class="embed-responsive-item" width="847" height="476"></iframe>
+    </div>
+  </div>
+
+  <div class="video-detail">
+    <div class="inner-panel">
+        <p>We use the <code>required</code> attribute on any Perch Template Tags that we want to ensure are completed by the content editor, such as the heading and content on our homepage slide.</p>
+<p>On the homepage slide we also have a subheading. We might not need to make editors add a subheading, but the problem is that if they don’t we’ll get these stray <code>h4</code> elements, as these wrap the template tag for the subheading.</p>
+<p>To solve this issue, we use a perch conditional. We use perch if. This conditional takes an ID, which is the same as the ID of the content that you’re checking for. We can add <code>&lt;perch:if exists=&quot;subheading&quot;&gt;&lt;/perch:if&gt;</code> around our template tag. You can see these fields in the complete template here:</p>
+<pre><code class="lang-html">&lt;h3&gt;&lt;perch:content id=&quot;heading&quot; type=&quot;smarttext&quot; label=&quot;Heading&quot; help=&quot;This will form the clickable heading on the slide&quot; required&gt;&lt;/h3&gt;
+
+&lt;perch:if exists=&quot;subheading&quot;&gt;&lt;h4&gt;&lt;perch:content id=&quot;subheading&quot; type=&quot;smarttext&quot; label=&quot;Subheading&quot;&gt;&lt;/h4&gt;&lt;/perch:if&gt;
+
+&lt;img class=&quot;border&quot; src=&quot;&lt;perch:content id=&quot;image&quot; type=&quot;image&quot; label=&quot;Image&quot; width=&quot;520&quot; height=&quot;520&quot; crop&gt;&quot; alt=&quot;&lt;perch:content id=&quot;alt&quot; type=&quot;smarttext&quot; label=&quot;Image description&quot;&gt;&quot;&gt;
+
+&lt;perch:content id=&quot;body&quot; type=&quot;textarea&quot; label=&quot;Body&quot; markdown editor=&quot;simplemde&quot; size=&quot;m&quot; required&gt;
+</code></pre>
+<p>These tags look a bit like HTML or XML tags, and are part of the perch template engine. Having added these required and conditional tags you ca reload the Admin and you will see that you are unable to submit the form for any required fields that are left empty. The subheading can be left empty, in this case if you view source you will see no stray empty heading elements.</p>
+<p>This is a very simple way to make sure you don’t end up with stray mark up in your template. A common thing to do would be to use a <code>perch:if</code>, around the image element, as if you’ve got the image <code>src</code>, and they don’t upload an image, you’re going to end up with empty image elements in your page.</p>
+
+
+
+        <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+            <li class="pagination-previous">
+              <a class="pagination-pointed-button" href="/video/v3/creating-a-template" aria-label="Previous video">
+                Previous<span class="show-for-sr"> video</span>
+              </a>
+            </li>
+            <li class="pagination-next">
+              <a class="pagination-pointed-button" href="/video/v3/creating-pages" aria-label="Next video">
+                Next<span class="show-for-sr"> video</span>
+              </a>
+            </li>
+        </ul>
+
+    </div>
+    
+  </div>
+
+
+
+
+  
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

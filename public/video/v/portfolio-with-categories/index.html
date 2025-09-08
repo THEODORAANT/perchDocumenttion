@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio with Categories - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Portfolio with Categories">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li class="selected"><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+      <ul class="sidenav">
+          <li>
+              <a href="/video/getting-started/">Getting Started</a>
+          </li>
+          <li>
+              <a href="/video/blog/">Perch Blog</a>
+          </li>
+          <li>
+              <a href="/video/runway/">Perch Runway</a>
+          </li>
+      </ul>
+    </nav>
+
+<article class="content">
+
+  <h1>Portfolio with Categories</h1>
+
+  <div class="video-wrapper">
+    <div class="flex-video widescreen">
+      <iframe src="https://www.youtube-nocookie.com/embed/HquZNPSBWuM?showinfo=0&amp;rel=0" frameborder="0" allow="encrypted-media" gesture="media" allowfullscreen class="embed-responsive-item" width="847" height="476"></iframe>
+    </div>
+  </div>
+
+  <div class="video-detail">
+    <div class="inner-panel">
+        <h2 id="video-transcript">Video Transcript</h2>
+<p>Our starting point for this tutorial is a new install of Perch with the default Quill Feather. You could just as easily be starting out with your own design here however.</p>
+<p>On my homepage I’ve just added a couple of Perch Regions for the heading and welcome text.
+Portfolio List Detail</p>
+<p>I’m starting out by creating a list/detail setup in Perch. I’m using the two page setup which is detailed in our Solutions section of the docs if you want a more complete explanation of how this works. I’ll go through it quickly here.</p>
+<p>I’ve created two pages in the root of my site: portfolio.php and detail.php. I have also created some templates.
+portfolio_item.html</p>
+<p>In <code>perch/templates/content</code> I have a template named <code>portfolio_item.html</code>. This template is the detail page for my portfolio items and also acts as the Master Template for this setup. Anything I want to display either on the listing page or detail page needs to be in this template.</p>
+<p>You can see I have a title, description and a repeater containing project images. I also have used the slug field to create a slug out of the title, and an image for the listing thumbnail. These are set to suppress=“true” in order that they don’t display on the detail page but can be used in my listing.
+portfolio_listing.html</p>
+<p>The other template I have will create a listing of portfolio items. This template creates a list and displays the title and listing image along with a link to detail.php with the slug on the query string.</p>
+<h3 id="-portfolio-php">/portfolio.php</h3>
+<p>On portfolio.php we need to do two things. We need to create the portfolio region so that it will appear in admin and you can start to add portfolio items, then we also display the listing.</p>
+<p>To create the region use perch_content_create().</p>
+<pre><code class="lang-php">    &lt;?php
+    perch_content_create(&#39;Portfolio&#39;, array(
+      &#39;template&#39;   =&gt; &#39;portfolio_item.html&#39;,
+      &#39;multiple&#39;    =&gt; true,
+      &#39;edit-mode&#39; =&gt; &#39;listdetail&#39;,
+    ));
+    ?&gt;
+</code></pre>
+<p>Then to display the listing use perch_content_custom().</p>
+<pre><code class="lang-php">    &lt;?php
+    perch_content_custom(&#39;Portfolio&#39;, array(
+      &#39;template&#39; =&gt; &#39;portfolio_listing.html&#39;,
+    ));
+    ?&gt;
+</code></pre>
+<p>Reload your page and go to the Perch Admin. On the Portfolio Page you should find your Portfolio Region all ready and set up with the portfolio_item.html template. Add a couple of test items.</p>
+<h3 id="-detail-php">/detail.php</h3>
+<p>Now open your detail.php page. All we need to do here is display a single item filtered on the item slug. Again we use perch_content_custom to do this.</p>
+<pre><code class="lang-php">    &lt;?php
+    perch_content_custom(&#39;Portfolio&#39;, array(
+      &#39;page&#39; =&gt; &#39;/portfolio.php&#39;,
+      &#39;template&#39; =&gt; &#39;portfolio_item.html&#39;,
+      &#39;filter&#39; =&gt; &#39;slug&#39;,
+      &#39;match&#39; =&gt; &#39;eq&#39;,
+      &#39;value&#39; =&gt; perch_get(&#39;s&#39;),
+      &#39;count&#39; =&gt; 1,
+    ));
+    ?&gt;
+</code></pre>
+<p><strong>TIP:</strong> I have added a line to my .htaccess file in order that I can have “friendly URLs”. This means that rather than have ?s=slug on the query string I can do /detail/slug.</p>
+<p>You should now see your items listed on portfolio.php and be able to click through to individual items.</p>
+<p>From this point it is really simple to start filtering your portfolio by category.</p>
+<h3 id="categories">Categories</h3>
+<p>Perch 2.6 introduces a new centralised categories app as part of Core. Categories belong to a set, and you can have multiple sets. For my portfolio I would like to filter projects by sector – healthcare, retail etc. and also by type of work – design, development and so on.</p>
+<p>In Perch Admin I start by creating a set called Sector, and one called Work.</p>
+<p>I can then add some categories to both. These are now available to anything in Perch. When I add categories and sets you can see that I choose a template. The template defines what is displayed if you display the category directly, and also controls the fields available to edit when editing a category. So if you want, for example, categories to have an image you just add it to the template.
+Adding categories to portfolio items</p>
+<p>Now that I have categories I can add these to my portfolio_item.html template.</p>
+<p>We use <code>&lt;perch:categories&gt;&lt;/perch:categories&gt;</code> tags to add the set, and inside this tag pair is the markup used to display the categories in this template.</p>
+<pre><code class="lang-html">    &lt;perch:categories id=&quot;Work&quot; label=&quot;Type of work&quot; set=&quot;work&quot; required&gt;
+      &lt;perch:before&gt;
+        &lt;h3&gt;Our work on this project&lt;/h3&gt;
+        &lt;ul class=&quot;tags&quot;&gt;
+      &lt;/perch:before&gt;
+          &lt;li&gt;&lt;a href=&quot;/category/&lt;perch:category id=&quot;catPath&quot;&gt;&quot;&gt;&lt;perch:category id=&quot;catTitle&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;perch:after&gt;
+        &lt;/ul&gt;
+      &lt;/perch:after&gt;
+    &lt;/perch:categories&gt;
+    &lt;perch:categories id=&quot;Sector&quot; label=&quot;Sector&quot; set=&quot;sectors&quot; required&gt;
+      &lt;perch:before&gt;
+        &lt;h3&gt;Sectors&lt;/h3&gt;
+        &lt;ul class=&quot;tags&quot;&gt;
+      &lt;/perch:before&gt;
+          &lt;li&gt;&lt;a href=&quot;/category/&lt;perch:category id=&quot;catPath&quot;&gt;&quot;&gt;&lt;perch:category id=&quot;catTitle&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;perch:after&gt;
+        &lt;/ul&gt;
+      &lt;/perch:after&gt;
+    &lt;/perch:categories&gt;
+</code></pre>
+<p>I’ve added one for set “work” and one for “sector”.</p>
+<p>With this added I can go back into admin and my portfolio items have the ability to select categories. Add some categories and look at the item and these are now displayed.
+Filtering the portfolio by category</p>
+<p>As you can see I have made the categories links, because I’d like to be able to filter the portfolio by category.</p>
+<p>The final element to this tutorial is to create a category page that will either show the full listing of categories or a single category with portfolio items that are part of that category.
+category.php</p>
+<p>On category.php we can see our full list of categories by simply adding the function <code>perch_categories()</code>.</p>
+<pre><code class="lang-php">    &lt;?php
+    perch_categories();
+    ?&gt;
+</code></pre>
+<p>If you add this to the page and load the page in your browser you will see your list of categories using the template we assigned when creating them.</p>
+<p>To view a single category based on a category slug passed on the query string we can alter our code to check for a value and retrieve the category based on it:</p>
+<pre><code class="lang-php">    &lt;?php
+    if (perch_get(&#39;cat&#39;)) {
+      perch_category(perch_get(&#39;cat&#39;));
+    } else {
+      perch_categories();
+    }
+    ?&gt;
+</code></pre>
+<p>I’m using the perch_category function here as I am dealing with a single category passing in the category slug. This will display the category using the default template which expects a list of categories. However I can make a new template for displaying a single category with different markup.</p>
+<p>In perch/templates/categories I copy category.html and save it as category_single.html, updating the markup.</p>
+<pre><code class="lang-html">    &lt;h1&gt;&lt;perch:category id=&quot;catTitle&quot; type=&quot;smarttext&quot; label=&quot;Title&quot; required&gt;&lt;/h1&gt;
+    &lt;perch:category id=&quot;desc&quot; type=&quot;textarea&quot; label=&quot;Description&quot; editor=&quot;markitup&quot; markdown size=&quot;s&quot;&gt;
+</code></pre>
+<p>Back on category.php I then pass in the template name as part of an options array.</p>
+<pre><code class="lang-php">&lt;?php
+    if (perch_get(&#39;cat&#39;)) {
+      perch_category(perch_get(&#39;cat&#39;),array(
+        &#39;template&#39;=&gt;&#39;category_single.html&#39;
+      ));
+    } else {
+      perch_categories();
+    }
+    ?&gt;
+</code></pre>
+<p>The final thing I want to do is, when on a single category page, display the projects within that category. I do this with perch_content_custom() passing in the category name. So my complete PHP block on this page is as follows:</p>
+<pre><code class="lang-php">    &lt;?php    
+    if (perch_get(&#39;cat&#39;)) {
+      perch_category(perch_get(&#39;cat&#39;),array(
+        &#39;template&#39;=&gt;&#39;category_single.html&#39;
+    ));
+    perch_content_custom(&#39;Portfolio&#39;, array(
+      &#39;template&#39; =&gt; &#39;portfolio_listing.html&#39;,
+      &#39;page&#39;=&gt;&#39;/portfolio.php&#39;,
+      &#39;category&#39; =&gt; perch_get(&#39;cat&#39;),
+    ));
+    } else {
+      perch_categories();
+    }
+    ?&gt;
+</code></pre>
+<p>And that’s categories. Categories is centralised and available in the API so as we roll out updates to the first party apps you’ll find that you can use the categories functionality to create sets of categories you can use through Perch – in Perch Content but also in the Blog App or Events.</p>
+
+
+
+        <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+        </ul>
+
+    </div>
+    
+  </div>
+
+
+
+
+  
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

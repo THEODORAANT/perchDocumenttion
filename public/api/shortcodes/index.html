@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shortcode providers - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Shortcode providers">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li class="selected"><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/api/apps/">Apps</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/auth/">Authentication plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/buckets/">Bucket handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/custom-ui/">UI Customisations</a>
+                        </li>
+                        <li>
+                            <a href="/api/dashboard/">Dashboard Widgets</a>
+                        </li>
+                        <li>
+                            <a href="/api/editors/">Editor plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/events/">Event hooks</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/api/template-filters/">Template filters</a>
+                        </li>
+                        <li>
+                            <a href="/api/templates/">Template handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/field-types/">Field Types</a>
+                        </li>
+                        <li>
+                            <a href="/api/validators/">Form validators</a>
+                        </li>
+                        <li>
+                            <a href="/api/search/">Search handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/shortcodes/" class="selected">Shortcode providers</a>
+                        </li>
+                        <li>
+                            <a href="/api/translations/">Translations</a>
+                        </li>
+                        <li>
+                            <a href="/api/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/api/import/">Importing Content</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/reference/">API Reference</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Shortcode providers</h1>
+
+  <p>Shortcodes are text-based placeholders that can be entered into a text field, to be replaced out with something else later. A good example is the default Asset shortcodes provided by Perch. To include an asset in their content, and user can enter a shortcode such as:</p>
+<pre><code>[cms:asset 1234]
+</code></pre><p>Shortcodes are processed by <em>shortcode providers</em>, which are registered to handle a specific set of shortcodes by an app.</p>
+<h3 id="registering-a-provider">Registering a provider</h3>
+<p>Shortcodes are handled with a PHP class, which should be registered in both the <code>admin.php</code> and <code>runtime.php</code> of your app:</p>
+<pre><code class="lang-php">PerchSystem::register_shortcode_provider(&#39;MyApp_ShortcodeProvider&#39;);
+</code></pre>
+<p>The provider class should extend <code>PerchShortcode_Provider</code>:</p>
+<pre><code class="lang-php">&lt;?php
+
+class MyApp_ShortcodeProvider extends PerchShortcode_Provider 
+{
+    public $shortcodes = [];
+
+    public function get_shortcode_replacement($Sortcode, $Tag)
+    {
+        return &#39;&#39;;
+    }
+}
+
+</code></pre>
+<p>The public <code>$shortcodes</code> property is an array of shortcode names handled by this provider.</p>
+<p>The <code>get_shortcode_replacement()</code> method is called whenever a shortcode handled by this provider is encountered and needs replacing.</p>
+<h2 id="example-embedding-tweets">Example: Embedding Tweets</h2>
+<p>The Twitter app has a very simple shortcode provider for embedding Tweets using the Twitter oembed API. In its entirety, the provider looks like this:</p>
+<pre><code class="lang-php">&lt;?php
+
+class PerchTwitter_ShortcodeProvider extends PerchShortcode_Provider
+{
+    public $shortcodes = [&#39;tweet&#39;];
+
+    public function get_shortcode_replacement($Sortcode, $Tag)
+    {
+        $id = $Sortcode-&gt;arg(0);
+
+        if (!$id) return &#39;&#39;;
+
+        $API = new PerchAPI(1.0, &#39;perch_twitter&#39;);
+        $HTTP = $API-&gt;get(&#39;HTTPClient&#39;);
+
+        $response = $HTTP-&gt;get(&#39;https://publish.twitter.com/oembed?url=https://twitter.com/Interior/status/&#39;.$id);
+
+        if ($response) {
+            $data = json_decode($response, true);
+            if (isset($data[&#39;html&#39;])) return $data[&#39;html&#39;];
+        }
+
+        return &#39;&#39;;
+    }
+}
+</code></pre>
+<p>Firstly, it declares itself the handler for <code>tweet</code>, so any shortcode formatted as <code>[cms:tweet ... ]</code> will be handed to this provider to replace.</p>
+<p>The <code>get_shortcode_replacement()</code> method reads the first argument from the shortcode, which is expected to be the Tweet ID.</p>
+<pre><code>[cms:tweet 843945557659959296]
+</code></pre><p>It then uses this to make a request to the Twitter API and returns the HTML for that Tweet.</p>
+<h3 id="accessing-arguments">Accessing arguments</h3>
+<p>Shortcode arguments can either be anonymous values (like the ID above) which are given an index number, or they can be named <code>attribute=value</code> pairs, which are accessed by name. You can mix both.</p>
+<pre><code>[cms:tweet 843945557659959296 lang=en]
+</code></pre><p>In this case the ID would be accessed with <code>$Shortcode-&gt;arg(0)</code> as it’s the first unnamed argument. The <code>lang</code> value would be accessed with <code>$Sortcode-&gt;arg(&#39;lang&#39;)</code>.</p>
+<h3 id="accessing-the-template-tag">Accessing the template tag</h3>
+<p>The second argument to <code>get_shortcode_replacement()</code> is an object representing the template tag. This is an instance of <a href="/api/reference/xmltag/">XMLTag</a>, so the tag attributes can be accessed as methods on the object.</p>
+<h2 id="example-embedding-instagram-photos">Example: Embedding Instagram Photos</h2>
+<p>In exactly the same way, we can create a very simple shortcode provider for embedding photos using the Instagram oembed API. In its entirety, the provider would look like this:</p>
+<pre><code class="lang-php">&lt;?php
+
+class PerchInstagram_ShortcodeProvider extends PerchShortcode_Provider
+{
+    public $shortcodes = [&#39;instagram&#39;];
+
+    public function get_shortcode_replacement($Sortcode, $Tag)
+    {
+        $id = $Sortcode-&gt;arg(0);
+
+        $API = new PerchAPI(1.0, &#39;perch_instagram&#39;);
+        $HTTP = $API-&gt;get(&#39;HTTPClient&#39;);
+
+        $response = $HTTP-&gt;get(&#39;https://api.instagram.com/oembed/?url=&#39;.urlencode(&#39;http://instagr.am/p/&#39;.$id));
+
+        if ($response) {            
+            $data = json_decode($response, true);
+            if (isset($data[&#39;html&#39;])) return $data[&#39;html&#39;];
+        }
+
+        return &#39;&#39;;
+    }
+}
+</code></pre>
+<p>An Instagram photo could then be embedded by its ID like so:</p>
+<pre><code>[cms:instagram BTQ1omKl0DJ]
+</code></pre><p>The same example becomes trivial to adapt for any oembed API, and can be built on for other types of API too.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create a Blog Archive page - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Create a Blog Archive page">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li class="selected"><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+      <ul class="sidenav">
+          <li>
+              <a href="/video/getting-started/">Getting Started</a>
+          </li>
+          <li>
+              <a href="/video/blog/" class="selected">Perch Blog</a>
+
+                <ul class="video-nav">
+                  <li>
+                      <a href="/video/v3/installing-blog">Installing the Blog</a>
+                      <span class="badge">3:41</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-listing-page">Create a Blog Listing page</a>
+                      <span class="badge">5:34</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-detail-page">Create a Blog Detail page</a>
+                      <span class="badge">10:47</span>
+                  </li>
+                  <li class="selected">
+                      <a href="/video/v3/blog-archive-page">Create a Blog Archive page</a>
+                      <span class="badge">12:08</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/editing-blog-templates">Editing Blog Templates</a>
+                      <span class="badge">9:18</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blocks">Blocks</a>
+                      <span class="badge">5:37</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-homepage">Showing blog posts on the homepage</a>
+                      <span class="badge">3:38</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-rss">Create a Blog RSS feed</a>
+                      <span class="badge">8:27</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/htaccess-rewrites">Rewriting URLs with htaccess</a>
+                      <span class="badge">6:05</span>
+                  </li>
+                </ul>
+
+          </li>
+          <li>
+              <a href="/video/runway/">Perch Runway</a>
+          </li>
+      </ul>
+    </nav>
+
+<article class="content">
+
+  <h1>Create a Blog Archive page</h1>
+
+  <div class="video-wrapper">
+    <div class="flex-video widescreen">
+      <iframe src="https://www.youtube-nocookie.com/embed/nE3SZ3cY8DE?showinfo=0&amp;rel=0" frameborder="0" allow="encrypted-media" gesture="media" allowfullscreen class="embed-responsive-item" width="847" height="476"></iframe>
+    </div>
+  </div>
+
+  <div class="video-detail">
+    <div class="inner-panel">
+        <p>The final page of our blog is an archive page, which serves to display posts by category or by tag. Each post has categories and tags which link to a listing of all the posts in that category or tag. Until you set up this page, if you click on these you will get a 404 error - page not found. If you have a look on the querystring, you will see that it contains a parameter and value that we can use to select the right data for our listing page. Just as we did when selecting a post based on the slug.</p>
+<p>We’ve got our <code>index.php</code> page which is the blog homepage listing page. I’m going to save that as <code>archive.php</code>, because essentially a archive is just like the blog homepage listing. It’s a listing of posts, we’re just filtering it in a different way. On that main listing we displayed our posts with <code>perch_blog_recent_posts()</code>. That’s what we used on the homepage. We’re going to need to change this. We’re going to use the Perch Blog custom function.</p>
+<p>Before I start to output the posts, I want to set up some variables to use, because we’re going to be filtering and displaying the posts in a few different ways, but there are some things that are going to be common to all of them, so let’s set those things up first.</p>
+<pre><code class="lang-php">$posts_per_page = 10;
+$template = &#39;post_in_list.html&#39;;
+$sort_order = &#39;DESC&#39;;
+$sort_by = &#39;postDateTime&#39;;
+
+$posts_displayed = false;
+</code></pre>
+<h3 id="testing-for-category">Testing for category</h3>
+<p>If the visitor has clicked a link which has a querystring parameter of <code>cat</code>, they are looking for a category archive. We can test for this in PHP and if so retrieve the category details and posts in the category.</p>
+<p>I use the <code>perch_get()</code> function. If it has a parameter <code>cat</code>, I use another blog function <code>perch_blog_category</code> passing in the value of <code>perch_get(&#39;cat&#39;)</code>. If my querystring included <code>cat=relocation</code> then the value passed into <code>perch_blog_category</code> will be <code>relocation</code>. The function returns the category title, and we use the parameter through in order to use this in our echoed statement.</p>
+<pre><code class="lang-php">if(perch_get(&#39;cat&#39;)) {
+  echo &#39;&lt;h1&gt;Archive of: &#39; . perch_blog_category(perch_get(&#39;cat&#39;),true) . &#39;&lt;/h1&gt;&#39;;
+
+}
+</code></pre>
+<p>Here’s a quick test. If we save this and if we head back to our page, now if we click on a category, archive of relocation. It’s collected the relocation category from that query string. If we click on, say, ‘Employees’, archive of employees. Great. So far, so good. What we’re doing is we’re getting the information about that category back from perch. That’s great. We can now output the linked posts for that category.</p>
+<p>Still staying inside that ‘If’, use <code>perch_blog_custom</code> with those variables created earlier, and once again the value of <code>perch_get(&#39;cat&#39;)</code>.</p>
+<pre><code class="lang-php">if(perch_get(&#39;cat&#39;)) {
+  echo &#39;&lt;h1&gt;Archive of: &#39; . perch_blog_category(perch_get(&#39;cat&#39;),true) . &#39;&lt;/h1&gt;&#39;;
+
+  perch_blog_custom([
+    &#39;category&#39;=&gt;perch_get(&#39;cat&#39;),
+    &#39;template&#39;=&gt;$template,
+    &#39;count&#39;=&gt;$posts_per_page,
+    &#39;sort&#39;=&gt;$sort_by,
+    &#39;sort-order&#39;=&gt;$sort_order
+  ]);
+
+  $posts_displayed = true;
+}
+</code></pre>
+<p>Having done that, I’m going to say ‘Posts displayed equals true’, because we actually got a match. We realize that yes, we are working within category.</p>
+<p>If you go back to the browser, you should now be able to load posts by category. We then do exactly the same with Tags.</p>
+<pre><code class="lang-php">if(perch_get(&#39;tag&#39;)) {
+  echo &#39;&lt;h1&gt;Archive of: &#39; . perch_blog_tag(perch_get(&#39;tag&#39;),true) . &#39;&lt;/h1&gt;&#39;;
+  perch_blog_custom([
+    &#39;tag&#39;=&gt;perch_get(&#39;tag&#39;),
+    &#39;template&#39;=&gt;$template,
+    &#39;count&#39;=&gt;$posts_per_page,
+    &#39;sort&#39;=&gt;$sort_by,
+    &#39;sort-order&#39;=&gt;$sort_order
+  ]);
+  $posts_displayed = true;
+}
+</code></pre>
+<p>Someone might, instead of going to archive.php with something on the querystring, they might just visit archive.php. In which case, they’re not going to get anything. That’s not very friendly, so in that case I’m just going to display the most recent posts. I only do this if <code>$posts_displayed</code> still equals <code>false</code> as I know that our checked for different types of archives have not matched.</p>
+<pre><code class="lang-php">if($posts_displayed == false) {
+  echo &#39;&lt;h1&gt;Archive&lt;/h1&gt;&#39;;
+  perch_blog_custom([
+    &#39;template&#39;=&gt;$template,
+    &#39;count&#39;=&gt;$posts_per_page,
+    &#39;sort&#39;=&gt;$sort_by,
+    &#39;sort-order&#39;=&gt;$sort_order
+  ]);
+}
+</code></pre>
+<p>You can use <code>perch_blog_custom</code> to do all kinds of filtering. For example, a date archive displaying things for each month. You can do that in exactly the same way as we created our ‘Tags’ and ‘Category’ archive. If you have a look at the _perch_blog_custom_ function in the documentation, you’ll see there’s an awful lot of different things that you can pass in.</p>
+
+
+
+        <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+            <li class="pagination-previous">
+              <a class="pagination-pointed-button" href="/video/v3/blog-detail-page" aria-label="Previous video">
+                Previous<span class="show-for-sr"> video</span>
+              </a>
+            </li>
+            <li class="pagination-next">
+              <a class="pagination-pointed-button" href="/video/v3/editing-blog-templates" aria-label="Next video">
+                Next<span class="show-for-sr"> video</span>
+              </a>
+            </li>
+        </ul>
+
+    </div>
+    
+  </div>
+
+
+
+
+  
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

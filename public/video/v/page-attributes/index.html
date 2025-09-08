@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page Attributes - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Page Attributes">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li class="selected"><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+      <ul class="sidenav">
+          <li>
+              <a href="/video/getting-started/">Getting Started</a>
+          </li>
+          <li>
+              <a href="/video/blog/">Perch Blog</a>
+          </li>
+          <li>
+              <a href="/video/runway/">Perch Runway</a>
+          </li>
+      </ul>
+    </nav>
+
+<article class="content">
+
+  <h1>Page Attributes</h1>
+
+  <div class="video-wrapper">
+    <div class="flex-video widescreen">
+      <iframe src="https://www.youtube-nocookie.com/embed/NB0CQLC47so?showinfo=0&amp;rel=0" frameborder="0" allow="encrypted-media" gesture="media" allowfullscreen class="embed-responsive-item" width="847" height="476"></iframe>
+    </div>
+  </div>
+
+  <div class="video-detail">
+    <div class="inner-panel">
+        <h2 id="video-transcript">Video Transcript</h2>
+<p>Introduced in Perch 2.4, Page Attributes are a method of adding to the detail about a Page that can be edited by Content Editors. Typically this includes meta information but this powerful feature can be used for much more.</p>
+<p>Included with the Perch download are some default templates in perch/templates/pages/attributes. If you don’t have this folder because you upgraded to 2.4, just copy it out of the download.</p>
+<p>You can select which attribute template that a page uses in the Page Options – by default Perch will use default.html if it is present. The default.html template includes seo.html a template for adding SEO meta information.</p>
+<p>You or your content editor can add the meta information to the page by clicking Page Details and completing the form.</p>
+<p>To display the Page Attributes in the head of your site you need to add a new function. Open the page on which the attributes will be displayed and add the perch_pages_attributes() function inside the head HTML tags, specifying the seo.html template.</p>
+<pre><code class="lang-php">    &lt;?php     
+    perch_page_attributes(array(        
+      &#39;template&#39; =&gt; &#39;seo.html&#39;    
+    )); 
+    ?&gt; 
+</code></pre>
+<p>Save, then reload the page in the browser and View Source to check that the meta information is now in place.</p>
+<p>You’ll notice that we specifically included the seo.html template here rather than default.html which includes it. That’s because you might include multiple templates in default.html to be used in different places.</p>
+<p>Sometimes you might want to add a class to the body element on your page, in order to then target this in your CSS to make your page look different. This is a great use of Page Attributes.</p>
+<p>To add this to our site I am creating a new template in perch/pages/templates/attributes and naming it body_attributes.html this template includes a select list of classes.</p>
+<pre><code class="lang-html">    &lt;perch:pages id=&quot;bodyclass&quot; label=&quot;Page Theme&quot; help=&quot;Select the theme for this page&quot; type=&quot;select&quot; options=&quot;red,green,blue&quot; divider-before=&quot;Design choices&quot;&gt;
+</code></pre>
+<p>You can see that I’m using a divider-before here to separate the design elements from SEO visually in the admin – you can see this when I reload the page. You can use all of the usual Perch Template tags and attributes in Page Attributes.</p>
+<p>I then include this template in default.html so that it can be edited on all pages using this template.</p>
+<pre><code class="lang-html">    &lt;perch:template path=&quot;pages/attributes/body_attributes.html&quot;&gt; 
+</code></pre>
+<p>On my page, I’m adding this to the body element using the perch_page_attribute function – this just returns a single attribute from the template. This means that I can add to this template in the future – perhaps to add an image to certain pages – without accidentally pulling out a bunch of HTML into the class attribute on the body!</p>
+<pre><code class="lang-php">    &lt;body class=&quot;&lt;?php
+      perch_page_attribute(&#39;bodyclass&#39;, array(
+        &#39;template&#39; =&gt; &#39;body_attributes.html&#39;
+      ));
+    ?&gt;&quot;&gt;
+</code></pre>
+<p>Adding images to Navigation is a common request, and Page Attributes makes this really simple as any Page Attributes are just available to your navigation. Perhaps I have a site map and think it would be nice to include an image and description of each page.</p>
+<p>I add to my body_attributes template Perch Template tags for these fields, and then go and complete these for the about page.</p>
+<p>My site map page already includes the navigation, using a template named sitemap.html which I have saved into the perch/templates/navigation folder. I can now just add my image and description that that template, save and refresh the site map page and the about image and description I added now shows up.</p>
+<p>This is a quick rundown of how you can use Page Attributes, a nice way to keep things that relate to a page all in one place for Editors.</p>
+
+
+
+        <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+        </ul>
+
+    </div>
+    
+  </div>
+
+
+
+
+  
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>
