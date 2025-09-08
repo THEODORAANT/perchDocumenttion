@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Repeaters Tags - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Repeaters Tags">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li class="selected"><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/templates/core-concepts/">Template Core Concepts</a>
+                        </li>
+                        <li>
+                            <a href="/templates/attributes/">Tag attributes</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/field-types/">Field Types</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/apps/">App Specific Tags</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/groups/">Field Groups</a>
+                        </li>
+                        <li>
+                            <a href="/templates/blocks/">Blocks Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/categories/">Category Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/comments/">Template Comments</a>
+                        </li>
+                        <li>
+                            <a href="/templates/conditionals/">Conditional Tags</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/form/">Form Tags</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/includes/">Template Includes</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/navigation/">Navigation Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/noresults/">No Results Tag</a>
+                        </li>
+                        <li>
+                            <a href="/templates/pagination/">Pagination Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/passing-variables-into-templates/">Passing variables into templates</a>
+                        </li>
+                        <li>
+                            <a href="/templates/repeaters/" class="selected">Repeaters Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/search/">Search Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/show-all/">Show All Tag</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Repeaters Tags</h1>
+
+  <p>Repeaters are parts of a template that can repeat. This is useful if, for example, you want to add multiple images but don’t know how many each item may have. You can add one image to the template, and then wrap it in a repeater.</p>
+<pre><code class="lang-html">&lt;perch:repeater id=&quot;images&quot; label=&quot;Images&quot;&gt;
+    &lt;img src=&quot;&lt;perch:content type=&quot;image&quot; id=&quot;image&quot; label=&quot;Image&quot;&gt;&quot;
+      alt=&quot;&lt;perch:content type=&quot;text&quot; id=&quot;alt&quot; label=&quot;Description&quot;&gt;&quot;&gt;
+&lt;/perch:repeater&gt;
+</code></pre>
+<p>The repeater tag takes a few attributes.</p>
+<h3 id="repeater-attributes">Repeater attributes</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Required. The ID of the repeater. Follows the same rules as normal template tag IDs</td>
+</tr>
+<tr>
+<td>label</td>
+<td>Required. A label to display when editing the items within Perch.</td>
+</tr>
+<tr>
+<td>max</td>
+<td>Integer. An optional maximum limit on the number of items that can be added to the repeater.</td>
+</tr>
+<tr>
+<td>scope-parent</td>
+<td>True or false. Bring the content variables outside of the repeater into scope within the repeater.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="using-a-repeater">Using a repeater</h2>
+<p>The space within a repeater acts a bit like a mini template of its own. It can include <code>perch:before</code> and <code>perch:after</code> sections, and item counts as <code>perch:every</code> counts are reset within it.</p>
+<pre><code class="lang-html">&lt;perch:repeater id=&quot;images&quot; label=&quot;Images&quot; max=&quot;5&quot;&gt;
+    &lt;perch:before&gt;&lt;ul&gt;&lt;/perch:before&gt;
+    &lt;li&gt;
+        &lt;img src=&quot;&lt;perch:content type=&quot;image&quot; id=&quot;image&quot; label=&quot;Image&quot;&gt;&quot;
+          alt=&quot;&lt;perch:content type=&quot;text&quot; id=&quot;alt&quot; label=&quot;Description&quot;&gt;&quot;&gt;
+    &lt;/li&gt;
+    &lt;perch:after&gt;&lt;/ul&gt;&lt;/perch:after&gt;
+&lt;/perch:repeater&gt;
+</code></pre>
+<h2 id="accessing-content-outside-the-repeater">Accessing content outside the repeater</h2>
+<p>By default, a repeater is a silo – like a mini region within the content item. It has its own content scope, and the template engine treats it as a distinct zone with its own <em>before</em> and <em>after</em> properties and new item counts.</p>
+<p>Content from outside the repeater is out of scope. You can bring it into scope within the repeater using the <code>scope-parent</code> attribute on the repeater tag.</p>
+<p>To prevent ID clashes, the items from outside the repeater become
+<code>parent.originalID</code> within the repeater. So a field that is <code>id=&quot;title&quot;</code>
+outside the repeater would be <code>id=&quot;parent.title&quot;</code> when brought into scope within the repeater.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

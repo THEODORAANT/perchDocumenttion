@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>perch_content_create() - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="perch_content_create()">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li class="selected"><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/functions/announcements/">Announcements</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/blog/">Blog</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/categories/">Categories Functions</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/collections/">Collection functions</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/comments/">Comments</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/content/">Content functions</a>
+                            <ul>    <li>
+                            <a href="/functions/content/perch-content-create/" class="selected">perch_content_create()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/content/perch-content-custom/">perch_content_custom()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/content/perch-content/">perch_content()</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/functions/events/">Events</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/form/">Form</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/gallery/">Gallery</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/layouts/">Layout Functions</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/listings/">Listings</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/mailchimp/">Mailchimp</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/members/">Members</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/navigation/">Navigation &amp; Page Functions</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/page-attributes/">Page Attributes</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/podcasts/">Podcasts</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/search/">Search Functions</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/shop-foxycart/">Foxycart (deprecated)</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/shop-paypal/">PayPal Shop (deprecated)</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/shop/">Shop</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/twitter/">Twitter</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/utilities/">Utility Functions</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>perch_content_create()</h1>
+
+  <p>By default, Perch creates a region automatically when it is first used. It can then be configured from within the web interface to pick a template and set its options. This is the primary way to work with Perch regions.</p>
+<p>In some circumstances, it’s also useful to be able to programmatically create a region. An example would be if you intend to always display the region using <code>perch_content_custom()</code>, which itself will not create regions. For this, we have <code>perch_content_create()</code>.</p>
+<pre><code class="lang-php">&lt;?php perch_content_create(&#39;News&#39;, array(
+    &#39;template&#39; =&gt; &#39;article.html&#39;,
+    &#39;multiple&#39; =&gt; true,
+    &#39;edit-mode&#39; =&gt; &#39;listdetail&#39;,
+    &#39;sort&#39; =&gt; &#39;date&#39;,
+    &#39;sort-order&#39; =&gt; &#39;DESC&#39;,
+));
+?&gt;
+</code></pre>
+<p>If a region doesn’t yet exist, <code>perch_content_create()</code> will create it, and configure it with the options provided. If it does exist, it does nothing.</p>
+<p>For this reason, you must <strong>create the region before it is used on the page</strong>. Practically, that means putting your <code>perch_content_create()</code>
+statements at the top of the page. Directly after the Perch runtime include would be a good place.</p>
+<h3 id="perch_content_create-options">perch_content_create options</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page</td>
+<td>The path of the page to create the region on. Leave unset for the current page (most likely case).</td>
+</tr>
+<tr>
+<td>template</td>
+<td>The name of content template file, e.g. article.html</td>
+</tr>
+<tr>
+<td>multiple</td>
+<td>true or false. Whether the region takes multiple items.</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>The ID of a template field to sort the region on.</td>
+</tr>
+<tr>
+<td>sort-order</td>
+<td>ASC or DESC - the direction of the sort.</td>
+</tr>
+<tr>
+<td>edit-mode</td>
+<td>singlepage or listdetail. The edit mode to use for the region.</td>
+</tr>
+<tr>
+<td>searchable</td>
+<td>true or false. Whether the region appears in search results.</td>
+</tr>
+<tr>
+<td>search-url</td>
+<td>The URL to use when linking to the item from a search result page.</td>
+</tr>
+<tr>
+<td>add-to-top</td>
+<td>true or false. Whether new items should be added to the top of the region (defaults to false - new items are added to the bottom).</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>Integer. The number of items to display when the region is output.</td>
+</tr>
+<tr>
+<td>shared</td>
+<td>true or false. Whether the region is shared across all pages.</td>
+</tr>
+<tr>
+<td>title-delimiter</td>
+<td>String use to delimit multiple content items when concatenating the default title for an item.</td>
+</tr>
+<tr>
+<td>columns</td>
+<td>Comma separated list of template field IDs to use for the columns on the listing page when editing in listdetail mode.</td>
+</tr>
+<tr>
+<td>roles</td>
+<td>Comma separated IDs of user roles with permission to edit the region. (Advanced use.)</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

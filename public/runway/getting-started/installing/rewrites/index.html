@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rewrite rules - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Rewrite rules">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li class="selected"><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/runway/caching/">Caching</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/cloud-storage/">Cloud Storage</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/collections/">Collections</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/configuration/">Configuration</a>
+                        </li>
+                        <li>
+                            <a href="/runway/core-tasks/">Core Tasks</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/getting-started/">Getting Started with Runway</a>
+                            <ul>    <li>
+                            <a href="/runway/getting-started/backup/">Backup</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/getting-started/installing/">Installing Runway</a>
+                            <ul>    <li>
+                            <a href="/runway/getting-started/installing/rewrites/" class="selected">Rewrite rules</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/getting-started/installing/scheduled-tasks/">Runway scheduled tasks</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/getting-started/upgrading-perch-to-runway/">Upgrading Perch to Runway</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/getting-started/using-runway/">Using Runway</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/runway/headless/">Headless requests</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/relationships/">Relationships</a>
+                        </li>
+                        <li>
+                            <a href="/runway/routing/">Routing</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/site-access/">Controlling site access</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading/">Upgrading to Runway 4</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading3/">Upgrading to Runway 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Rewrite rules</h1>
+
+  <p>Perch Runway uses your web server’s URL rewriting capability to manage incoming page requests. This needs to be configured in order for Runway to serve pages and the URLs you choose.</p>
+<p>Different types of web servers need configuring differently. Follow the instructions below for the type of web server you’re running. If your web server isn’t listed, there’s a general set of instructions at the bottom.</p>
+<h2 id="apache-with-mod_rewrite">Apache with mod_rewrite</h2>
+<p>For Apache with mod_rewrite, add the following rules to your web server configuration.</p>
+<p>Ideally this will form part of your server’s virtualhost configuration. If you can’t access the server config, a workaround is to use a simple <code>.htaccess</code> file in the root of the website. This isn’t as good for performance, but is convenient in development and staging environments.</p>
+<p>When installing fresh:</p>
+<pre><code class="lang-html">    # Perch Runway
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} !^/perch
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule .* /perch/core/runway/start.php [L]
+</code></pre>
+<p>Or when <strong>upgrading a Perch 2 site</strong> containing existing pages:</p>
+<pre><code class="lang-html">    # Perch Runway
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} !^/perch
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule .* /perch/core/runway/start.php [L]
+</code></pre>
+<p>If you installed into a folder other than <code>/perch</code>, update the rules accordingly.</p>
+<h2 id="nginx">Nginx</h2>
+<p>If you’re using nginx, add the following to your server configuration.</p>
+<pre><code class="lang-php">    # Match just the homepage
+    location = / {
+        try_files $uri @runway;
+    }
+
+    # Match any other request
+    location / {
+        try_files $uri $uri/ @runway;
+    }
+
+    # Perch Runway
+    location @runway {
+        rewrite ^ /perch/core/runway/start.php last;
+    }
+</code></pre>
+<p>If you installed into a folder other than <code>/perch</code>, update the rules accordingly.</p>
+<h2 id="something-else">Something else</h2>
+<p>If you’re using a server other than those listed above, you need to configure rewriting to do the following:</p>
+<ol>
+<li>Ideally, ignore the <code>/perch</code> folder</li>
+<li>If the requested file doesn’t exist, route the request to <code>/perch/core/runway/start.php</code></li>
+</ol>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Importing Collections - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Importing Collections">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li class="selected"><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/api/apps/">Apps</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/auth/">Authentication plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/buckets/">Bucket handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/custom-ui/">UI Customisations</a>
+                        </li>
+                        <li>
+                            <a href="/api/dashboard/">Dashboard Widgets</a>
+                        </li>
+                        <li>
+                            <a href="/api/editors/">Editor plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/events/">Event hooks</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/api/template-filters/">Template filters</a>
+                        </li>
+                        <li>
+                            <a href="/api/templates/">Template handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/field-types/">Field Types</a>
+                        </li>
+                        <li>
+                            <a href="/api/validators/">Form validators</a>
+                        </li>
+                        <li>
+                            <a href="/api/search/">Search handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/shortcodes/">Shortcode providers</a>
+                        </li>
+                        <li>
+                            <a href="/api/translations/">Translations</a>
+                        </li>
+                        <li>
+                            <a href="/api/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/api/import/">Importing Content</a>
+                            <ul>    <li>
+                            <a href="/api/import/collections/" class="selected">Importing Collections</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/import/assets/">Importing Assets</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/import/categories/">Importing Categories</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/import/shop/">Importing into Perch Shop</a>
+                             
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/api/reference/">API Reference</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Importing Collections</h1>
+
+  <p>Content can be imported programmatically into a nominated Perch Runway Collection. To achieve this, you first need:</p>
+<ol>
+<li>A script that includes the Perch runtime (which could be a master page)</li>
+<li>A collection</li>
+<li>A template for the collection that defines the content types</li>
+<li>A source of data</li>
+</ol>
+<h2 id="getting-started">Getting started</h2>
+<p>In your script, include the Perch runtime. If you’re using a Runway master page, you can skip this, just set up the master page and point a route to it.</p>
+<pre><code class="lang-php">include(&#39;/perch/runtime.php&#39;);
+</code></pre>
+<p>Create an instance of the API, and a new <code>CollectionImporter</code>. Tell the importer which collection to import into.</p>
+<pre><code class="lang-php">$API      = new PerchAPI(1.0, &#39;my_importer&#39;);
+$Importer = $API-&gt;get(&#39;CollectionImporter&#39;);
+
+$Importer-&gt;set_collection(&#39;Articles&#39;);
+</code></pre>
+<p>The importer uses a template to know how to process the incoming content. You might have a field called <code>publish_on</code>, but the importer only knows that the content should be processed as a date because it can look at the definition of <code>id=&quot;publish_on&quot;</code> in the supplied template.</p>
+<p><code>PerchAPI_Template::set()</code> takes two arguments:</p>
+<ol>
+<li>The path to the template</li>
+<li>The tag namespace to use </li>
+</ol>
+<pre><code class="lang-php">$Template = $API-&gt;get(&#39;Template&#39;);
+$Template-&gt;set(&#39;content/my_article&#39;, &#39;content&#39;);
+
+$Importer-&gt;set_template($Template);
+</code></pre>
+<p>You’re now ready to start importing content. If your collection is new and you want to clean out previous test imports, you can call <code>empty_collection()</code>. Don’t do that on a collection with valuable content, it’s a hard delete.</p>
+<pre><code class="lang-php">$Importer-&gt;empty_collection();
+</code></pre>
+<h2 id="importing">Importing</h2>
+<p>At this point you want to loop through your data source (whatever that may be) and map your content to IDs from your collection template. For each collection item you want to add, call <code>add_item()</code> with an associative array where the <em>keys</em> are the IDs from your template, and the <em>values</em> are the content you want to assign to that field.</p>
+<p>The <code>add_item()</code> method validates required fields and will throw an exception if any item of content cannot be imported. For this reason, it’s best to use a try/catch block:</p>
+<pre><code class="lang-php">try {
+    $Importer-&gt;add_item([
+        &#39;title&#39;    =&gt; &#39;Breaking news!&#39;,
+        &#39;body&#39;     =&gt; &#39;Some **exciting news** has _just_ broken...&#39;,
+        &#39;slug&#39;     =&gt; &#39;&#39;,
+        &#39;date&#39;     =&gt; &#39;2012-04-28 12:23:09&#39;,
+        &#39;category&#39; =&gt; [&#39;articles/news&#39;, &#39;articles/flippin-exciting&#39;],
+    ]);    
+} catch (Exception $e) {
+    die(&#39;Error: &#39;.$e-&gt;getMessage());
+}
+</code></pre>
+<p>The corresponding template for this example might look like this:</p>
+<pre><code class="lang-html">&lt;perch:content id=&quot;title&quot; type=&quot;text&quot; label=&quot;Title&quot; required&gt;
+&lt;perch:content id=&quot;body&quot; type=&quot;textarea&quot; label=&quot;Body&quot; markdown&gt;
+&lt;perch:content id=&quot;slug&quot; type=&quot;slug&quot; for=&quot;title&quot; label=&quot;Slug&quot; required&gt;
+&lt;perch:content id=&quot;date&quot; type=&quot;date&quot; label=&quot;Date&quot; required format=&quot;d F Y H:i&quot;&gt;
+&lt;perch:categories id=&quot;category&quot; set=&quot;articles&quot;&gt;
+    &lt;perch:category id=&quot;catTitle&quot;&gt;
+&lt;/perch:categories&gt;
+</code></pre>
+<p>Clearly not a very exciting template. I’m sure yours is much better.</p>
+<h3 id="slug-and-composite-fields">Slug and composite fields</h3>
+<p>The importer will process slug and composite fields based on the content of other fields in the data set. The trick is to nudge the importer into action by specify those fields in your array.</p>
+<pre><code class="lang-php">$Importer-&gt;add_item([
+    &#39;title&#39;    =&gt; &#39;Breaking news!&#39;,
+    &#39;slug&#39;     =&gt; &#39;&#39;,
+]);    
+</code></pre>
+<p>Because the <code>slug</code> key is set, the importer will invoke the corresponding Slug field type from the tag in the template and generate a value.</p>
+<h3 id="relationships">Relationships</h3>
+<p>Relationships can be created by specifying the IDs of the related items. The key should be the ID of the <code>perch:related</code> tag in your template.</p>
+<pre><code class="lang-php">try {
+    $Importer-&gt;add_item([
+        &#39;title&#39;  =&gt; &#39;Breaking news!&#39;,
+        &#39;author&#39; =&gt; [12],
+    ]);    
+} catch (Exception $e) {
+    die(&#39;Error: &#39;.$e-&gt;getMessage());
+}
+</code></pre>
+<p>The corresponding template for this example might look like this:</p>
+<pre><code class="lang-html">&lt;perch:content id=&quot;title&quot; type=&quot;text&quot; label=&quot;Title&quot; required&gt;
+&lt;perch:related id=&quot;author&quot; collection=&quot;Authors&quot;&gt;
+    &lt;perch:content id=&quot;name&quot; type=&quot;text&quot; label=&quot;Name&quot;&gt;
+&lt;/perch:related&gt;
+</code></pre>
+<p>A successful call to <code>add_item()</code> will return the ID of the newly added item, which can help in importing relationships. For example in this case you could import the author, get the new author ID and then insert your news item using that author ID in the relationship.</p>
+<h2 id="updating">Updating</h2>
+<p>Once content has already been imported, you can subsequently update it. This is a two-step process of finding the item (or items) and then updating.</p>
+<p>First you need to find an item (or items) to update. You use <code>find_items()</code> for this. It takes an options array just like you’d use to filter with <code>perch_collection()</code>.</p>
+<pre><code class="lang-php">$items = $Importer-&gt;find_items([
+    &#39;filter&#39; =&gt; &#39;slug&#39;,
+    &#39;value&#39; =&gt; &#39;hello-world&#39;,
+]);
+</code></pre>
+<p>This will always return an array of items - even if that’s an array containing just one item. The crucial field you want from the result is <code>_id</code> - this is the item’s ID for updating. You pass it as the first argument to <code>update_item()</code>. The second argument is an array of the fields you want to change.</p>
+<pre><code class="lang-php">if (count($items)) {
+   foreach($items as $item) {
+      $Importer-&gt;update_item($item[&#39;_id&#39;], [
+         &#39;slug&#39; =&gt; &#39;hello-george&#39;,
+      ]);    
+   }
+}
+</code></pre>
+<h2 id="deleting">Deleting</h2>
+<p>Deleting an item follows the same process as updating. First find the item, then call <code>delete_item()</code> to delete it.</p>
+<pre><code class="lang-php">$items = $Importer-&gt;find_items([
+    &#39;filter&#39; =&gt; &#39;slug&#39;,
+    &#39;value&#39; =&gt; &#39;hello-world&#39;,
+]);
+
+if (count($items)) {
+   foreach($items as $item) {
+      $Importer-&gt;delete_item($item[&#39;_id&#39;]);    
+   }
+}
+</code></pre>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

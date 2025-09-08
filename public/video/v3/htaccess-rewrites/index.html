@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rewriting URLs with htaccess - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Rewriting URLs with htaccess">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li class="selected"><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+      <ul class="sidenav">
+          <li>
+              <a href="/video/getting-started/">Getting Started</a>
+          </li>
+          <li>
+              <a href="/video/blog/" class="selected">Perch Blog</a>
+
+                <ul class="video-nav">
+                  <li>
+                      <a href="/video/v3/installing-blog">Installing the Blog</a>
+                      <span class="badge">3:41</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-listing-page">Create a Blog Listing page</a>
+                      <span class="badge">5:34</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-detail-page">Create a Blog Detail page</a>
+                      <span class="badge">10:47</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-archive-page">Create a Blog Archive page</a>
+                      <span class="badge">12:08</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/editing-blog-templates">Editing Blog Templates</a>
+                      <span class="badge">9:18</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blocks">Blocks</a>
+                      <span class="badge">5:37</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-homepage">Showing blog posts on the homepage</a>
+                      <span class="badge">3:38</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-rss">Create a Blog RSS feed</a>
+                      <span class="badge">8:27</span>
+                  </li>
+                  <li class="selected">
+                      <a href="/video/v3/htaccess-rewrites">Rewriting URLs with htaccess</a>
+                      <span class="badge">6:05</span>
+                  </li>
+                </ul>
+
+          </li>
+          <li>
+              <a href="/video/runway/">Perch Runway</a>
+          </li>
+      </ul>
+    </nav>
+
+<article class="content">
+
+  <h1>Rewriting URLs with htaccess</h1>
+
+  <div class="video-wrapper">
+    <div class="flex-video widescreen">
+      <iframe src="https://www.youtube-nocookie.com/embed/4-eBgrQW2Yo?showinfo=0&amp;rel=0" frameborder="0" allow="encrypted-media" gesture="media" allowfullscreen class="embed-responsive-item" width="847" height="476"></iframe>
+    </div>
+  </div>
+
+  <div class="video-detail">
+    <div class="inner-panel">
+        <p>Perch doesn’t assume a lot about your web server. One of the things we don’t do by default is rewrite all of the URLs of your website. This is for a couple of reasons. It means you can easily add Perch to just a few pages of an existing site, or use it to edit bits of some other app. It also means that if you find yourself working on a site with no ability to rewrite URLs, you can still use Perch.</p>
+<p>That said, you can easily rewrite URLs in any way you’d like. This information is very much for Perch. Perch Runway does rewrite your URLs because it works with a front controller and therefore has its own routing system. So, if you are using Runway, take a look at the routing documentation.</p>
+<h2 id="the-htaccess-file">The .htaccess file</h2>
+<p>You add all of these rules into a file named <code>.htaccess</code> saved into the root of your site. This file must be named exactly like this, with the <code>.</code> making it a hidden file, and with no extension.</p>
+<h2 id="removing-the-file-extension">Removing the file extension</h2>
+<p>One thing you might want to do is hide the extension. Instead of visiting <code>about/history.php</code>, you could visit <code>about/history</code> with no <code>.php</code> on the end. To do this add the following rules to your <code>.htaccess</code> file. These rules will take any incoming URL with no extension and add <code>.php</code> when sending the request to the server. Your visitors won’t need the file extension but the server will see the file as if it did have an extension.</p>
+<pre><code class="lang-php">RewriteEngine on
+# Redirect to PHP if it exists.
+# e.g. example.com/foo will display the contents of example.com/foo.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f 
+RewriteRule ^(.+)$ $1.php [L,QSA]
+</code></pre>
+<p>In Perch you can then update your navigation to show the links without the <code>.php</code>. To do this add the option <code>&#39;hide-extensions&#39; =&gt; true</code> when outputting your navigation using <code>perch_pages_navigation()</code>.</p>
+<pre><code class="lang-php">&lt;?php 
+  perch_pages_navigation([
+    &#39;from-path&#39; =&gt; &#39;/about&#39;,
+    &#39;levels&#39; =&gt; 1,
+        &#39;hide-extensions&#39; =&gt; true
+  ]);
+?&gt;
+</code></pre>
+<h2 id="rewriting-blog-urls">Rewriting Blog URLs</h2>
+<p>We can also rewrite blog URLs. When creating the blog we used querystrings to load our pages. For example:</p>
+<p><code>https://example.com/blog/post.php?s=2017-04-27-my-blog-post</code></p>
+<p>A rewritten URL might look like this:</p>
+<p><code>https://example.com/blog/2017-04-27-my-blog-post</code></p>
+<p>As with the pages, the server still ‘sees’ a querystring. Your visitors however use that much nicer looking URL.</p>
+<p>Once again, we add this to our <code>.htaccess</code> file after the lines that allow you to link to pages without the file extension.</p>
+<pre><code class="lang-php">RewriteRule ^blog/([a-zA-Z0-9-/]+)$ /blog/post.php?s=$1 [L]
+</code></pre>
+<p>Once you have done this be sure to go to Settings in the Control Panel and also update the Blog Post path to represent your new URL format.</p>
+<h2 id="more-blog-urls">More blog URLs</h2>
+<p>You can do more than rewrite the basic URLs. The following rules may help with the various pages within the blog.</p>
+<h3 id="category-archives">Category Archives</h3>
+<pre><code class="lang-php">RewriteRule ^blog/category/([a-zA-Z0-9-/]+)/page/([0-9]+)/{0,1}$ /blog/archive.php?cat=$1&amp;page=$2 [L]
+RewriteRule ^blog/category/([a-zA-Z0-9-/]+)$ /blog/archive.php?cat=$1 [L]
+</code></pre>
+<h3 id="date-archive-by-year">Date archive by year</h3>
+<pre><code class="lang-php">RewriteRule ^blog/date/([a-zA-Z0-9-/]+)/page/([0-9]+)/{0,1}$ /blog/archive.php?year=$1&amp;page=$2 [L]
+RewriteRule ^blog/date/([a-zA-Z0-9-/]+)$ /blog/archive.php?year=$1 [L]
+</code></pre>
+<h3 id="tag-archive">Tag archive</h3>
+<pre><code class="lang-php">RewriteRule ^blog/tag/([a-zA-Z0-9-/]+)/page/([0-9]+)/{0,1}$ /blog/archive.php?tag=$1&amp;page=$2 [L]
+RewriteRule ^blog/tag/([a-zA-Z0-9-/]+)$ /blog/archive.php?tag=$1 [L] 
+</code></pre>
+<h3 id="post-preview">Post preview</h3>
+<pre><code class="lang-php">RewriteRule ^blog/([a-zA-Z0-9-/]+)/preview$ /blog/post.php?s=$1&amp;preview=all [L]
+</code></pre>
+<p>If you’re doing a lot of this, for lots of different types of pages then that may well be a good indication that you should consider upgrading the site to Runway. It handles these rewrites in a far simpler way right from within the control panel. However for simple rewriting you should be able to get to where you need to be in your <code>.htaccess</code>.</p>
+
+
+
+        <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+            <li class="pagination-previous">
+              <a class="pagination-pointed-button" href="/video/v3/blog-rss" aria-label="Previous video">
+                Previous<span class="show-for-sr"> video</span>
+              </a>
+            </li>
+        </ul>
+
+    </div>
+    
+  </div>
+
+
+
+
+  
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

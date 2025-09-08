@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adding Settings - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Adding Settings">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li class="selected"><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/api/apps/">Apps</a>
+                            <ul>    <li>
+                            <a href="/api/apps/registering/">Registering</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/apps/activating/">Activation</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/apps/settings/" class="selected">Adding Settings</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/apps/runtime-functions/">Runtime functions</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/apps/field-types/">Field types</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/apps/scheduled-tasks/">Scheduled tasks</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/apps/upgrading/">Upgrading</a>
+                             
+                             
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/api/auth/">Authentication plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/buckets/">Bucket handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/custom-ui/">UI Customisations</a>
+                        </li>
+                        <li>
+                            <a href="/api/dashboard/">Dashboard Widgets</a>
+                        </li>
+                        <li>
+                            <a href="/api/editors/">Editor plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/events/">Event hooks</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/api/template-filters/">Template filters</a>
+                        </li>
+                        <li>
+                            <a href="/api/templates/">Template handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/field-types/">Field Types</a>
+                        </li>
+                        <li>
+                            <a href="/api/validators/">Form validators</a>
+                        </li>
+                        <li>
+                            <a href="/api/search/">Search handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/shortcodes/">Shortcode providers</a>
+                        </li>
+                        <li>
+                            <a href="/api/translations/">Translations</a>
+                        </li>
+                        <li>
+                            <a href="/api/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/api/import/">Importing Content</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/reference/">API Reference</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Adding Settings</h1>
+
+  <p>Apps sometimes need to offer the user configuration options, and for this purpose they can add items to the Perch Settings page.</p>
+<p>This is done from within the <code>admin.php</code> file.</p>
+<h2 id="adding-a-setting">Adding a setting</h2>
+<pre><code class="lang-php">$this-&gt;add_setting(&#39;my_app_editorMayDeleteStuff&#39;, &#39;Editors may delete stuff&#39;, &#39;checkbox&#39;, false);
+</code></pre>
+<p>The <code>add_setting()</code> method tags 6 arguments:</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Setting ID</td>
+<td>String</td>
+<td>A unique ID for the setting, prefixed with your app ID</td>
+<td>my_app_editorMayDeleteStuff</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>String</td>
+<td>A label for the setting, presented to the user</td>
+<td>Editors may delete stuff</td>
+</tr>
+<tr>
+<td>Field type</td>
+<td>String or callable</td>
+<td>The type of form element to use for the setting, see below</td>
+<td>text</td>
+</tr>
+<tr>
+<td>Default value</td>
+<td>String, int, bool</td>
+<td>The default value for the setting</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Options</td>
+<td>Array</td>
+<td>Optional, options for select fields</td>
+<td><em>See below</em></td>
+</tr>
+<tr>
+<td>Hint text</td>
+<td>String</td>
+<td>Optional hint text for displaying next to the field</td>
+</tr>
+</tbody>
+</table>
+<h2 id="field-types">Field types</h2>
+<p>There are four basic field types:</p>
+<ul>
+<li>text</li>
+<li>textarea</li>
+<li>checkbox</li>
+<li>select</li>
+</ul>
+<p>If specifying a select box, you should also provide an options array.
+Each item in the array is an associative array with label and value keys. The label is displayed, the value returned.</p>
+<pre><code class="lang-php">$opts = array();
+$opts[] = array(&#39;label&#39;=&gt;&#39;Option 1&#39;, &#39;value&#39;=&gt;&#39;1&#39;);
+$opts[] = array(&#39;label&#39;=&gt;&#39;Option 2&#39;, &#39;value&#39;=&gt;&#39;2&#39;);
+$opts[] = array(&#39;label&#39;=&gt;&#39;Option 3&#39;, &#39;value&#39;=&gt;&#39;3&#39;);
+</code></pre>
+<p>If you need a more complex type of field, you can specify a callable anonymous function as the argument for the field type. The function is passed the following</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Form</td>
+<td>Object</td>
+<td>An instance of <code>PerchAPI_Form</code></td>
+</tr>
+<tr>
+<td>ID</td>
+<td>String</td>
+<td>The ID of the setting</td>
+</tr>
+<tr>
+<td>Details</td>
+<td>Array</td>
+<td>The current settings values</td>
+</tr>
+<tr>
+<td>Setting</td>
+<td>Array</td>
+<td>The details of this particular setting</td>
+</tr>
+</tbody>
+</table>
+<p>It is then your responsibility to return the HTML for the completed form field. For example, Perch Shop defines the following to provide the user with a list of currency options that are marked as active in the database:</p>
+<pre><code class="lang-php">$this-&gt;add_setting(&#39;perch_shop_default_currency&#39;, &#39;Default currency&#39;, &#39;PerchShop_Currencies::get_settings_select_list&#39;, &#39;&#39;);
+</code></pre>
+<p>The <code>get_settings_select_list</code> function:</p>
+<pre><code class="lang-php">public static function get_settings_select_list($Form, $id, $details, $setting)
+{
+    $opts = array();
+    $opts[] = array(&#39;value&#39;=&gt;&#39;&#39;, &#39;label&#39;=&gt;&#39;&#39;);
+    $c = __CLASS__;
+    $Currencies = new $c;
+    $currencies = $Currencies-&gt;get_by(&#39;currencyActive&#39;, &#39;1&#39;);
+    if (PerchUtil::count($currencies)) {
+        foreach($currencies as $Currency) {
+            $opts[] = array(&#39;value&#39;=&gt;$Currency-&gt;currencyID(), &#39;label&#39;=&gt;$Currency-&gt;currencyCode());
+        }
+    }
+    return $Form-&gt;select($id, $opts, $Form-&gt;get($details, $id, $setting[&#39;default&#39;])); 
+}
+</code></pre>
+<p>$Form, $id, $details, $setting</p>
+<h2 id="reading-your-setting-back">Reading your setting back</h2>
+<p>Once a setting is set, you need to be able to read it back. You do that like this:</p>
+<pre><code class="lang-php">$Settings = $API-&gt;get(&#39;Settings&#39;);
+$Settings-&gt;get(&#39;my_app_editorMayDeleteStuff&#39;)-&gt;val();
+</code></pre>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

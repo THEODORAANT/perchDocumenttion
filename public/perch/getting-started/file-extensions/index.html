@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Using different file extensions - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Using different file extensions">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link selected"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/perch/getting-started/">Getting Started With Perch</a>
+                            <ul>    <li>
+                            <a href="/perch/getting-started/installing/">Installing Perch</a>
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/getting-started/development-tips/">Development and Workflow Tips</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/getting-started/file-extensions/" class="selected">Using different file extensions</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/getting-started/fundamentals/">Fundamental ideas behind Perch</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/getting-started/using-perch/">Using Perch - getting started tutorial</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/perch/configuration/">Configuration</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/building/">Building Sites with Perch</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/categories/">Categories</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/content/">Working with Content</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/control-panel/">The Perch Control Panel</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/help/">Troubleshooting Tips</a>
+                        </li>
+                        <li>
+                            <a href="/perch/pages-and-nav/">Pages and Navigation</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/resources/">Managing Resources</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/upgrading/">Upgrading to Perch 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Using different file extensions</h1>
+
+  <p>Perch uses PHP to deliver your content, so by default the pages of your site must be <code>.php</code> files.</p>
+<p>However, if your hosting account allows for <code>.htaccess</code> (web server configuration) files, it’s possible to tell the web server to run PHP in other sorts of pages.</p>
+<p>To do this, create a new file at the top level of your website and call it <code>htaccess.txt</code> (we’ll rename it shortly).</p>
+<p>The configuration settings needed for this vary from host to host, but here are some common ones. You may need to check your host’s documentation or knowledgebase on how to do this. Try one, and if it doesn’t work, try the next.</p>
+<hr>
+<h3 id="option-1-addtype">Option 1: AddType</h3>
+<p>Put the following line into the file:</p>
+<pre><code>AddType application/x-httpd-php .php .htm .html
+</code></pre><h3 id="options-2-addhandler">Options 2: AddHandler</h3>
+<p>Put the following line into the file:</p>
+<pre><code>AddHandler php-script .html
+</code></pre><hr>
+<p>You can add any file extensions you’d like to treat as PHP. (Don’t add other server-side scripting languages like <code>.asp</code> unless you know what you’re doing!)</p>
+<p>Once you’ve done that, <strong>rename your file to <code>.htaccess</code></strong> – that’s starting with a dot and no file extension. This is a hidden file, so depending on your software settings, it may then appear to vanish. Most web editing software has a setting to show hidden files.</p>
+<p>The files with the extensions you listed should now be run as PHP, enabling Perch to manage your content.</p>
+<p>You can also use this method to parse a <code>.xml</code> or <code>.json</code> file or other text format as PHP if you want to use Perch to create those files.</p>
+<p>If you make a mistake in the <code>.htaccess</code> file or this is not supported by your host you may get an error, or a zero-length document, or your <code>.html</code> pages will just ignore it.</p>
+<h3 id="troubleshooting-steps">Troubleshooting steps</h3>
+<ol>
+<li><p>If your site is now throwing an error then you have either made a mistake in your <code>.htaccess</code> file or your host does not support this. Search on your hosting company website for <em>AddType</em> and see if they have an alternate syntax to use, or raise a ticket with your host for help. You could send them the link to this support page.</p>
+</li>
+<li><p>If your site is not erroring but Perch does not seem to be picking up your regions, <strong>View Source</strong>. If you can see the Perch runtime include at the top of the page then PHP is <strong>not</strong> being parsed. This include should not be visible if everything is set up correctly.</p>
+</li>
+<li><p>Check that you have copied the line exactly with no extra characters into a plain text or code editor.</p>
+</li>
+<li><p>Check that you have renamed the file correctly as <code>.htaccess</code> and placed it in the root of your site.</p>
+</li>
+<li><p>If your host gets back to you with information that you do not understand, raise a ticket with us giving us details of what your host has said.</p>
+</li>
+</ol>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

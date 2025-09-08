@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Editing the Blog Templates - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Editing the Blog Templates">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li class="selected"><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+      <ul class="sidenav">
+          <li>
+              <a href="/video/getting-started/">Getting Started</a>
+          </li>
+          <li>
+              <a href="/video/blog/">Perch Blog</a>
+          </li>
+          <li>
+              <a href="/video/runway/">Perch Runway</a>
+          </li>
+      </ul>
+    </nav>
+
+<article class="content">
+
+  <h1>Editing the Blog Templates</h1>
+
+  <div class="video-wrapper">
+    <div class="flex-video widescreen">
+      <iframe src="https://www.youtube-nocookie.com/embed/c_7H5x13KPE?showinfo=0&amp;rel=0" frameborder="0" allow="encrypted-media" gesture="media" allowfullscreen class="embed-responsive-item" width="847" height="476"></iframe>
+    </div>
+  </div>
+
+  <div class="video-detail">
+    <div class="inner-panel">
+        <h2 id="video-transcript">Video Transcript</h2>
+<p>To add the finishing touches to our blog we need to edit the templates. As with anything in Perch the output HTML is down to you. When editing templates for any official app you should start by making a copy of the app default templates and placing them into your perch/templates folder. Perch uses the default templates but if there is a template of the same filename in your folder it will use that one first.</p>
+<p>By copying your templates rather than editing the default ones directly, we won’t overwrite your changes when you upgrade.</p>
+<p>So copy the folder <code>perch/addons/apps/perch_blog/templates/blog</code> to <code>perch/templates/blog</code></p>
+<p>Another concept to understand about app templates is that every app has a Master Template. This tends to be the one for the detail page of the app. In the case of blog this is the template that displays an individual post – post.html. Any fields that you want available to other views – such as the listing – must appear in this template. As this is the template that generates the admin view and therefore the fields the editor completes.</p>
+<p>As post.html is the master template we will start by editing it.</p>
+<p>You can add or remove any markup here and also add additional fields.</p>
+<p>In our design we use the excerpt as an intro to the post. In the default templates however excerpt does not appear on the detail page, it’s only used for listings. You can see it is down at the bottom of the template outside of the HTML markup and has an attribute suppress=“true”. The suppress attribute is how you add additional fields to your Master Template for the editor to complete without them displaying in that view on the website.</p>
+<p>We want to display our excerpt so I move it into place and remove the suppress attribute.</p>
+<p>I’m removing the image field as we aren’t using it in this design. The second field down the bottom would create a cropped version for the listing – again if you need multiple image sizes they all need to be listed in this template.</p>
+<p>At the bottom of the page things look pretty good. My name is displayed there as part of the author credits section, I don’t want that in this design so I need to switch to my post.php page and remove the function that calls that in.</p>
+<p>You can also see on post.php the functions that add the comments listing and form to the post. If you don’t want comments at all you could remove these. We do have comments so I need to update the comments template so that is looks like our design.</p>
+<p>The comments template is comment.html</p>
+<p>Comments are really just like any repeating content in Perch. If you look at the very top of the template there is a section wrapped in perch:before tags – this will output before the comments are displayed, at the bottom the content with perch:after tags will display after the final comment.</p>
+<p>Finally we edit the listing template which is post-in-list.html this should be looking familiar to you now – once again we have perch before and after sections enclosing the list.</p>
+<p>You can tweak and adjust your templates until you are happy with the output.</p>
+<p>With your templates updated the blog is ready to go.</p>
+
+
+
+        <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+        </ul>
+
+    </div>
+    
+  </div>
+
+
+
+
+  
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

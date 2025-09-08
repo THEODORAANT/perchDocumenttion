@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event hooks - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Event hooks">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li class="selected"><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/api/apps/">Apps</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/auth/">Authentication plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/buckets/">Bucket handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/custom-ui/">UI Customisations</a>
+                        </li>
+                        <li>
+                            <a href="/api/dashboard/">Dashboard Widgets</a>
+                        </li>
+                        <li>
+                            <a href="/api/editors/">Editor plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/events/" class="selected">Event hooks</a>
+                            <ul>    <li>
+                            <a href="/api/events/list/">List of events</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/api/template-filters/">Template filters</a>
+                        </li>
+                        <li>
+                            <a href="/api/templates/">Template handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/field-types/">Field Types</a>
+                        </li>
+                        <li>
+                            <a href="/api/validators/">Form validators</a>
+                        </li>
+                        <li>
+                            <a href="/api/search/">Search handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/shortcodes/">Shortcode providers</a>
+                        </li>
+                        <li>
+                            <a href="/api/translations/">Translations</a>
+                        </li>
+                        <li>
+                            <a href="/api/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/api/import/">Importing Content</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/reference/">API Reference</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Event hooks</h1>
+
+  <p>Perch uses a publisher/subscriber model of custom events to enable loose interaction between add-ons without each needing to know about the other. The control panel fires events as the system is used and is content updated. Your code can listen for these events and react to them. For example, you can listen for the <code>page.published</code> event and run some custom code (like clearing a cache) when a page is published. All without the page publishing code needing to know anything about your add-on.</p>
+<p>You can also fire your own custom events for either your own code, or other people’s code to be able to listen for. The Perch Shop app fires an event when an order is placed - you can write code to listen for that event and do something else accordingly.</p>
+<h3 id="listening-for-an-event">Listening for an event</h3>
+<p>There are broadly two types of events. Control panel events are fired when something happens as a result of the user editing content and generally using the Perch control panel. Runtime events happen as a result of a visitor doing something on your site (such as buying a product in your store).</p>
+<p>Both types take the same approach, but are just declared in different places.</p>
+<p>Register your content panel event listeners in your app’s <code>admin.php</code> file. Runtime events should go in your app’s <code>runtime.php</code> file.</p>
+<pre><code class="lang-php">$API = new PerchAPI(1.0, &#39;my_app&#39;);
+
+$API-&gt;on(&#39;region.publish&#39;, function(PerchSystemEvent $Event){
+    // A region has been published!
+});
+</code></pre>
+<p>The callback function is passed a <code>PerchSystemEvent</code> object containing the details of the event. In the above example, where the event is assigned as <code>$Event</code>, the following properties are available:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>event</td>
+<td>the name of the event called (<code>region.publish</code> in this example)</td>
+</tr>
+<tr>
+<td>subject</td>
+<td>the item the event was called on. This will usually be an object such as a Region or a Page, depending on the event. The subject can be interrogated for details.</td>
+</tr>
+<tr>
+<td>args</td>
+<td>an array of any subsequent arguments passed to the event</td>
+</tr>
+<tr>
+<td>user</td>
+<td>a User object representing the logged in user (control panel events only)</td>
+</tr>
+</tbody>
+</table>
+<p>You can also listen for a special wildcard event name <code>&#39;*&#39;</code> which will be called for all events. Can be useful for logging, but be very careful as this code will be called very frequently.</p>
+<pre><code class="lang-php">$API-&gt;on(&#39;*&#39;, function(PerchSystemEvent $Event){
+    // An event has been fired
+    // It was: $Event-&gt;event
+});
+</code></pre>
+<h3 id="firing-an-event">Firing an event</h3>
+<p>You should only fire your own events, never someone else’s.</p>
+<pre><code class="lang-php">$API-&gt;event(&#39;my_app.did_something&#39;, $this);
+</code></pre>
+<p>The <code>event()</code> method takes a variable number of arguments:</p>
+<ol>
+<li>Event name (<em>required</em>) see naming requirements below</li>
+<li>The subject of the event, e.g. <code>$this</code> from within a class</li>
+<li>Any number of additional arguments, which will be available as <code>PerchSystemEvent::$args</code></li>
+</ol>
+<h3 id="naming-your-event">Naming your event</h3>
+<ul>
+<li>Event names should contain only letters, numbers, underscores and dots.</li>
+<li>Prefix the event name with the name of your app, followed by a dot </li>
+<li>Use an active verb in preference to a past tense verb where possible, e.g. <em>post_create</em> not <em>post_created</em> (like a mouse event - <em>onclick</em> not <em>onclicked</em>)</li>
+<li>Use underscores to separate words, and dots to create heirarchy</li>
+<li>The entire event name must be max 64 chars</li>
+</ul>
+<p><strong>Examples:</strong> </p>
+<pre><code class="lang-php">my_app.product.update
+my_app.product.stock_level.reduce
+my_app.feed.create
+my_app.user.avatar.delete
+</code></pre>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

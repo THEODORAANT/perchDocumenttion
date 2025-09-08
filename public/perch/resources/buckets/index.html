@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resource Buckets - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Resource Buckets">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link selected"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/perch/getting-started/">Getting Started With Perch</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/configuration/">Configuration</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/building/">Building Sites with Perch</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/categories/">Categories</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/content/">Working with Content</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/control-panel/">The Perch Control Panel</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/help/">Troubleshooting Tips</a>
+                        </li>
+                        <li>
+                            <a href="/perch/pages-and-nav/">Pages and Navigation</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/resources/">Managing Resources</a>
+                            <ul>    <li>
+                            <a href="/perch/resources/buckets/" class="selected">Resource Buckets</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/perch/upgrading/">Upgrading to Perch 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Resource Buckets</h1>
+
+  <p>Perch 2.1 introduced the ability to have multiple places in which to store resources. We call these resource buckets – you can think of them as multiple resource folders.</p>
+<h2 id="basic-buckets">Basic buckets</h2>
+<p>The resource bucket to use can be set on any individual template tag using the <code>bucket</code> attribute.</p>
+<pre><code class="lang-html">    &lt;perch:content id=&quot;report&quot; type=&quot;file&quot; label=&quot;Annual report PDF&quot; bucket=&quot;reports&quot;&gt;
+</code></pre>
+<p>Without any configuration, you can use a bucket name as above. If that bucket doesn’t exist, it will be created as a subfolder of the default resources folder. In this case, <code>/perch/resources/reports/</code>. You can create that folder yourself, or Perch will do it for you.</p>
+<h2 id="setting-a-default-bucket">Setting a default bucket</h2>
+<p>You can declare any of your buckets as the default from your <code>config/config.php</code> file.</p>
+<pre><code class="lang-php">define(&#39;PERCH_DEFAULT_BUCKET&#39;,&#39;images&#39;);
+</code></pre>
+<h2 id="bucket-list">Bucket list</h2>
+<p>For more advanced use, you can define a bucket using the bucket list. This is a PHP configuration file which you need to create as <code>perch/config/buckets.php</code></p>
+<p>A bucket list item has a name (max 16 characters) and defines the following:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>The type of bucket. Defaults to <code>file</code> for basic buckets, and uses values like <code>amazon_s3</code>, <code>dropbox</code> etc for cloud storage.</td>
+</tr>
+<tr>
+<td>web_path</td>
+<td>The path (either absolute or from your website root) to use when creating links to images and files in the website.</td>
+</tr>
+<tr>
+<td>file_path</td>
+<td>The file system path to the folder where the files are saved.</td>
+</tr>
+<tr>
+<td>role</td>
+<td>If set, can have the value of <code>backup</code> to indicate that the bucket is used for backups only.</td>
+</tr>
+</tbody>
+</table>
+<p>Specific bucket types may also define additional properties as per their own documentation. For example, Amazon S3 buckets need a <code>region</code> option setting.</p>
+<p>An example bucket list takes this format. It defines three buckets, <code>images</code>, <code>whitepapers</code> and <code>backup</code>.</p>
+<pre><code class="lang-php">&lt;?php
+    return [
+        &#39;images&#39; =&gt; [
+            &#39;type&#39;      =&gt; &#39;file&#39;,
+            &#39;web_path&#39;  =&gt; &#39;/images&#39;,
+            &#39;file_path&#39; =&gt; &#39;/var/www/mysite/public_html/images&#39;,
+        ],
+        &#39;whitepapers&#39; =&gt; [
+            &#39;type&#39;      =&gt; &#39;file&#39;,
+            &#39;web_path&#39;  =&gt; &#39;/whitepapers&#39;,
+            &#39;file_path&#39; =&gt; &#39;/var/www/mysite/public_html/whitepapers&#39;,
+        ],
+        &#39;backup&#39; =&gt; [
+            &#39;type&#39;      =&gt; &#39;dropbox&#39;,
+            &#39;web_path&#39;  =&gt; &#39;&#39;,
+            &#39;file_path&#39; =&gt; &#39;backups&#39;,
+            &#39;role&#39;      =&gt; &#39;backup&#39;,
+        ],
+    ];
+?&gt;
+</code></pre>
+<p>Using the bucket list, you could define a bucket which stored files outside of the web root, and then delivered them using a script. This can be used to, for example, only give access to a file to someone who is authorised to view it. You would set the <code>web_path</code> to be a path to your script. The file name will be appended to it, so it could be e.g. <code>/secure-download.php?file=</code></p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

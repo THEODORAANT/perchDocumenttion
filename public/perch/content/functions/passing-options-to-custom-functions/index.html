@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>How to pass options to custom functions - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="How to pass options to custom functions">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link selected"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/perch/getting-started/">Getting Started With Perch</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/configuration/">Configuration</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/building/">Building Sites with Perch</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/categories/">Categories</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/content/">Working with Content</a>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/">Functions</a>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/content-from-multiple-pages-and-regions/">Combining Content from Several Regions</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/create-a-prepopulated-region/">Pre-populating Template Regions</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/get-content-before-templating/">Accessing content before it is templated</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-add-an-rss-feed/">Adding an RSS Feed</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-create-a-faq/">Creating a FAQ</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-create-a-google-sitemap/">Create a Google Sitemap</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-create-list-detail-pages/">Create a list detail page</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-link-prev-next/">Previous and Next Links in content</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/passing-options-to-custom-functions/" class="selected">How to pass options to custom functions</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/show-one-random-item/">Display an item at random</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/sorting-data/">Sorting data</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/two-page-list-and-detail/">Two page list and detail</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/user-filtered-lists/">A user-filtered list</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/">Templates</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/perch/control-panel/">The Perch Control Panel</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/help/">Troubleshooting Tips</a>
+                        </li>
+                        <li>
+                            <a href="/perch/pages-and-nav/">Pages and Navigation</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/resources/">Managing Resources</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/upgrading/">Upgrading to Perch 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>How to pass options to custom functions</h1>
+
+  <p>When you use <code>perch_content_custom</code>, <code>perch_collection</code> or any of the App custom functions you pass options into the function with a PHP array.</p>
+<p>In the documentation you can see an example:</p>
+<pre><code class="lang-php">&lt;?php
+  perch_content_custom(&#39;News&#39;, array(
+    &#39;page&#39;=&gt;&#39;/news/index.php&#39;,
+    &#39;template&#39;=&gt;&#39;article.html&#39;,
+    &#39;sort&#39;=&gt;&#39;date&#39;,
+    &#39;sort-order&#39;=&gt;&#39;DESC&#39;,
+    &#39;count&#39;=&gt;1
+  ));
+?&gt;
+</code></pre>
+<p>What is happening here? The first thing we pass in is the name of the Perch Region we are using as a string, so this is either a Region you created with the perch_content function and are now replacing with perch_content_custom, a region created elsewhere with perch_content_create or a Region defined elsewhere on your page or site.</p>
+<p>Next we have some options stored in an array. The array looks like this if we remove it from the function.</p>
+<pre><code class="lang-php">array(
+  &#39;page&#39;=&gt;&#39;/news/index.php&#39;,
+  &#39;template&#39;=&gt;&#39;article.html&#39;,
+  &#39;sort&#39;=&gt;&#39;date&#39;,
+  &#39;sort-order&#39;=&gt;&#39;DESC&#39;,
+  &#39;count&#39;=&gt;1
+)
+</code></pre>
+<p>The string on the left of the fat arrow <code>=&gt;</code> is the key, so this is the option name, and on the right is the value you want to set for that option. Unless indicated in the documentation, most options are not required. You only need to set the things you want to change the default behaviour of.</p>
+<p>We normally show this options array passed into the function as in the first example. However if you prefer you can write it to a variable and then pass the variable into the array, so the example below is the same as the first example.</p>
+<pre><code class="lang-php">&lt;?php
+  $opts = array(
+    &#39;page&#39;=&gt;&#39;/news/index.php&#39;,
+    &#39;template&#39;=&gt;&#39;article.html&#39;,
+    &#39;sort&#39;=&gt;&#39;date&#39;,  
+    &#39;sort-order&#39;=&gt;&#39;DESC&#39;,
+    &#39;count&#39;=&gt;1
+  )
+  perch_content_custom(&#39;News&#39;, $opts);
+?&gt;
+</code></pre>
+<p>In our example you can see that one of the options is <code>page</code>. For perch_content_custom this means you can use content created on another page of your site. Make sure it is set to a full path from the root of your site.</p>
+<p>You can also pass in a template with the <code>template</code> option. This means that you can use a different template to the one used to create the content – perhaps this use only requires some of the fields, or you wish to use different markup. Perhaps your article when posted in full uses an h1 for the main heading, but your homepage shows an excerpt using an h3 as the story title, this is all possible by creating a new template.</p>
+<p>For Content and Collections templates should be stored in perch/templates/content or in a subfolder of that folder, so the path to the template is relative to the folder. In the example above article.html is directly inside the perch/templates/content folder. First party app templates are stored in their own folder – for example perch/templates/blog.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

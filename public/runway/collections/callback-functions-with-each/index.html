@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Callback Functions with each - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Callback Functions with each">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li class="selected"><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/runway/caching/">Caching</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/cloud-storage/">Cloud Storage</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/collections/">Collections</a>
+                            <ul>    <li>
+                            <a href="/runway/collections/callback-functions-with-each/" class="selected">Callback Functions with each</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/collections/relationships/">Relationships</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/collections/social-sharing/">Social Sharing with Collections, Layout and Blog</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/runway/configuration/">Configuration</a>
+                        </li>
+                        <li>
+                            <a href="/runway/core-tasks/">Core Tasks</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/getting-started/">Getting Started with Runway</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/headless/">Headless requests</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/relationships/">Relationships</a>
+                        </li>
+                        <li>
+                            <a href="/runway/routing/">Routing</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/site-access/">Controlling site access</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading/">Upgrading to Runway 4</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading3/">Upgrading to Runway 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Callback Functions with each</h1>
+
+  <p>Any of the <code>_custom</code> functions in Perch can take a callback which allows for some processing of the item before it is templated. In this example I create a Category listing and then use <code>each</code> to pass in templated Collection data.</p>
+<p>Working on a site for a course I created a listing of all of my lessons as a Perch Runway Collection. This gave me the ability to template the lesson with Blocks, adding code sections, video and text. I then used the Categories functionality to create top level categories for my courses with sub-categories to represent modules – groups of lessons.</p>
+<h2 id="categories">Categories</h2>
+<p>With my categories created I could add a lesson to a module by selecting the category in the Perch Admin.</p>
+<p>To display this information on the landing page for a course I then needed to loop through my categories, and display the name of that module with the lessons listed underneath.</p>
+<p>Looping through and displaying the categories was easy using the perch_categories function, passing in the name of the category Set. I’m also filtering on the top level category, in this case “css-basics” to get the sub-categories. These sub-categories are my modules.</p>
+<pre><code class="lang-php">$currentPath = &#39;css-basics&#39;;
+$course = perch_categories([
+  &#39;set&#39; =&gt; &#39;courses&#39;,
+  &#39;template&#39; =&gt; &#39;course-module.html&#39;,
+  &#39;filter&#39; =&gt; [
+    [
+      &#39;filter&#39; =&gt; &#39;catPath&#39;,
+      &#39;match&#39; =&gt; &#39;contains&#39;,
+      &#39;value&#39; =&gt; $currentPath
+    ],
+    [
+      &#39;filter&#39; =&gt; &#39;catParentID&#39;,
+      &#39;match&#39; =&gt; &#39;gt&#39;,
+      &#39;value&#39; =&gt; &#39;0&#39;
+    ],
+  ],
+]);
+</code></pre>
+<p>This gets me a list of all of the sub-categories of the category ‘css-basics’ output by a template course-module.html.</p>
+<p>The template course-module.html is a standard category template saved in perch/templates/categories. I’ve added an additional field – a hidden field with an ID of lessons. I want to populate this field with the lessons that have been added to the current module as we go through the loop.</p>
+<pre><code class="lang-html">&lt;perch:before&gt;
+  &lt;div class=&quot;wrapper&quot;&gt;
+    &lt;div class=&quot;page-listing&quot;&gt;
+      &lt;ul&gt;
+&lt;/perch:before&gt;
+&lt;li&gt;
+  &lt;h2&gt;&lt;perch:category id=&quot;catTitle&quot; type=&quot;smarttext&quot; label=&quot;Title&quot; required&gt;&lt;/h2&gt;
+  &lt;perch:category id=&quot;catSlug&quot; type=&quot;slug&quot; for=&quot;catTitle&quot; suppress&gt;
+  &lt;perch:category id=&quot;desc&quot; type=&quot;textarea&quot; label=&quot;Description&quot; editor=&quot;markitup&quot; markdown size=&quot;s&quot;&gt;
+
+    &lt;perch:category id=&quot;lessons&quot; type=&quot;hidden&quot; encode=&quot;false&quot;&gt;
+&lt;/li&gt;
+&lt;perch:after&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/perch:after&gt;
+</code></pre>
+<p>To get my lessons from the Collection I add a key each to the array of options for the perch_categories function.</p>
+<pre><code class="lang-php">$currentPath = &#39;css-basics&#39;;
+$course = perch_categories([
+  &#39;set&#39; =&gt; &#39;courses&#39;,
+  &#39;template&#39; =&gt; &#39;course-module.html&#39;,
+  &#39;filter&#39; =&gt; [
+    [
+      &#39;filter&#39; =&gt; &#39;catPath&#39;,
+      &#39;match&#39; =&gt; &#39;contains&#39;,
+      &#39;value&#39; =&gt; $currentPath
+    ],
+    [
+      &#39;filter&#39; =&gt; &#39;catParentID&#39;,
+      &#39;match&#39; =&gt; &#39;gt&#39;,
+      &#39;value&#39; =&gt; &#39;0&#39;
+    ],
+  ],
+  &#39;each&#39;  =&gt;  function($item) {
+      $item[&#39;lessons&#39;] = perch_collection(&#39;lessons&#39;,[
+        &#39;category&#39; =&gt; $item[&#39;catPath&#39;],
+        &#39;template&#39; =&gt; &#39;lessons/lesson-excerpt.html&#39;
+      ],true);
+
+      return $item;
+    },
+]);
+</code></pre>
+<p>The value of each is a function, this function runs each time we go through the loop and returns the lessons for that category templates with my lesson-excerpt.html template. This then populates <code>$item[&#39;lessons&#39;]</code> which in turn populates the lessons template tag in my category template.</p>
+<p>This functionality is documented on the <a href="/functions/collections/perch-collection/">perch_collection page</a>, but works wherever there is a custom function – so in many official Apps, Categories and Collections.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Running the Compatibility Test - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Running the Compatibility Test">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li class="selected"><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+      <ul class="sidenav">
+          <li>
+              <a href="/video/getting-started/">Getting Started</a>
+          </li>
+          <li>
+              <a href="/video/blog/">Perch Blog</a>
+          </li>
+          <li>
+              <a href="/video/runway/">Perch Runway</a>
+          </li>
+      </ul>
+    </nav>
+
+<article class="content">
+
+  <h1>Running the Compatibility Test</h1>
+
+  <div class="video-wrapper">
+    <div class="flex-video widescreen">
+      <iframe src="https://www.youtube-nocookie.com/embed/8wTZZ4Ae2SQ?showinfo=0&amp;rel=0" frameborder="0" allow="encrypted-media" gesture="media" allowfullscreen class="embed-responsive-item" width="847" height="476"></iframe>
+    </div>
+  </div>
+
+  <div class="video-detail">
+    <div class="inner-panel">
+        <h2 id="video-transcript">Video Transcript</h2>
+<p>If you are thinking of buying Perch for your next project, the first thing you need to do is check that Perch can run on the hosting you are using.</p>
+<p>Perch has very simple requirements of PHP 5.3 or up and MySQL and can run on servers running Unix for example Linux and Mac OSX as well as on Windows. However before purchasing you can check that your server supports it.</p>
+<p>Visit the requirements page at <a href="http://grabaperch.com/requirements">http://grabaperch.com/requirements</a> and download the Server Compatibility Test Suite.</p>
+<p>Unzip the download and upload the perchtest folder to your server (or if you are working locally place it into your site as I am doing here.)</p>
+<p>Then visit /perchtest in a web browser. So if your domain was <a href="http://www.example.com">www.example.com</a> you would visit <a href="http://www.example.com/perchtest">http://www.example.com/perchtest</a></p>
+<p>The script will immediately check that your server can run PHP and that you have PHP version 5.2.</p>
+<p>If the PHP checks go through you will see step 1 of the test which asks you for your database connection details.</p>
+<p>Server is prefilled to localhost. All localhost means is that the database is on the same server as your site. If you are working on your own computer as I am this will be correct. For many hosts this will also be correct, but some larger hosts have separate servers they use for databases. If this is the case you will have been given an IP address or URL for the database server by your host. Replace the default localhost with this.</p>
+<p>Database is the name of the database that you will use to install Perch and store the content for your site. Perch needs this to be created before installation.</p>
+<p>Your hosting account may already come with a database, in which case the name of this database should be in your account details. Often you are able to create databases using your control panel – for example in CPanel there is a page to create new databases and assign users. Put the name of your database in here, you will also have a username and password to access the database which you will need to enter.</p>
+<p>Submit this form. Behind the scenes Perch will attempt to connect to your database, create a table, insert, update and delete some data. It will also check that PHP sessions are working correctly. If all these things check out you will get a PASS from the test and you will be able to run Perch on this server. Make a note of the details you used to successfully connect to the database as you will need these when you come to install Perch.</p>
+<p>If you see the screen here it means we have checked your installation environment and you should have a great experience installing and running Perch. You may see one or more of our advisory messages on this screen however and these indicate things you may wish to raise a ticket with your host about.
+No image resize functionality.</p>
+<p>Perch requires PHP modules that enable image resize, these are very common but if you see this message ask your host to enable either GD or ImageMagick.</p>
+<h3 id="no-native-json-support-">No native JSON support.</h3>
+<p>This is enabled by default in PHP5.2 so you should have it, without native JSON Perch will work but will be slower so it is worth asking your host to enable it.</p>
+<h3 id="no-filter-support-">No filter support.</h3>
+<p>Filter enables better serverside form validation in Perch and you should ask your host to enable it.</p>
+<h3 id="safe-mode-may-be-enabled-">Safe mode may be enabled.</h3>
+<p>Safe mode is a legacy PHP mode that has been removed from newer PHP versions. You are likely to run into a range of problems using it and we’d recommend turning it off. You sometimes find it is enabled in servers managed via Plesk Control Panel, and you can turn it off in Plesk.</p>
+<p>If the test tells you that your server can’t run Perch or that the test has been unsuccessful, don’t panic. If your server does support PHP5 and MySQL it is most likely that you can run Perch, you may just have to make a support request of your host or check the details you entered.</p>
+<p>If you received a message saying, “Sorry, your server doesn’t run PHP” then you will need to get hosting that does support PHP to run Perch as this is the language it is written in. The good news is that PHP and MySQL hosting is easy to find and inexpensive.</p>
+<p>If you received a message saying, “Perch requires PHP 5.3 or greater.” Your server does have PHP installed but it is probably an old version of PHP5 or even PHP4. Most often hosts are supporting old versions of PHP for customers who have legacy sites and will be able to switch your account to a server running a newer version, if they cannot we’d advise changing hosts as the version of PHP they are running is liable to have security problems being so out of date.</p>
+<p>If you got as far as the database connection page then the errors you see will generally be due to incorrect database details or that the database user does not have enough permissions.</p>
+<p>“Please provide a full set of database details” or “Could not connect to the database with the information provided.” means that either your server, database name, username or password was missing or incorrect. Check these with your host.</p>
+<p>The next set of errors are all to do with permissions. The database user that you are using to connect to Perch needs to be able to CREATE, UPDATE and DELETE tables and also INSERT and UPDATE data in the tables. Raise a ticket with your host if you do not know how to give your database user permissions.</p>
+<p>Errors we see very rarely are “Perch needs at least MySQL version 4.1 to run.” – Version 4.1 is a very old version at this point, if you see this you will need to speak to your host about upgrading to a newer version of MySQL. Also “PHP Sessions are not functioning as expected.” – on a very few hosts, you need to actively configure PHP sessions. If you see this message ask your host how to configure PHP sessions.</p>
+<p>If you try these steps and are still having problems getting the test to run please raise a support ticket in our support area. We will be happy to help you through the compatibility test even if you have not yet bought Perch. The good news is that once you have this test running successfully you should have no trouble getting Perch installed – just make sure you remember the MySQL connection details that worked!</p>
+<p>Remember to re-run the test if you move Perch between servers. If the test runs you should have a straightforward install or migration process.</p>
+
+
+
+        <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+        </ul>
+
+    </div>
+    
+  </div>
+
+
+
+
+  
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

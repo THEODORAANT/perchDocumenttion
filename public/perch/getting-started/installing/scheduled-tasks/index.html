@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Perch Scheduled Tasks - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Perch Scheduled Tasks">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link selected"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/perch/getting-started/">Getting Started With Perch</a>
+                            <ul>    <li>
+                            <a href="/perch/getting-started/installing/">Installing Perch</a>
+                            <ul>    <li>
+                            <a href="/perch/getting-started/installing/php/">PHP</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/getting-started/installing/apps/">Installing Apps</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/getting-started/installing/scheduled-tasks/" class="selected">Perch Scheduled Tasks</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/getting-started/development-tips/">Development and Workflow Tips</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/getting-started/file-extensions/">Using different file extensions</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/getting-started/fundamentals/">Fundamental ideas behind Perch</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/getting-started/using-perch/">Using Perch - getting started tutorial</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/perch/configuration/">Configuration</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/building/">Building Sites with Perch</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/categories/">Categories</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/content/">Working with Content</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/control-panel/">The Perch Control Panel</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/help/">Troubleshooting Tips</a>
+                        </li>
+                        <li>
+                            <a href="/perch/pages-and-nav/">Pages and Navigation</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/resources/">Managing Resources</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/upgrading/">Upgrading to Perch 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Perch Scheduled Tasks</h1>
+
+  <p>Some tasks can be automatically run on a schedule. In order to do this, you need to configure your server to periodically run a script.</p>
+<p>The script should be set to run as frequently as your most frequent task. If you wanted to update from Twitter every 15 minutes, your script should run at least every 15 minutes.</p>
+<h2 id="setting-up-a-secret">Setting up a secret</h2>
+<p>To prevent the scheduled tasks being run accidentally, you need to configure a ‘secret’ in your <code>perch/config/config.php</code> file. This should be URL-safe letters and numbers, and no spaces.</p>
+<pre><code class="lang-php">define(&#39;PERCH_SCHEDULE_SECRET&#39;, &#39;mysecret&#39;);
+</code></pre>
+<h2 id="scheduling-with-cron">Scheduling with cron</h2>
+<p>You can set up the script to run on the command line, or via a scheduling system like cron. Many hosting control panels will give you access to set this up.</p>
+<pre><code class="lang-php">php /path/to/site/perch/core/scheduled/run.php mysecret
+</code></pre>
+<p>If you check the Scheduled Tasks page under Settings in Perch, you should see the full path you need to use.</p>
+<p>Note that some servers may require a path to the <code>php</code> command (perhaps something like <code>/usr/bin/env php</code> rather than just <code>php</code>) so check with your host.</p>
+<h2 id="scheduling-via-a-url">Scheduling via a URL</h2>
+<p>You can also run the scheduled script via a URL in a browser (useful for remote scripts or Windows scheduled tasks).</p>
+<pre><code class="lang-php">http://yoursite.com/perch/core/scheduled/run.php?secret=mysecret
+</code></pre>
+<h2 id="task-history">Task history</h2>
+<p>You can view a log of the tasks that have run from the Scheduled Tasks page under Settings in Perch. This log keeps the ten most recent runs of each individual task. Older log entries are purged automatically.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

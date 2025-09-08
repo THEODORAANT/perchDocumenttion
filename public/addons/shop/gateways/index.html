@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Payment Gateways - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:title" content="Payment Gateways">
+  <meta property="og:description" content="Perch documentation">
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+         <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+
+
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li class="selected"><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+  <main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/addons/announcements/">Announcements App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/backup/">Backup App</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/blog/">Blog App</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/comments/">Comments App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/email_octopus/">EmailOctopus App</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/events/">Events App</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/addons/field-types/">Field Types</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/forms/">Forms App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/gallery/">Gallery App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/kraken/">Kraken App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/listings/">Listings App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/mailchimp/">Mailchimp App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/members/">Members App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/plugins/">Plugins</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/podcasts/">Podcasts App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/poll/">Poll App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/qr/">QRGenerator App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/shop-foxycart/">Foxycart Shop App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/shop-paypal/">PayPal Shop App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/shop/">Shop App</a>
+                            <ul>    <li>
+                            <a href="/addons/shop/cart/">The Cart</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/changelog/">Changelog</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/checkout/">Checkout</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/customers/">Customers</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/examples/">Examples</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/gateways/" class="selected">Payment Gateways</a>
+                            <ul>    <li>
+                            <a href="/addons/shop/gateways/braintree/">Braintree</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/gateways/klarna/">Klarna</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/gateways/manual/">Manual</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/gateways/paypal-express/">PayPal Express</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/gateways/paypal/">PayPal</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/gateways/revolut/">Revolut</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/gateways/stripe-sca/">Stripe SCA</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/gateways/stripe/">Stripe</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/gateways/worldpay/">WorldPay</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/installation/">Installation</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/orders/">Orders</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/products/">Products</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/requirements/">Requirements</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/shipping/">Shipping</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/tax/">Tax</a>
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/updating/">Updating</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/addons/twillio/">Twilio App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/twitter/">Twitter App</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+  <h1>Payment Gateways</h1>
+
+  <p>Instructions are available for the following gateways:</p>
+<table>
+<thead>
+<tr>
+<th>Gateway</th>
+<th>Supported</th>
+<th>Seen working</th>
+<th>Tax evidence collection</th>
+<th>Recurring payments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/addons/shop/gateways/braintree/">Braintree</a></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/addons/shop/gateways/manual/">Manual</a></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td>N/A</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/addons/shop/gateways/paypal-express/">PayPal Express</a></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/addons/shop/gateways/paypal/">PayPal</a></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/addons/shop/gateways/stripe/">Stripe</a></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/addons/shop/gateways/stripe-sca/">StripeSCA</a></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/addons/shop/gateways/worldpay/">Worldpay</a></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/addons/shop/gateways/revolut/">Revolut</a></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="/addons/shop/gateways/klarna/">Klarna</a></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td><img src="/assets/svg/check.svg" alt="Yes"></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Tax evidence collection happens for all transactions, but only some gateways enable us to retrieve the country the payment card is registered to.</p>
+<p>Perch Shop uses the <a href="http://omnipay.thephpleague.com">Omnipay</a> library for some payment gatways. That means that any gateway that has a driver for Omnipay has the potential to work just fine with Perch Shop. Omnipay has a long list of <a href="http://omnipay.thephpleague.com/gateways/official/">official</a> and <a href="http://omnipay.thephpleague.com/gateways/third-party/">third party</a> gateways that are supported. It’s also possible for a PHP developer to add support for an unlisted gateway.</p>
+<p>While this very comprehensive list of gateways should be possible to use with Perch Shop, we’re not going to list a gateway here until we’ve worked on it and seen it working in action. That way, you can know that when a gateway is listed here it should be simple to start using without any developer knowledge.</p>
+<p>If you have a gateway you need to get working with Perch Shop, we can help you do that. To do that, we need</p>
+<ol>
+<li>For there to be an official or third-party Omnipay driver for the gateway</li>
+<li>A test account so that we can try it and see it working</li>
+</ol>
+<p>If you’d like help doing that, <a href="mailto:support@grabaperch.com">send us an email</a> and we’ll take a look and see what’s going to be possible. It’s best to start this process as early into a project as is possible.</p>
+<p>If your requirement is urgent, or your gateway does not have an Omnipay driver we may be able to provide development expertise in order to prioritize implementation and testing of a gateway as a <a href="https://shop.perchcms.com/roadmap">sponsored feature</a>.</p>
+
+
+  <ul>
+      <li>
+          Payment Gateways
+          <ul>
+              <li><a href="/addons/shop/gateways/braintree/">Braintree</a></li>
+              <li><a href="/addons/shop/gateways/klarna/">Klarna</a></li>
+              <li><a href="/addons/shop/gateways/manual/">Manual</a></li>
+              <li><a href="/addons/shop/gateways/paypal-express/">PayPal Express</a></li>
+              <li><a href="/addons/shop/gateways/paypal/">PayPal</a></li>
+              <li><a href="/addons/shop/gateways/revolut/">Revolut</a></li>
+              <li><a href="/addons/shop/gateways/stripe-sca/">Stripe SCA</a></li>
+              <li><a href="/addons/shop/gateways/stripe/">Stripe</a></li>
+              <li><a href="/addons/shop/gateways/worldpay/">WorldPay</a></li>
+          </ul>
+      </li>
+  </ul>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

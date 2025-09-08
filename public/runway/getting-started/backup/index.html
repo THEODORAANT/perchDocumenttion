@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Backup - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Backup">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li class="selected"><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/runway/caching/">Caching</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/cloud-storage/">Cloud Storage</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/collections/">Collections</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/configuration/">Configuration</a>
+                        </li>
+                        <li>
+                            <a href="/runway/core-tasks/">Core Tasks</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/getting-started/">Getting Started with Runway</a>
+                            <ul>    <li>
+                            <a href="/runway/getting-started/backup/" class="selected">Backup</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/getting-started/installing/">Installing Runway</a>
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/getting-started/upgrading-perch-to-runway/">Upgrading Perch to Runway</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/getting-started/using-runway/">Using Runway</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/runway/headless/">Headless requests</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/relationships/">Relationships</a>
+                        </li>
+                        <li>
+                            <a href="/runway/routing/">Routing</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/site-access/">Controlling site access</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading/">Upgrading to Runway 4</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading3/">Upgrading to Runway 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Backup</h1>
+
+  <p>Perch Runway will use the <a href="/runway/getting-started/installing/scheduled-tasks/">Scheduled Tasks</a> system to automatically run backups of your database and assets uploaded into Perch.</p>
+<p>For backups to work <em>you must have scheduled tasks configured</em>, and you must have at least one remote (cloud storage) bucket configured in your buckets list.</p>
+<p>You must also set up a non-public folder for backup to use as a temporary working folder in your <code>config/runway.php</code> file. See the ‘Environment’ section in that file.</p>
+<h2 id="what-gets-backed-up">What gets backed up</h2>
+<p>Perch Runway will back up content added through the Perch Control Panel and that is stored locally. That includes locally stored asset files and the database. It does not back up your site files, configuration, templates etc, as you should already be managing those with some sort of VCS like Git or Subversion. It also does not back up asset files that are already on a remote storage system.</p>
+<p>The backup system is for backing up content changes that happen once your site has gone live.</p>
+<h2 id="creating-a-backup-plan">Creating a backup plan</h2>
+<p>Backups are managed from the Settings section, which you can find by clicking the cog icon in the sidebar in Perch Runway.</p>
+<p>Under <em>Add plan</em> you can give your backup plan a title (e.g. “Daily”) and then choose to backup either just the database, or the database and your asset files.</p>
+<p>Set the number of hours between each database backup. For a busy site with lots of editing activity, you might want this to be once a day or more. For less frequently updated sites, once a week (168 hours) or even once a month (720 hours) might be acceptable. We recommend backing up more frequently - it’s always better to have a few too many backups than not enough.</p>
+<p>Backups are saved to a remote resource bucket. You’ll need at least one bucket configured to use <a href="/runway/cloud-storage/">cloud storage</a> to place your backups into. It should ideally be to a different, non-public storage folder than you use for storing assets.</p>
+<h2 id="running-a-backup">Running a backup</h2>
+<p>Backups run automatically, using the scheduled tasks system. The database will be backed up with the frequency you set, and asset files will be backed up on a rolling basis. (Asset files don’t change, so they only need to be backed up once.)</p>
+<h2 id="restoring-a-backup">Restoring a backup</h2>
+<p>Once the backup has run, you can choose any prior database snapshot and restore it from the list.</p>
+<p>After successfully restoring a backup, Perch will ask you to reauthenticate, as it needs to check your credentials against those now held in the newly restored database.</p>
+<h2 id="restoring-into-a-fresh-installation">Restoring into a fresh installation</h2>
+<p>If you’re setting up a new copy of a site, you can restore a backup from any remote bucket.</p>
+<ol>
+<li>Configure the remote bucket in your <code>perch/config/buckets.php</code> file. See <a href="/docs/resources/buckets/">Resource Buckets</a>.</li>
+<li>Under Settings &gt; Backup, choose the Restore tab.</li>
+<li>Find your bucket in the list and choose <em>Find backups</em></li>
+<li>Locate your backup and click <em>Restore</em></li>
+</ol>
+<p>After successfully restoring a backup, Perch will ask you to reauthenticate, as it need to check your credentials against those now held in the newly restored database.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

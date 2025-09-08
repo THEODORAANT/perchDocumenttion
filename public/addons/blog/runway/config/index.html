@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Runway Configuration - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Runway Configuration">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li class="selected"><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/addons/announcements/">Announcements App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/backup/">Backup App</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/blog/">Blog App</a>
+                            <ul>    <li>
+                            <a href="/addons/blog/changelog/">Changelog</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/blog/examples/">Examples</a>
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/blog/importing/">Importing Posts</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/blog/installation/">Installation</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/blog/post-types/">Post types</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/blog/runway/">Runway</a>
+                            <ul>    <li>
+                            <a href="/addons/blog/runway/config/" class="selected">Runway Configuration</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/blog/runway/multiple-blogs/">Multiple Blogs</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/blog/spam/">Spam</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/blog/updating/">Updating</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/blog/webmentions/">Webmentions</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/addons/comments/">Comments App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/email_octopus/">EmailOctopus App</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/events/">Events App</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/addons/field-types/">Field Types</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/forms/">Forms App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/gallery/">Gallery App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/kraken/">Kraken App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/listings/">Listings App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/mailchimp/">Mailchimp App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/members/">Members App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/plugins/">Plugins</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/podcasts/">Podcasts App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/poll/">Poll App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/qr/">QRGenerator App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/shop-foxycart/">Foxycart Shop App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/shop-paypal/">PayPal Shop App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/shop/">Shop App</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/twillio/">Twilio App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/twitter/">Twitter App</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Runway Configuration</h1>
+
+  <p>The Blog add-on comes with a set of example pages to get Perch users up and running quickly with a blog. For Perch Runway sites, we imagine that most users will want to spend time designing and configuring their own Master Pages and templates, but the examples can still be used if desired.</p>
+<p>The following is a guide for getting those example pages and templates up and running within a Perch Runway site.</p>
+<h2 id="copy-the-example-pages">Copy the example pages</h2>
+<p>Included in the Blog app zip file is a folder called <code>blog</code> containing example pages.</p>
+<ol>
+<li>Copy this folder into your <code>perch/templates/pages</code> folder</li>
+<li>Within each file, delete the Perch runtime include on the first line</li>
+</ol>
+<p>These will now act as master pages to base your blog pages on.</p>
+<h2 id="create-the-blog-pages">Create the blog pages</h2>
+<p>This presumes that you’re setting up a blog at the path <code>/blog</code> within your site. This is, of course, just an example. You can structure your site however you wish. This is just a guide.</p>
+<p>Below are the pages you might wish to create.</p>
+<table>
+<thead>
+<tr>
+<th>Page</th>
+<th>Path</th>
+<th>Master page</th>
+<th>Hide from nav</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blog</td>
+<td><code>/blog</code></td>
+<td>Blog / Index</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Post</td>
+<td><code>/blog/post</code></td>
+<td>Blog / Post</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Archive</td>
+<td><code>/blog/archive</code></td>
+<td>Blog / Archive</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>RSS</td>
+<td><code>/blog/rss</code></td>
+<td>Blog / Rss</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="add-routes-for-the-pages">Add routes for the pages</h2>
+<p>Next, you want to set up routes for those pages so that they respond to the URLs you wish to use.</p>
+<h3 id="post-page-routes">Post page routes</h3>
+<p>This page needs to display whenever a single post is viewed. Below is a <a href="/runway/routing/custom-tokens/">custom token</a> you can use to match the default slug format:</p>
+<pre><code>&#39;blogslug&#39; =&gt; &#39;[1-2][0-9]{3}\-[0-9]{2}\-[0-3][0-9]-[a-z0-9\-]+&#39;,
+</code></pre><p>With that in place, the Post page can then use this URL pattern:</p>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>Pattern</th>
+<th>Example URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single post page</td>
+<td><code>blog/[blogslug:s]</code></td>
+<td><code>/blog/2014-12-01-christmas-is-near</code></td>
+</tr>
+<tr>
+<td>Single draft preview</td>
+<td><code>blog/[blogslug:s]/[preview:preview]</code></td>
+<td><code>/blog/2014-12-01-christmas-is-near/preview</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="archive-page-routes">Archive page routes</h3>
+<p>The archive page shows listings by year, month, category, tag and so on. You’ll need to set up a few routes:</p>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>Pattern</th>
+<th>Example URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Posts by year</td>
+<td><code>blog/[year:year]</code></td>
+<td><code>/blog/2012</code></td>
+</tr>
+<tr>
+<td>Posts by month</td>
+<td><code>blog/[year:year]/[i:month]</code></td>
+<td><code>/blog/2012/10</code></td>
+</tr>
+<tr>
+<td>Posts by category</td>
+<td><code>blog/category/[slug:cat]</code></td>
+<td><code>/blog/category/cheese</code></td>
+</tr>
+<tr>
+<td>Posts by tag</td>
+<td><code>blog/tag/[slug:tag]</code></td>
+<td><code>/blog/tag/industrialism</code></td>
+</tr>
+<tr>
+<td>Posts by author</td>
+<td><code>blog/author/[slug:author]</code></td>
+<td><code>/blog/author/sid-james</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="update-links-in-the-templates">Update links in the templates</h2>
+<p>By this point you should be almost set to go. The one remaining task is to update any link paths in the templates to use your new URLs.</p>
+<p>If you’ve not done so already, copy the <code>perch_blog/templates/blog</code> folder to <code>perch/templates/blog</code> so that you’ve got a set of the default templates to edit.</p>
+<p>In turn, edit each template and correct any link paths to use your new URLs. For example, <code>category.html</code> includes a link to the category:</p>
+<pre><code>href=&quot;archive.php?cat=&lt;perch:category id=&quot;catSlug&quot; type=&quot;slug&quot; for=&quot;catTitle&quot; order=&quot;2&quot;&gt;&quot;
+</code></pre><p>This would become:</p>
+<pre><code>href=&quot;/blog/category/&lt;perch:category id=&quot;catSlug&quot; type=&quot;slug&quot; for=&quot;catTitle&quot; order=&quot;2&quot;&gt;&quot;
+</code></pre><p>A good way to find any links is to search for <code>archive.php</code>, as many of the links point there.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

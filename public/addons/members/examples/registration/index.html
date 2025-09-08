@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Member Registration - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Member Registration">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li class="selected"><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/addons/announcements/">Announcements App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/backup/">Backup App</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/blog/">Blog App</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/comments/">Comments App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/email_octopus/">EmailOctopus App</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/events/">Events App</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/addons/field-types/">Field Types</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/forms/">Forms App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/gallery/">Gallery App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/kraken/">Kraken App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/listings/">Listings App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/mailchimp/">Mailchimp App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/members/">Members App</a>
+                            <ul>    <li>
+                            <a href="/addons/members/changelog/">Changelog</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/members/examples/">Examples</a>
+                            <ul>    <li>
+                            <a href="/addons/members/examples/downloads/">Secure Downloads</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/members/examples/registration/" class="selected">Member Registration</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/members/examples/tags/">Member Tags</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/members/installation/">Installation</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/members/updating/">Updating</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/addons/plugins/">Plugins</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/podcasts/">Podcasts App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/poll/">Poll App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/qr/">QRGenerator App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/shop-foxycart/">Foxycart Shop App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/shop-paypal/">PayPal Shop App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/shop/">Shop App</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/twillio/">Twilio App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/twitter/">Twitter App</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Member Registration</h1>
+
+  <p>Members can register for the site through a registration form. You can
+have one or more of these forms. It can collect any information you need
+by adding inputs to the registration form template – all we require is
+an email address and password.</p>
+<pre><code class="lang-php">&lt;?php perch_member_form(&#39;register.html&#39;); ?&gt;
+</code></pre>
+<h2 id="registration-form-templates">Registration form templates</h2>
+<p>The registration form templates live in <code>perch/templates/members/forms</code>
+– the default set are in the app at
+<code>perch/addons/perch_members/templates/members/forms</code>, you can copy these
+to your own templates folder to modify them.</p>
+<p>There are three important attributes on the <code>&lt;perch:form&gt;</code> tag to make a
+registration form work properly:</p>
+<ul>
+<li>The <code>app</code> attribute must be set <code>app=&quot;perch_members&quot;</code></li>
+<li>The <code>id</code> attribute must be <code>id=&quot;register&quot;</code> so the app knows its the
+registration form</li>
+<li>The <code>type</code> attribute is set to a value to identify what <em>type</em> of
+member is signing up, e.g <code>type=&quot;parent&quot;</code></li>
+</ul>
+<h2 id="an-example-registration-template-">An example registration template:</h2>
+<pre><code class="lang-html">&lt;perch:form id=&quot;register&quot; method=&quot;post&quot; app=&quot;perch_members&quot; type=&quot;default&quot;&gt;
+
+  &lt;div&gt;
+        &lt;perch:label for=&quot;first_name&quot;&gt;First name&lt;/perch:label&gt;
+        &lt;perch:input type=&quot;text&quot; id=&quot;first_name&quot; required label=&quot;First name&quot;&gt;
+        &lt;perch:error for=&quot;first_name&quot; type=&quot;required&quot;&gt;Please add your name&lt;/perch:error&gt;
+    &lt;/div&gt;
+
+  &lt;div&gt;
+        &lt;perch:label for=&quot;last_name&quot;&gt;Last name&lt;/perch:label&gt;
+        &lt;perch:input type=&quot;text&quot; id=&quot;last_name&quot; required label=&quot;Last name&quot;&gt;
+        &lt;perch:error for=&quot;last_name&quot; type=&quot;required&quot;&gt;Please add your name&lt;/perch:error&gt;
+    &lt;/div&gt;
+
+  &lt;div&gt;
+        &lt;perch:label for=&quot;email&quot;&gt;Email&lt;/perch:label&gt;
+        &lt;perch:input type=&quot;email&quot; id=&quot;email&quot; required placeholder=&quot;you@company.com&quot; helper=&quot;PerchMembers_Members::check_email&quot;&gt;
+        &lt;perch:error for=&quot;email&quot; type=&quot;required&quot;&gt;Please add your email address&lt;/perch:error&gt;
+        &lt;perch:error for=&quot;email&quot; type=&quot;helper&quot;&gt;That email address is already in use&lt;/perch:error&gt;
+    &lt;/div&gt;
+
+  &lt;div&gt;
+        &lt;perch:label for=&quot;password&quot;&gt;Password&lt;/perch:label&gt;
+        &lt;perch:input type=&quot;password&quot; id=&quot;password&quot; required match-with=&quot;password2&quot;&gt;
+        &lt;perch:error for=&quot;password&quot; type=&quot;required&quot;&gt;Please add a password&lt;/perch:error&gt;
+        &lt;perch:error for=&quot;password&quot; type=&quot;match&quot;&gt;Passwords do not match&lt;/perch:error&gt;
+    &lt;/div&gt;
+
+  &lt;div&gt;
+        &lt;perch:label for=&quot;password2&quot;&gt;Password again&lt;/perch:label&gt;
+        &lt;perch:input type=&quot;password&quot; id=&quot;password2&quot; required&gt;
+        &lt;perch:error for=&quot;password2&quot; type=&quot;required&quot;&gt;Please repeat your password&lt;/perch:error&gt;
+    &lt;/div&gt;
+
+  &lt;div&gt;
+        &lt;perch:input type=&quot;submit&quot; value=&quot;Register&quot;&gt;
+    &lt;/div&gt;
+
+  &lt;perch:success&gt;
+        &lt;p&gt;Thanks!&lt;/p&gt;
+    &lt;/perch:success&gt;
+
+&lt;/perch:form&gt;
+</code></pre>
+<p>After a registration form has been submitted for the first time, it
+shows up under Forms inside the Members app. You can configure what
+happens when a member registers. You can specify if the member needs to
+be approved, and who to notify when someone registers. You can specify
+the default set of tags (permissions) the member is given.</p>
+<p>Different registration forms can collect different information, and
+assign different tags to determin which permissions the member is given.
+Each different <code>type</code> of registration form gets its own entry under
+Forms in the Members app. So a form with <code>type=&quot;parent&quot;</code> can have
+different settings to a form with <code>type=&quot;customer&quot;</code> or
+<code>type=&quot;boardmember&quot;</code>.</p>
+<h2 id="passwordless-registration">Passwordless registration</h2>
+<p>If you wish to allow users to register without a password (e.g. when used with the Shop app to allow account creation in the background without the customer needing to know they’ve got an account) you can set the <code>password</code> field to the special value <code>__auto__</code>.</p>
+<p>When this value is set, Perch will automatically generate a random password for the account. In order to log into the account again, the recovery route is for the user to then reset their password.</p>
+<pre><code class="lang-html">&lt;perch:input type=&quot;hidden&quot; id=&quot;password&quot; value=&quot;__auto__&quot;&gt;
+</code></pre>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

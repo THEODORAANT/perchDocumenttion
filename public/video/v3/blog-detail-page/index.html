@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create a Blog Detail page - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Create a Blog Detail page">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li class="selected"><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+      <ul class="sidenav">
+          <li>
+              <a href="/video/getting-started/">Getting Started</a>
+          </li>
+          <li>
+              <a href="/video/blog/" class="selected">Perch Blog</a>
+
+                <ul class="video-nav">
+                  <li>
+                      <a href="/video/v3/installing-blog">Installing the Blog</a>
+                      <span class="badge">3:41</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-listing-page">Create a Blog Listing page</a>
+                      <span class="badge">5:34</span>
+                  </li>
+                  <li class="selected">
+                      <a href="/video/v3/blog-detail-page">Create a Blog Detail page</a>
+                      <span class="badge">10:47</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-archive-page">Create a Blog Archive page</a>
+                      <span class="badge">12:08</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/editing-blog-templates">Editing Blog Templates</a>
+                      <span class="badge">9:18</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blocks">Blocks</a>
+                      <span class="badge">5:37</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-homepage">Showing blog posts on the homepage</a>
+                      <span class="badge">3:38</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-rss">Create a Blog RSS feed</a>
+                      <span class="badge">8:27</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/htaccess-rewrites">Rewriting URLs with htaccess</a>
+                      <span class="badge">6:05</span>
+                  </li>
+                </ul>
+
+          </li>
+          <li>
+              <a href="/video/runway/">Perch Runway</a>
+          </li>
+      </ul>
+    </nav>
+
+<article class="content">
+
+  <h1>Create a Blog Detail page</h1>
+
+  <div class="video-wrapper">
+    <div class="flex-video widescreen">
+      <iframe src="https://www.youtube-nocookie.com/embed/ce0sMWQb0m0?showinfo=0&amp;rel=0" frameborder="0" allow="encrypted-media" gesture="media" allowfullscreen class="embed-responsive-item" width="847" height="476"></iframe>
+    </div>
+  </div>
+
+  <div class="video-detail">
+    <div class="inner-panel">
+        <p>This time we are creating the blog detail page. As with the listing page, the starting point will be an HTML page already designed and coded. As we already know how we want the blog to look, we need to make the page dynamic using Perch functions.</p>
+<p>I save my HTML page as <code>post.php</code> into the <code>blog</code> folder that is in the root of the site. This page needs the Perch runtime include so we can start to use Perch. If you go back to the listing page in your browser and click on any of the blog posts, they will now load up our <code>post.php</code> page in the browser with the hardcoded content in place. The pages load with a querystring on the end. The querystring has a parameter <code>s</code> and then a value, which is the slug of our blog post. The slug identifies the actual post. </p>
+<p>In a later video I will explain how to rewrite the querystring to create a ‘friendly URL’, however whether you’ve got rewritten URLs or a querystring on the URL, as far as the web server is concerned you’re using a querystring. Our querystring has a name of <code>s</code> and the value is what comes after the equals sign.</p>
+<p>It is the value after the <code>=</code> that we want to use to identify our post. When we load this page for each individual post we need to look and see which post this is, get the content from the database, and then load the content into this page.</p>
+<p>First thing I’m going to do is get that value off the querystring. I need to do that inside PHP. I’m going to create a php variable called <code>post_slug</code> in which to store the value of <code>s</code>. Perch has a nice little function that will help you do this called <code>perch_get</code>. If you pass the name of the querystring paramter into <code>perch_get</code> it will return the value and store it in our variable.</p>
+<pre><code class="lang-php">$post_slug = perch_get(&#39;s&#39;);
+</code></pre>
+<p>Look in the Perch Documentation and find the Blog function <code>perch_blog_post</code>, this will display a single blog post. The function can either look up a post from the <code>id</code> or <code>slug</code>. We’ve got the post slug, so can use that. In the example in the documentation you can see that the <code>perch_get</code> function is used directly as the value passed into <code>perch_blog_post</code>, this is a fine approach too. Because we’re going to use it in a few different places I’ve written it to a variable.</p>
+<p>In the document find where the post is displayed, and take out the hard coded post, replacing it with the function, using our slug variable.</p>
+<pre><code class="lang-php">&lt;?php perch_blog_post($post_slug); ?&gt;
+</code></pre>
+<p>If you now click through to an individual post you should see the unique content. It doesn’t look quite how it did before. Again, we’ve not changed our templates yet but you can see we’ve got the post.</p>
+<p>So you only have one actual blog post page and it loads the content of all of the individual posts. We can now use our variable, along with some of the other blog functions to add the other elements of a blog detail page. These are of course all optional.</p>
+<h2 id="the-post-title">The post title</h2>
+<p>One thing you might want to do is add the title of your blog post into the title element of the page. That’s good for SEO to be able to show what the actual unique title is for the page. We can do that with another function. There’s a function called <code>perch_blog_post_field</code> which you can use to pick out a field from your template. Find <code>perch_blog_post_field</code> in the documentation. The parameters you need to pass in are the slug as before and the name of the field you want to get the content of, in this case <code>title</code></p>
+<p>You need to make sure that this field does exist in your template and is going to contain content, I would make this a required field. Other things you might want to do, we’ve got some information and that appears about the categories and the tags that our post is in. You can see we’ve got this here. We’ve got categories and we’ve got tags. Once again, we’ve got some handy functions you can use to get that information.</p>
+<h2 id="post-categories-and-tags">Post categories and tags</h2>
+<p>In <code>post.php</code>, under categories I remove all the information including the heading. We can use <code>perch_blog_post_categories</code> to ouput the categories that this post is in. This is different to <code>perch_blog_categories</code> which output all the categories used in the blog. This is the one for the specific post which is why it’s <code>perch_blog_post</code>. Once again we can add our post slug in here to identify which post we arew showing information for. In addition to categories we’ve got tags which works in exactly the same way except instead of asking for <code>perch_blog_post_categories</code> we will use <code>perch_blog_post_tags</code>.</p>
+<p>Once you’ve done that go back to the page, reload and scroll down. You cshould see the categories and the tags showing up for this particular post. We’re starting to build up the blog functionality. </p>
+<h2 id="post-comments">Post comments</h2>
+<p>The blog app uses comments. You can have a comment form, and a comment listing. Once again you’ve got some handy functions just to pull that out onto the page.</p>
+<p>It’s probably not surprising to you now that what we need to do is remove the comments that we’ve got here and add a function that will pull in our comments. This time we’re going to use <code>perch_blog_post_comments</code> to display the comments for this particular post. Once again we pass in the <code>post_slug</code> variable.</p>
+<p>You can also pass in an array as the second argument and that’s the same for the majority of Perch functions. You can pass in extra options as an array. To see how that works let’s say we only want to show ten of the comments that are available. We add a count to the array, with a value of the number of comments to display. That would give us ten comments. If you go to the documentation you can see all of the different things that you can add there. </p>
+<p>Next replace the hardcoded form with <code>perch_blog_post_comment_form</code>. Again, we need to pass in the post slug so that any comments that are added will be attached to this particular post. </p>
+<p>That’s the basics of creating our page. The complete PHP for this page is below.</p>
+<pre><code class="lang-html">&lt;?php include(&#39;../perch/runtime.php&#39;); ?&gt;
+&lt;?php 
+$post_slug = perch_get(&#39;s&#39;);
+?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt; 
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;
+    &lt;title&gt;&lt;?php perch_blog_post_field($post_slug, &#39;postTitle&#39;); ?&gt; | Blog | Swift Migrations&lt;/title&gt;
+    &lt;!--[if IE]&gt;
+        &lt;script src=&quot;http://html5shiv.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/style.css&quot;&gt;
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;/favicon.ico&quot;&gt;
+&lt;/head&gt;
+
+&lt;body class=&quot;blog&quot;&gt;
+    &lt;nav class=&quot;site-navigation&quot; role=&quot;navigation&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;about.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;team.html&quot;&gt;Team&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;blog.html&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;header class=&quot;site-header&quot; role=&quot;banner&quot;&gt;
+        &lt;h1 class=&quot;site-title&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;Swift Migrations&lt;/a&gt;&lt;/h1&gt;
+        &lt;h2 class=&quot;site-description&quot;&gt;Helping you get your flock from A to B&lt;/h2&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;masthead&quot;&gt;
+        &lt;div class=&quot;masthead-inner&quot;&gt;
+            &lt;h2&gt;An intro to the blog&lt;/h2&gt;
+            &lt;p&gt;Our team are based in locations around the world. Some migrate mid-year to better serve seasonal locations.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;main&quot; role=&quot;main&quot;&gt;
+        &lt;div class=&quot;primary-content&quot;&gt;
+
+                &lt;?php perch_blog_post($post_slug); ?&gt;
+
+                &lt;div class=&quot;meta&quot; role=&quot;complementary&quot;&gt;
+                    &lt;div class=&quot;cats&quot;&gt;
+                        &lt;?php perch_blog_post_categories($post_slug); ?&gt;                    
+                    &lt;/div&gt;
+                    &lt;div class=&quot;tags&quot;&gt;
+                        &lt;?php perch_blog_post_tags($post_slug); ?&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;?php perch_blog_post_comments($post_slug,[
+                  &#39;count&#39; =&gt; 10
+                ]); ?&gt;
+
+                &lt;?php perch_blog_post_comment_form($post_slug); ?&gt;
+
+        &lt;/div&gt;
+        &lt;aside class=&quot;sidebar&quot; role=&quot;complementary&quot;&gt;
+            &lt;div class=&quot;module&quot;&gt;
+                &lt;h2&gt;Archive&lt;/h2&gt;
+                &lt;?php perch_blog_categories(); ?&gt;
+            &lt;/div&gt;
+        &lt;/aside&gt;
+    &lt;/div&gt;
+    &lt;footer class=&quot;site-footer&quot;&gt;
+        &lt;div class=&quot;footer&quot;&gt;
+            &lt;div class=&quot;vcard&quot;&gt;
+                &lt;h2&gt;Contact Swift Migrations&lt;/h2&gt;
+                &lt;p class=&quot;fn org&quot;&gt;&lt;a href=&quot;/&quot; rel=&quot;me&quot;&gt;Swift Migrations&lt;/a&gt;&lt;/p&gt;
+                &lt;div class=&quot;adr&quot;&gt;
+                    &lt;p class=&quot;street-address&quot;&gt;The Old Church&lt;/p&gt;
+                    &lt;p class=&quot;street-address&quot;&gt;123 Letsbe Avenue&lt;/p&gt;
+                    &lt;p class=&quot;locality&quot;&gt;Smalltown&lt;/p&gt;
+                    &lt;p class=&quot;postal-code&quot;&gt;NE1 4TV&lt;/p&gt;
+                    &lt;p class=&quot;country-name&quot;&gt;United Kingdom&lt;/p&gt;
+                    &lt;p class=&quot;email&quot;&gt;&lt;a href=&quot;mailto:madeup.email@perchdemo.com&quot;&gt;madeup.email@perchdemo.com&lt;/a&gt;&lt;/p&gt;
+                    &lt;p class=&quot;tel value&quot;&gt;+44 (0) 1628 633301&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+    &lt;script src=&quot;/js/modernizr.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+
+        <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+            <li class="pagination-previous">
+              <a class="pagination-pointed-button" href="/video/v3/blog-listing-page" aria-label="Previous video">
+                Previous<span class="show-for-sr"> video</span>
+              </a>
+            </li>
+            <li class="pagination-next">
+              <a class="pagination-pointed-button" href="/video/v3/blog-archive-page" aria-label="Next video">
+                Next<span class="show-for-sr"> video</span>
+              </a>
+            </li>
+        </ul>
+
+    </div>
+    
+  </div>
+
+
+
+
+  
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

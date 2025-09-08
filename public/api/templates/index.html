@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Template handlers - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Template handlers">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li class="selected"><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/api/apps/">Apps</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/auth/">Authentication plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/buckets/">Bucket handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/custom-ui/">UI Customisations</a>
+                        </li>
+                        <li>
+                            <a href="/api/dashboard/">Dashboard Widgets</a>
+                        </li>
+                        <li>
+                            <a href="/api/editors/">Editor plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/events/">Event hooks</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/api/template-filters/">Template filters</a>
+                        </li>
+                        <li>
+                            <a href="/api/templates/" class="selected">Template handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/field-types/">Field Types</a>
+                        </li>
+                        <li>
+                            <a href="/api/validators/">Form validators</a>
+                        </li>
+                        <li>
+                            <a href="/api/search/">Search handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/shortcodes/">Shortcode providers</a>
+                        </li>
+                        <li>
+                            <a href="/api/translations/">Translations</a>
+                        </li>
+                        <li>
+                            <a href="/api/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/api/import/">Importing Content</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/reference/">API Reference</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Template handlers</h1>
+
+  <p>Perch has a flexible tag-based templating language which can be augmented with custom tags. Template handlers can hook into each phase of template parsing to add custom functionality to templates. Template handlers are implemented with an app.</p>
+<p>A template handler is a PHP class that enxtends the <code>PerchAPI_TemplateHandler</code> base class. It specifies a mask for the tags it handles, and then a method to be called for each phase of parsing.</p>
+<h2 id="when-to-use">When to use</h2>
+<p>You don’t need to use a template handler for basic content substitution - Perch will handle that for you. The case whereby you need a template handler is if you have tags that need to do something out of the ordinary. Examples would be</p>
+<ol>
+<li>Rendering tag pairs - that is a block with opening a closing tags that loops around the contents.</li>
+<li>Rendering tags outside the scope of your own app - handling a tag no matter if it appears in a blog template, a content template or wherever.</li>
+</ol>
+<p>Regular use - just substituting content within your own app - does not need a custom template handler. Perch will take care of that as standard.</p>
+<h2 id="registering-your-template-handler">Registering your template handler</h2>
+<p>In your app’s <code>runtime.php</code> and <code>admin.php</code> files, register the name of your template handler class with:</p>
+<pre><code class="lang-php">PerchSystem::register_template_handler(&#39;MyApp_Template&#39;);
+</code></pre>
+<p>When templates are parsed, the <code>MyApp_Template</code> class will be instantiated, so make sure the file is either included or handled by your apps autoloader.</p>
+<h2 id="the-template-handler-class">The template handler class</h2>
+<p>By convension, your template handler should be within your app’s folder and named <code>MyApp_Template.class.php</code>, according to your app’s naming scheme. This is not a technical limitation - if for some reason you needed multiple handlers, you can name them and register them as needed.</p>
+<p>A boilerplate template handler class might look like the following. </p>
+<pre><code class="lang-php">class MyApp_Template extends PerchAPI_TemplateHandler
+{
+    public $tag_mask = &#39;students|student&#39;;
+
+    public function render($vars, $html, PerchTemplate $Template)
+    {
+        return $html
+    }
+
+    public function render_runtime($html, PerchTemplate $Template)
+    {
+        return $html;
+    }
+
+}
+</code></pre>
+<h2 id="tag-mask">Tag mask</h2>
+<p>The handler specifies a <em>tag mask</em> to signify which tags this handler is to be used for. The tags name are pipe-delimited. This is example, our templater hander declares the mask <code>&#39;students|student&#39;</code> to work with <code>perch:student</code> tags:</p>
+<pre><code class="lang-markup">&lt;perch:student ...&gt;
+</code></pre>
+<p>and also <code>perch:students</code> tags:</p>
+<pre><code class="lang-markup">&lt;perch:students&gt;&lt;/perch:students&gt;
+</code></pre>
+<p>The tag mask is crucial to specify - without it the template engine won’t know about your tags and so they’ll get stripped out of the final output.</p>
+<h2 id="phases-of-parsing">Phases of parsing</h2>
+<p>The template engine has two distinct parsing phases. The primary phase deals with the majority of substitutions and is considered deterministic. The given input will always result in the same output, and that output can be cached and used again freely.</p>
+<p>The second phase is what we call <em>runtime</em> parsing, and is always performed at runtime, even if the previous phase has been cached. Runtime parsing is used when the result is dependant on environmental factors such as user input or session state. </p>
+<p>Form tags are always parsed at runtime, as the state changes based on user input - at one load it might show an empty field, and a second load might display a validation message, for example. The Members app also renders exclusively during the runtime phase, as the results will be different depending on whether the user is currently logged in or not.</p>
+<p>The primary parsing phase uses the <code>render()</code> method, and the runtime phase uses <code>render_runtime()</code>. Which to use depends on when you need your tags to be parsed. Keep in mind that while all tags could be parsed at runtime, to do so surrenders any opertunity for caching, so don’t be lazy, try to pick the best phase for each use case.</p>
+<h2 id="rendering-your-tags">Rendering your tags</h2>
+<p>Templates are tag-based, and are passed to both render methods as a chunk of code featuring a mix of (typically) HTML and other template tags. Some of those tags might be yours and some might not. Your job is to find your tags, process them and return the resulting code. Each handler is called in turn until all the tags are processed.</p>
+<p>Internally, Perch parses the code for tags using regular expressions. Fear not, you don’t have to do this yourself - we have all sorts of built-in functionality to do it for you.</p>
+<h3 id="be-light">Be light</h3>
+<p>An important principal to remember is that your handler will be called many times during the rendering of a page. Sometimes it will have work to do and sometimes not. A simple, light string check for the presence of your tag before you start can save you doing any unnecessary processing.</p>
+<pre><code class="lang-php">if (strpos($html, &#39;perch:student&#39;) !== false) {
+    // our tag exists
+}
+return $html;
+</code></pre>
+<p>This can make additional template handlers very inexpensive to include, adding minimal overhead when not needed.</p>
+<h3 id="replacing-a-single-tag">Replacing a single tag</h3>
+<p>If you want to replace a single tag using your own content, you can do that using the passed in <code>$Template</code> instance:</p>
+<pre><code class="lang-php">$my_content = [&#39;first_name&#39;=&gt;&#39;Joe&#39;];
+$html = $Template-&gt;replace_content_tags(&#39;student&#39;, $my_content, $html);
+</code></pre>
+<h3 id="replacing-a-tag-pair">Replacing a tag pair</h3>
+<p>A tag pair (opening and closing tag with something inbetween) is used in Perch templates when you need to loop around a section of the template. Parsing them requires a bit more work. Take our example tag:</p>
+<pre><code class="lang-markup">&lt;perch:students&gt;
+    &lt;li&gt;
+        &lt;perch:student id=&quot;first_name&quot;&gt;
+    &lt;/li&gt;
+&lt;/perch:students&gt;
+</code></pre>
+<p>Here we want to findn the <code>perch:students</code> tags so that we can loop around our set of students and write out their names.</p>
+<pre><code class="lang-php">$tag_type          = &#39;students&#39;;
+$empty_opening_tag = true;
+$index_in_group    = null;
+$callback          = &#39;render_students&#39;;
+
+$html = $this-&gt;parse_paired_tags($tag_type, $empty_opening_tag, $html, $vars, $index_in_group, $callback)
+</code></pre>
+<ul>
+<li><code>$tag_type</code> is the name of the tag we’re looking for - <code>students</code>.</li>
+<li><code>$empty_opening_tag</code> is an optimisation based on whether the opening tag of the pair has attributes or not. Our tag does not have attributes, so this is set to <code>true</code>.</li>
+<li><code>$index_in_group</code> can be used with a tag pair needs to know its position within a set. We don’t need that, so it’s set to <code>null</code>. </li>
+<li><code>$callback</code> is the name of a method within our handler class that will be called with the result when the tag pair is found. It’s the callback that does the work.</li>
+</ul>
+<p>The callback method might look like this:</p>
+<pre><code class="lang-php">private function render_students($type, $opening_tag, $tag_contents, $exact_match, $html, $vars, $index_in_group=false)
+{
+    $replacement = &#39;The modified result&#39;;
+
+    return str_replace($exact_match, $replacement, $html);
+}
+</code></pre>
+<p>The difficult bit is what happens in between.</p>
+<h3 id="working-with-a-tag">Working with a tag</h3>
+<p>In the callback method, one of the arguments passed is the opening tag of our tag pair. It’s handed to us as a string. If we wanted to examine it to look at its attributes, we can turn it into a <code>PerchXMLTag</code> like so:</p>
+<pre><code class="lang-php">$Tag = new PerchXMLTag($opening_tag);
+</code></pre>
+<p>You can find out more about <code>PerchXMLTag</code> in <a href="/reference/xmltag">its reference section</a>.</p>
+<h3 id="subtemplating">Subtemplating</h3>
+<p>In order to loop through the matched contents, the simplest way to deal with it is to treat it as a subtemplate. Load up a new instance of the template engine, and load the contents in as a string.</p>
+<p>If <code>$vars[&#39;students&#39;]</code> contained an array of the content we wanted to template:</p>
+<pre><code class="lang-php">$ItemTemplate = $API-&gt;get(&#39;Template&#39;);
+$ItemTemplate-&gt;set_from_string($tag_contents, &#39;student&#39;);
+$replacement = $ItemTemplate-&gt;render_group($vars[&#39;students&#39;], true);
+</code></pre>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

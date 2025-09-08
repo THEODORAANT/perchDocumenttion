@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Field Types - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:title" content="Field Types">
+  <meta property="og:description" content="Perch documentation">
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+         <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+
+
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li class="selected"><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+  <main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/api/apps/">Apps</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/auth/">Authentication plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/buckets/">Bucket handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/custom-ui/">UI Customisations</a>
+                        </li>
+                        <li>
+                            <a href="/api/dashboard/">Dashboard Widgets</a>
+                        </li>
+                        <li>
+                            <a href="/api/editors/">Editor plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/events/">Event hooks</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/api/template-filters/">Template filters</a>
+                        </li>
+                        <li>
+                            <a href="/api/templates/">Template handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/field-types/" class="selected">Field Types</a>
+                        </li>
+                        <li>
+                            <a href="/api/validators/">Form validators</a>
+                        </li>
+                        <li>
+                            <a href="/api/search/">Search handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/shortcodes/">Shortcode providers</a>
+                        </li>
+                        <li>
+                            <a href="/api/translations/">Translations</a>
+                        </li>
+                        <li>
+                            <a href="/api/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/api/import/">Importing Content</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/reference/">API Reference</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+  <h1>Field Types</h1>
+
+  <p>In Perch, every content template tag has a <code>type</code> attribute. This specifies which type of form field (or fields) are used to collect and process the data.</p>
+<p>From text to textarea, checkbox to file, these all have different form controls and ways of handling the data. You can use the API to create your own field types.</p>
+<h2 id="why-create-a-field-type-">Why create a Field Type?</h2>
+<p>Take the map field type as an example. This goes beyond a basic form control. It asks for an address, and then uses the Google Maps geocoding API to turn it into a pin on a map. The map can then be zoomed and positioned to your needs. That’s just one example of how a field type can do a lot more than just collect some bare data and output it onto the page.</p>
+<p>Perch has several <a href="/templates/field-types/">core field types</a> which are listed in the documentation, however these can also be created as an add-on, and this is a fairly simple way to introduce custom functionality to Perch and Runway.</p>
+<p>A field type is essentially just a PHP class. You must declare four main methods, then you are free to create whatever other functions you need for the custom functionality you are creating.</p>
+<h2 id="how-do-i-create-a-field-type-">How do I create a Field Type?</h2>
+<p>In Perch, every content template tag has a <code>type</code> attribute. This specifies which type of field is used to collect and process the data. Creating a field type is a simple way to start extending Perch as all you need to create is one PHP class that defines the fields needed to collect the data and the code to process it. </p>
+<p>The below example will show you how to create a simple field type that creates a list of the files you have uploaded to your Perch resources folder, enabling the editor to select one.</p>
+<p>You can download a fully worked example below.</p>
+<p><a href="https://static.grabaperch.com/docs/api/download-create-a-field-type.zip">Filelist Field Type example</a></p>
+<p>The example field type has been commented to explain what the main elements of the field type do. </p>
+<p>To use the field type open <code>perch/addons/fieldtypes</code> and put the folder <code>filelist</code> containing <code>filelist.class.php</code> into it. You can then use it like any other field type by specifying <code>type=&quot;filelist&quot;</code> on a template tag.</p>
+<p>As explained in the <a href="/api/reference/fieldtype">API reference for Field Type</a>, the class has four main methods:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/api/reference/fieldtype/render-inputs">render_inputs</a></td>
+<td>Renders the edit fields in the Perch control panel</td>
+</tr>
+<tr>
+<td><a href="/api/reference/fieldtype/get-raw">get_raw</a></td>
+<td>Reads in the form data when submitted and processes it</td>
+</tr>
+<tr>
+<td><a href="/api/reference/fieldtype/get-processed">get_processed</a></td>
+<td>Gets the data ready for templating</td>
+</tr>
+<tr>
+<td><a href="/api/reference/fieldtype/get-search-text">get_search_text</a></td>
+<td>Formats the field value for the search index so the content of this field can be searched</td>
+</tr>
+</tbody>
+</table>
+<p>The above methods are detailed in the <a href="/api/reference/fieldtype">API reference for Field Type</a> and the example <code>filelist.class.php</code> is documented to show how they work in practice.</p>
+<p>The example also has a function <code>_get_files()</code>, this function is to enable the functionality of the field type, it looks in the <code>perch/resources</code> folder and returns a list of all files (if a file extension has not been passed to it) or a list of just those files that have a particular extension.</p>
+<p>You can add as many functions as you need in your class as long as you also have those that are required by Perch.</p>
+<p>You will generally find that you can use the core field types that ship with Perch, or the example from this page and then start to tweak it for your own purposes.</p>
+
+
+  <ul>
+      <li>
+          Field Types
+          <ul>
+          </ul>
+      </li>
+  </ul>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

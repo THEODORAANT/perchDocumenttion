@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>perch_content_custom() - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="perch_content_custom()">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li class="selected"><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/functions/announcements/">Announcements</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/blog/">Blog</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/categories/">Categories Functions</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/collections/">Collection functions</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/comments/">Comments</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/content/">Content functions</a>
+                            <ul>    <li>
+                            <a href="/functions/content/perch-content-create/">perch_content_create()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/content/perch-content-custom/" class="selected">perch_content_custom()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/content/perch-content/">perch_content()</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/functions/events/">Events</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/form/">Form</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/gallery/">Gallery</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/layouts/">Layout Functions</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/listings/">Listings</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/mailchimp/">Mailchimp</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/members/">Members</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/navigation/">Navigation &amp; Page Functions</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/page-attributes/">Page Attributes</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/podcasts/">Podcasts</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/search/">Search Functions</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/shop-foxycart/">Foxycart (deprecated)</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/shop-paypal/">PayPal Shop (deprecated)</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/shop/">Shop</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/twitter/">Twitter</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/utilities/">Utility Functions</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>perch_content_custom()</h1>
+
+  <p>To define editable regions you need to use <code>perch_content()</code> however there is a second page function for content that can give you more control over the output of your content.</p>
+<p>The <code>perch_content_custom()</code> function takes the region name and an array of options to enable you to manipulate the content.</p>
+<pre><code class="lang-php">&lt;?php
+  perch_content_custom(&#39;News&#39;, []);
+?&gt;
+</code></pre>
+<h2 id="when-to-use-perch_content_custom">When to use perch_content_custom</h2>
+<p>It is important to note that <code>perch_content_custom()</code> should not be used to replace all of your perch_content tags.</p>
+<p>The <code>perch_content_custom()</code> tag cannot be used to define a new region, that has to be done using <code>perch_content()</code> or <code>perch_content_create()</code>. In addition <code>perch_content_custom()</code> is not cached at edit time, the processing has to happen at run time so loses the performance advantage that <code>perch_content()</code> has.</p>
+<p>The most common use of this functionality is to reuse some content used elsewhere on the page or site. For example when creating a list of FAQ questions at the top of a FAQ page so the visitor can jump down from question to answer.</p>
+<h3 id="perch_content_custom-options">perch_content_custom options</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>page</td>
+<td>The path or array of paths of the page from which to select the region. Should be root-relative. Can end in a * wildcard.</td>
+</tr>
+<tr>
+<td>template</td>
+<td>The name of a template to use to display the content.</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>The ID of the field to sort on.</td>
+</tr>
+<tr>
+<td>sort-order</td>
+<td>Either <code>ASC</code> (ascending), <code>DESC</code> (descending) or <code>RAND</code> (random).</td>
+</tr>
+<tr>
+<td>sort-type</td>
+<td>Either <code>alpha</code> or <code>numeric</code>. Default is <code>alpha</code>.</td>
+</tr>
+<tr>
+<td>count</td>
+<td>The number of items to display.</td>
+</tr>
+<tr>
+<td>start</td>
+<td>The item number to start displaying from.</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>The ID of a field to filter the results by.</td>
+</tr>
+<tr>
+<td>match</td>
+<td>Used with filter, see the below table for values</td>
+</tr>
+<tr>
+<td>value</td>
+<td>Used with filter and match. The value to match. For <code>between</code> and <code>in</code>, takes a comma delimited string. For <code>regex</code> takes PCRE regular expression.</td>
+</tr>
+<tr>
+<td>category</td>
+<td>Filter by one or more categories. See <a href="/docs/categories/filtering/">Category filtering</a></td>
+</tr>
+<tr>
+<td>category-match</td>
+<td>Either <code>any</code> or <code>all</code>. See <a href="/docs/categories/filtering/">Category filtering</a></td>
+</tr>
+<tr>
+<td>skip-template</td>
+<td>True or false. Bypass template processing and return the content in an associative array.</td>
+</tr>
+<tr>
+<td>return-html</td>
+<td>True or false. For use with <code>skip-template</code>. Adds the HTML onto the end of the returned array with key <code>html</code>.</td>
+</tr>
+<tr>
+<td>split-items</td>
+<td>True or false. Return an array of individually templated items.</td>
+</tr>
+<tr>
+<td>raw</td>
+<td>True or false. Returns unprocessed content, for use alongside skip-template.</td>
+</tr>
+<tr>
+<td>paginate</td>
+<td>True or false. Whether to use pagination.</td>
+</tr>
+<tr>
+<td>count</td>
+<td>Integer. (When used with <code>paginate</code>) The number of items to show per page if pagination is being used.</td>
+</tr>
+<tr>
+<td>pagination-var</td>
+<td>The URL query string parameter name to use for the page number. Defaults to page.</td>
+</tr>
+<tr>
+<td>page-links</td>
+<td>True or false. Create numbered page links as well as previous and next links.</td>
+</tr>
+<tr>
+<td>page-link-template</td>
+<td>The template to use (if not the default) to generate the page links.</td>
+</tr>
+<tr>
+<td>page-link-style</td>
+<td>shortened or all. By default a shortened set of page links are generated. If you want a link for every page, set to all.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="possible-values-for-match">Possible values for match</h3>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eq</td>
+<td><code>is</code>, <code>exact</code></td>
+<td>equal to</td>
+</tr>
+<tr>
+<td>neq</td>
+<td><code>not</code>, <code>!eq</code></td>
+<td>not equal to</td>
+</tr>
+<tr>
+<td>gt</td>
+<td></td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>gte</td>
+<td></td>
+<td>greater than or equal to</td>
+</tr>
+<tr>
+<td>lt</td>
+<td></td>
+<td>less than</td>
+</tr>
+<tr>
+<td>lte</td>
+<td></td>
+<td>less than or equal to</td>
+</tr>
+<tr>
+<td>contains</td>
+<td></td>
+<td>the value exists within the content (a simple search)</td>
+</tr>
+<tr>
+<td>!contains</td>
+<td></td>
+<td>opposite of <code>contains</code>: the value does not exist within the content</td>
+</tr>
+<tr>
+<td>regex</td>
+<td><code>regexp</code></td>
+<td>using a PCRE regular expression</td>
+</tr>
+<tr>
+<td>between</td>
+<td></td>
+<td>match between two values</td>
+</tr>
+<tr>
+<td>!between</td>
+<td></td>
+<td>opposite of <code>between</code></td>
+</tr>
+<tr>
+<td>eqbetween</td>
+<td></td>
+<td>match between two values inclusively</td>
+</tr>
+<tr>
+<td>!eqbetween</td>
+<td></td>
+<td>opposite of <code>eqbetween</code></td>
+</tr>
+<tr>
+<td>in</td>
+<td><code>within</code></td>
+<td>match within a comma delimited content list (like a list of tags)</td>
+</tr>
+<tr>
+<td>!in</td>
+<td><code>!within</code></td>
+<td>opposite of <code>in</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<p>The following example would show the most recent news item from the News page. It assumes that you have a page at <code>/news/index.php</code> that has an editable region on it (added using <code>perch_content</code>) called News.</p>
+<p>The template is a template (a default template or one you have created) from /templates/content. If the template is directly within that folder just give the template filename, if it is inside a subfolder you should include the subfolder in this path.</p>
+<pre><code class="lang-php">&lt;?php
+  perch_content_custom(&#39;News&#39;, [
+    &#39;page&#39;=&gt;&#39;/news/index.php&#39;,
+    &#39;template&#39;=&gt;&#39;article.html&#39;,
+    &#39;sort&#39;=&gt;&#39;date&#39;,
+    &#39;sort-order&#39;=&gt;&#39;DESC&#39;,
+    &#39;count&#39;=&gt;1
+  ]);
+?&gt;
+</code></pre>
+<h2 id="filtering-content">Filtering content</h2>
+<p>You can filter a region to only display a subset of items. This is done with the <code>filter</code> option, which is always used with <code>match</code> and <code>value</code>.</p>
+<p>Take the example of a multiple-item region containing properties (real estate). We could filter the list to only show properties where the
+<code>bedrooms</code> field as a value of <code>3</code> or higher.</p>
+<pre><code class="lang-php">&lt;?php
+perch_content_custom(&#39;Properties&#39;, [
+    &#39;filter&#39;=&gt;&#39;bedrooms&#39;,
+    &#39;match&#39;=&gt;&#39;gte&#39;,
+    &#39;value&#39;=&gt;3
+]);
+?&gt;
+</code></pre>
+<h2 id="filtering-by-multiple-fields">Filtering by multiple fields</h2>
+<p>You can filter content regions by more than one field by setting an array of filters as the <code>filter</code> option. This is best shown in an example.</p>
+<p>Using the same property search example, the below will find all properties with 3 or more bedrooms. To also filter by price, the
+<code>filter</code> option becomes an array of filters. Each item in the filter array is an array of <code>filter</code>, <code>match</code>, <code>value</code>.</p>
+<pre><code class="lang-php">&lt;?php
+perch_content_custom(&#39;Properties&#39;, [
+    &#39;filter&#39;=&gt; [
+        [
+            &#39;filter&#39;=&gt;&#39;bedrooms&#39;,
+            &#39;match&#39;=&gt;&#39;gte&#39;,
+            &#39;value&#39;=&gt;3
+        ],
+        [
+            &#39;filter&#39;=&gt;&#39;price&#39;,
+            &#39;match&#39;=&gt;&#39;lte&#39;,
+            &#39;value&#39;=&gt;500000
+        ],
+    )
+]);
+?&gt;
+</code></pre>
+<p>This would find properties with 3 or more bedrooms, costing 500,000 or less. Filters are <code>AND</code> by default. You can make it <code>OR</code> like this:</p>
+<pre><code class="lang-php">&lt;?php
+perch_content_custom(&#39;Properties&#39;, [
+    &#39;filter&#39;=&gt;[
+        [
+            &#39;filter&#39;=&gt;&#39;bedrooms&#39;,
+            &#39;match&#39;=&gt;&#39;gte&#39;,
+            &#39;value&#39;=&gt;3
+        ],
+        [
+            &#39;filter&#39;=&gt;&#39;price&#39;,
+            &#39;match&#39;=&gt;&#39;lte&#39;,
+            &#39;value&#39;=&gt;500000
+        ],
+    ],
+    &#39;match&#39;=&gt;&#39;or&#39;
+]);
+?&gt;
+</code></pre>
+<h2 id="using-content-from-different-pages">Using content from different pages</h2>
+<p>The <code>page</code> option can be used to pull content in from another page.</p>
+<p>This will return the content for the region ‘Properties’ on the page
+<code>/properties.php</code>:</p>
+<pre><code class="lang-php">&lt;?php
+perch_content_custom(&#39;Properties&#39;, [
+    &#39;page&#39;=&gt;&#39;/properties.php&#39;
+]);
+?&gt;
+</code></pre>
+<p>You can collect content from multiple pages by using an array:</p>
+<pre><code class="lang-php">&lt;?php
+perch_content_custom(&#39;Properties&#39;,  [
+    &#39;page&#39; =&gt; [&#39;/properties.php&#39;, &#39;/properties-archive.php&#39;],
+]);
+?&gt;
+</code></pre>
+<p>Sometimes, you may need to pull content from a lot of pages, or you may not know the page name. This happens if your client is created pages once the site is live. You can use a wildcard at the end of the path to find any page that matches.</p>
+<p>For example, this would find the ‘Product’ region on any page with a path that starts <code>/products/</code>:</p>
+<pre><code class="lang-php">&lt;?php
+perch_content_custom(&#39;Products&#39;, [
+    &#39;page&#39; =&gt; &#39;/products/*&#39;
+]);
+?&gt;
+</code></pre>
+<p>When doing this, you sometimes need to know where the content has come from. For example, you might have a list of items that has been pulled from multiple pages, and want to link to each item’s page. To help with this the special ID value <code>_page</code> is available within your template:</p>
+<pre><code class="lang-html">&lt;a href=&quot;&lt;perch:content id=&quot;_page&quot;&gt;&quot;&gt;Read more&lt;/a&gt;
+</code></pre>
+<h2 id="specifying-an-item-callback-function">Specifying an item callback function</h2>
+<p>When retrieving multiple items (such as a filtered list from a multiple item region) it is possible to specify a PHP callback function for processing each item before it is templated.</p>
+<pre><code class="lang-php">&lt;?php
+perch_content_custom(&#39;Products&#39;, [
+    &#39;each&#39; =&gt; function($item) {
+        // process as necessary, then return the modified array
+        return $item;
+    },
+]);
+?&gt;
+</code></pre>
+<p>The <code>each</code> option should be specified as a PHP anonymous function or closure. The function will be passed a single argument, which is an associative array representing each item in turn. After processing, the function must return the array.</p>
+<h2 id="retrieving-content-from-multiple-regions">Retrieving content from multiple regions</h2>
+<p>The first argument to <code>perch_content_custom()</code> is the key (or name) of the region you want to fetch the content from.</p>
+<p>This can also be an array of keys.</p>
+<pre><code class="lang-php">perch_content_custom([&#39;News&#39;, &#39;Updates&#39;], [...]);
+</code></pre>
+<p>Of course, this can lead to data of different ‘shapes’ being processed as one collection, so you’ll need to make sure your template or code can deal with that.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

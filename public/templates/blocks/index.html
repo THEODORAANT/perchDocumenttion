@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blocks Tags - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Blocks Tags">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li class="selected"><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/templates/core-concepts/">Template Core Concepts</a>
+                        </li>
+                        <li>
+                            <a href="/templates/attributes/">Tag attributes</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/field-types/">Field Types</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/apps/">App Specific Tags</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/groups/">Field Groups</a>
+                        </li>
+                        <li>
+                            <a href="/templates/blocks/" class="selected">Blocks Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/categories/">Category Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/comments/">Template Comments</a>
+                        </li>
+                        <li>
+                            <a href="/templates/conditionals/">Conditional Tags</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/form/">Form Tags</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/includes/">Template Includes</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/templates/navigation/">Navigation Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/noresults/">No Results Tag</a>
+                        </li>
+                        <li>
+                            <a href="/templates/pagination/">Pagination Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/passing-variables-into-templates/">Passing variables into templates</a>
+                        </li>
+                        <li>
+                            <a href="/templates/repeaters/">Repeaters Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/search/">Search Tags</a>
+                        </li>
+                        <li>
+                            <a href="/templates/show-all/">Show All Tag</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Blocks Tags</h1>
+
+  <p>Blocks offer the ability to structure an item with a choice of mixed content. Within each item (such as an item in a multiple item region, or a Collection item in Perch Runway) the template can define a <code>perch:blocks</code> section containing a choice of blocks to add.</p>
+<p>Blocks defines the following template tags:</p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;perch:blocks&gt;&lt;/perch:blocks&gt;</code></td>
+<td>The entire blocked section should be inside this pair.</td>
+</tr>
+<tr>
+<td><code>&lt;perch:block&gt;&lt;/perch:block&gt;</code></td>
+<td>An individual block, defining the start and end of that micro-template</td>
+</tr>
+</tbody>
+</table>
+<p>Each block is like a micro-template. It can include the usual mix of field types, Repeaters and markup.</p>
+<pre><code class="lang-html">&lt;perch:blocks&gt;
+  &lt;perch:block type=&quot;text&quot; label=&quot;Text&quot;&gt;
+    ...
+  &lt;/perch:block&gt;
+  &lt;perch:block type=&quot;quote&quot; label=&quot;Pull quote&quot;&gt;
+    ...
+  &lt;/perch:block&gt;
+  &lt;perch:block type=&quot;image&quot; label=&quot;Feature image&quot;&gt;
+    ...
+  &lt;/perch:block&gt;
+&lt;/perch:blocks&gt;
+</code></pre>
+<h2 id="the-perch-blocks-tag-pair">The <code>perch:blocks</code> tag pair</h2>
+<p>All blocks must exist within a  <code>perch:blocks</code> tag pair. This defines the <em>’blocked’</em> section of the template.</p>
+<p>A template using blocks can contain other content outside of the blocks. The order of the fields and the blocked section can be controlled with the <code>order</code> attribute.</p>
+<pre><code class="lang-html">&lt;perch:content type=&quot;smarttext&quot; id=&quot;heading&quot; order=&quot;1&quot;&gt;
+&lt;perch:content type=&quot;date&quot; id=&quot;date&quot; order=&quot;3&quot;&gt;
+&lt;perch:blocks order=&quot;2&quot;&gt;
+  …
+&lt;/perch:blocks&gt;
+</code></pre>
+<p>The blocked section can use <code>perch:before</code> and <code>perch:after</code> sections in order to display markup around the blocks. These do not show if no blocks are selected.</p>
+<p>The blocks are output in a group, so <code>perch:every</code> acts across the blocks, and each block has its own <code>perch_item_index</code> and friends.</p>
+<h2 id="the-perch-block-tag-pair">The <code>perch:block</code> tag pair</h2>
+<p>Block tags appear within a <code>perch:blocks</code> tag pair. They define each block than can be chosen by the content editor.</p>
+<pre><code class="lang-html">&lt;perch:block type=&quot;image&quot; label=&quot;Feature image&quot;&gt;
+  &lt;figure&gt;
+      &lt;img src=&quot;&lt;perch:content id=&quot;image&quot; type=&quot;image&quot; width=&quot;1600&quot; label=&quot;Image&quot;&gt;&quot;&gt;
+      &lt;figcaption&gt;
+        &lt;perch:content id=&quot;caption&quot; type=&quot;smarttext&quot; label=&quot;Caption&quot;&gt;
+      &lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/perch:block&gt;
+</code></pre>
+<p>A <code>perch:block</code> tag pair then just contains normal template code, including content tags, repeaters and markup. (Each individual block does not have a <code>before</code> or <code>after</code> section, but they do have an index within the blocked group.) You can use the <code>divider-before</code> and <code>divider-after</code> attributes to give the edit form more structure.</p>
+<p>The <code>perch:block</code> opening tag has two required attributes. <code>type</code> describes the block to the templating system, and <code>label</code> describes it to your users.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>An ID-like reference used to refer to the block in templates</td>
+</tr>
+<tr>
+<td>label</td>
+<td>A short, human-readable description of the block type</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>The name of an icon to use to represent the block in the user interface</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>label</code> attribute is used in the editing interface to describe the block.</p>
+<p>A blocked section can include as many blocks as needed. A template can only contain one <code>perch:blocks</code> section.</p>
+<h2 id="using-template-includes">Using template includes</h2>
+<p>It is perfectly fine to use template includes to make your code more modular.</p>
+<pre><code class="lang-html">&lt;perch:blocks&gt;
+  &lt;perch:block type=&quot;image&quot; label=&quot;Feature image&quot;&gt;
+    &lt;perch:template path=&quot;content/blocks/image.html&quot;&gt;
+  &lt;/perch:block&gt;
+&lt;/perch:blocks&gt;
+</code></pre>
+<p>You can even make sets of common blocks and add special cases as needed:</p>
+<pre><code class="lang-html">&lt;perch:blocks&gt;
+  &lt;perch:template path=&quot;blocks/article_blocks.html&quot;&gt;
+  &lt;perch:block type=&quot;image&quot; label=&quot;Feature image&quot;&gt;
+    &lt;perch:template path=&quot;content/blocks/image.html&quot;&gt;
+  &lt;/perch:block&gt;
+&lt;/perch:blocks&gt;
+</code></pre>
+<h2 id="accessing-content-outside-the-blocks">Accessing content outside the blocks</h2>
+<p>By default, blocks operate as a silo – like a region within the template. They have their own content scope, and the template engine treats them as a distinct zone with its own <em>before</em> and <em>after</em> properties and new item counts.</p>
+<p>Content from outside the <code>perch:blocks</code> tag is out of scope. You can bring it into scope for all blocks using the <code>scope-parent</code> attribute on the <code>perch:blocks</code> tag.</p>
+<p>To prevent ID clashes, the items from outside the blocks become <code>parent.originalID</code> within the blocks. So a field that is <code>id=&quot;title&quot;</code>
+outside the blocks would be <code>id=&quot;parent.title&quot;</code> when brought into scope within the blocks.</p>
+<h2 id="icons">Icons</h2>
+<p>A block can be represented by an icon. The available icons are listed below.</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#address-book"> </svg></td>
+<td>address-book</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#alarm-alt"> </svg></td>
+<td>alarm-alt</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#anchor"> </svg></td>
+<td>anchor</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#bed"> </svg></td>
+<td>bed</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#bell"> </svg></td>
+<td>bell</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#book"> </svg></td>
+<td>book</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#bookmark"> </svg></td>
+<td>bookmark</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#burger"> </svg></td>
+<td>burger</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#calculator"> </svg></td>
+<td>calculator</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#calendar-add"> </svg></td>
+<td>calendar-add</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#calendar"> </svg></td>
+<td>calendar</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#camera-alt"> </svg></td>
+<td>camera-alt</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#cart"> </svg></td>
+<td>cart</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#chart-pie"> </svg></td>
+<td>chart-pie</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#chat"> </svg></td>
+<td>chat</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#circle-add"> </svg></td>
+<td>circle-add</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#clock"> </svg></td>
+<td>clock</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#cloud"> </svg></td>
+<td>cloud</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#code"> </svg></td>
+<td>code</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#coffee-togo"> </svg></td>
+<td>coffee-togo</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#compass"> </svg></td>
+<td>compass</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#contacts"> </svg></td>
+<td>contacts</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#dashboard"> </svg></td>
+<td>dashboard</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#database"> </svg></td>
+<td>database</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#document"> </svg></td>
+<td>document</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#download"> </svg></td>
+<td>download</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#edit"> </svg></td>
+<td>edit</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#flag"> </svg></td>
+<td>flag</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#folder"> </svg></td>
+<td>folder</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#heart"> </svg></td>
+<td>heart</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#home"> </svg></td>
+<td>home</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#keyboard"> </svg></td>
+<td>keyboard</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#keynote"> </svg></td>
+<td>keynote</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#lightbulb"> </svg></td>
+<td>lightbulb</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#link"> </svg></td>
+<td>link</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#list"> </svg></td>
+<td>list</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#location"> </svg></td>
+<td>location</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#mail"> </svg></td>
+<td>mail</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#megaphone"> </svg></td>
+<td>megaphone</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#menu"> </svg></td>
+<td>menu</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#microphone"> </svg></td>
+<td>microphone</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#music"> </svg></td>
+<td>music</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#newspaper"> </svg></td>
+<td>newspaper</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#notepad"> </svg></td>
+<td>notepad</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#paint-roller"> </svg></td>
+<td>paint-roller</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#paintbrush"> </svg></td>
+<td>paintbrush</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#paper-airplane"> </svg></td>
+<td>paper-airplane</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#paperclip"> </svg></td>
+<td>paperclip</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#pencil-paintbrush-pen"> </svg></td>
+<td>pencil-paintbrush-pen</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#pencil"> </svg></td>
+<td>pencil</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#phone"> </svg></td>
+<td>phone</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#photo"> </svg></td>
+<td>photo</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#photos"> </svg></td>
+<td>photos</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#plane"> </svg></td>
+<td>plane</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#popsicle"> </svg></td>
+<td>popsicle</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#pulse-wave"> </svg></td>
+<td>pulse-wave</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#puzzle"> </svg></td>
+<td>puzzle</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#question"> </svg></td>
+<td>question</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#quote"> </svg></td>
+<td>quote</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#redirect"> </svg></td>
+<td>redirect</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#signs"> </svg></td>
+<td>signs</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#tag"> </svg></td>
+<td>tag</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#theater-masks"> </svg></td>
+<td>theater-masks</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#truck"> </svg></td>
+<td>truck</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#tv"> </svg></td>
+<td>tv</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#umbrella"> </svg></td>
+<td>umbrella</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#user-female"> </svg></td>
+<td>user-female</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#user"> </svg></td>
+<td>user</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#users"> </svg></td>
+<td>users</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#utensils"> </svg></td>
+<td>utensils</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#video"> </svg></td>
+<td>video</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#weather"> </svg></td>
+<td>weather</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#wine"> </svg></td>
+<td>wine</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#world"> </svg></td>
+<td>world</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#wrench"> </svg></td>
+<td>wrench</td>
+</tr>
+<tr>
+<td><svg role="img" width="16" height="16"> <use xlink:href="/assets/svg/blocks.svg#yin-yang"> </svg></td>
+<td>yin-yang</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

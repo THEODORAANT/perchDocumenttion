@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Using Blocks to create a photo essay blog post - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Using Blocks to create a photo essay blog post">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li class="selected"><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+      <ul class="sidenav">
+          <li>
+              <a href="/video/getting-started/">Getting Started</a>
+          </li>
+          <li>
+              <a href="/video/blog/">Perch Blog</a>
+          </li>
+          <li>
+              <a href="/video/runway/">Perch Runway</a>
+          </li>
+      </ul>
+    </nav>
+
+<article class="content">
+
+  <h1>Using Blocks to create a photo essay blog post</h1>
+
+  <div class="video-wrapper">
+    <div class="flex-video widescreen">
+      <iframe src="https://www.youtube-nocookie.com/embed/-H4fT3xS22o?showinfo=0&amp;rel=0" frameborder="0" allow="encrypted-media" gesture="media" allowfullscreen class="embed-responsive-item" width="847" height="476"></iframe>
+    </div>
+  </div>
+
+  <div class="video-detail">
+    <div class="inner-panel">
+        <h2 id="video-transcript">Video Transcript</h2>
+<p>One of the things that has been traditionally hard to create is the photo essay type of blog post or content. As Perch Blocks is also part of the API, it’s available to the Blog App. In this video I’m going to show you how to create a beautiful photo essay post like this one.</p>
+<p>As I want my images to be the star of this blog, I’m using a very simple CSS framework called Skeleton. It gives me a simple grid but requires that classes are added to my markup to make that grid work - it’s much like the Bootstrap Grid in that regard.</p>
+<p>To make it easy to follow along, I have packaged up all of the files for this example.</p>
+<p>You’ll need to get a copy of the Skeleton framework from get skeleton.com. You should have Perch 2.8 or greater installed plus the Blog App version 2.6 or up.</p>
+<p>Then download the zip (if you are watching this embedded somewhere the files are attached to the video in the video section of the Perch documentation).</p>
+<p>Pop the blog folder into the root of your site, make sure the paths to the Perch runtime and the css files for skeleton are correct. There is an additional stylesheet in the css folder.</p>
+<p>I have also included the two blog templates we will be using, add these to perch/templates/blog then open them up in your editor.</p>
+<p>Our master template for blog is post.html any fields that you want to edit have to be in this template. As I’m creating a photo essay blog my template looks quite different to a regular blog template.</p>
+<p>I’ll explain some of the features I have added.</p>
+<p>If I go to the Perch Admin and create a new blog post you can see our template has some fields available. A title, then there is a cover image. This will be a big image displayed at the top of the post with the title and date on top.</p>
+<p>As we’ll have text on top I have added a selection of dark or light - this enables the user to choose to have dark or light text on their image and also sets an appropriate background color.</p>
+<p>Then we have a subtitle and some introductory text. </p>
+<p>If we go back to the code we can see how this works.</p>
+<p>Our dark and light selection is a template tag type of select, allowing the user to choose a class.
+We then apply the cover image as an inline style on that cover div, it then contains the title, author and date information.</p>
+<p>If you look at the bottom of the template I have reused the cover image id to make a smaller version to use in the post listing.</p>
+<p>If we now look at the blog on the site you can see we already have the post in the listing, click through and there is the cover image and information.</p>
+<p>Now we build up our essay.</p>
+<p>Going back to the template you can see that we have opened a perch:blocks section.</p>
+<p>Inside this I have four options.</p>
+<ul>
+<li>a full width image</li>
+<li>two images side by side</li>
+<li>image and text side by side </li>
+<li>just a text area</li>
+</ul>
+<p>You could of course offer as many options as you like. You can even use repeaters.</p>
+<p>Back in admin I can just pick the blocks I want to use to build up my photo essay.</p>
+<p>I can reorder them too.</p>
+<p>Then take a look on the site and see how it looks.</p>
+<p>Perch Blocks makes it really straightforward to create this kind of content entry - whether in regular perch content or in an App like Blog. </p>
+
+
+
+        <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+        </ul>
+
+    </div>
+    
+  </div>
+
+
+
+
+  
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

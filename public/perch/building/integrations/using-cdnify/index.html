@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Using CDNify with Perch - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Using CDNify with Perch">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link selected"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/perch/getting-started/">Getting Started With Perch</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/configuration/">Configuration</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/building/">Building Sites with Perch</a>
+                            <ul>    <li>
+                            <a href="/perch/building/hosts/">Webhosts</a>
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/how-do-i-create-a-multilingual-site/">Create a multilingual site</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/integrations/">Integrations</a>
+                            <ul>    <li>
+                            <a href="/perch/building/integrations/adding-facebook-like-buttons/">Add Facebook like buttons to a page</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/integrations/google-analytics/">Using Google Analytics</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/integrations/rss-to-email-mailchimp/">RSS to MailChimp</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/integrations/using-cdnify/" class="selected">Using CDNify with Perch</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/servers/">Servers</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/troubleshooting/">Troubleshooting</a>
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/updating/">Updating Perch</a>
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/building/working-with-front-controllers/">Working with Front Controllers</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/perch/categories/">Categories</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/content/">Working with Content</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/control-panel/">The Perch Control Panel</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/help/">Troubleshooting Tips</a>
+                        </li>
+                        <li>
+                            <a href="/perch/pages-and-nav/">Pages and Navigation</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/resources/">Managing Resources</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/upgrading/">Upgrading to Perch 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Using CDNify with Perch</h1>
+
+  <p><strong>Can I use CDNify with Perch?</strong></p>
+<hr>
+<p><strong>In Feb 2017, CDNify announced the end of the service.</strong> Sites using CDNify need to transition away by the end of March 2017.</p>
+<hr>
+<p>Sites with international audiences can see performance benefits from moving images and static assets to a content delivery network (CDN). CDNify is one such service which is very easy to add to a Perch site.</p>
+<p>The purpose of a content delivery network (CDN) is to make your site load faster by serving images and static assets from data centres that are physically closer to the site visitor. A CDN will automatically copy your assets to their data centres around the globe. When a visitor loads your site, they’ll be sent assets from the closest data centre to their current location.</p>
+<p>That all sounds pretty complicated to set up, right? Well yes, it can be, but it doesn’t have to be. <a href="https://cdnify.com/">CDNify</a> is a CDN service that does 80% of what you’d ever need, with only about 1% of the hassle. It’s a bit like Perch (and that’s why we like it).</p>
+<p>CDNify works like this:</p>
+<ol>
+<li>You create an account, and set your website up as a <em>resource</em>.</li>
+<li>CDNify gives you a URL to put in front of any static asset paths on your site</li>
+<li>The first time that asset is loaded, CDNify fetches it from your site, then serves its copy from that point on</li>
+</ol>
+<p>One of the classic problems with using a CDN is making sure that updated assets get updated on the CDN too. That’s not so much a problem with Perch, because everything is versioned, every updated image etc has a new file name.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>Once you’ve signed up for CDNify and have set your site up as a resource, you’ll be given a URL like this:</p>
+<pre><code>mysite.a.cdnify.io
+</code></pre><p>Open up your <code>perch/config/config.php</code> file and find this line:</p>
+<pre><code>define(&#39;PERCH_RESPATH&#39;, PERCH_LOGINPATH . &#39;/resources&#39;);
+</code></pre><p>and update it to this:</p>
+<pre><code>define(&#39;PERCH_RESPATH&#39;, &#39;http://mysite.a.cdnify.io&#39; . PERCH_LOGINPATH . &#39;/resources&#39;);
+</code></pre><p>That’s it. The explanation was longer than the instructions!</p>
+<h2 id="using-with-buckets">Using with buckets</h2>
+<p>If you have a custom bucket list, you just need to prefix the <code>web_path</code> for any buckets you want to serve from the CDN. Open up <code>perch/config/buckets.php</code> and change your lines like this:</p>
+<pre><code>&#39;web_path&#39;  =&gt; &#39;/my/bucket/path&#39;,
+</code></pre><p>to include the CDNify URL like this:</p>
+<pre><code>&#39;web_path&#39;  =&gt; &#39;http://mysite.a.cdnify.io/my/bucket/path&#39;,
+</code></pre><p>And you’re done.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

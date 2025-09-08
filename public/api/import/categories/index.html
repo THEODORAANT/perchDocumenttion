@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Importing Categories - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Importing Categories">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li class="selected"><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/api/apps/">Apps</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/auth/">Authentication plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/buckets/">Bucket handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/custom-ui/">UI Customisations</a>
+                        </li>
+                        <li>
+                            <a href="/api/dashboard/">Dashboard Widgets</a>
+                        </li>
+                        <li>
+                            <a href="/api/editors/">Editor plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/events/">Event hooks</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/api/template-filters/">Template filters</a>
+                        </li>
+                        <li>
+                            <a href="/api/templates/">Template handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/field-types/">Field Types</a>
+                        </li>
+                        <li>
+                            <a href="/api/validators/">Form validators</a>
+                        </li>
+                        <li>
+                            <a href="/api/search/">Search handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/shortcodes/">Shortcode providers</a>
+                        </li>
+                        <li>
+                            <a href="/api/translations/">Translations</a>
+                        </li>
+                        <li>
+                            <a href="/api/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/api/import/">Importing Content</a>
+                            <ul>    <li>
+                            <a href="/api/import/collections/">Importing Collections</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/import/assets/">Importing Assets</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/import/categories/" class="selected">Importing Categories</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/api/import/shop/">Importing into Perch Shop</a>
+                             
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/api/reference/">API Reference</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Importing Categories</h1>
+
+  <p>Content can be imported programmatically into a nominated Category Set. To achieve this, you first need:</p>
+<ol>
+<li>A script that includes the Perch runtime (which could be a master page)</li>
+<li>A category set</li>
+<li>A template for categories within the set that defines the content types</li>
+<li>A source of data</li>
+</ol>
+<h2 id="getting-started">Getting started</h2>
+<p>In your script, include the Perch runtime. If you’re using a Runway master page, you can skip this, just set up the master page and point a route to it.</p>
+<pre><code class="lang-php">include(&#39;/perch/runtime.php&#39;);
+</code></pre>
+<p>Create an instance of the API, and a new <code>CategoryImporter</code>. Tell the importer which category set to import into by specifying the set slug.</p>
+<pre><code class="lang-php">$API      = new PerchAPI(1.0, &#39;my_importer&#39;);
+$Importer = $API-&gt;get(&#39;CategoryImporter&#39;);
+
+$Importer-&gt;set_set(&#39;topics&#39;);
+</code></pre>
+<p>The importer uses a template to know how to process the incoming content. </p>
+<p><code>PerchAPI_Template::set()</code> takes two arguments:</p>
+<ol>
+<li>The path to the template</li>
+<li>The tag namespace to use </li>
+</ol>
+<pre><code class="lang-php">$Template = $API-&gt;get(&#39;Template&#39;);
+$Template-&gt;set(&#39;categories/category&#39;, &#39;category&#39;);
+
+$Importer-&gt;set_template($Template);
+</code></pre>
+<p>You’re now ready to start importing content. If your set is new and you want to clean out previous test imports, you can call <code>empty_set()</code>. </p>
+<pre><code class="lang-php">$Importer-&gt;empty_set();
+</code></pre>
+<h2 id="importing">Importing</h2>
+<p>At this point you want to loop through your data source (whatever that may be) and map your content to IDs from your category template. For each category you want to add, call <code>add_item()</code> with an associative array where the <em>keys</em> are the IDs from your template, and the <em>values</em> are the content you want to assign to that field.</p>
+<p>The <code>add_item()</code> method validates required fields and will throw an exception if any item of content cannot be imported. For this reason, it’s best to use a try/catch block:</p>
+<pre><code class="lang-php">try {
+    $Importer-&gt;add_item([
+        &#39;catTitle&#39; =&gt; &#39;Cookery&#39;,
+        &#39;catSlug&#39; =&gt; &#39;&#39;,
+    ]);    
+} catch (Exception $e) {
+    die(&#39;Error: &#39;.$e-&gt;getMessage());
+}
+</code></pre>
+<p>A successful call to <code>add_item()</code> will return the path of the newly added category, which can help when importing other content that uses the new category.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

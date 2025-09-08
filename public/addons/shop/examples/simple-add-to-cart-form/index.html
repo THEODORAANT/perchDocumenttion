@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Add to Cart Form - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Simple Add to Cart Form">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li class="selected"><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/addons/announcements/">Announcements App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/backup/">Backup App</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/blog/">Blog App</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/comments/">Comments App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/email_octopus/">EmailOctopus App</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/events/">Events App</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/addons/field-types/">Field Types</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/forms/">Forms App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/gallery/">Gallery App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/kraken/">Kraken App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/listings/">Listings App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/mailchimp/">Mailchimp App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/members/">Members App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/plugins/">Plugins</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/podcasts/">Podcasts App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/poll/">Poll App</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/qr/">QRGenerator App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/shop-foxycart/">Foxycart Shop App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/shop-paypal/">PayPal Shop App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/shop/">Shop App</a>
+                            <ul>    <li>
+                            <a href="/addons/shop/cart/">The Cart</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/changelog/">Changelog</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/checkout/">Checkout</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/customers/">Customers</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/examples/">Examples</a>
+                            <ul>    <li>
+                            <a href="/addons/shop/examples/add-to-cart-options/">Add to Cart with Options</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/examples/add-to-cart-php/">Add to Cart Function</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/examples/create-account/">Create a customer account</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/examples/digital-downloads/">Selling digital downloads</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/examples/display-cart/">Display the Cart</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/examples/empty-cart/">Empty the Cart</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/examples/managing-addresses/">Managing addresses</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/examples/no-account/">Paying without creating an account</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/examples/no-cart/">Creating a checkout without a cart</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/examples/order-confirmation/">Creating an order confirmation step</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/examples/payment-result/">Handling payment results</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/examples/sell-content-behind-a-paywall/">Sell content behind a paywall</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/examples/simple-add-to-cart-form/" class="selected">Simple Add to Cart Form</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/gateways/">Payment Gateways</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/installation/">Installation</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/orders/">Orders</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/products/">Products</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/requirements/">Requirements</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/shipping/">Shipping</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/tax/">Tax</a>
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/addons/shop/updating/">Updating</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/addons/twillio/">Twilio App</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/addons/twitter/">Twitter App</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Simple Add to Cart Form</h1>
+
+  <p>The majority of the time you will give your customer the ability to add a product to their cart by way of displaying a form along with the product, using a template.</p>
+<pre><code class="lang-html">&lt;perch:form id=&quot;add_to_cart&quot; app=&quot;perch_shop&quot; action=&quot;/cart&quot;&gt;
+  &lt;perch:input id=&quot;product&quot; type=&quot;hidden&quot; value=&quot;&lt;perch:shop id=&quot;productID&quot; type=&quot;hidden&quot;&gt;&quot;&gt;
+  &lt;perch:input type=&quot;submit&quot; value=&quot;Add to cart&quot;&gt;
+&lt;/perch:form&gt;
+</code></pre>
+<p>This will add the product (with <code>productID</code>) to your cart. The form has <code>action=&quot;/cart&quot;</code> set, so the user will be taken to the URL <code>/cart</code> where presumably there is a cart to show. You can change this to suit your needs.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

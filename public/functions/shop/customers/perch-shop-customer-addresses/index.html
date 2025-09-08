@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>perch_shop_customer_addresses() - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="perch_shop_customer_addresses()">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li class="selected"><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/functions/announcements/">Announcements</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/blog/">Blog</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/categories/">Categories Functions</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/collections/">Collection functions</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/comments/">Comments</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/content/">Content functions</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/events/">Events</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/form/">Form</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/gallery/">Gallery</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/layouts/">Layout Functions</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/listings/">Listings</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/mailchimp/">Mailchimp</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/members/">Members</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/navigation/">Navigation &amp; Page Functions</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/page-attributes/">Page Attributes</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/podcasts/">Podcasts</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/search/">Search Functions</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/shop-foxycart/">Foxycart (deprecated)</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/shop-paypal/">PayPal Shop (deprecated)</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/shop/">Shop</a>
+                            <ul>    <li>
+                            <a href="/functions/shop/cart/">Cart Functions</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/shop/checkout/">Checkout Functions</a>
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/shop/customers/">Customers Functions</a>
+                            <ul>    <li>
+                            <a href="/functions/shop/customers/perch-shop-addresses-set/">perch_shop_addresses_set()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/shop/customers/perch-shop-customer-address/">perch_shop_customer_address</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/shop/customers/perch-shop-customer-addresses/" class="selected">perch_shop_customer_addresses()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/shop/customers/perch-shop-edit-address-form/">perch_shop_edit_address_form()</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/shop/customers/perch-shop-order-address-form/">perch_shop_order_address_form()</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/shop/orders/">Order Functions</a>
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/shop/products/">Product Functions</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/functions/shop/shipping/">Shipping Functions</a>
+                             
+                             
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/functions/twitter/">Twitter</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/functions/utilities/">Utility Functions</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>perch_shop_customer_addresses()</h1>
+
+  <p>Display a list the logged in customer’s addresses with <code>perch_shop_customer_addresses()</code>.</p>
+<h2 id="requires">Requires</h2>
+<ul>
+<li>Perch Shop installed</li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Array</td>
+<td>Options array, see table below</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>Set to <code>true</code> to have the value returned instead of echoed.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="options-array">Options array</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>template</td>
+<td>The name of a template to use to display the content.</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>The ID of the field to sort on.</td>
+</tr>
+<tr>
+<td>sort-order</td>
+<td>Either <code>ASC</code> (ascending), <code>DESC</code> (descending) or <code>RAND</code> (random).</td>
+</tr>
+<tr>
+<td>sort-type</td>
+<td>Either <code>alpha</code> or <code>numeric</code>. Default is <code>alpha</code>.</td>
+</tr>
+<tr>
+<td>count</td>
+<td>The number of items to display.</td>
+</tr>
+<tr>
+<td>start</td>
+<td>The item number to start displaying from.</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>The ID of a field to filter the results by.</td>
+</tr>
+<tr>
+<td>match</td>
+<td>Used with filter, see the below table for values</td>
+</tr>
+<tr>
+<td>value</td>
+<td>Used with filter and match. The value to match. For <code>between</code> and <code>in</code>, takes a comma delimited string. For <code>regex</code> takes PCRE regular expression.</td>
+</tr>
+<tr>
+<td>category</td>
+<td>Filter by one or more categories. See <a href="/docs/categories/filtering/">Category filtering</a></td>
+</tr>
+<tr>
+<td>category-match</td>
+<td>Either <code>any</code> or <code>all</code>. See <a href="/docs/categories/filtering/">Category filtering</a></td>
+</tr>
+<tr>
+<td>skip-template</td>
+<td>True or false. Bypass template processing and return the content in an associative array.</td>
+</tr>
+<tr>
+<td>return-html</td>
+<td>True or false. For use with <code>skip-template</code>. Adds the HTML onto the end of the returned array with key <code>html</code>.</td>
+</tr>
+<tr>
+<td>split-items</td>
+<td>True or false. Return an array of individually templated items.</td>
+</tr>
+<tr>
+<td>raw</td>
+<td>True or false. Returns unprocessed content, for use alongside skip-template.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usage-examples">Usage examples</h2>
+<p>Display the list using the default template. The default template is <code>shop/addresses/list.html</code>.</p>
+<pre><code class="lang-php">perch_shop_customer_addresses();
+</code></pre>
+<p>This function accepts an array of options to control what is returned. It can be used as follows.</p>
+<pre><code class="lang-php">perch_shop_customer_addresses([
+    &#39;template&#39; =&gt; &#39;brand_list.html&#39;,
+    &#39;count&#39; =&gt; 10,
+]);
+</code></pre>
+<p>Available options include:</p>
+<p>|-|-|
+|Option|Value|
+|-|-|</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

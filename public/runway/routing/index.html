@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Routing - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:title" content="Routing">
+  <meta property="og:description" content="Perch documentation">
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+         <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+
+
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li class="selected"><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+  <main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/runway/caching/">Caching</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/cloud-storage/">Cloud Storage</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/collections/">Collections</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/configuration/">Configuration</a>
+                        </li>
+                        <li>
+                            <a href="/runway/core-tasks/">Core Tasks</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/getting-started/">Getting Started with Runway</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/headless/">Headless requests</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/relationships/">Relationships</a>
+                        </li>
+                        <li>
+                            <a href="/runway/routing/" class="selected">Routing</a>
+                            <ul>    <li>
+                            <a href="/runway/routing/tokens/">Tokens</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/routing/named-segments/">Named Segments</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/routing/custom-tokens/">Custom Tokens</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/runway/site-access/">Controlling site access</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading/">Upgrading to Runway 4</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading3/">Upgrading to Runway 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+  <h1>Routing</h1>
+
+  <p>Runway uses your web server’s ability to <em>rewrite</em> incoming URLs and point those requests to a single entry point. This is sometimes called a <em>Front Controller</em>. For Runway, it’s the <code>start.php</code> script that handles all page requests.</p>
+<p>Once Runway has received the request, it then decides which page to display. This is known as <em>routing</em> - deciding which page will the incoming request be routed to.</p>
+<p>When you add a page in Runway, it has a URL. By default, this is used by the router, and any direct request of that page’s URL will result in a direct match. For some sites, that’s all you’ll need.</p>
+<p>For sites with more complex requirements, you can add additional pattern to match more complex URLs and route them through to your pages. For example, a blog might have URLs like this:</p>
+<pre><code class="lang-unix">/blog/2014/my-post-title
+</code></pre>
+<p>No page with that URL exists, as you don’t have a new page for every blog post in the database. Instead, you’d create a route to match it and direct that request through to the page that displays blog posts. The URL pattern for the route might look like this:</p>
+<pre><code class="lang-unix">blog/[year]/[slug]
+</code></pre>
+<p>The <code>[bracketed]</code> items are placeholders, we call them tokens. The <code>[year]</code> token matches a four-digit year, and then <code>[slug]</code> token matches a lowercase letters, numbers and dashes sequence. There are tokens for numbers <code>[i]</code>, letters <code>[a]</code>, dates <code>[isodate]</code> and so on, for the common parts of a URL you might want to find.</p>
+<h2 id="adding-a-route">Adding a route</h2>
+<p>By default, the router will map any incoming request to a page with the same URL. Adding an additional routes to the page is done through the Perch control panel.</p>
+<p>Find the page a click on <em>Page Options</em>. Find the <em>Routes</em> section, and add a new route at the bottom. Delete a route by clearing the field.</p>
+<p>When writing a pattern for the route, you don’t need to include the opening or trailing slash, and Runway will strip those for you if you do.</p>
+<h2 id="route-matching-order">Route matching order</h2>
+<p>The order in which routes are matched can be quite important. It’s possible to create multiple patterns that could theoretically match the same URL, and the router will stop at the first that matches. It’s therefore important to carefully manage the order.</p>
+<p>To do this, go to the <em>Routes</em> section under <em>Pages</em>. The routes are listed in order, first to last. Select the <em>Reorder</em> option in the smartbar, and then drag and drop the routes to change the order. Select <em>Save Changes</em> when you’re done.</p>
+
+
+  <ul>
+      <li>
+          Routing
+          <ul>
+              <li><a href="/runway/routing/tokens/">Tokens</a></li>
+              <li><a href="/runway/routing/named-segments/">Named Segments</a></li>
+              <li><a href="/runway/routing/custom-tokens/">Custom Tokens</a></li>
+          </ul>
+      </li>
+  </ul>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

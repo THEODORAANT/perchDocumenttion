@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>API Documentation - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:title" content="API Documentation">
+  <meta property="og:description" content="Perch documentation">
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+         <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+
+
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li class="selected"><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+  <main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/api/apps/">Apps</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/auth/">Authentication plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/buckets/">Bucket handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/custom-ui/">UI Customisations</a>
+                        </li>
+                        <li>
+                            <a href="/api/dashboard/">Dashboard Widgets</a>
+                        </li>
+                        <li>
+                            <a href="/api/editors/">Editor plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/events/">Event hooks</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/api/template-filters/">Template filters</a>
+                        </li>
+                        <li>
+                            <a href="/api/templates/">Template handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/field-types/">Field Types</a>
+                        </li>
+                        <li>
+                            <a href="/api/validators/">Form validators</a>
+                        </li>
+                        <li>
+                            <a href="/api/search/">Search handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/shortcodes/">Shortcode providers</a>
+                        </li>
+                        <li>
+                            <a href="/api/translations/">Translations</a>
+                        </li>
+                        <li>
+                            <a href="/api/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/api/import/">Importing Content</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/reference/">API Reference</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+  <h1>API Documentation</h1>
+
+  <p>Perch and Perch Runway share a powerful API that enables you to extend, integrate with, and build on top of the Perch platform.</p>
+<p>There are lots of ways for a developer to use the API, from light CSS and JavaScript additions, right through to building Perch apps. Below are some of the ways you can use the API.</p>
+<p>Many of the more advanced API uses are implemented with the use of an App, so that’s a good place to start for anything that appears after Apps in the list below.</p>
+<h2 id="custom-editors"><a href="/api/editors">Custom editors</a></h2>
+<p>Want to add your favourite WYSIWYG editor to Perch? This is the place to do it.</p>
+<h2 id="ui-customisations"><a href="/api/custom-ui">UI customisations</a></h2>
+<p>Modify the control panel by adding in your own custom CSS and JavaScript in a way that shouldn’t break when you update.</p>
+<h2 id="language-translations"><a href="/api/translations">Language translations</a></h2>
+<p>If you want to use the control panel in a language other than English, this is done with translations.</p>
+<h2 id="authentication-plugins"><a href="/api/auth">Authentication plugins</a></h2>
+<p>When you need to manage your user accounts in an external system, authentication plugins enable you to do just that.</p>
+<h2 id="field-types"><a href="/api/field-types">Field types</a></h2>
+<p>If you want to add new types of field to Perch control panel edit forms, this is how you do it. All edit fields in Perch are field types, from the basic single line text field, to more complex examples like maps and YouTube fields.</p>
+<h2 id="apps"><a href="/api/apps">Apps</a></h2>
+<p>When it comes to adding more serious functionality to Perch, you need an app. Apps can be anything from just a couple of quick files to listen for events (see below) to full scale applications built on Perch, such as Perch Shop. They can add pages the control panel, add runtime functions to the page, define custom templates tags and more. They can be powerful and complex, or almost nothing at all. If you want to hook your own code into Perch, an app is usally the route to do it.</p>
+<h2 id="form-validators"><a href="/api/validators">Form validators</a></h2>
+<p>The Perch public-facing forms have lots of basic built-in validation for common input types. When you need to apply custom logic to field validation, you can do that with a custom form validator. They enable you do to things like check an email address isn’t already in use, or verify some input against an external API. Form validators are implemented with an app.</p>
+<h2 id="event-hooks"><a href="/api/events">Event hooks</a></h2>
+<p>Many interactions that occur within the Perch control panel issue an event which your code can listen for. That might be when a page is published or an image is uploaded. Event hooks enable you to implement code in response to these interactions, such as invalidating a cache or optmizing an image. You can also issue events of your own for other developers (or other apps of your own) to listen for. Event hooks are implemented with an app.</p>
+<h2 id="dashboard-widgets"><a href="/api/dashboard">Dashboard widgets</a></h2>
+<p>The control panel has a dashboard page which is made up of small interface widgets. These typically give statistical or summary information and offer some quick links. You can add your own widgets with an app.</p>
+<h2 id="template-handlers"><a href="/api/templates">Template handlers</a></h2>
+<p>Perch has a flexible tag-based templating language which can be augmented with custom tags. Template handlers can hook into each phase of template parsing to add custom functionality to templates. Template handlers are implemented with an app.</p>
+<h2 id="search-handlers"><a href="/api/search">Search handlers</a></h2>
+<p>When a user performs a search on your website, each search handler is called in turn and can augment the search query and perform transformations on the results. If your app stores content in the database that needs to be returned through a site search, then search handlers are the way to do it. They are implemented with an app.</p>
+<h2 id="bucket-handlers"><a href="/api/buckets">Bucket handlers</a></h2>
+<p>Uploaded assets are stored in resource buckets, which are managed through the user’s bucket list. Perch has support for buckets on the local file system, whereas Perch Runway adds support for buckets on Dropbox, Amazon S3, CloudFiles and so on. You can add support for alternative backends using a bucket handler, implemented with an app.</p>
+
+
+  <ul>
+      <li>
+          API Documentation
+          <ul>
+              <li><a href="/api/apps/">Apps</a></li>
+              <li><a href="/api/auth/">Authentication plugins</a></li>
+              <li><a href="/api/buckets/">Bucket handlers</a></li>
+              <li><a href="/api/custom-ui/">UI Customisations</a></li>
+              <li><a href="/api/dashboard/">Dashboard Widgets</a></li>
+              <li><a href="/api/editors/">Editor plugins</a></li>
+              <li><a href="/api/events/">Event hooks</a></li>
+              <li><a href="/api/template-filters/">Template filters</a></li>
+              <li><a href="/api/templates/">Template handlers</a></li>
+              <li><a href="/api/field-types/">Field Types</a></li>
+              <li><a href="/api/validators/">Form validators</a></li>
+              <li><a href="/api/search/">Search handlers</a></li>
+              <li><a href="/api/shortcodes/">Shortcode providers</a></li>
+              <li><a href="/api/translations/">Translations</a></li>
+              <li><a href="/api/feathers/">Feathers</a></li>
+              <li><a href="/api/import/">Importing Content</a></li>
+              <li><a href="/api/reference/">API Reference</a></li>
+          </ul>
+      </li>
+  </ul>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

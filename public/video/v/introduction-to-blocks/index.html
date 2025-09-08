@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Introduction to Blocks - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Introduction to Blocks">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li class="selected"><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+      <ul class="sidenav">
+          <li>
+              <a href="/video/getting-started/">Getting Started</a>
+          </li>
+          <li>
+              <a href="/video/blog/">Perch Blog</a>
+          </li>
+          <li>
+              <a href="/video/runway/">Perch Runway</a>
+          </li>
+      </ul>
+    </nav>
+
+<article class="content">
+
+  <h1>Introduction to Blocks</h1>
+
+  <div class="video-wrapper">
+    <div class="flex-video widescreen">
+      <iframe src="https://www.youtube-nocookie.com/embed/W53oxaZkWcQ?showinfo=0&amp;rel=0" frameborder="0" allow="encrypted-media" gesture="media" allowfullscreen class="embed-responsive-item" width="847" height="476"></iframe>
+    </div>
+  </div>
+
+  <div class="video-detail">
+    <div class="inner-panel">
+        <h2 id="video-transcript">Video Transcript</h2>
+<p>In this video we will take a look at how to use Perch Blocks. This is a feature of Perch and Perch Runway introduced in version 2.8 so make sure you are running 2.8 or greater before getting started.</p>
+<p>Sometimes it is useful to allow content editors to select from a range of templates. Creating a free form content area that can contain text, a media object with image and text alongside, a video, or a three column structure. It is here that Blocks come in useful.</p>
+<p>I’ve got a page here based on the Skeleton CSS framework. This is a lightweight framework that has a grid system much like the one in Bootstrap that requires adding divs and classes to your markup.</p>
+<p>Without Blocks I would need to be proscriptive about which layout the editor could use where. With Blocks I can give them the choice. Let’s take a look.</p>
+<p>I want my freeform area to be where I have the three rows of placeholder content, so I copy that out and paste it into a Perch template named freeform.html - that’s saved into <code>perch/templates/content</code> as usual. I now need to turn each area into an editable template.</p>
+<p>I’m just adding a textarea here, if I wanted to be sure they added a heading I could add separate tags for heading and content.</p>
+<p>So this is just creating a template as usual, however if we selected this template the editor would have to fill in all of the fields, in the order they are in the template.</p>
+<p>So we can now make this a Blocks template.</p>
+<p>We wrap the whole template in a <code>&lt;perch:blocks&gt;</code> tag pair. </p>
+<p>Then each of these rows I will make a Block, by wrapping them in <code>perch:blocks</code> tag pairs.</p>
+<p>Each perch:block tag pair requires two attributes ‘type’ which is an ID like reference to allow you to refer to the block in templates.</p>
+<p>I’m going to add this tp my three blocks now.</p>
+<p>I also need to add a label - this should be a short, human readable label for the block. It will show up in admin.</p>
+<p>I save my template then go back to the original page and add a Perch Region.</p>
+<p>I reload the page in the browser then go into the Perch Admin and choose my new template.</p>
+<p>You can see we now have a region with no available fields to fill in but a selection of the three labels we gave our blocks.</p>
+<p>I can now build up the page.</p>
+<p>I’m first going to add a 2 column block.</p>
+<p>If I save this and go back to the page you can see how this looks.</p>
+<p>You can drag Blocks to reorder them.</p>
+<p>This is a single item region but you can use Blocks within Multiple Item Regions. You can also use Blocks in Perch Add-ons - such as Blog.</p>
+
+
+
+        <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+        </ul>
+
+    </div>
+    
+  </div>
+
+
+
+
+  
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

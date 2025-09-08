@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>A Contact Form - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="A Contact Form">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li class="selected"><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+      <ul class="sidenav">
+          <li>
+              <a href="/video/getting-started/" class="selected">Getting Started</a>
+
+                <ul class="video-nav">
+                  <li>
+                      <a href="/video/v3/getting-started">Getting Started</a>
+                      <span class="badge">1:28</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/installing-perch">Installing Perch</a>
+                      <span class="badge">2:56</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/editing-content">Editing Content</a>
+                      <span class="badge">4:02</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/creating-a-template">Creating a Template</a>
+                      <span class="badge">8:41</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/required-fields-conditionals">Required Fields and Conditionals</a>
+                      <span class="badge">2:41</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/creating-pages">Creating Pages</a>
+                      <span class="badge">8:34</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/contact-details">A contact details template</a>
+                      <span class="badge">7:01</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/shared-regions">Shared Regions</a>
+                      <span class="badge">2:03</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/google-map">A Google Map</a>
+                      <span class="badge">3:58</span>
+                  </li>
+                  <li class="selected">
+                      <a href="/video/v3/contact-form">A Contact Form</a>
+                      <span class="badge">9:20</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/form-error-messaging">Contact Form Error Messaging</a>
+                      <span class="badge">6:17</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/repeating-regions">Repeating Regions</a>
+                      <span class="badge">5:32</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/perch-repeaters">Perch Repeaters</a>
+                      <span class="badge">5:04</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/perch-content-custom">The perch_content_custom function</a>
+                      <span class="badge">6:47</span>
+                  </li>
+                </ul>
+
+          </li>
+          <li>
+              <a href="/video/blog/">Perch Blog</a>
+          </li>
+          <li>
+              <a href="/video/runway/">Perch Runway</a>
+          </li>
+      </ul>
+    </nav>
+
+<article class="content">
+
+  <h1>A Contact Form</h1>
+
+  <div class="video-wrapper">
+    <div class="flex-video widescreen">
+      <iframe src="https://www.youtube-nocookie.com/embed/SaxY6wNSxtk?showinfo=0&amp;rel=0" frameborder="0" allow="encrypted-media" gesture="media" allowfullscreen class="embed-responsive-item" width="847" height="476"></iframe>
+    </div>
+  </div>
+
+  <div class="video-detail">
+    <div class="inner-panel">
+        <p>The final part of our contact page is a form. I’m going to show you how you can use Perch to create this contact form. To process forms in Perch, you need to download the free Perch forms add-on from the Perch website.</p>
+<p>Once you’ve downloaded the forms app and opened the zip, you can take the Perch forms folder, which is inside <code>add-ons/apps</code>, and place it into  your site, in <code>perch/addons/apps</code>.</p>
+<p>Then open the file <code>perch/config/apps.php</code> and add <code>perch_forms</code> to the list so your file should now look like this:</p>
+<pre><code class="lang-php">&lt;?php
+    $apps_list = [&#39;perch_forms&#39;
+    ];
+</code></pre>
+<p>In the Control Panel, you can see now that a new menu item has appeared. Visit the app, this will install it behind the scenes. </p>
+<p>Now open <code>contact.php</code> from your site files and, as we’ve done before, copy the HTML for the form from here. We can use that as our starting point as we create our template. We’re going to need to create a new template under content, and we’ll save that as <code>contactform.html</code> and copy in our markup.</p>
+<p>The video walks through the creation of this template, you can see the full code below.</p>
+<pre><code class="lang-html">&lt;h2&gt;&lt;perch:content id=&quot;heading&quot; type=&quot;text&quot; label=&quot;Heading&quot; required&gt;&lt;/h2&gt;
+&lt;perch:form id=&quot;form-contact&quot; method=&quot;post&quot; app=&quot;perch_forms&quot; role=&quot;form&quot;&gt;
+  &lt;div class=&quot;input&lt;perch:error for=&quot;name&quot; type=&quot;required&quot;&gt; error&lt;/perch:error&gt;&quot;&gt;
+    &lt;perch:label for=&quot;name&quot;&gt;Your name:&lt;/perch:label&gt;
+    &lt;perch:input id=&quot;name&quot; type=&quot;text&quot; required label=&quot;Name&quot;&gt;
+    &lt;perch:error for=&quot;name&quot; type=&quot;required&quot;&gt; 
+    &lt;p class=&quot;about-error&quot;&gt;Please enter your name&lt;/p&gt;
+    &lt;/perch:error&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input&lt;perch:error for=&quot;email&quot; type=&quot;required&quot;&gt; error&lt;/perch:error&gt;&lt;perch:error for=&quot;email&quot; type=&quot;format&quot;&gt; error&lt;/perch:error&gt;&quot;&gt;
+    &lt;perch:label for=&quot;email&quot;&gt;Your email:&lt;/perch:label&gt;
+    &lt;perch:input id=&quot;email&quot; type=&quot;email&quot; required label=&quot;Email&quot;&gt;
+    &lt;perch:error for=&quot;email&quot; type=&quot;required&quot;&gt; 
+    &lt;p class=&quot;about-error&quot;&gt;Please enter your email address&lt;/p&gt;
+    &lt;/perch:error&gt;
+    &lt;perch:error for=&quot;email&quot; type=&quot;format&quot;&gt; 
+    &lt;p class=&quot;about-error&quot;&gt;Please enter a valid email address&lt;/p&gt;
+    &lt;/perch:error&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input&lt;perch:error for=&quot;message&quot; type=&quot;required&quot;&gt; error&lt;/perch:error&gt;&quot;&gt;
+    &lt;perch:label for=&quot;message&quot;&gt;Your message:&lt;/perch:label&gt;
+    &lt;perch:input id=&quot;message&quot; type=&quot;textarea&quot; required label=&quot;Message&quot;&gt;
+    &lt;perch:error for=&quot;message&quot; type=&quot;required&quot;&gt; 
+    &lt;p class=&quot;about-error&quot;&gt;Please enter your message&lt;/p&gt;
+    &lt;/perch:error&gt;
+&lt;/div&gt;
+&lt;perch:input type=&quot;submit&quot; id=&quot;submit&quot; value=&quot;Send&quot;&gt;
+
+&lt;perch:success&gt;
+&lt;div class=&quot;alert success&quot;&gt;
+&lt;perch:content id=&quot;success&quot; type=&quot;textarea&quot; size=&quot;m&quot; label=&quot;Thank you message&quot; markdown editor=&quot;simplemde&quot; required&gt;
+&lt;/div&gt;
+&lt;/perch:success&gt;
+
+&lt;/perch:form&gt;
+</code></pre>
+<p>That’s all of our form. We can now go back to <code>contact.php</code> and delete the markup that’s now part of our template. Replace it with a Perch Region . Then reload the page so the form disappears, and reload the Control Panel. We’ve got our new contact form region showing up, so we can select our template. </p>
+<p>If you go to form options, you’ll see you have other options here, you can give the form a different title, you can store the response. You can set a file upload path if people are allowed to upload information, for example if you’re creating a form where people can Upload a CV. If you’ve got a functioning mail server, you can send the response via email. You can change some things about the email template as well. </p>
+
+
+
+        <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+            <li class="pagination-previous">
+              <a class="pagination-pointed-button" href="/video/v3/google-map" aria-label="Previous video">
+                Previous<span class="show-for-sr"> video</span>
+              </a>
+            </li>
+            <li class="pagination-next">
+              <a class="pagination-pointed-button" href="/video/v3/form-error-messaging" aria-label="Next video">
+                Next<span class="show-for-sr"> video</span>
+              </a>
+            </li>
+        </ul>
+
+    </div>
+    
+  </div>
+
+
+
+
+  
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

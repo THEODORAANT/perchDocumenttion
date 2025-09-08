@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Installing Runway - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Installing Runway">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li class="selected"><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/runway/caching/">Caching</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/cloud-storage/">Cloud Storage</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/collections/">Collections</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/configuration/">Configuration</a>
+                        </li>
+                        <li>
+                            <a href="/runway/core-tasks/">Core Tasks</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/getting-started/">Getting Started with Runway</a>
+                            <ul>    <li>
+                            <a href="/runway/getting-started/backup/">Backup</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/getting-started/installing/" class="selected">Installing Runway</a>
+                            <ul>    <li>
+                            <a href="/runway/getting-started/installing/rewrites/">Rewrite rules</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/getting-started/installing/scheduled-tasks/">Runway scheduled tasks</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/getting-started/upgrading-perch-to-runway/">Upgrading Perch to Runway</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/runway/getting-started/using-runway/">Using Runway</a>
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/runway/headless/">Headless requests</a>
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/relationships/">Relationships</a>
+                        </li>
+                        <li>
+                            <a href="/runway/routing/">Routing</a>
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/runway/site-access/">Controlling site access</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading/">Upgrading to Runway 4</a>
+                        </li>
+                        <li>
+                            <a href="/runway/upgrading3/">Upgrading to Runway 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Installing Runway</h1>
+
+  <p>The steps below walk you through the process of getting Perch Runway up and running on your server.</p>
+<p>Before starting ensure that you have run the Runway Server Compatibility Test on your server and that it passed. Make a note of the database details that you used to pass the test as you will need these during install.</p>
+<h2 id="step-1-extract-the-perch-zip">Step 1: Extract the Perch zip</h2>
+<p>After purchasing Perch Runway you will be able to download the software. Save the zip file somewhere on your computer and unzip it. Inside you will find a folder named <code>perch</code> which is the Perch software.</p>
+<h2 id="step-2-put-the-perch-folder-into-your-website-root-folder">Step 2: Put the perch folder into your website root folder</h2>
+<p>Copy the <code>perch</code> folder into your top-level folder.</p>
+<h2 id="step-3-visit-the-setup-page">Step 3: Visit the setup page</h2>
+<p>Visit <code>/perch/setup</code> in a web browser. You will see a form.</p>
+<ul>
+<li>The license key is the one from your account for this site.</li>
+<li>Your details will create the first admin account in Perch.</li>
+<li>The install location is the location of perch in your site. If you just copied the <code>perch</code> folder into the root of your site then <code>/perch</code> is correct. If you renamed the Perch folder or put it into a subdirectory you need to update this.</li>
+<li>The final section is database settings – use the database location, name, username and password that worked for the Server Compatibility Test.</li>
+</ul>
+<p>After completing this form, hit submit and Perch Runway will either write your configuration files for you _or_ display a block of configuration code on screen.</p>
+<p>If you get the code, copy this code to your clipboard, then open the <code>perch</code> directory that you copied into your site earlier, then open the <code>config</code> folder and the file <code>config.php</code>.</p>
+<p>Paste the code into <code>config.php</code> using a <strong>plain text editor</strong> and save it. Repeat with the <code>config.local.php</code> file.</p>
+<p>Back in your browser click ‘I’ve done that’ and Runway will install. Otherwise, move onto the steps below.</p>
+<h2 id="step-4-configuring-url-rewriting">Step 4: Configuring URL rewriting</h2>
+<p>The next step is to set up URL rewriting for Runway to handle incoming page requests. See the <a href="/runway/getting-started/installing/rewrites/">information on configuring URL rewriting</a> for step-by-step instructions.</p>
+<h2 id="step-5-configuring-scheduled-tasks">Step 5: Configuring scheduled tasks</h2>
+<p>The following step is to set up scheduled tasks. See <a href="/runway/getting-started/installing/scheduled-tasks/">setting up Scheduled Tasks</a> for more information.</p>
+<h2 id="final-steps">Final Steps</h2>
+<p>You should now be able to log into Runway using the username and password you entered in the previous step.</p>
+<p>Delete the setup folder from inside the <code>perch</code> folder.</p>
+<p>Make the <code>/perch/resources</code> folder writable by your webserver in order that files and images can be uploaded through Perch Runway. Check with your host how to do this.</p>
+<p>For most users these steps will install Perch Runway without any problems. However there are some issues that we see reasonably regularly. These tend to be webhost specific.</p>
+<h3 id="after-submitting-the-form-at-step-3-nothing-happens-">After submitting the form at Step 3. Nothing happens.</h3>
+<p>This usually means <strong>PHP Sessions</strong> are not configured fully on your server. Ask your host if there is anything you need to do to get PHP Sessions working on your server.</p>
+<p>If sessions are configured then the other possibility is that you have something causing a redirect on your server, for example in your <code>.htaccess</code> file.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Creating Pages - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Creating Pages">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li class="selected"><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+      <ul class="sidenav">
+          <li>
+              <a href="/video/getting-started/" class="selected">Getting Started</a>
+
+                <ul class="video-nav">
+                  <li>
+                      <a href="/video/v3/getting-started">Getting Started</a>
+                      <span class="badge">1:28</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/installing-perch">Installing Perch</a>
+                      <span class="badge">2:56</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/editing-content">Editing Content</a>
+                      <span class="badge">4:02</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/creating-a-template">Creating a Template</a>
+                      <span class="badge">8:41</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/required-fields-conditionals">Required Fields and Conditionals</a>
+                      <span class="badge">2:41</span>
+                  </li>
+                  <li class="selected">
+                      <a href="/video/v3/creating-pages">Creating Pages</a>
+                      <span class="badge">8:34</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/contact-details">A contact details template</a>
+                      <span class="badge">7:01</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/shared-regions">Shared Regions</a>
+                      <span class="badge">2:03</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/google-map">A Google Map</a>
+                      <span class="badge">3:58</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/contact-form">A Contact Form</a>
+                      <span class="badge">9:20</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/form-error-messaging">Contact Form Error Messaging</a>
+                      <span class="badge">6:17</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/repeating-regions">Repeating Regions</a>
+                      <span class="badge">5:32</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/perch-repeaters">Perch Repeaters</a>
+                      <span class="badge">5:04</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/perch-content-custom">The perch_content_custom function</a>
+                      <span class="badge">6:47</span>
+                  </li>
+                </ul>
+
+          </li>
+          <li>
+              <a href="/video/blog/">Perch Blog</a>
+          </li>
+          <li>
+              <a href="/video/runway/">Perch Runway</a>
+          </li>
+      </ul>
+    </nav>
+
+<article class="content">
+
+  <h1>Creating Pages</h1>
+
+  <div class="video-wrapper">
+    <div class="flex-video widescreen">
+      <iframe src="https://www.youtube-nocookie.com/embed/tcLxY1S25xY?showinfo=0&amp;rel=0" frameborder="0" allow="encrypted-media" gesture="media" allowfullscreen class="embed-responsive-item" width="847" height="476"></iframe>
+    </div>
+  </div>
+
+  <div class="video-detail">
+    <div class="inner-panel">
+        <p>In our simple site, I’ve decided the editors won’t be able to add new pages to the main navigation, but one place they’d like to be able to create new pages as required is inside the “about” section. In this video I’m going to create my main “about page,” and then create a master page, from which other pages in the “about” section can be created.</p>
+<p>I’ve saved my “about” html page into a new folder called, <code>about</code> as <code>index.php</code>. I’ve already included perch on the page and I’ve made sure that the path is correct, because we’re now inside a sub folder. I’ve added two perch regions to this page. One is the masthead area, and another is for some content.</p>
+<p>I’ve created a new template for this masthead area, because I’ve got some specific mark up I want to use. The content of that template is below and you can save it into <code>perch/templates/content</code> as <code>masthead.html</code>.</p>
+<pre><code class="lang-html">&lt;h2&gt;&lt;perch:content id=&quot;heading&quot; title type=&quot;text&quot; label=&quot;Heading&quot; required&gt;&lt;/h2&gt;
+&lt;perch:content id=&quot;body&quot; required type=&quot;textarea&quot; label=&quot;Masthead content&quot; help=&quot;This will appear at the top of the page, so should be a sentence or two.&quot; markdown editor=&quot;simplemde&quot;&gt;
+</code></pre>
+<h2 id="creating-the-master-page">Creating the Master Page</h2>
+<p>Next, I need to create a master page. This is kind of a special kind of full page template, which new pages are based on. We can use our <code>about/index.php</code>, as a starting point for this. I’m going to take this <code>index.php</code>, and I’m going to save it into <code>/perch/templates/pages</code>, and I’ll call it, <code>about.php</code>.</p>
+<p>If you look in <code>/perch/templates/pages</code>, you’ll see that we also have a <code>default.php</code>. Open up <code>default.php</code> and we’ll use this to help us create our master page. The first thing you want is to copy out this link to the runtime. It looks a bit different, because we don’t necessarily know the entire path to the runtime, when we’re creating a page from our Master Page. Copy this and add it to the <code>about.php</code> Master Page.</p>
+<p>You will want the page to have a unique title. This can be created by using another Perch Function - <code>perch_pages_title()</code> which will insert the title based on the page title added in the Control Panel.</p>
+<h2 id="adding-navigation">Adding Navigation</h2>
+<p>Finally, I want to navigate to these new pages. We can use the <a href="https://docs.grabaperch.com/functions/navigation/">Perch Navigation functions</a> in order that when new pages are created from the Master Page, links will be created to them in the Navigation.</p>
+<pre><code class="lang-php"> &lt;?php 
+   perch_pages_navigation([
+     &#39;from-path&#39; =&gt; &#39;/about&#39;,
+     &#39;levels&#39; =&gt; 1
+   ]);
+?&gt;
+</code></pre>
+<p>As the main About page is not generated from the Master Page, don’t forget to add the navigation there too.</p>
+<h2 id="creating-pages-from-the-control-panel">Creating pages from the Control Panel</h2>
+<p>When you create a new page with Perch, it creates an actual, physical file on disc. That’s a difference between Perch and Runway. Runway doesn’t create actual files, it creates references to pages in the database. However in the Control Panel the process is very similar.</p>
+<p>In the Control Panel, visit the Master Pages section. Find the About page. You have a few options here. If you choose to “copy regions from” and existing page the editor won’t need to choose templates for each Region. This is generally what you want. In our case we can copy the Regions from the about page.</p>
+<p>Then you can choose to reference the Master Page or Copy it. This is important. If you say reference, it means you can go back, and you can make changes to your master page and they’ll be reflected in all of the pages created from it. If you want pages to be completely detached from the master page, you can say, “copy this master page.” Generally, I’d say reference, because it’s useful to be able to make changes to the html on your master page, and go on to all of the pages that are created from it.</p>
+<p>Once you have set up your Master Page, creating new pages is a case of choosing to add a New Subpage when in the Pages View in Perch, and adding details for the page.</p>
+
+
+
+        <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+            <li class="pagination-previous">
+              <a class="pagination-pointed-button" href="/video/v3/required-fields-conditionals" aria-label="Previous video">
+                Previous<span class="show-for-sr"> video</span>
+              </a>
+            </li>
+            <li class="pagination-next">
+              <a class="pagination-pointed-button" href="/video/v3/contact-details" aria-label="Next video">
+                Next<span class="show-for-sr"> video</span>
+              </a>
+            </li>
+        </ul>
+
+    </div>
+    
+  </div>
+
+
+
+
+  
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Search handlers - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Search handlers">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li class="selected"><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/api/apps/">Apps</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/auth/">Authentication plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/buckets/">Bucket handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/custom-ui/">UI Customisations</a>
+                        </li>
+                        <li>
+                            <a href="/api/dashboard/">Dashboard Widgets</a>
+                        </li>
+                        <li>
+                            <a href="/api/editors/">Editor plugins</a>
+                        </li>
+                        <li>
+                            <a href="/api/events/">Event hooks</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/api/template-filters/">Template filters</a>
+                        </li>
+                        <li>
+                            <a href="/api/templates/">Template handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/field-types/">Field Types</a>
+                        </li>
+                        <li>
+                            <a href="/api/validators/">Form validators</a>
+                        </li>
+                        <li>
+                            <a href="/api/search/" class="selected">Search handlers</a>
+                        </li>
+                        <li>
+                            <a href="/api/shortcodes/">Shortcode providers</a>
+                        </li>
+                        <li>
+                            <a href="/api/translations/">Translations</a>
+                        </li>
+                        <li>
+                            <a href="/api/feathers/">Feathers</a>
+                        </li>
+                        <li>
+                            <a href="/api/import/">Importing Content</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/api/reference/">API Reference</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Search handlers</h1>
+
+  <p>Perch and Runway implement basic full-text site search functionality. An app can include its data as part of the search by exposing a class which implements the <code>PerchAPI_SearchHandler</code> interface and registering it at runtime.</p>
+<pre><code class="lang-php">class MyApp_SearchHandler implements PerchAPI_SearchHandler
+{
+    public static function get_search_sql($key)
+    {
+        ...
+    }
+
+    public static function get_backup_search_sql($key)
+    {
+        ...
+    }
+
+    public static function format_result($key, $opts, $result)
+    {
+        ...
+    }
+}
+</code></pre>
+<p>In the app’s runtime.php:</p>
+<pre><code class="lang-php">PerchSystem::register_search_handler(&#39;MyApp_SearchHandler&#39;);
+</code></pre>
+<h2 id="methods">Methods</h2>
+<p>The interface has three static methods. Two which return an SQL fragment, and one which post-processes a result for display.</p>
+<h3 id="perchapi_searchhandler-get_search_sql-string-key-">PerchAPI_SearchHandler::get_search_sql(string $key)</h3>
+<p>Generates and returns an SQL SELECT query for finding data matching the keyword $key. This SELECT is streamlined into a larger query by way of a UNION, and so the number and order of columns in the query matters significantly.</p>
+<p>You must select 10 columns, with the first two being source and score.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source</td>
+<td>The name of your SearchHandler class. It should be sufficient to use the PHP magic constant <code>__CLASS__</code></td>
+</tr>
+<tr>
+<td>score</td>
+<td>A score value (e.g. fulltext index search score) to order the results by. This is going to be an inexact science, admittedly.</td>
+</tr>
+</tbody>
+</table>
+<p>Following those, select up to 8 other columns that will be needed to format a search result listing item. Usually this will be a title, some way of forming a link, and something for an excerpt. If you don’t need 8 items, pad the end of the list with empty quotes items.</p>
+<pre><code class="lang-sql">SELECT &quot;MyApp_SearchHandler&quot; AS source, MATCH(...) AS score, 
+    itemTitle, itemSlug, itemDateTime, itemDescHTML, itemID, &quot;&quot;, &quot;&quot;, &quot;&quot;
+FROM my_table
+</code></pre>
+<h3 id="perchapi_searchhandler-get_backup_search_sql-string-key-">PerchAPI_SearchHandler::get_backup_search_sql(string $key)</h3>
+<p>This is exactly the same as the previous method, but is used if the previous returns no results. The reason is that most search will probably be implemented using MySQL fulltext indexes. These work well with large volumes of data, but behave badly when there’s not much content to search. They also do badly for keywords that are too common in the data, e.g. a company name on their own website.</p>
+<p>Whilst this isn’t usually a practical problem for the site visitor (who searches a company site for the company’s name?) it proves extremely confusing for clients and less technical web designers, and causes them to lose time on a project trying to figure out why something simple isn’t working. We don’t want to cause people that frustration, so the backup search sql should use a simpler search method less likely to run into those problems.</p>
+<p>We’d recommend using a <code>REGEXP</code> query with word boundaries rather than a <code>LIKE</code>.</p>
+<pre><code class="lang-sql">WHERE itemTitle REGEXP &#39;[[:&lt;:]]bananas[[:&gt;:]]&#39; 
+</code></pre>
+<h3 id="perchapi_searchhandler-format_result-string-key-array-opts-array-result-">PerchAPI_SearchHandler::format_result(string $key, array $opts, array $result)</h3>
+<p>After the search query has been run, the search engine runs down the results and calls the format_result method of the handler for each line. This comes from the source column we specified in the SQL. </p>
+<p>The method gets passed three arguments</p>
+<h3 id="arguments">Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>the search keyword</td>
+</tr>
+<tr>
+<td>opts</td>
+<td>An associative array of search options passed into the system by the page author</td>
+</tr>
+<tr>
+<td>result</td>
+<td>An associative array representing the row selected by the search query</td>
+</tr>
+</tbody>
+</table>
+<p>The method processes the result into an array with the following keys and values.</p>
+<h3 id="returned-array">Returned array</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>The URL within the site to link to in order to display the found item.</td>
+</tr>
+<tr>
+<td>title</td>
+<td>The title of the found item</td>
+</tr>
+<tr>
+<td>excerpt</td>
+<td>An HTML excerpt of length specified in opts.</td>
+</tr>
+<tr>
+<td>key</td>
+<td>the keyword</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

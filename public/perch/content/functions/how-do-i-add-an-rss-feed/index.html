@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adding an RSS Feed - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Adding an RSS Feed">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://account.perchcms.com">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link selected"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+    <ul class="sidenav">
+                        <li>
+                            <a href="/perch/getting-started/">Getting Started With Perch</a>
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/configuration/">Configuration</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/building/">Building Sites with Perch</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/categories/">Categories</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/content/">Working with Content</a>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/">Functions</a>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/content-from-multiple-pages-and-regions/">Combining Content from Several Regions</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/create-a-prepopulated-region/">Pre-populating Template Regions</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/get-content-before-templating/">Accessing content before it is templated</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-add-an-rss-feed/" class="selected">Adding an RSS Feed</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-create-a-faq/">Creating a FAQ</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-create-a-google-sitemap/">Create a Google Sitemap</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-create-list-detail-pages/">Create a list detail page</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/how-do-i-link-prev-next/">Previous and Next Links in content</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/passing-options-to-custom-functions/">How to pass options to custom functions</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/show-one-random-item/">Display an item at random</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/sorting-data/">Sorting data</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/two-page-list-and-detail/">Two page list and detail</a>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/functions/user-filtered-lists/">A user-filtered list</a>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                            <ul>    <li>
+                            <a href="/perch/content/templates/">Templates</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="/perch/control-panel/">The Perch Control Panel</a>
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/help/">Troubleshooting Tips</a>
+                        </li>
+                        <li>
+                            <a href="/perch/pages-and-nav/">Pages and Navigation</a>
+                             
+                             
+                             
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/resources/">Managing Resources</a>
+                             
+                        </li>
+                        <li>
+                            <a href="/perch/upgrading/">Upgrading to Perch 3</a>
+                        </li>
+    </ul>  </nav>
+
+<article class="content">
+
+
+  <h1>Adding an RSS Feed</h1>
+
+  <p><strong>How do I add an RSS feed to a news page?</strong></p>
+<p>In this article we’ll look at how to use the power of perch_content_custom() and templates to create a simple RSS feed for content stored in a standard multiple item region in Perch.</p>
+<p>In this article we’ll look at how to use the power of <code>perch_content_custom()</code> and templates to create a simple RSS feed for your site.</p>
+<p>To do this, we’ll assume that you already have a multiple-item region set up with the content that you want to replicate in the RSS feed. For us, that’s going to be a region called ‘News’ on the page /news.php – just adapt the examples accordingly to fit your own site.</p>
+<p>The solution is more straightforward than you might think. RSS feeds are a form of XML, which is a text format based on tags just like HTML. We’re going to create a page using XML tags instead of HTML, and pull in the content from the News page using perch_content_custom().</p>
+<h2 id="creating-the-page">Creating the page</h2>
+<p>First we need to add a new page to our site. I’m calling mine rss.php and placing it at the top level alongside my news.php page. RSS feeds are made up of two main parts. The first is general information about the feed (the title etc, similar in many ways to the <head> section of an HTML page) and then the news items themselves.</p>
+<pre><code class="lang-html">    &lt;?php include(&#39;perch/runtime.php&#39;); ?&gt;
+    &lt;?php echo &#39;&lt;&#39;.&#39;?xml version=&quot;1.0&quot;?&#39;.&#39;&gt;&#39;; ?&gt;
+    &lt;rss version=&quot;2.0&quot;&gt;
+    &lt;channel&gt;
+        &lt;title&gt;Example Co News&lt;/title&gt;
+        &lt;link&gt;http://example.com/news.php&lt;/link&gt;
+        &lt;description&gt;News and information about Example Co&lt;/description&gt;
+    &lt;/channel&gt;
+    &lt;/rss&gt;
+</code></pre>
+<p>The first line is the familiar Perch runtime link. The strange incantation on the second line is a workaround necessary for using the XML <code>&lt;?xml ... ?&gt;</code> prolog on PHP servers which mistake this for a PHP opening tag. It’s strange, but copy it as written and it should be fine.</p>
+<p>Next we have the basic structure of the RSS feed. Go ahead and set the title, link and description to be whatever you need for your site. You could even make these editable using perch_content() regions.</p>
+<p>So that’s the basic outline of the feed. Next we need to make a template to use in a repeating region for the news items.</p>
+<h2 id="creating-the-template">Creating the template</h2>
+<p>Add a new file for your template in perch/templates/content/. I’m calling mine <code>_rss_item.html</code>. Starting the file name with an underscore causes it to be hidden from the web interface, as this isn’t a template we need available for regular regions.</p>
+<pre><code class="lang-html">    &lt;item&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;link&gt;&lt;/link&gt;
+    &lt;description&gt;
+        &lt;![CDATA[
+
+        ]]&gt;
+    &lt;/description&gt;
+    &lt;/item&gt;
+</code></pre>
+<p>Again, the basic outline for an item is quite simple. The only strange thing here is the CDATA block inside the <description> tags – that’s required if we want to put HTML inside the item.</p>
+<p>Next we need to add the perch:content tags to our template, using the same id attributes as appear in the template that our main news items use. For me, that’s article.html.</p>
+<pre><code class="lang-html">    &lt;item&gt;
+    &lt;title&gt;&lt;perch:content id=&quot;heading&quot; type=&quot;text&quot; label=&quot;Heading&quot;&gt;&lt;/title&gt;
+    &lt;link&gt;http://example.com/news.php#news&lt;perch:content id=&quot;perch_item_index&quot; type=&quot;hidden&quot;&gt;&lt;/link&gt;
+    &lt;description&gt;
+        &lt;![CDATA[
+            &lt;perch:content id=&quot;body&quot; type=&quot;textarea&quot; label=&quot;Body&quot; textile&gt;
+        ]]&gt;
+    &lt;/description&gt;
+    &lt;/item&gt;
+</code></pre>
+<p>If you want to use just an excerpt in your feed, you can use the <a href="http://docs.grabaperch.com/docs/templates/attributes/words/">words attribute</a> to limit the number of words you output.</p>
+<p>Worth noting here is the way the content for the <link> tag is created. We’re using the perch_item_index special value to create a link to the item on our news page. To make this work, I’ve added the same to the article template:</p>
+<pre><code class="lang-html">    &lt;h2 id=&quot;news&lt;perch:content id=&quot;perch_item_index&quot; type=&quot;hidden&quot;&gt;&quot;&gt;...&lt;/h2&gt;
+</code></pre>
+<p>Obviously, you’ll also want to update the <a href="http://example.com/news.php">http://example.com/news.php</a> to be the correct URL of your news page.</p>
+<h2 id="putting-the-two-together">Putting the two together</h2>
+<p>So we have our RSS page, and we have a template to display the items. We just need to put the two together. The items appear after the <description> tags in an RSS feed.</p>
+<pre><code class="lang-html">    &lt;?php include(&#39;perch/runtime.php&#39;); ?&gt;
+    &lt;?php echo &#39;&lt;&#39;.&#39;?xml version=&quot;1.0&quot;?&#39;.&#39;&gt;&#39;; ?&gt;
+    &lt;rss version=&quot;2.0&quot;&gt;
+      &lt;channel&gt;
+        &lt;title&gt;Example Co News&lt;/title&gt;
+        &lt;link&gt;http://example.com/news.php&lt;/link&gt;
+        &lt;description&gt;News and information about Example Co&lt;/description&gt;
+        &lt;?php
+            $opts = array(
+                    &#39;page&#39;=&gt;&#39;/news.php&#39;,
+                    &#39;template&#39;=&gt;&#39;_rss_item.html&#39;
+                );
+            perch_content_custom(&#39;News&#39;, $opts);
+        ?&gt;
+      &lt;/channel&gt;
+    &lt;/rss&gt;
+</code></pre>
+<p>We set the options for perch_content_custom() to take the content from the page our news is on, and tell it to use the template we created for the RSS items. We then use the same region name that our news page uses.</p>
+<h2 id="linking-the-feed-to-the-news-page">Linking the feed to the news page</h2>
+<p>RSS feeds are included using a <link> tag in the <head> of a page. This is how you get the feed to show up as an RSS icon in the browser’s location bar. Add the following to the <head> section of your news page:</p>
+<pre><code class="lang-html">    &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;RSS&quot; href=&quot;/rss.php&quot;&gt;
+</code></pre>
+<p>And that’s it – we’re done.</p>
+
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>

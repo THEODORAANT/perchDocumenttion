@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blocks - Perch CMS documentation</title>
+  <meta name="description" content="Perch documentation">
+  <meta property="og:title" content="Blocks">
+  <meta property="og:description" content="Perch documentation">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="/assets/css/docs.css" rel="stylesheet">
+  <script type="text/javascript" src="//use.typekit.net/kiw6gix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  <nav class="global-bar show-for-small-only">
+    <ul class="nav-products">
+        <li class="docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+    </ul>
+    <a href="?nav=show" class="hamburger">☰</a>
+</nav>
+<nav class="global-bar primary show-for-medium">
+    <ul class="nav-products">
+        <li class="perch"><a href="https://grabaperch.com">Perch</a></li>
+        <li class="runway"><a href="https://perchrunway.com">Runway</a></li>
+        <li class="shop"><a href="https://shop.perchcms.com">Perch Shop</a></li>
+        <li class="addons first-right"><a href="https://grabaperch.com/add-ons">Add-ons</a></li>
+        <li class="selected docs"><a href="https://docs.grabaperch.com">Docs</a></li>
+        <li class="support"><a href="https://community.perchcms.com/forum/">Support</a></li>
+        <li class="account"><a href="https://grabaperch.com/account">Account</a></li>
+    </ul>
+</nav>
+<nav class="site-nav">
+    <ul>
+        <li class="home-link"><a href="/perch/">Perch Docs</a></li>
+        <li><a href="/runway/">Runway Docs</a></li>
+        <li class="selected"><a href="/video/">Video</a></li>
+        <li><a href="/templates/">Template Reference</a></li>
+        <li><a href="/functions/">Function Reference</a></li>
+        <li><a href="/addons/">Add-ons</a></li>
+        <li><a href="/api/">API</a></li>
+    </ul>
+
+    <div class="global-search" role="search">
+      <div class="gcse-searchbox"></div>
+    </div>
+
+    <style>
+      .custom-search {
+        with
+      }
+  
+      table.gsc-input {
+        margin: 0;
+        height: 1.5em;
+      }
+
+      form.gsc-search-box {
+        margin: 0;
+      }
+
+      .gsc-search-box tbody {
+        border: none;
+      }
+
+      .gsc-search-box tbody td {
+        padding: 0;
+      }
+
+      .gsc-control-cse {
+        padding: 0;
+      }
+
+      .gsc-input-box {
+        border: none;
+      }
+
+      .gsc-search-box a {
+        padding: 0;
+      }
+    </style>
+</nav>
+
+<div class="gcse-searchresults"></div>
+<main class="wrapper">
+    <nav class="sidebar">
+      <ul class="sidenav">
+          <li>
+              <a href="/video/getting-started/">Getting Started</a>
+          </li>
+          <li>
+              <a href="/video/blog/" class="selected">Perch Blog</a>
+
+                <ul class="video-nav">
+                  <li>
+                      <a href="/video/v3/installing-blog">Installing the Blog</a>
+                      <span class="badge">3:41</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-listing-page">Create a Blog Listing page</a>
+                      <span class="badge">5:34</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-detail-page">Create a Blog Detail page</a>
+                      <span class="badge">10:47</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-archive-page">Create a Blog Archive page</a>
+                      <span class="badge">12:08</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/editing-blog-templates">Editing Blog Templates</a>
+                      <span class="badge">9:18</span>
+                  </li>
+                  <li class="selected">
+                      <a href="/video/v3/blocks">Blocks</a>
+                      <span class="badge">5:37</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-homepage">Showing blog posts on the homepage</a>
+                      <span class="badge">3:38</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/blog-rss">Create a Blog RSS feed</a>
+                      <span class="badge">8:27</span>
+                  </li>
+                  <li>
+                      <a href="/video/v3/htaccess-rewrites">Rewriting URLs with htaccess</a>
+                      <span class="badge">6:05</span>
+                  </li>
+                </ul>
+
+          </li>
+          <li>
+              <a href="/video/runway/">Perch Runway</a>
+          </li>
+      </ul>
+    </nav>
+
+<article class="content">
+
+  <h1>Blocks</h1>
+
+  <div class="video-wrapper">
+    <div class="flex-video widescreen">
+      <iframe src="https://www.youtube-nocookie.com/embed/MsgMhTFConA?showinfo=0&amp;rel=0" frameborder="0" allow="encrypted-media" gesture="media" allowfullscreen class="embed-responsive-item" width="847" height="476"></iframe>
+    </div>
+  </div>
+
+  <div class="video-detail">
+    <div class="inner-panel">
+        <p>In our blog template, the body of the post is just one big area to add text. Your editor, however, might want to build up a post with images, or video, or anything else. We can give them the ability to choose between different things to put into their post using <strong>Perch Blocks</strong>. And this works with any Perch Content, not just Blog. </p>
+<p>To create a Blocks section in a template, add a <code>&lt;perch:blocks&gt;&lt;/perch:blocks&gt;</code> tag pair. Then inside add your individual Block. Each ones is wrapped in <code>&lt;perch:block&gt;&lt;/perch:block&gt;</code> and is a kind of sub-template. We need to add a couple of attributes to the Perch block to identify it, we give it a <code>type</code>, which is anything you like really, just call it something that would identify it to you. So let’s call this one just <code>text</code> and then give it a label, that’s what will show up for the Admin to know what that kind of block is.</p>
+<p>Inside the block you use your regular Perch template tags, whatever you want. For a text block you might just add a single Perch textarea tag, remember that when working inside Blog you need to use <code>&lt;perch:blog</code> tags and not <code>&lt;perch:content</code>.</p>
+<p>The completed Blocks section for our post looks like this:</p>
+<pre><code class="lang-html">&lt;perch:blocks&gt; 
+  &lt;perch:block type=&quot;text&quot; label=&quot;Text&quot;&gt;
+    &lt;perch:blog type=&quot;textarea&quot; markdown editor=&quot;simplemde&quot; id=&quot;text&quot; label=&quot;Content&quot; size=&quot;m&quot;&gt;
+  &lt;/perch:block&gt;
+
+  &lt;perch:block type=&quot;figure&quot; label=&quot;Figure&quot;&gt;
+    &lt;figure&gt;
+      &lt;img src=&quot;&lt;perch:blog type=&quot;image&quot; id=&quot;image&quot; label=&quot;Image&quot; width=&quot;800&quot;&gt;&quot; alt=&quot;&lt;perch:blog id=&quot;alt&quot; type=&quot;text&quot; label=&quot;Alt text&quot;&gt;&quot;&gt;
+      &lt;figcaption&gt;&lt;perch:blog type=&quot;smarttext&quot; id=&quot;caption&quot; label=&quot;Caption&quot;&gt;&lt;/figcaption&gt;
+    &lt;/figure&gt;
+  &lt;/perch:block&gt;
+&lt;/perch:blocks&gt;
+</code></pre>
+<p>Blocks mean you can add all of the markup you need around content. It’s quite handy when working with something like Foundation or Bootstrap which require quite a lot of markup and classes added. The content editor can simply add the block they need and complete the content. You have already defined the markup that will enable it to look as they expect.</p>
+<p>Having added blocks to the template, if you go back to the Blog admin you should see the Blocks selection toolbar appearing. Click on the text label to get a text area to fill in; click on the figure label to get a figure with the image, and alt text. You can add as many of these as you want.</p>
+<p>Once Blocks have been added they can be rearranged by drag and drop.</p>
+<p>This is a very nice way to give more flexibility to your content editors while still maintaining good control over the mark up that is output. At the point at which you want to redesign the site - or just add an additional class to some element for styling purposes. You can do that easily, something impossible if everything has been added and formatted as a big block of HTML in a WYSIWYG editor.</p>
+
+
+
+        <ul class="pagination-pointed pagination text-center" role="navigation" aria-label="Pagination">
+            <li class="pagination-previous">
+              <a class="pagination-pointed-button" href="/video/v3/editing-blog-templates" aria-label="Previous video">
+                Previous<span class="show-for-sr"> video</span>
+              </a>
+            </li>
+            <li class="pagination-next">
+              <a class="pagination-pointed-button" href="/video/v3/blog-homepage" aria-label="Next video">
+                Next<span class="show-for-sr"> video</span>
+              </a>
+            </li>
+        </ul>
+
+    </div>
+    
+  </div>
+
+
+
+
+  
+</article>
+
+
+
+
+</main>
+<footer>
+</footer>
+<script async src="https://cse.google.com/cse.js?cx=007560778035763025039:043iekruiov"></script>
+<script src="/assets/js/prism.js" async defer></script>
+<script>
+    if ("classList" in document.createElement("_")) {
+        var hb = document.querySelectorAll('.hamburger');
+        if (hb.length) {
+            hb[0].addEventListener('click', function(e) {
+                e.preventDefault();
+                var nav = document.querySelectorAll('nav.primary')[0];
+                if (!nav.classList.contains('show')) {
+                    nav.classList.remove('show-for-medium', 'hide');
+                    nav.classList.add('show');
+                } else {
+                    nav.classList.remove('show');
+                    nav.classList.add('hide');
+                }
+            });
+        }
+    }
+
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8618320-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>
