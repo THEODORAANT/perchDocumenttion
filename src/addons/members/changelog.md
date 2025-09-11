@@ -5,6 +5,9 @@ nav_groups:
 ---
 
 All notable changes to Perch Members.
+## 1.6.7
+- Adds Akismet integration to prevent spam registrations
+- Fixes sorting and filtering of member lists
 ## 1.6.6
 - Fixes for warnings
 
