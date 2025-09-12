@@ -47,3 +47,22 @@ Once you have some products added, you can display them on your page.
 Use [perch_shop_products()](/addons/shop/products/functions/perch-shop-products/) to display a list of products. This enables you to filter products by category, brand and so on. It's the main tool for displaying multiple products at once.
 
 When it comes to showing the details of a single product, use [perch_shop_product()](/addons/shop/products/functions/perch-shop-product/). This takes the _slug_ of the product as an argument - this will usually be part of the URL from your listing page.
+
+## Reordering products
+
+You can control the order in which products appear both in the Control Panel and on your site. In the Products app choose **Reorder**, then drag and drop the products into the sequence you want before saving.
+
+To output products using this custom order, sort by the `productOrder` field when calling `perch_shop_products`:
+
+```php
+perch_shop_products([
+    'sort'       => 'productOrder',
+    'sort-order' => 'ASC',
+]);
+```
+
+If you need to trigger a reorder from code, pass the product IDs in the desired sequence to `perch_shop_products_reorder()`:
+
+```php
+perch_shop_products_reorder([3, 5, 2, 9]);
+```
