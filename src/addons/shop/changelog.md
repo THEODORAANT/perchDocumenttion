@@ -5,6 +5,16 @@ nav_groups:
 ---
 
 All notable changes to Perch Shop.
+## [1.3.6] - YYYY-MM-DD
+### Fixed
+- VAT-inclusive price calculation.
+- PDF invoice generation issues.
+- Shipping methods now allowed without category restrictions.
+
+### Added
+- Category validation in `find_options_for_cart`.
+- Product list reordering feature.
+
 ## [1.3.5] - 2025-01-14
 ### Fixed
 - Fixes for PHP 8.2 compatibility
