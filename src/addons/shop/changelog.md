@@ -5,7 +5,7 @@ nav_groups:
 ---
 
 All notable changes to Perch Shop.
-## [1.3.6] - YYYY-MM-DD
+## [1.3.6] - 2025-09-12
 ### Fixed
 - VAT-inclusive price calculation.
 - PDF invoice generation issues.
